@@ -11,6 +11,10 @@
     h3 {
       color: green;
     }
+
+    body {
+      background: #F2DBC4;
+    }
   </style>
   <title>Plenty of Thyme :: Welcome</title>
 </head>
@@ -33,16 +37,16 @@
         <li><a href="plan.html">Plan</a></li>
       </ul>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-12">
       <form class="form-horizontal">
         <fieldset>
           <legend>Cart</legend>
           <div class="form-group">
-            <label for="Item1" class="col-lg-2 control-label">Item 1</label>
-            <div class="col-lg-6">
+            <label for="Item1" class="col-md-3 control-label">Item 1</label>
+            <div class="col-md-3">
               <input type="text" class="form-control" id="item1" placeholder="Item 1">
             </div>
-            <div class="col-lg-2">
+            <div class="col-md-1">
               <select class="form-control" id="select">
                 <option>1</option>
                 <option>2</option>
@@ -50,6 +54,22 @@
                 <option>4</option>
                 <option>5</option>
                 <option>5+</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <input type="date" class="form-control" id="item1" placeholder="date">
+            </div>
+            <div class="col-md-2">
+              <input type="price" class="form-control" id="item1" placeholder="price">
+            </div>
+            <div class="col-md-2">
+              <select class="form-control" id="select">
+                <option>dairy</option>
+                <option>vegetables</option>
+                <option>fruits</option>
+                <option>produce</option>
+                <option>meats & alternatives</option>
+                <option>miscellaneous</option>
               </select>
             </div>
           </div>
@@ -121,17 +141,10 @@
             <a href="" class="btn btn-default">Add More Items</a>
             <p></p>
           </div>
-          <div class="form-group">
-            <label for="Email" class="col-lg-2 control-label">Email</label>
-            <div class="col-lg-8">
-              <input type="text" class="form-control" id="Email" placeholder="Email">
-            </div>
-          </div>
         </fieldset>
       </form>
       <div class="col-lg-10 col-lg-offset-2">
         <a href="calendar.html" class="btn btn-primary">Submit</a>
       </div>
-</body>
-
+    </body>
 </html>
