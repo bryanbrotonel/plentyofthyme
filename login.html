@@ -2,74 +2,77 @@
 <html lang="en">
 
 <head>
-  <title>Log In</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <style>
-    .center {
-      text-align: center;
-    }
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <style>
+        .center {
+            text-align: center;
+        }
 
-    h3 {
-      color: green;
-    }
-  </style>
-  <title>Plenty of Thyme - Welcome</title>
+        h3 {
+            color: green;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <title>Plenty of Thyme - Welcome</title>
 </head>
 
 <body class="container middle">
-  <div class="center">
-    <div>
-      <h4 class="visible-xs">Plenty of Thyme</h4>
-      <div class="hidden-xs navigation hide">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="plan.html">Plan</a>
-        <hr/>
-      </div>
-      <ul class="breadcrumb visible-xs">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li class="active">Grocery</li>
-        <li><a href="plan.html">Plan</a></li>
-      </ul>
+    <div class="center">
+
+        <div>
+
+            </ul>
+        </div>
+        <div>
+
+            <br>
+        </div>
+
+    </div>
+    <div class="center">
+        <h1>Plenty of Thyme</h1>
+        <h6>A guide to spending your thyme wisely.</h6>
+        <br>
     </div>
     <div>
-      <!--
-      <h3>Welcome back!</h3>
-      <h6 class="text-muted">What's in store for today?</h6>
-        -->
-      <br>
+
+        <br><br><br><br><br><br>
     </div>
-  </div>
-  <div class="center">
-    <h1>Plenty of Thyme</h1>
-    <h6>A guide to spending your thyme wisely.</h6>
-    <br>
-  </div>
-  <div>
-    <form role="form">
-      <fieldset>
-        <div class="form-group">
-          <input type="text" class="form-control" id="Email" placeholder="Email">
+    <div>
+        <form role="form">
+            <fieldset>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+      <button id="btnLogin" class="btn btn-action">
+      Log in
+    </button>
+        <button id="btnSignUp" class="btn btn-secondary">
+      Sign Up
+    </button>
+        <button id="btnLogout" class="btn btn-action hide">
+      Log out
+    </button>
+    </div>
+    <script src="feature/auth.js"></script>
+        <div>
+            <br>
         </div>
-        <div class="form-group">
-          <input type="password" class="form-control" id="Password" placeholder="Password">
-        </div>
-      </fieldset>
-    </form>
-  </div>
-  <div>
-    <a href="landing.html" class="btn btn-primary">Log In</a>
-    <a href="calendar.html" class="btn btn-primary">Sign Up</a>
-    <a href="calendar.html" class="btn btn-primary hide">Log Out</a>
-  </div>
-  <br>
-  <div>
-    <a href="index.html" class="btn btn-primary">About Us</a>
-  </div>
+        <a href="aboutpot.html" class="btn btn-primary">What we do</a>
+        <a href="aboutus.html" class="btn btn-primary">Who we are</a>
+    </div>
 </body>
 
 </html>
