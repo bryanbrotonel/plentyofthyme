@@ -8,6 +8,36 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <style>
+
+  /* Nav bar */
+
+  ul {
+      font-size: 12px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #332;
+      opacity: 0.8;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover {
+      background-color: #111;
+  }
+  /* /Nav bar*/
+
   ul {
     list-style-type: none;
   }
@@ -20,7 +50,7 @@
   .month {
     padding: 70px 25px;
     width: 100%;
-    background: #5BD359;
+    background: #52BB51;
   }
   /* Month list */
 
@@ -52,7 +82,7 @@
   .weekdays {
     margin: 0;
     padding: 10px 0;
-    background-color: #ddd;
+    background-color: #52BB51;
   }
 
   .weekdays li {
@@ -118,7 +148,7 @@
     height: 40px;
     width: 70px;
     text-align: center;
-    background: #E7C19A;
+    background: #80CE7E;
   }
 
   td.food {
@@ -132,7 +162,7 @@
     border: 2px solid black;
     height: 80px;
     text-align: center;
-    background: #DAC7B4;
+    background: #CFEECE;
   }
 
   .food_list {
@@ -150,18 +180,16 @@
     <div>
       <h1 class="hidden-xs">Plenty of Thyme</h1>
       <h4 class="visible-xs">Plenty of Thyme</h4>
-      <div class="hidden-xs navigation">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="plan.html">Plan</a>
-        <hr/>
-      </div>
-      <ul class="breadcrumb visible-xs">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li class="active">Grocery</li>
-        <li><a href="plan.html">Plan</a></li>
+      <ul>
+          <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
+          </a></li>
+          <li><a href="library.html">Food Library</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+          <li><a href="aboutPOT.html">About PoT</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+
       </ul>
+
     </div>
     <div>
       <h3>Calendar</h3>
