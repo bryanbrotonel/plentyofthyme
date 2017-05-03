@@ -12,7 +12,12 @@
 
     const txtEmail = document.getElementById('Email');
     const txtPassword = document.getElementById('Password');
+    const btnCancel = document.getElementById('btnCancel');
 
+    btnCancel.addEventListener('click', e => {
+      window.location.href='login.html';
+    });
+    
     // create account
     btnSignUp.addEventListener('click', e => {
         // check for real email validation
