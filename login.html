@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+  <title>Log In</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
-
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <style>
     .center {
       text-align: center;
@@ -14,11 +16,12 @@
       color: green;
     }
   </style>
-  <title>Plenty of Thyme :: Welcome</title>
+  <title>Plenty of Thyme - Welcome</title>
 </head>
 
-<body class="container">
+<body class="container middle">
   <div class="center">
+<<<<<<< HEAD
     <div>
       <h1 class="hidden-xs">Plenty of Thyme</h1>
       <h4 class="visible-xs">Plenty of Thyme</h4>
@@ -44,33 +47,33 @@
     </div>
   </div>
   <div class="col-md-3">
+=======
+    <h1>Plenty of Thyme</h1>
+    <h6>A guide to spending your thyme wisely.</h6>
+    <hr>
+>>>>>>> c10625126de440971794a472e771d5367bad33c5
   </div>
-  <div class="col-md-6">
-    <form class="form-horizontal">
+  <div>
+    <form role="form">
       <fieldset>
-        <legend></legend>
         <div class="form-group">
-          <label for="Email" class="col-lg-1 control-label">Email</label>
-          <div class="col-lg-12">
-            <input type="text" class="form-control" id="Email" placeholder="Email">
-          </div>
-          <label for="Password" class="col-lg-1 control-label">Password</label>
-          <div class="col-lg-12">
-            <input type="password" class="form-control" id="Password" placeholder="Password">
-          </div>
+          <input type="text" class="form-control" id="Email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="Password" placeholder="Password">
         </div>
       </fieldset>
     </form>
   </div>
-  <div class="col-md-3">
+  <div>
+    <a href="landing.html" class="btn btn-primary">Log In</a>
+    <a href="calendar.html" class="btn btn-primary">Sign Up</a>
+    <a href="calendar.html" class="btn btn-primary hide">Log Out</a>
   </div>
-    <div class="col-lg-8 col-lg-offset-3">
-      <a href="landing.html" class="btn btn-primary">Log In</a>
-      <a href="signup.html" class="btn btn-primary">Sign Up</a>
-      <a href="aboutPOT.html" class="btn btn-primary">What we do</a>
-      <a href="login.html" class="btn btn-primary hide">Log Out</a>
-
-    </div>
+  <br>
+  <div>
+    <a href="index.html" class="btn btn-primary">About Us</a>
+  </div>
 </body>
 
 </html>
