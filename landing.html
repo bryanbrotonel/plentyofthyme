@@ -9,6 +9,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
+    /* Nav bar */
+
+    ul {
+        font-size: 12px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #332;
+        opacity: 0.8;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+    /* /Nav bar*/
         img {
             width: 100% height: auto;
         }
@@ -33,18 +61,16 @@
             </button>
             <script src='feature/logout.js'></script>
             <h4 class="visible-xs">Plenty of Thyme</h4>
-            <div class="hidden-xs navigation">
-                <a href="landing.html">Home</a>
-                <a href="library.html">Guide</a>
-                <a href="aboutPOT.html">Plan</a>
-                <hr/>
-            </div>
-            <ul class="breadcrumb visible-xs">
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="library.html">Guide</a></li>
-                <li class="active">Grocery</li>
-                <li><a href="aboutPOT.html">About Us</a></li>
+            <ul>
+                <li><a class="active" href="#"><i class="material-icons" style="font-size:17px">home</i>
+                </a></li>
+                <li><a href="library.html">Food Library</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="aboutPOT.html">About PoT</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+
             </ul>
+
         </div>
         <div>
             <h3 class="hide">Grocery</h3>
