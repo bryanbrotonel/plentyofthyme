@@ -43,6 +43,9 @@
         firebase.auth().signOut();
     });
 
+    btnSignUp.addEventListener('click', e=> {
+        window.location.href='signup.html';
+    })
     // add a realtime user
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
