@@ -2,57 +2,86 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <style>
-  .center {
-    text-align: center;
-  }
-  h3 {
-    color: green;
-  }
-  </style>
-  <title>Plenty of Thyme</title>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style>
+    /* Nav bar */
+
+    ul {
+        font-size: 12px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #332;
+        opacity: 0.8;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+    /* /Nav bar*/
+        .center {
+            text-align: center;
+        }
+
+        h3 {
+            color: green;
+        }
+    </style>
+    <title>Plenty of Thyme</title>
 </head>
+
 <body class="container">
-  <div class="center">
-    <div>
-      <h1 class="hidden-xs">Plenty of Thyme</h1>
-      <h4 class="visible-xs">Plenty of Thyme</h4>
-      <div class="hidden-xs navigation">
-        <a href="landing.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="plan.html">Plan</a>
-        <hr/>
-      </div>
-      <ul class="breadcrumb visible-xs">
-        <li><a href="landing.html">Home</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li><a href="groceryList.html">Grocery</a></li>
-        <li><a href="plan.html">Plan</a></li>
-      </ul>
-    </div>
-    <div>
-      <label for="week_vw" class="btn">Week</label>
-      <label for="twowks_vw" class="btn">Two Weeks</label>
-      <label for="month_vw" class="btn">Month</label>
-      <label for="annual_vw" class="btn">Year</label>
-    </div>
-    <div>
-      <label for="bar" class="btn">Bar</label>
-      <label for="pie" class="btn">Pie Chart</label>
-    </div>
-  </br>
-<<<<<<< HEAD
-  <div>
-    <img src="images/piechart.png"
-    alt="pie chart" style="width:304px;height:228px;">
-    </html>
-=======
-  <br />
-    <div>
-      <img src="images/piechart.png"
-      alt="pie chart" style="width:304px;height:228px;">
-  </html>
->>>>>>> ccc41c9e2146654e7561aafe03ca4823afb4aff5
+    <div class="center">
+        <div>
+            <h1 class="hidden-xs">Plenty of Thyme</h1>
+            <h4 class="visible-xs">Plenty of Thyme</h4>
+            <ul>
+                <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
+</a></li>
+                <li><a href="library.html">Food Library</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="aboutPOT.html">About PoT</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <button id="btnLogout" class="btn btn-action">
+              Log out
+          </button>
+                <script src='feature/logout.js'></script>
+
+            </ul>
+
+
+        </div>
+        <div>
+            <label for="week_vw" class="btn">Week</label>
+            <label for="twowks_vw" class="btn">Two Weeks</label>
+            <label for="month_vw" class="btn">Month</label>
+            <label for="annual_vw" class="btn">Year</label>
+        </div>
+        <div>
+            <label for="bar" class="btn">Bar</label>
+            <label for="pie" class="btn">Pie Chart</label>
+        </div>
+        </br>
+
+        <br />
+        <div>
+            <img src="images/piechart.png" alt="pie chart" style="width:304px;height:228px;">
+
+</html>
