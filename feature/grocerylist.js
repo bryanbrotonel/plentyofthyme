@@ -11,10 +11,10 @@
     firebase.initializeApp(config);
 
     // Get elements
-    const itemName1 = document.getElementById('itemName1');
-    const itemPrice1 = document.getElementById('itemPrice1');
+    const itemName1 = document.getElementById('item1name');
+    const itemPrice1 = document.getElementById('item1price');
     const proObject = document.getElementById('object');
-    const btnSubmit = document.getElementById('submit');
+    const btnSubmit = document.getElementById('btnSubmit');
 
     // Create references
     const dbRefObject = firebase.database().ref().child('object');
@@ -22,10 +22,11 @@
     // Sync object changes
     dbRefObject.on('value', snap => {
       preObject.innerText = JSON.stringify(snap.val(), null, 3);
-      console.log(snap.val()));
+      console.log(snap.val());
+    });
 
   function addItem(itemName, itemPrice) {
-  firebase.database().ref('items/' + userId).set({
+  firebase.database().ref().set({
     name: itemName,
     price: itemPrice
   });
