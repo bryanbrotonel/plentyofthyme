@@ -22,10 +22,11 @@
     // Sync object changes
     dbRefObject.on('value', snap => {
       preObject.innerText = JSON.stringify(snap.val(), null, 3);
-      console.log(snap.val()));
+      console.log(snap.val());
+    });
 
   function addItem(itemName, itemPrice) {
-  firebase.database().ref('items/' + userId).set({
+  firebase.database().ref().set({
     name: itemName,
     price: itemPrice
   });
