@@ -11,10 +11,10 @@
     firebase.initializeApp(config);
 
     // Get elements
-    const itemName1 = document.getElementById('itemName1');
-    const itemPrice1 = document.getElementById('itemPrice1');
+    const itemName1 = document.getElementById('item1name');
+    const itemPrice1 = document.getElementById('item1price');
     const proObject = document.getElementById('object');
-    const btnSubmit = document.getElementById('submit');
+    const btnSubmit = document.getElementById('btnSubmit');
 
     // Create references
     const dbRefObject = firebase.database().ref().child('object');
