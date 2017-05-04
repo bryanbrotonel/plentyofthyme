@@ -2,14 +2,65 @@
 <html lang="en">
 
 <head>
+  <title>Plenty of Thyme</title>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <style>
     img {
-      width: 100%
-      height: auto;
+      width: 100% height: auto;
     }
+
+    .center {
+      text-align: center;
+    }
+
+    h3 {
+      color: green;
+    }
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    /* Nav bar */
+
+    ul {
+      font-size: 12px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #332;
+      opacity: 0.8;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+    /* /Nav bar*/
+
+    img {
+      width: 100% height: auto;
+    }
+
     .center {
       text-align: center;
     }
@@ -26,18 +77,20 @@
     <div>
       <h1 class="hidden-xs">Plenty of Thyme</h1>
       <h4 class="visible-xs">Plenty of Thyme</h4>
-      <div class="hidden-xs navigation">
-        <a href="landing.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="aboutPOT.html">Plan</a>
-        <hr/>
-      </div>
-      <ul class="breadcrumb visible-xs">
-        <li><a href="landing.html">Home</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li class="active">Grocery</li>
-        <li><a href="aboutPOT.html">About Us</a></li>
+      <ul>
+        <li><a class="active" href="#"><i class="material-icons" style="font-size:17px">home</i>
+                </a></li>
+        <li><a href="library.html">Food Library</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="aboutPOT.html">About PoT</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <button id="btnLogout" class="btn btn-action">
+                  Log out
+                </button>
+        <script src='feature/logout.js'></script>
+
       </ul>
+
     </div>
     <div>
       <h3 class="hide">Grocery</h3>
@@ -45,24 +98,18 @@
       <br>
     </div>
   </div>
-  <div class="col-md-3 col-md-offset-2 hidden">
-    <a href="foodlist.html" class="btn btn-primary">TO THE CART FAM</a>
+</br>
+  <div class="col-md-4 col-lg-offset-0">
+    <a href="groceryList.html"><img src="images/shoppingcart2.png" alt="cart"
+      style="width:300px;"/></a>
   </div>
-  <div class="col-md-3 col-md-offset-3 hidden">
-    <a href="calendar.html" class="btn btn-primary">TO THE STATS FAM</a>
-
+  <div class="col-md-4 col-lg-offset-0">
+    <a href="stats.html"><img src="images/stats.png" alt="stats"
+      style="width:300px;"/></a>
   </div>
-  <div class="col-md-3 col-md-offset-0">
-    <a href="foodlist.html"><img src="images/shoppingcart2.png" style="height:550px;width:550px;" alt="cart"/></a>
-  </div>
-  <div class="col-md-3 col-md-offset-3">
-    <a href="stats.html"><img src="images/stats.png" alt="stats"/></a>
-  </div>
-  <div class="col-lg-12 col-lg-offset-5 hidden">
-    <a href="calendar.html" class="btn btn-primary">CALENDAR VIEW FAM</a>
-  </div>
-  <div class="col-lg-12 col-lg-offset-3">
-    <a href="calendar.html"><img src="images/calendar.png" style="height:550px;width:550px;" alt="calendar"/></a>
+  <div class="col-md-4 col-lg-offset-0">
+    <a href="calendar.html"><img src="images/calendar.png" alt="calendar"
+      style="width:300px;"/></a>
   </div>
 
 </body>
