@@ -2,70 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>Plenty of Thyme :: Welcome</title>
-  <style>
-    /* Nav bar */
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Plenty of Thyme :: Welcome</title>
+    <style>
+        /* Nav bar */
 
-    ul {
-      font-size: 12px;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #332;
-      opacity: 0.8;
-    }
+        ul {
+            font-size: 12px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #332;
+            opacity: 0.8;
+        }
 
-    li {
-      float: left;
-    }
+        li {
+            float: left;
+        }
 
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-    li a:hover {
-      background-color: #111;
-    }
-    /* /Nav bar*/
-  </style>
+        li a:hover {
+            background-color: #111;
+        }
+        /* /Nav bar*/
+    </style>
 </head>
 
 <body class="container">
-  <div class="center">
-    <div>
-      <h1>Plenty of Thyme</h1>
-      <ul>
-        <li><a class="active" href="groceryList.html"><i class="material-icons" style="font-size:17px">pool</i>
+    <div class="center">
+        <div>
+            <h1>Plenty of Thyme</h1>
+            <ul>
+                <li><a class="active" href="groceryList.html"><i class="material-icons" style="font-size:17px">pool</i>
         </a>
-        </li>
-      </ul>
-    </div>
-    <div>
-    </div>
-    <br>
-    <div>
-      <form role="form">
-        <fieldset>
-          <legend>Cart</legend>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 1</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 1">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
+                </li>
+            </ul>
+        </div>
+        <div>
+        </div>
+        <br>
+        <div>
+            <div>
+                <fieldset>
+                    <legend>Cart</legend>
+                    <div class="form-group">
+                        <label for="Item1" class="col-sm-1 control-label">Item 1</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="item1name" placeholder="Item 1">
+                        </div>
+                        <div class="col-sm-1">
+                            <select class="form-control" id="select">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -73,15 +73,15 @@
                 <option>5</option>
                 <option>5+</option>
               </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" id="item1date" placeholder="date">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="price" class="form-control" id="item1price" placeholder="price">
+                        </div>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="item1select">
               <option>dairy</option>
               <option>vegetables</option>
               <option>fruits</option>
@@ -89,147 +89,17 @@
               <option>meats & alternatives</option>
               <option>miscellaneous</option>
             </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 2</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 2">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 3</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 3">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 4</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 4">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 5</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 5">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
+                        </div>
+                    </div>
+        </div>
         </fieldset>
     </div>
-    </form>
+  </div>
     <br>
     <div class="center">
-      <a href="calendar.html" class="btn btn-primary">Submit</a>
+        <button id="btnSubmit" class="btn btn-action">Submit</button>
     </div>
+    <script src="feature/grocerylist.js"></script>
 </body>
 
 </html>
