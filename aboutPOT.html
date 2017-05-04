@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 
   <title>Plenty of Thyme</title>
 </head>
@@ -48,18 +49,21 @@
     background-color: #111;
   }
   /* /Nav bar*/
+
   .videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 <body>
@@ -92,6 +96,7 @@
     <p>Under the weekly view, a bi-weekly calendar will display the items expiring in the next two weeks, which acts as a convenient reminder. You are able to input the grocery item, its price, and its given expiry date--if a date is not given you are able
       to refer to our 'food guide' chart. You will have the option of deleting items manually or default it to delete itself once it has hit the expiry date. The application will take this information in for a period of time and provide a statistic of
       how much food and money you have wasted.</p>
+  </div>
 </body>
 
 </html>

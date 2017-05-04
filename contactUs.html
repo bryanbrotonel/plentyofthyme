@@ -2,73 +2,65 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <style>
+    h3 {
+      color: green;
+    }
+    /* Nav bar */
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        .center {
-            text-align: center;
-        }
+    ul {
+      font-size: 12px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #332;
+      opacity: 0.8;
+    }
 
-        h3 {
-            color: green;
-        }
+    li {
+      float: left;
+    }
 
-/* Nav bar */
-        ul {
-            font-size: 12px;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #0F420F;
-            opacity: 0.8;
-        }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111;
-        }
-/* /Nav bar*/
-
-    </style>
-    <title>Plenty of Thyme</title>
+    li a:hover {
+      background-color: #111;
+    }
+    /* /Nav bar*/
+  </style>
+  <title>Plenty of Thyme</title>
 </head>
 
 <body class="container">
-    <div class="center">
-        <div>
-            <h1 class="hidden-xs">Plenty of Thyme</h1>
-            <h4 class="visible-xs">Plenty of Thyme</h4>
-            <ul>
-                <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
-                </a></li>
-                <li><a href="library.html">Food Library</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="aboutPOT.html">About PoT</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <button id="btnLogout" class="btn btn-action">
-                  Log out
-                </button>
-                <script src='feature/logout.js'></script>
-            </ul>
-        </div>
-        <br>
+  <div>
+    <div>
+      <h1>Plenty of Thyme</h1>
+      <br>
+      <div>
+        <ul class="nav">
+          <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a></li>
+          <li><a href="library.html">Food Library</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+          <li><a class="active" href="#">About PoT</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><button id="btnLogout" class="btn btn-action">Log out</button></li>
+          <script src='feature/logout.js'></script>
+        </ul>
+      </div>
     </div>
+    </br>
     <div>
       <p>For and questions about Plenty of Thyme or have any problems with your account, please contact us via email.</p>
       <br />
@@ -84,6 +76,7 @@
         Public Relations: <a href="mailto:leesally_@hotmail.com">Sally Lee</a>
       </address>
     </div>
+  </div>
 </body>
 
 </html>
