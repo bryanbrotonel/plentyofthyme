@@ -4,48 +4,37 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>Plenty of Thyme :: Welcome</title>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <title>Cart</title>
 </head>
 
-<body class="container">
-  <div class="center">
+<body>
+  <div class="container">
+    <h1>Plenty of Thyme</h1>
+    <br>
     <div>
-      <h1>Plenty of Thyme</h1>
-      <ul>
-        <li><a class="active" href="groceryList.html"><i class="material-icons" style="font-size:17px">pool</i>
-        </a>
-        </li>
+      <ul class="nav">
+        <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a></li>
+        <li><a href="library.html">Food Library</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="aboutPOT.html">About POT</a></li>
+        <li><a class="active" href="aboutus.html">About Us</a></li>
+        <li><button id="btnLogout" class="btn btn-action">Log out</button></li>
+        <script src='feature/logout.js'></script>
       </ul>
     </div>
-<<<<<<< Updated upstream
-    <h3>Cart</h3>
-    <div class="center col-md-4">
-      <fieldset>
-        <div class="form-group">
-          <label for="Item1" class="control-label">Item 1</label>
-          <input type="text" class="form-control" id="item1name" placeholder="Item 1">
-        </div>
-        <div class="form-group">
-          <select class="form-control" id="select">
-=======
-    <div>
-    </div>
     <br>
-    <div>
-        <fieldset>
-          <legend>Cart</legend>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 1</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 1">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
+    <form class="form-group">
+      <fieldset>
+        <label for="Item1" class="col-sm-1 control-label">Item 1</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="item1" placeholder="Item 1">
+        </div>
+        <div class="col-sm-1">
+          <select class="form-control" id="select">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -53,15 +42,15 @@
                 <option>5</option>
                 <option>5+</option>
               </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
+        </div>
+        <div class="col-sm-2">
+          <input type="date" class="form-control" id="item1" placeholder="date">
+        </div>
+        <div class="col-sm-2">
+          <input type="price" class="form-control" id="item1" placeholder="price">
+        </div>
+        <div class="col-sm-2">
+          <select class="form-control" id="select">
               <option>dairy</option>
               <option>vegetables</option>
               <option>fruits</option>
@@ -69,152 +58,13 @@
               <option>meats & alternatives</option>
               <option>miscellaneous</option>
             </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 2</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 2">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 3</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 3">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
->>>>>>> Stashed changes
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-<<<<<<< Updated upstream
         </div>
       </fieldset>
-=======
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 4</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 4">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-          <br><br>
-          <div class="form-group">
-            <label for="Item1" class="col-sm-1 control-label">Item 5</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="item1" placeholder="Item 5">
-            </div>
-            <div class="col-sm-1">
-              <select class="form-control" id="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </div>
-            <div class="col-sm-2">
-              <input type="date" class="form-control" id="item1" placeholder="date">
-            </div>
-            <div class="col-sm-2">
-              <input type="price" class="form-control" id="item1" placeholder="price">
-            </div>
-            <div class="col-sm-2">
-              <select class="form-control" id="select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-            </div>
-          </div>
-        </fieldset>
->>>>>>> Stashed changes
-    </div>
-    <br>
+    </form>
     <div class="center">
       <a href="calendar.html" class="btn btn-primary">Submit</a>
     </div>
+  </div>
 </body>
 
 </html>
