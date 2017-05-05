@@ -2,24 +2,19 @@
 <html lang="en">
 
 <head>
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
   <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <title>Stats</title>
+</head>
 
+<style>
   img {
     width: 100%;
     height: auto;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  h3 {
-    color: green;
   }
 
   .vertical-line {
@@ -29,51 +24,8 @@
     margin-right: auto;
     width: 1px;
   }
-  </style>
-
-  <style>
-
-  /* Nav bar */
-  ul {
-    font-size: 12px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #332;
-    opacity: 0.8;
-  }
-
-  li {
-    float: left;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    background-color: #111;
-  }
-  /* /Nav bar*/
-
-  img {
-    width: 100% height: auto;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  h3 {
-    color: green;
-  }
-
   /*Table for list of wasted food*/
+
   table {
     border: 2px solid black;
     width: 60%;
@@ -108,14 +60,13 @@
     text-align: center;
     padding: 14px 16px;
   }
-  </style>
-  <title>Plenty of Thyme</title>
-</head>
-<body class="container">
-  <div class="center">
-    <div>
-      <h1 class="hidden-xs">Plenty of Thyme</h1>
-      <h4 class="visible-xs">Plenty of Thyme</h4>
+</style>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <h1>Plenty of Thyme</h1>
+      <br>
       <ul>
         <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
         </a></li>
@@ -128,65 +79,22 @@
       </ul>
     </div>
     <br>
-    <div>
+    <div class="center">
       <label for="week_vw" class="btn btn-default">Week</label>
       <label for="twowks_vw" class="btn btn-default">Two Weeks</label>
       <label for="month_vw" class="btn btn-default">Month</label>
       <label for="annual_vw" class="btn btn-default">Year</label>
-    </div>
-    <br>
-    <div>
+      <br><br>
       <label for="bar" class="btn btn-default">Bar</label>
       <label for="pie" class="btn btn-default">Pie Chart</label>
     </div>
-    <br><br />
-    <div class="col-md-6 col-lg-offset-0">
-      <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
+    <br>
+    <div class="col-md-12 center">
+      <div class="col-md-5 center">
+        <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
+      </div>
+      <div class="col-md-5 center"
     </div>
-    <div class="vertical-line"/>
-      <div class="col-md-8 col-md-offset-0">
-        <h2 style="padding:10px;">Food Wasted: 75%</h2>
-        <table>
-          <thead>
-            <tr>
-              <th class="categories">Fruits:</th>
-              <th class="categories">Vegetables:</th>
-              <th class="categories">Dairy:</th>
-              <th class="categories">Meat & Alternatives:</th>
-              <th class="categories">Miscellaneous:</th>
-            </tr>
-            <tr>
-              <td class="waste_items">
-                <ul class="cat">
-                  <li class="waste_list">Banana</li>
-                  <li class="waste_list">Papaya</li>
-                </ul>
-              </td>
-              <td class="waste_items">
-                <ul class="cat">
-                  <li class="waste_list">Cucumber</li>
-                  <li class="waste_list">Lettuce</li>
-                </ul>
-            </td>
-            <td class="waste_items">
-              <ul class="cat">
-                <li class="waste_list">2% Milk</li>
-                <li class="waste_list">Cheese</li>
-              </ul>
-            </td>
-            <td class="waste_items">
-              <ul class="cat">
-                <li class="waste_list">Soybean</li>
-                <li class="waste_list">Beef Jerky</li>
-              </ul>
-            </td>
-            <td class="waste_items">
-              <ul class="cat">
-                <li class="waste_list">Coco Crunch</li>
-                <li class="waste_list">Jellybeans</li>
-              </ul>
-            </td>
-          </tr>
-        </thead>
-      </table>
-    </html>
+</body>
+
+</html>
