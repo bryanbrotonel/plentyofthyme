@@ -2,18 +2,117 @@
 <html lang="en">
 
 <head>
+  <title>Plenty of Thyme</title>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <style>
-    .center {
-      text-align: center;
-    }
+  img {
+    width: 100% height: auto;
+  }
 
-    h3 {
-      color: green;
-    }
+  .center {
+    text-align: center;
+  }
+
+  h3 {
+    color: green;
+  }
+
+  .vertical-line {
+    border-left: 1px solid #808080;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1px;
+  }
   </style>
+
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+  /* Nav bar */
+  ul {
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #332;
+    opacity: 0.8;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+  /* /Nav bar*/
+
+  img {
+    width: 100% height: auto;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  h3 {
+    color: green;
+  }
+
+  /*Table for list of wasted food*/
+  table {
+    border: 2px solid black;
+    width: 60%;
+    height: 30px;
+    margin: auto;
+  }
+
+  th.categories {
+    padding: 10px;
+    border: 2px solid black;
+    height: 40px;
+    width: 70px;
+    text-align: center;
+  }
+
+  td.waste_items {
+    border: 2px solid black;
+    height: 80px;
+  }
+
+  ul.cat {
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: none;
+  }
+
+  li.waste_list {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  </style>
+
   <title>Plenty of Thyme</title>
 </head>
 <body class="container">
@@ -21,30 +120,74 @@
     <div>
       <h1 class="hidden-xs">Plenty of Thyme</h1>
       <h4 class="visible-xs">Plenty of Thyme</h4>
-      <div class="hidden-xs navigation">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="plan.html">Plan</a>
-        <hr/>
-      </div>
-      <ul class="breadcrumb visible-xs">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li class="active">Grocery</li>
-        <li><a href="plan.html">Plan</a></li>
+      <ul>
+        <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
+        </a></li>
+        <li><a href="library.html">Food Library</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="aboutPOT.html">About PoT</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <button id="btnLogout" class="btn btn-action">Log out</button>
+        <script src='feature/logout.js'></script>
       </ul>
     </div>
+    <br>
     <div>
-      <label for="week_vw" class="btn">Week</label>
-      <label for="twowks_vw" class="btn">Two Weeks</label>
-      <label for="month_vw" class="btn">Month</label>
-      <label for="annual_vw" class="btn">Year</label>
+      <label for="week_vw" class="btn btn-default">Week</label>
+      <label for="twowks_vw" class="btn btn-default">Two Weeks</label>
+      <label for="month_vw" class="btn btn-default">Month</label>
+      <label for="annual_vw" class="btn btn-default">Year</label>
     </div>
+    <br>
     <div>
-      <label for="bar" class="btn">Bar</label>
-      <label for="pie" class="btn">Pie Chart</label>
+      <label for="bar" class="btn btn-default">Bar</label>
+      <label for="pie" class="btn btn-default">Pie Chart</label>
     </div>
-    <div>
-      <img src="image/pie-chart-diagram-statistics-parts-pieces.png"
-      alt="pie chart" style="width:304px;height:228px;">
-  </html>
+    <br><br />
+    <div class="col-md-6 col-lg-offset-0">
+      <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
+    </div>
+    <div class="vertical-line"/>
+    <div class="col-md-8 col-md-offset-0">
+      <h2 style="padding:10px;">Food Wasted: 75%</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="categories">Fruits:</th>
+            <th class="categories">Vegetables:</th>
+            <th class="categories">Dairy:</th>
+            <th class="categories">Meat & Alternatives:</th>
+            <th class="categories">Miscellaneous:</th>
+          </tr>
+          <tr>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Banana</li>
+                <li class="waste_list">Papaya</li>
+              </ul>
+            </td>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Cucumber</li>
+                <li class="waste_list">Lettuce</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">2% Milk</li>
+                <li class="waste_list">Cheese</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                  <li class="waste_list">Soybean</li>
+                  <li class="waste_list">Beef Jerky</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Coco Crunch</li>
+                <li class="waste_list">Jellybeans</li>
+              </ul>
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </html>
