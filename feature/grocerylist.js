@@ -8,7 +8,6 @@
         storageBucket: "plentyofthyme-c301a.appspot.com",
         messagingSenderId: "1087388674603"
     };
-    firebase.initializeApp(config);
 
     var count = 0;
     // Get elements
