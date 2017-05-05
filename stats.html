@@ -28,8 +28,8 @@
     margin-right: auto;
     width: 1px;
   }
-
   </style>
+
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
   <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
@@ -37,7 +37,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
   /* Nav bar */
-
   ul {
     font-size: 12px;
     list-style-type: none;
@@ -77,6 +76,7 @@
     color: green;
   }
 
+  /*Table for list of wasted food*/
   table {
     border: 2px solid black;
     width: 60%;
@@ -90,17 +90,30 @@
     height: 40px;
     width: 70px;
     text-align: center;
-    background: #F6EBDF;
   }
 
-  ul.food {
+  td.waste_items {
     border: 2px solid black;
     height: 80px;
-    text-align: center;
-    background: #F6EBDF;
+    text
   }
 
+  ul.cat {
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: none;
+  }
+
+  li.waste_list {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+  }
   </style>
+
   <title>Plenty of Thyme</title>
 </head>
 <body class="container">
@@ -115,11 +128,8 @@
         <li><a href="contactUs.html">Contact Us</a></li>
         <li><a href="aboutPOT.html">About PoT</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <button id="btnLogout" class="btn btn-action">
-          Log out
-        </button>
+        <button id="btnLogout" class="btn btn-action">Log out</button>
         <script src='feature/logout.js'></script>
-
       </ul>
     </div>
     <br>
@@ -139,8 +149,8 @@
       <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
     </div>
     <div class="vertical-line"/>
-    <div class="col-md-2 col-lg-offset-3">
-      <p style="padding:10px;">Food Wasted: 75%</p>
+    <div class="col-md-8 col-md-offset-0">
+      <h2 style="padding:10px;">Food Wasted: 75%</h2>
       <table>
         <thead>
           <tr>
@@ -148,17 +158,37 @@
             <th class="categories">Vegetables:</th>
             <th class="categories">Dairy:</th>
             <th class="categories">Meat & Alternatives:</th>
-            <th class="categories">Produce:</th>
             <th class="categories">Miscellaneous:</th>
           </tr>
           <tr>
-            <td>
-            <ul class="food">
-              <il>Banana</il>
-              <il>Papaya</il>
-            </ul>
-          </td>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Banana</li>
+                <li class="waste_list">Papaya</li>
+              </ul>
+            </td>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Cucumber</li>
+                <li class="waste_list">Lettuce</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">2% Milk</li>
+                <li class="waste_list">Cheese</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                  <li class="waste_list">Soybean</li>
+                  <li class="waste_list">Beef Jerky</li>
+              </ul>
+            <td class="waste_items">
+              <ul class="cat">
+                <li class="waste_list">Coco Crunch</li>
+                <li class="waste_list">Jellybeans</li>
+              </ul>
+            </td>
           </tr>
         </thead>
       </table>
-      </html>
+    </html>
