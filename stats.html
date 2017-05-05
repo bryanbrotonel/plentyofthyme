@@ -28,6 +28,7 @@
     margin-right: auto;
     width: 1px;
   }
+
   </style>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
@@ -76,6 +77,29 @@
     color: green;
   }
 
+  table {
+    border: 2px solid black;
+    width: 60%;
+    height: 30px;
+    margin: auto;
+  }
+
+  th.categories {
+    padding: 10px;
+    border: 2px solid black;
+    height: 40px;
+    width: 70px;
+    text-align: center;
+    background: #F6EBDF;
+  }
+
+  ul.food {
+    border: 2px solid black;
+    height: 80px;
+    text-align: center;
+    background: #F6EBDF;
+  }
+
   </style>
   <title>Plenty of Thyme</title>
 </head>
@@ -98,19 +122,43 @@
 
       </ul>
     </div>
+    <br>
     <div>
-      <label for="week_vw" class="btn">Week</label>
-      <label for="twowks_vw" class="btn">Two Weeks</label>
-      <label for="month_vw" class="btn">Month</label>
-      <label for="annual_vw" class="btn">Year</label>
+      <label for="week_vw" class="btn btn-default">Week</label>
+      <label for="twowks_vw" class="btn btn-default">Two Weeks</label>
+      <label for="month_vw" class="btn btn-default">Month</label>
+      <label for="annual_vw" class="btn btn-default">Year</label>
     </div>
+    <br>
     <div>
-      <label for="bar" class="btn">Bar</label>
-      <label for="pie" class="btn">Pie Chart</label>
+      <label for="bar" class="btn btn-default">Bar</label>
+      <label for="pie" class="btn btn-default">Pie Chart</label>
     </div>
-  <br><br />
-  <div class="col-md-4 col-lg-offset-0">
-    <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
-  </div>
-  <div class="vertical-line"/>
-</html>
+    <br><br />
+    <div class="col-md-6 col-lg-offset-0">
+      <img src="images/piechart.png" alt="pie chart" style="width:350px;height:300px;" />
+    </div>
+    <div class="vertical-line"/>
+    <div class="col-md-2 col-lg-offset-3">
+      <p style="padding:10px;">Food Wasted: 75%</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="categories">Fruits:</th>
+            <th class="categories">Vegetables:</th>
+            <th class="categories">Dairy:</th>
+            <th class="categories">Meat & Alternatives:</th>
+            <th class="categories">Produce:</th>
+            <th class="categories">Miscellaneous:</th>
+          </tr>
+          <tr>
+            <td>
+            <ul class="food">
+              <il>Banana</il>
+              <il>Papaya</il>
+            </ul>
+          </td>
+          </tr>
+        </thead>
+      </table>
+      </html>
