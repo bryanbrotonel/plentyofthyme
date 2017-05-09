@@ -13,7 +13,7 @@
         td {
             padding: 10px;
         }
-        
+
         th {
             padding: 10px;
             font-size: 120%;
@@ -52,6 +52,16 @@
         <div class=".table-responsive col-lg-offset-2">
             <table class="table-hover">
                 <caption style="font-size:15px;"> Fridge and Freezer Storage </caption>
+                <div class="search_bar">
+                  <input type="search" id="mySearch" placeholder="Search">
+                  <button onclick="myFunction()">Search</button>
+                  <script>
+                    function myFunction() {
+                        var x = document.getElementById("mySearch").placeholder;
+                        document.getElementById("").innerHTML = x;
+                    }
+                  </script>
+                </div>
                 <tbody>
                     <tr class="active">
                         <th>Food</th>
@@ -373,7 +383,7 @@
             </table></div>
     <br />
         </div>
-    
+
             <div class="footer">
                 <div>
                     <div> MEDIA CONNECTIONS </div>
