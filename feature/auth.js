@@ -15,7 +15,6 @@
     const txtPassword = document.getElementById('txtPassword');
     const btnLogin = document.getElementById('btnLogin');
     const btnSignUp = document.getElementById('btnSignUp');
-    const btnLogout = document.getElementById('btnLogout');
 
     // login
     btnLogin.addEventListener('click', e => {
@@ -38,10 +37,6 @@
         promise.catch(e => console.log(e.message));
     });
 
-    // log out
-    btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-    });
 
     btnSignUp.addEventListener('click', e=> {
         window.location.href='signup.html';
@@ -50,11 +45,9 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
             window.location.href = 'landing.html';
         } else {
             console.log('not logged in');
-            btnLogout.classList.add('hide');
         }
     });
 }());
