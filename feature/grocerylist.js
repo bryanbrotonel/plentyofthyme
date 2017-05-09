@@ -1,13 +1,4 @@
 (function() {
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBWQ0DKA_LDHLrsNEUkFRxh8Dr9rKKnTVA",
-        authDomain: "plentyofthyme-c301a.firebaseapp.com",
-        databaseURL: "https://plentyofthyme-c301a.firebaseio.com",
-        projectId: "plentyofthyme-c301a",
-        storageBucket: "plentyofthyme-c301a.appspot.com",
-        messagingSenderId: "1087388674603"
-    };
 
     var count = 0;
     // Get elements
@@ -15,27 +6,36 @@
     const itemPrice1 = document.getElementById('item1price');
     const proObject = document.getElementById('object');
     const btnSubmit = document.getElementById('btnSubmit');
+
     const select = document.getElementById('select');
     const itemDate1 = document.getElementById('item1date');
     const itemSelect1 = document.getElementById('item1select');
 
-    // Create references
-    const dbRefObject = firebase.database().ref().child('object');
-
-    // Sync object changes
-    // dbRefObject.on('value', snap => {
-    //   preObject.innerText = JSON.stringify(snap.val(), null, 3);
-    //   console.log(snap.val());
-    // });
+    // Create ref
+    // var user = firebase.auth().currentUser;
+    // if (user != null) {
+    //   name = user.displayName;
+    // }
+    var user1;
+    var name;
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        user1 = firebase.auth().currentUser;
+        name = user1.uid;
+        console.log(name);
+      } else {
+        window.location.href='login.html';
+      }
+    });
 
   function addItem(itemName, itemPrice, itemDate, itemCat, amount) {
-  firebase.database().ref().child('items').push({
-    name: itemName,
-    price: itemPrice,
-    date: itemDate,
-    category: itemCat,
-    quantity: amount
-  });
+    firebase.database().ref().child('users/' + user1.uid).child('items').push({
+      name: itemName,
+      price: itemPrice,
+      date: itemDate,
+      category: itemCat,
+      quantity: amount
+    });
 
   }
 
