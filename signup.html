@@ -9,23 +9,7 @@
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
   <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
-  <style>
-    .middle {
-      display: flex;
-      min-height: 100vh;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    .center {
-      text-align: center;
-    }
-  </style>
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <title>Plenty of Thyme</title>
 </head>
 
@@ -34,22 +18,24 @@
     <div class="center">
       <h1>Plenty of Thyme</h1>
       <h6>A guide to spending your thyme wisely.</h6>
-      <hr>
     </div>
     <div>
+      <filedset>
         <div class="form-group">
           <input type="email" class="col-lg-1 form-control" id="Email" placeholder="Email">
         </div>
         <div class="form-group">
           <input type="password" class=" col-lg-1 form-control" id="Password" placeholder="Password">
         </div>
-      </div>
-        <div class="col-lg-12">
-          <button id="btnSignUp" class="btn btn-action">Sign Up</button>
-          <button id="btnCancel" class="btn btn-action">Cancel</button>
-          <script src="feature/signup.js"></script>
-        </div>
-      </fieldset>
+        </fieldset>
+    </div>
+    <br>
+    <div class="center col-lg-12">
+      <button id="btnSignUp" class="btn btn-action">Sign Up</button>
+      <button id="btnCancel" class="btn btn-action">Cancel</button>
+      <script src="feature/signup.js"></script>
+    </div>
   </div>
 </body>
+
 </html>
