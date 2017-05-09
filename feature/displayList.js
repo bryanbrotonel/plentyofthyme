@@ -4,9 +4,13 @@ var name;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     user1 = firebase.auth().currentUser;
-    name = user1.uid;
-    var starCountRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
-    starCountRef.on('value', function(snapshot) {
+
+    // Get elements
+    const uiList = document.getElementById('list');
+    user1 = firebase.auth().currentUser;
+    var itemRef = firebase.database().ref('users/' + user1.uid).child('items');
+    itemRef.on('value', function(snapshot) {
+      snapshot.val();
       console.log(snapshot.val());
     });
     console.log(name);
@@ -14,9 +18,3 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.location.href='login.html';
   }
 });
-
-
-
-// Get elements
-const uiList = document.getElementById('list');
-user1 = firebase.auth().currentUser;

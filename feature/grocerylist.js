@@ -36,7 +36,6 @@
       category: itemCat,
       quantity: amount
     });
-
   }
 
   btnSubmit.addEventListener('click', e => {
