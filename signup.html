@@ -9,31 +9,40 @@
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <link rel="stylesheet" href="css/yeti/bootstrap.css" />
   <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg"/>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <title>Plenty of Thyme</title>
 </head>
 
 <body>
   <div class="container middle">
     <div class="center">
-      <h1>Plenty of Thyme</h1>
-      <h6>A guide to spending your thyme wisely.</h6>
+        <img style="height: 230px" src="images/logo.png" />
+        <h1>Plenty of Thyme</h1>
+        <h6>A guide to spending your thyme wisely.</h6>
+        <br>
     </div>
-    <div>
-      <filedset>
+      <fieldset>
         <div class="form-group">
-          <input type="email" class="col-lg-1 form-control" id="Email" placeholder="Email">
-        </div>
-        <div class="form-group">
+          <input type="text" style="width: 300px" class="col-lg-1 form-control" id="fName" placeholder="First Name">
+          <input type="text" style="width: 300px" class="col-lg-1 form-control" id="lName" placeholder="Last Name">
+          <input type="email" style="width: 300px" class="col-lg-1 form-control" id="Email" placeholder="Email">
           <input type="password" class=" col-lg-1 form-control" id="Password" placeholder="Password">
         </div>
         </fieldset>
-    </div>
     <br>
     <div class="center col-lg-12">
-      <button id="btnSignUp" class="btn btn-action">Sign Up</button>
-      <button id="btnCancel" class="btn btn-action">Cancel</button>
+      <button id="btnSignUp" style="width: 150px" class="btn btn-action">Sign Up</button>
+      <button id="btnCancel" style="width: 150px" class="btn btn-action">Cancel</button>
+    </div>
       <script src="feature/signup.js"></script>
+      <br/>
+      <div>
+      <a style="width: 150px" href="aboutpot-nolog.html" class="btn btn-primary">What we do</a>
+      <a style="width: 150px" href="aboutus-nolog.html" class="btn btn-primary">Who we are</a>
     </div>
   </div>
 </body>
