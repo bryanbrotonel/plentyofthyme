@@ -11,10 +11,13 @@
     firebase.initializeApp(config);
 
     const preObject = document.getElementById('object');
-    const dbRefList = preOjbect.child(items);
+
+    const dbRefObject = firebase.database().ref().child('users/');
+    const dbRefList = preOjbect.child('items');
 
     dbRefObject.on('value', snap => {
       preObject.innerText = JSON.stringify(snap.val(), null, 3);
     });
+
 
 }());
