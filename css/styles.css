@@ -12,8 +12,13 @@ h1 {
   text-align: center;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #332;
+}
 
-
+a {
+    color: #294;
+}
 
 .middle {
   display: flex;
