@@ -28,14 +28,33 @@
       }
     });
 
+    function isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
   function addItem(itemName, itemPrice, itemDate, itemCat, amount) {
-    firebase.database().ref().child('users/' + user1.uid).child('items').push({
-      name: itemName,
-      price: itemPrice,
-      date: itemDate,
-      category: itemCat,
-      quantity: amount
-    });
+    if (!isNumber(itemPrice)) {
+      window.alert('Please enter a valid price');
+      console.log('invalid price');
+      return;
+    }
+    if(itemName != "" && itemPrice != "" && isNumber(itemPrice) && itemDate != "" && itemCat != "" && amount != "") {
+      firebase.database().ref().child('users/' + user1.uid).child('items').push({
+        name: itemName,
+        price: itemPrice,
+        date: itemDate,
+        category: itemCat,
+        quantity: amount
+      });
+      document.getElementById('item1name').value = "";;
+      document.getElementById('item1price').value = "";
+      document.getElementById('select').value = "";
+      document.getElementById('item1date').value = "";
+      document.getElementById('item1select').value = "";
+    } else {
+      window.alert('Please fill in all fields.');
+      console.log('missing fields');
+    }
   }
 
   btnSubmit.addEventListener('click', e => {
@@ -45,11 +64,6 @@
     const cat = itemSelect1.value;
     var iSelect = select.value;
     addItem(iName, iPrice, iDate, cat, iSelect);
-    document.getElementById('item1name').value = "";;
-    document.getElementById('item1price').value = "";
-    document.getElementById('select').value = "";
-    document.getElementById('item1date').value = "";
-    document.getElementById('item1select').value = "";
   });
 
 }());

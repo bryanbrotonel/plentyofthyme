@@ -1,7 +1,7 @@
 
 var user1;
 var name;
-var btnSubmit = document.getElementById('ihatejs');
+var btnSubmit = document.getElementById('btnSubmit');
 console.log(btnSubmit);
 
 btnSubmit.addEventListener('click', e => {
@@ -17,7 +17,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     user1 = firebase.auth().currentUser;
     var itemRef = firebase.database().ref('users/' + user1.uid).child('items');
     itemRef.on('value', function(snapshot) {
-      snapshot.val();
+      uiList.innerText = JSON.stringify(snapshot.val(), null, 2);
       console.log(snapshot.val());
     });
     console.log(name);
