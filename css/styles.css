@@ -8,7 +8,7 @@ html {
   width: 100%;
 }
 
-li.nav.nabar-nav {
+li.nav.navbar-nav {
   float: top;
   color: green;
   display: block;
@@ -131,27 +131,20 @@ h3 {
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: center;
-  background-repeat: no-repeat;
 
-  width: 500px;
+  width: 100%;
   font-size: 14px;
-  padding: 12px 16px 12px 18px;
-  border: 1px solid #ddd;
   margin-bottom: 12px;
 }
 
 #myTable {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #ddd;
   font-size: 14px;
 }
 
 #myTable th, #myTable td {
   text-align: left;
   padding: 12px;
-}
-
-#myTable tr {
-  border-bottom: 1px;
+  width: auto;
 }
