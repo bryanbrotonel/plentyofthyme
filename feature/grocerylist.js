@@ -33,12 +33,12 @@
     }
 
   function addItem(itemName, itemPrice, itemDate, itemCat, amount) {
-    if (!isNumber(itemPrice)) {
-      window.alert('Please enter a valid price');
-      console.log('invalid price');
-      return;
-    }
-    if(itemName != "" && itemPrice != "" && isNumber(itemPrice) && itemDate != "" && itemCat != "" && amount != "") {
+    if(itemName != "" && itemPrice != "" && itemDate != "" && itemCat != "" && amount != "") {
+      if (!isNumber(itemPrice)) {
+        Materialize.toast('Please enter a valid price', 4000);
+        console.log('invalid price');
+        return;
+      }
       firebase.database().ref().child('users/' + user1.uid).child('items').push({
         name: itemName,
         price: itemPrice,
@@ -46,14 +46,14 @@
         category: itemCat,
         quantity: amount
       });
-      window.alert('Successfully added ' + itemName + '.');
+      Materialize.toast('Successfully added ' + itemName + '.', 4000);
       document.getElementById('item1name').value = "";;
       document.getElementById('item1price').value = "";
       document.getElementById('select').value = "";
       document.getElementById('item1date').value = "";
       document.getElementById('item1select').value = "";
     } else {
-      window.alert('Please fill in all fields.');
+      Materialize.toast('Please fill in all fields.', 4000);
       console.log('missing fields');
     }
   }

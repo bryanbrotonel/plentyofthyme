@@ -25,11 +25,18 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+        if (email == "") {
+          Materialize.toast('Please enter your email.', 4000);
+          return;
+        }
+        if (pass == "") {
+          Materialize.toast('Please enter your password', 4000);
+          return;
+        }
 
         const promise = auth.createUserWithEmailAndPassword(email, pass);
-        promise.catch(e => window.alert(e.message));
+        promise.catch(e => Materialize.toast(e.message, 4000));
         promise.catch(e => console.log(e.message));
-        document.getElementById('Email').value = "";
         document.getElementById('Password').value = "";
 
     });
