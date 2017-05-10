@@ -43,8 +43,8 @@
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
-        window.alert("Account successfully created!");
-        window.location.href="landing.html";
+        Materialize.toast("Account successfully created!", 4000);
+        setTimeout(function(){window.location.href='landing.html'; }, 500);
         console.log(firebaseUser);
       } else {
         console.log('not logged in');
