@@ -1,6 +1,6 @@
 (function() {
     btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
-        window.location.href = 'login.html';
+        Materialize.toast('Successfully logged out!', 4000);
     });
 }());
