@@ -28,14 +28,23 @@
       }
     });
 
+    function isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
   function addItem(itemName, itemPrice, itemDate, itemCat, amount) {
-    firebase.database().ref().child('users/' + user1.uid).child('items').push({
-      name: itemName,
-      price: itemPrice,
-      date: itemDate,
-      category: itemCat,
-      quantity: amount
-    });
+    if(itemName != "" && itemPrice != "" && isNumber(itemPrice) && itemDate != "" && itemCat != "" && amount != "") {
+      firebase.database().ref().child('users/' + user1.uid).child('items').push({
+        name: itemName,
+        price: itemPrice,
+        date: itemDate,
+        category: itemCat,
+        quantity: amount
+      });
+    } else {
+      window.alert('Please fill in all fields.');
+      console.log('missing fields');
+    }
   }
 
   btnSubmit.addEventListener('click', e => {
