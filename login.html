@@ -2,38 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>Log In</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <title>Plenty of Thyme - Welcome</title>
+  <title>Log In</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 
 <body>
-    <div class="container middle">
-        <div class="center">
-            <img style="height: 230px" src="images/logo.png" />
-            <h1>Plenty of Thyme</h1>
-            <h6>A guide to spending your thyme wisely.</h6>
-            <br>
+  <div class="container middle">
+    <div class="center">
+      <img style="height: 230px" src="images/logo.png" />
+      <h2>Plenty of Thyme</h2>
+      <h6>A guide to spending your thyme wisely.</h6>
+      <br>
+    </div>
+    <div>
+      <form>
+        <div class="form-group input-field">
+          <input type="email" style="width: 300px" id="txtEmail">
+          <label for="txtEmail">Email</label>
         </div>
-        <div>
-            <fieldset>
-                <div class="form-group">
-                    <input type="email" class="form-control" style="width: 300px" id="txtEmail" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="txtPassword" placeholder="Password">
-                </div>
-            </fieldset>
+        <div class="form-group input-field">
+          <input type="password" class="input-field" id="txtPassword">
+          <label for="txtPassword">Password</label>
         </div>
+      </form>
+    </div>
 
+<<<<<<< HEAD
+    <div>
+      <br/>
+      <button style="width: 150px" id="btnLogin" class="btn btn-action">Log in</button>
+      <button style="width: 150px" id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+      <script src="feature/auth.js"></script>
+    </div>
+    <div>
+      <br/>
+      <a style="width: 150px" href="aboutpot-nolog.html" class="btn btn-primary">What we do</a>
+      <a style="width: 150px" href="aboutus-nolog.html" class="btn btn-primary">Who we are</a>
+=======
         <div>
             <br/>
             <button style="width: 150px" id="btnLogin" class="btn btn-action waves-effect waves-light">
@@ -49,7 +62,9 @@
             <a style="width: 150px" href="aboutpot-nolog.html" class="btn btn-primary waves-effect waves-light">What we do</a>
             <a style="width: 150px" href="aboutus-nolog.html" class="btn btn-primary waves-effect waves-light">Who we are</a>
         </div>
+>>>>>>> claidev2
     </div>
+  </div>
 </body>
 
 </html>
