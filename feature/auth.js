@@ -22,8 +22,12 @@
         const pass = txtPassword.value;
         const auth = firebase.auth();
 
+        if (email != "" && pass != "") {
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
+      } else {
+        Materialize.toast('Please fill all required fields!', 4000)
+      }
     });
 
     // create account
