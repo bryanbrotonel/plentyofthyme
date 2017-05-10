@@ -6,6 +6,17 @@
     width: 100%;
 }
 
+
+li.nav.nabar-nav {
+    float: top;
+    color: green;
+    display: block;
+}
+
+
+
+
+
 h1 {
     text-align: center;
 }
@@ -68,42 +79,8 @@ hr {
 #myNavbar .navbar-nav > li a:hover{
   background: #547F4F;
   position: sticky;
+    color:green;
 }
-
-
-/* Nav bar */
-
-
-/*
-ul {
-  font-size: 12px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #16440E;
-  opacity: 0.8;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-*/
-
-
-/* /Nav bar*/
 
 h3 {
     color: green;
