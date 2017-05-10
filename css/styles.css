@@ -130,7 +130,7 @@ h3 {
 /*Search bar implementation*/
 #myInput {
   background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
+  background-position: center;
   background-repeat: no-repeat;
 
   width: 500px;
