@@ -46,6 +46,7 @@
         category: itemCat,
         quantity: amount
       });
+      window.alert('Successfully added ' + itemName + '.');
       document.getElementById('item1name').value = "";;
       document.getElementById('item1price').value = "";
       document.getElementById('select').value = "";
