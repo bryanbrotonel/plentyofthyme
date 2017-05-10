@@ -14,6 +14,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
   } else {
-    window.location.href='login.html';
+    setTimeout(function(){window.location.href='login.html'; }, 500);
   }
 });

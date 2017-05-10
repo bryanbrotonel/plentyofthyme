@@ -22,7 +22,8 @@
         const pass = txtPassword.value;
         const auth = firebase.auth();
 
-        if (email != "" && pass != "") {
+      if (email != "" && pass != "") {
+        Materialize.toast('Log in successful!', 4000);
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
       } else {
