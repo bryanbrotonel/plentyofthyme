@@ -1,6 +1,13 @@
 
 var user1;
 var name;
+var btnSubmit = document.getElementById('ihatejs');
+console.log(btnSubmit);
+
+btnSubmit.addEventListener('click', e => {
+  window.location.href='cart.html';
+});
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     user1 = firebase.auth().currentUser;
