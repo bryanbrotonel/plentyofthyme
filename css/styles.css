@@ -8,12 +8,6 @@ html {
   width: 100%;
 }
 
-li.nav.navbar-nav {
-  float: top;
-  color: green;
-  display: block;
-}
-
 h1 {
   text-align: center;
 }
@@ -22,18 +16,8 @@ h1 {
   text-align: center;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border-color: #16440E;
-}
-
 a {
   color: #294;
-}
-
-#btnLogout {
-  position: absolute;
-  right: 0;
-  background: #547F4F;
 }
 
 .material-icons {
@@ -64,18 +48,8 @@ hr {
   border-bottom: 1px solid gray;
 }
 
-.navbar, .navbar-inverse {
-  background-color: #173F13;
-}
-
 .center {
   text-align: center;
-}
-
-#myNavbar .navbar-nav>li a:hover {
-  background: #547F4F;
-  position: sticky;
-  color: green;
 }
 
 h3 {
