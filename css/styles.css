@@ -140,3 +140,8 @@ div.footer-copyright{
   padding: 12px;
   width: auto;
 }
+
+#cntnr {
+  background: black;
+  background: rgba(0, 0, 0, 0.54);
+}
