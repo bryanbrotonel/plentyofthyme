@@ -103,10 +103,8 @@ h3 {
 
 /*Media connections*/
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
+  background: transparent;
+  margin: auto;
 }
 
 .fa:hover {
@@ -114,19 +112,9 @@ h3 {
   color: white;
 }
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
+.e-mail {
+  font-size: 16px;
+  margin: auto;
 }
 
 /*Search bar implementation*/
