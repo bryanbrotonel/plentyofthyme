@@ -8,8 +8,6 @@
 body {
     color:white;
     
-
-    
 }
 
 <<<<<<< HEAD
@@ -98,10 +96,10 @@ hr {
   height: 80px;
 }
 
-.footer {
-  background-color: #16440E;
+footer.page-footer {
+  background-color: rgba(57, 38, 7, 0.85);
   color: white;
-  text-align: center;
+  /*text-align: center;*/
   min-height: 85px;
   width: 100%;
   vertical-align: bottom;
