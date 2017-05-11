@@ -18,88 +18,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <title>Cart</title>
 </head>
-<!--
 <body>
-  <div class="container">
-    <div class="page_div">
-      <div class="center ">
-        <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-        <h4 class="visible-xs">Plenty of Thyme</h4>
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a>
-                  <li><a href="library.html">Food Library</a></li>
-                  <li><a href="contactUs.html">Contact Us</a></li>
-                  <li><a href="aboutPOT.html">About PoT</a></li>
-                  <li><a href="aboutus.html">About Us</a></li>
-                  <button id="btnLogout" class="btn btn-action"> Log out </button>
-                  <script src='feature/logout.js'></script>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <br>
-      <div class="form-group">
-        <fieldset>
-          <label for="Item1" class="col-sm-12 control-label">Item Name</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="item1name" placeholder="Item 1"> </div>
-          <label for="select" class="col-sm-12 control-label">Quantity</label>
-          <div class="col-sm-12">
-            <select class="form-control" id="select">
-            -->
-
-<body>
-<<<<<<< Updated upstream
-    <div class="container">
-        <div class="page_div">
-            <div class="center">
-                <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-                <h4 class="visible-xs">Plenty of Thyme</h4>
-                <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-                        <div class="collapse navbar-collapse" id="myNavbar">
-                            <ul class="nav navbar-nav">
-                                <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a>
-                                    <li><a href="library.html">Food Library</a></li>
-                                    <li><a href="contactUs.html">Contact Us</a></li>
-                                    <li><a href="aboutPOT.html">About PoT</a></li>
-                                    <li><a href="aboutus.html">About Us</a></li>
-                                    <button id="btnLogout" class="btn btn-action"> Log out </button>
-                                    <script src='feature/logout.js'></script>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-=======
   <div class="container">
     <div class="page_div">
       <div class="center">
         <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
         <h4 class="visible-xs">Plenty of Thyme</h4>
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a>
-                  <li><a href="library.html">Food Library</a></li>
-                  <li><a href="contactUs.html">Contact Us</a></li>
-                  <li><a href="aboutPOT.html">About PoT</a></li>
-                  <li><a href="aboutus.html">About Us</a></li>
-                  <button id="btnLogout" class="btn btn-action"> Log out </button>
-                  <script src='feature/logout.js'></script>
-              </ul>
->>>>>>> Stashed changes
-            </div>
+        <nav class="top-nav green">
+          <div class="nav-wrapper">
+            <a class="brand-logo">Plenty of Thyme</a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="library.html">Food Library</a></li>
+              <li><a href="aboutPOT.html">About PoT</a></li>
+              <li class="active"><a>About Us</a></li>
+              <li><a href="contactUs.html">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+              <script src='feature/logout.js'></script>
+            </ul>
+            <ul id="slide-out" class="side-nav hide-on-large-only">
+              <li><a class="center" href="library.html">Food Library</a></li>
+              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+              <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+              <li><a class="center" href="contactUs.html">Contact Us</a></li>
+              <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
+              <script src='feature/logout.js'></script>
+            </ul>
           </div>
         </nav>
       </div>
@@ -134,187 +78,6 @@
                             <option>meats & alternatives</option>
                             <option>miscellaneous</option>
                         </select>
-            <!--
-<<<<<<< HEAD
-=======
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
-              <li><a href="library.html">Food Library</a></li>
-              <li><a href="contactUs.html">Contact Us</a></li>
-              <li><a href="aboutPOT.html">About PoT</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-              <button id="btnLogout" class="btn btn-action waves-effect waves-light">
-                          Log out
-                        </button>
-              <script src='feature/logout.js'></script>
-            </ul>
->>>>>>> claidev2
-          </div>
-        </fieldset>
-        <br>
-        <div class="center">
-          <script src='js/addinput.js'></script>
-          <input type="button" class="btn" value="Add Item" onClick="addinput('dynamicInput');">
-        </div>
-        <div class="home_menu">
-          <div class="col-xs-12 " align="center">
-            <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-          </div>
-        </div>
-        <div class="home_menu">
-          <div class="col-xs-12 " align="center">
-            <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-          </div>
-        </div>
-        <div class="center">
-          <button class="btn btn-primary" id='btnSubmit'>Submit</button>
-        </div>
-        <script src='feature/grocerylist.js'>
-        </script>
-      </div>
-      <div class="home_menu">
-        <div class="col-xs-12 " align="center">
-          <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-        </div>
-      </div>
-    </div>
-  </div>
-=======
-<!--
-                    </div>
-                </fieldset>
-                <br>
-                <div class="center">
-                    <input type="button" class="btn" value="Add Item" onClick="addinput('dynamicInput');"> </div>
-                </form>
-                <div class="home_menu">
-                    <div class="col-xs-12 " align="center">
-                        <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                    </div>
-                </div>
-                <div class="home_menu">
-                    <div class="col-xs-12 " align="center">
-                        <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                    </div>
-                </div>
-                <div class="center">
-                    <button class="btn btn-primary" id='btnSubmit'>Submit</button>
-                </div>
-                <script src='feature/grocerylist.js'>
-                </script>
-            </div>
-            <div class="home_menu">
-                <div class="col-xs-12 " align="center">
-                    <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                </div>
-<<<<<<< HEAD
-<!--
-
-                <body>
-                    <div class="container">
-                        <div class="page_div">
-                            <div class="center ">
-                                <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-                                <h4 class="visible-xs">Plenty of Thyme</h4>
-                                <nav class="navbar navbar-inverse">
-                                    <div class="container-fluid">
-                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                                        <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-                                        <div class="collapse navbar-collapse" id="myNavbar">
-                                            <ul class="nav navbar-nav">
-                                                <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i></a>
-                                                    <li><a href="library.html">Food Library</a></li>
-                                                    <li><a href="contactUs.html">Contact Us</a></li>
-                                                    <li><a href="aboutPOT.html">About PoT</a></li>
-                                                    <li><a href="aboutus.html">About Us</a></li>
-                                                    <button id="btnLogout" class="btn btn-action"> Log out </button>
-                                                    <script src='feature/logout.js'></script>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <fieldset>
-                                    <label for="Item1" class="col-sm-12 control-label">Item Name</label>
-                                    <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="item1name" placeholder="Item 1"> </div>
-                                    <label for="select" class="col-sm-12 control-label">Quantity</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-control" id="select">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>5+</option>
-                                        </select>
-                                    </div>
-                                    <br/>
-                                    <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
-                                    <div class="col-sm-12">
-                                        <input type="date" class="form-control" id="item1date" placeholder="date"> </div>
-                                    <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="item1price" placeholder="price"> </div>
-                                    <label for="item1select" class="col-sm-12 control-label">Categorys</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-control" id="item1select">
-                                            <option>dairy</option>
-                                            <option>vegetables</option>
-                                            <option>fruits</option>
-                                            <option>produce</option>
-                                            <option>meats & alternatives</option>
-                                            <option>miscellaneous</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-                                <br>
-                                <div class="center">
-                                    <input type="button" class="btn" value="Add Item" onClick="addinput('dynamicInput');"> </div>
-                                <div class="home_menu">
-                                    <div class="col-xs-12 " align="center">
-                                        <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                                    </div>
-                                </div>
-                                <div class="home_menu">
-                                    <div class="col-xs-12 " align="center">
-                                        <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                                    </div>
-                                </div>
-                                <div class="center">
-                                    <button class="btn btn-primary" id='btnSubmit'>Submit</button>
-                                </div>
-                                <script src='feature/grocerylist.js'>
-                                </script>
-                            </div>
-                            <div class="home_menu">
-                                <div class="col-xs-12 " align="center">
-                                    <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </body>
-            </div>
-        </div>
-
-=======
-                <label for="item1select" class="col-sm-12 control-label">Categorys</label>
-
-                <div class="col-sm-12">
-                    <select class="form-control" id="item1select">
-              <option>dairy</option>
-              <option>vegetables</option>
-              <option>fruits</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-        </div>
-      -->
-<<<<<<< Updated upstream
       </fieldset>
       <br>
       <div class="center">
@@ -339,7 +102,6 @@
     <div class="home_menu">
       <div class="col-xs-12 " align="center">
           <a href="grocerylist.html"><img src="images/back.png" alt="GO BACK" style="width:70px;"/></a>
-=======
         </fieldset>
         <br>
         <div class="center">
@@ -367,7 +129,7 @@
           </div>
         </div>
         <script src='feature/grocerylist.js'></script>
->>>>>>> Stashed changes
+        <script src='feature/navbar.js'></script>
       </div>
 </body>
 
