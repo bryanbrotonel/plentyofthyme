@@ -21,28 +21,31 @@
 </head>
 
 <body>
+    <nav class="top-nav green">
+    <div class="nav-wrapper">
+      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="library.html">Food Library</a></li>
+        <li><a href="aboutPOT.html">About PoT</a></li>
+        <li><a>About Us</a></li>
+        <li class="active"><a href="#">Contact Us</a></li>
+        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+        <script src='feature/logout.js'></script>
+      </ul>
+      <ul id="slide-out" class="side-nav hide-on-large-only">
+        <li><a class="center" href="library.html">Food Library</a></li>
+        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+        <li><a class="center" href="aboutus.html">About Us</a></li>
+        <li class="active"><a class="center" href="#">Contact Us</a></li>
+        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+        <script src='feature/logout.js'></script>
+      </ul>
+    </div>
+  </nav>
     <div class="container">
         <div class="center">
-            <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-            <h4 class="visible-xs">Plenty of Thyme</h4>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
-                        </a></li>
-                            <li><a href="library.html">Food Library</a></li>
-                            <li><a class="active" href="#">Contact Us</a></li>
-                            <li><a href="aboutPOT.html">About PoT</a></li>
-                            <li><a href="aboutus.html">About Us</a></li>
-                            <button id="btnLogout" class="btn btn-action waves-effect waves-light"> Log out </button>
-                            <script src='feature/logout.js'></script>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            
         </div>
         <div class="center">
             <div class="hidden-xs">
@@ -86,4 +89,16 @@
 
 </body>
 
+    <script>
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+
+  $('.button-collapse').sideNav({
+    menuWidth: 200, // Default is 300
+    edge: 'left', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true // Choose whether you can drag to open on touch screens
+  });
+</script>
+    
 </html>
