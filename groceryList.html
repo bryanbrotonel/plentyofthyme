@@ -25,13 +25,24 @@
             text-align: left;
         }
     </style>
+    <style>
+        body{
+            background-image: url(images/thyme+background3.jpg);
+        }
+        td {
+            padding: 10px;
+        }
+
+        th {
+            padding: 10px;
+            font-size: 120%;
+        }
+    </style>
     <title>Plenty of Thyme</title>
 </head>
 
-<body class="container">
+<body>
     <div class="center">
-        <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-        <h4 class="visible-xs">Plenty of Thyme</h4>
         <nav class="top-nav green">
           <div class="nav-wrapper">
             <a class="brand-logo">Plenty of Thyme</a>
@@ -53,18 +64,20 @@
           </div>
         </nav>
     </div>
-    <div class="center">
+    <br/>
+    <div class="container center" style="width: 80%; background-color:black; opacity: 0.6">
         <h1 style="color: green;">Grocery List</h1>
         <h4 class="text-muted">What's in your fridge?</h4>
-        <button id='btnSubmit' class="waves-effect waves-light btn btn-action" style="height: 70px; width:100%; font-size:30px;">Add to List +</button>
+        <button id='btnSubmit' class="waves-effect waves-light btn btn-action" style="height: 70px; width:80%; font-size:30px;">Add to List +</button>
         <script src='feature/displayList.js'></script>
         <br/>
         <br/>
     </div>
     <div>
-     <pre id='list'>
-     </pre>
+      <div id='list' class="container" style="width: 80%; background-color:black; opacity: 0.6">
+      </div>
     </div>
+    <br/>
     <footer class="page-footer green">
       <div class="container">
         <div class="row">
