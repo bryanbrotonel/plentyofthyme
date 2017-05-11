@@ -18,33 +18,37 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <title>About Us</title>
+  <style>
+      body {
+          background-image: url(images/thyme+background3.jpg);
+      }
+  </style>
 </head>
 
 <body class=" solid yellow lighten-3">
-  <nav class="top-nav green">
-    <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="library.html">Food Library</a></li>
-        <li><a href="aboutPOT.html">About PoT</a></li>
-        <li class="active"><a>About Us</a></li>
-        <li><a href="contactUs.html">Contact Us</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-        <script src='feature/logout.js'></script>
-      </ul>
-      <ul id="slide-out" class="side-nav hide-on-large-only">
-        <li><a class="center" href="library.html">Food Library</a></li>
-        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
-        <li><a class="center" href="contactUs.html">Contact Us</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-        <script src='feature/logout.js'></script>
-      </ul>
-    </div>
+  <nav class="top-nav" style="background-color: rgba(65, 96, 33, 0.83);">
+      <div class="nav-wrapper">
+          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="library.html">Food Library</a></li>
+              <li><a href="aboutPOT.html">About PoT</a></li>
+              <li><a>About Us</a></li>
+              <li class="active"><a href="#">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+              <script src='feature/logout.js'></script>
+          </ul>
+          <ul id="slide-out" class="side-nav hide-on-large-only">
+              <li><a class="center" href="library.html">Food Library</a></li>
+              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+              <li><a class="center" href="aboutus.html">About Us</a></li>
+              <li class="active"><a class="center" href="#">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+              <script src='feature/logout.js'></script>
+          </ul>
+      </div>
   </nav>
   <br>
-  <div class="container">
+  <div class="container" style="background-color:black; opacity:0.6">
     <h3>About Us</h3>
     <div class="card small hoverable">
       <div class="card-image waves-effect waves-block waves-light">
@@ -148,30 +152,29 @@
     </div>
     <br>
   </div>
-  <footer class="page-footer green">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grow With Us!</h5>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green lighten-2">Collaborate!</button>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Guide</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Food Fall</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-          </ul>
-        </div>
+  <br/>
+  <footer class="page-footer">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">Grow With Us!</h5>
+                  <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                  <button class="btn green lighten-2">Collaborate!</button>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                      <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Guide</a></li>
+                      <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Food Fall</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center">
-        © 2016 Copyright Team SEABASS
-      </div>
-    </div>
   </footer>
+  <div class="footer-copyright">
+      <div class="container center"> © 2016 Copyright Team SEABASS </div>
+  </div>
 </body>
 
 <script>
