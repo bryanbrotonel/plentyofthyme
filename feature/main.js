@@ -1,5 +1,5 @@
 // Initialize Firebase
-var config = {
+<!--var config = {
     apiKey: "AIzaSyBWQ0DKA_LDHLrsNEUkFRxh8Dr9rKKnTVA",
     authDomain: "plentyofthyme-c301a.firebaseapp.com",
     databaseURL: "https://plentyofthyme-c301a.firebaseio.com",
@@ -17,3 +17,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     setTimeout(function(){window.location.href='login.html'; }, 500);
   }
 });
+-->
