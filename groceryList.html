@@ -19,7 +19,6 @@
             width: 80%;
             font-size: 14px;
         }
-        
         .container5,
         .container3,
         .container6 {
@@ -30,46 +29,6 @@
 </head>
 
 <body class="container">
-    <div class="page_div">
-<<<<<<< HEAD
-        <div class="center">
-            <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-            <h4 class="visible-xs">Plenty of Thyme</h4>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
-                      </a></li>
-                            <li><a href="library.html">Food Library</a></li>
-                            <li><a href="contactUs.html">Contact Us</a></li>
-                            <li><a href="aboutPOT.html">About PoT</a></li>
-                            <li><a class="active" href="#">About Us</a></li>
-                            <button id="btnLogout" class="btn btn-action"> Log out </button>
-                            <script src='feature/logout.js'></script>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="center">
-            <h1 style="color: green;">Grocery List</h1>
-            <h4 class="text-muted">What's in your fridge?</h4>
-            <button id='btnSubmit' class="btn btn-action" style="height: 70px; width:100%; font-size:30px;">Add to List +</button>
-            <br/>
-            <br/> </div>
-        <div> <pre id='list'>
-      </pre> </div>
-    </div>
-    <div class="home_menu" style="background-color:#26a69a; width: 100%;">
-        <div class="col-xs-4" align="center" style="width:(100)%">
-            <button id='btnCart' style="width: 100%; height: 75px;" class='waves-effect btn btn-primary active disabled'><img src="images/shoppingcart2.png" alt="cart" style="height: 70px; align:center;" />
-                <p> Add or modify items
-                    <br/>in your fridge. </p>
-            </button>
-=======
     <div class="center">
         <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
         <h4 class="visible-xs">Plenty of Thyme</h4>
@@ -81,14 +40,12 @@
               <li><a href="library.html">Food Library</a></li>
               <li><a href="aboutPOT.html">About PoT</a></li>
               <li class="active"><a>About Us</a></li>
-              <li><a href="contactUs.html">Contact Us</a></li>
-              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
             </ul>
             <ul id="slide-out" class="side-nav hide-on-large-only">
               <li><a class="center" href="library.html">Food Library</a></li>
               <li><a class="center" href="aboutPOT.html">About PoT</a></li>
               <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
-              <li><a class="center" href="contactUs.html">Contact Us</a></li>
               <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
               <script src='feature/logout.js'></script>
               <script src='feature/navbar.js'></script>
@@ -100,11 +57,13 @@
         <h1 style="color: green;">Grocery List</h1>
         <h4 class="text-muted">What's in your fridge?</h4>
         <button id='btnSubmit' class="waves-effect waves-light btn btn-action" style="height: 70px; width:100%; font-size:30px;">Add to List +</button>
+        <script src='feature/displayList.js'></script>
         <br/>
-        <br/> </div>
+        <br/>
+    </div>
     <div>
-       <pre id='list'>
-      </pre>
+     <pre id='list'>
+     </pre>
     </div>
     <footer class="page-footer green">
       <div class="container">
@@ -130,25 +89,6 @@
         </div>
       </div>
     </footer>
-    <div class="home_menu hide">
-        <div class="col-xs-4 " align="center">
-            <a class="active" href="#"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
->>>>>>> b64da5018925f672b581790ec8a3a0fea8f1361b
-        </div>
-        <div class="col-xs-4" align="center" style="width:(100)%">
-            <button id='btnStats' style=" width: 100%; height: 75px;" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="height: 70px; align:center;" />
-                <p> Check out your up to
-                    <br/>date statistics. </p>
-            </button>
-        </div>
-        <div class="col-xs-4" align="center" style="width:(100)%">
-            <button id='btnCalendar' style=" width:100% ; height: 75px;" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="height: 70px; align:center;" />
-                <p> Go to the
-                    <br/> calendar view. </p>
-            </button>
-        </div>
-        <script src='feature/landingnav.js'></script>
-    </div>
 </body>
 
 </html>
