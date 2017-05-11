@@ -1,4 +1,3 @@
-// get elements
 
 const btnCart = document.getElementById('btnCart');
 const btnStats = document.getElementById('btnStats');
