@@ -22,10 +22,20 @@
       body {
           background-image: url(images/thyme+background3.jpg);
       }
+
+      #cntnr {
+          background-color:black;
+          opacity:0.6;
+      }
+
+      #members {
+        background-color: black;
+      }
+
   </style>
 </head>
 
-<body class=" solid yellow lighten-3">
+<body>
   <nav class="top-nav" style="background-color: rgba(65, 96, 33, 0.83);">
       <div class="nav-wrapper">
           <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -48,7 +58,7 @@
       </div>
   </nav>
   <br>
-  <div class="container" style="background-color:black; opacity:0.6">
+  <div class="container" id="cntnr">
     <h3>About Us</h3>
     <div class="card small hoverable">
       <div class="card-image waves-effect waves-block waves-light">
@@ -63,7 +73,7 @@
         <p>BCIT students.</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="members">
       <div class="col s6 m4">
         <div class="card small hoverable">
           <div class="card-image">
