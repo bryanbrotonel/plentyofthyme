@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 51108608871fe1e235285656eef4dd0750feaf60
 body {
     color:white;
-    
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> a9953dfe72400c6a3230c3eda4ade47e23e3fb53
->>>>>>> b715ae0432772e4c6e8e878988e2d0456a285ae9
-=======
->>>>>>> 51108608871fe1e235285656eef4dd0750feaf60
+
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
+
+
+nav.top-nav {
+        background-color: rgba(65, 96, 33, 0.83);
+
+}
+
 
 .page_div {
   margin-bottom: 130px;
@@ -107,18 +102,10 @@ footer.page-footer {
 
 div.footer-copyright{
   background-color: rgb(39, 26, 5);
-
+    padding:10px;
 }
 
-.copyright {
-  background-color: #ffffff;
-  color: #16440E;
-  text-align: center;
-  bottom: 0;
-  min-height: 29px;
-  width: 100%;
-  vertical-align: bottom;
-}
+
 
 /*Media connections*/
 .fa {
