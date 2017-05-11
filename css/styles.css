@@ -1,3 +1,7 @@
+body {
+    color:white;
+}
+
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
@@ -50,10 +54,6 @@ hr {
 
 .center {
   text-align: center;
-}
-
-h3 {
-  color: green;
 }
 
 .videoWrapper {
