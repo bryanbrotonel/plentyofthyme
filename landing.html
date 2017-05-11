@@ -21,35 +21,33 @@
     <style>
         body{
             background-image: url(images/thyme+background3.jpg);
-            
         }
     </style>
-    
     </head>
-
 <body>
     <div class="container">
         <div class="page_div">
             <div class="center">
                 <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
                 <h4 class="visible-xs">Plenty of Thyme</h4>
-                <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <div style="background-color: #173F13;" class="navbar-header"> <a class="navbar-brand" href="#">Plenty of Thyme</a> </div>
-                        <div class="collapse navbar-collapse" id="myNavbar">
-                            <ul class="nav navbar-nav">
-                                <li style="float:top;"><a class="active" href="#"><i class="material-icons" style="font-size:17px">home</i>
-                        </a></li>
-                                <li style="float:top;"><a href="library.html">Food Library</a></li>
-                                <li style="float:top;"><a href="contactUs.html">Contact Us</a></li>
-                                <li style="float:top;"><a href="aboutPOT.html">About PoT</a></li>
-                                <li style="float:top;"><a href="aboutus.html">About Us</a></li>
-                                <button id="btnLogout" class="btn btn-action"> Log out </button>
-                                <script src='feature/logout.js'></script>
-                            </ul>
-                        </div>
-                    </div>
+                <nav class="top-nav green">
+                  <div class="nav-wrapper">
+                    <a class="brand-logo">Plenty of Thyme</a>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href="library.html">Food Library</a></li>
+                      <li><a href="aboutPOT.html">About PoT</a></li>
+                      <li class="active"><a>About Us</a></li>
+                      <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                    </ul>
+                    <ul id="slide-out" class="side-nav hide-on-large-only">
+                      <li><a class="center" href="library.html">Food Library</a></li>
+                      <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                      <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+                      <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
+                      <script src='feature/logout.js'></script>
+                    </ul>
+                  </div>
                 </nav>
                 <div>
                     <h3 class="hide">Grocery</h3>
@@ -67,8 +65,8 @@
                 </div>
                 <div class="col-sm-4 hidden-xs" align="center">
                     <button id='btnStats' style=" width: 200px; height : auto" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="width:150px; padding: 5px;" />
-                        <p> Check out your up to
-                            <br/>date statistics. </p>
+                        <p> Check out your up <br/> to
+                            date statistics. </p>
                     </button>
                 </div>
                 <div class="col-sm-4 hidden-xs" align="center">
@@ -78,21 +76,21 @@
                     </button>
                 </div>
                 <!-- -->
-                <br />
-                <div class="col-xs-6 visible-xs" align="center">
-                    <button id='btnCart' style=" width: 150px; height: auto" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; height:100px;" /> </button>
+                <br/>
+                <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                    <button id='btnCart' style=" width: 250; height: 250px" class='waves-effect waves-light btn btn-action'><img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; height:200px;" /> </button>
                 </div>
-                <div class="col-xs-6 visible-xs" align="center">
-                    <button id='btnStats' style=" width: 150px; height : auto" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding: 8px; height:100px;" /> </button>
+                <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                    <button id='btnStats' style=" width: 250; height : 250px" class='waves-effect waves-light btn btn-primary'><img src="images/stats.png" alt="stats" style="padding: 8px; height:200px;" /> </button>
                 </div>
-                <div class="col-xs-12 visible-xs" align="center" style="padding:10px;">
-                    <button id='btnCalendar' style="width: 150px; height: auto" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding: 8px; height:100px;" /> </button>
+                <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                    <button id='btnCalendar' style="width: 250; height: 250px" class='waves-effect waves-light btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding: 8px; height:200px;" /> </button>
                 </div>
                 <script src='feature/landingnav.js'></script>
             </div>
-            <br />
-            <br />
-            <br /> </div>
+          </div>
+        </div>
+      </div>
     </div>
     <br />
     <br />
@@ -104,8 +102,6 @@
                 <button style='background-color: #55ACEE; width: 50px; height: 50px;' class="btn btn-action fa fa-twitter waves-effect waves-light"></button>
                 <button style='background-color: #3F729B; width: 50px; height: 50px;' class="btn btn-action fa fa-instagram waves-effect waves-light"></button>
             </div>
-            <script src='feature/landingnav.js'>
-            </script>
             <br />
             <br /> </div>
     </div>
@@ -131,6 +127,7 @@
             <div class="container center"> &copy; 2014 Copyright Text </div>
         </div>
     </footer>
+
 </body>
 
 </html>
