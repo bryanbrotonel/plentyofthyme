@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< Updated upstream
+>>>>>>> bryan
 body {
     color:white;
 }
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> Stashed changes
+>>>>>>> bryan
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
@@ -107,7 +116,9 @@ div.footer-copyright{
 
 
 
+
 /*Media connections*/
+
 .fa {
   background: transparent;
   margin: auto;
@@ -124,10 +135,10 @@ div.footer-copyright{
 }
 
 /*Search bar implementation*/
+
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: center;
-
   width: 100%;
   font-size: 14px;
   margin-bottom: 12px;
