@@ -1,20 +1,13 @@
-
 body {
     color:white;
 }
-
-
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
-
-
 nav.top-nav {
         background-color: rgba(65, 96, 33, 0.83);
 
 }
-
-
 .page_div {
   margin-bottom: 130px;
   clear: both;
@@ -107,7 +100,9 @@ div.footer-copyright{
 
 
 
+
 /*Media connections*/
+
 .fa {
   background: transparent;
   margin: auto;
@@ -124,10 +119,10 @@ div.footer-copyright{
 }
 
 /*Search bar implementation*/
+
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: center;
-
   width: 100%;
   font-size: 14px;
   margin-bottom: 12px;
