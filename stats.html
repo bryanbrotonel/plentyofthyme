@@ -83,45 +83,39 @@
     <div class="center">
         <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
         <h4 class="visible-xs">Plenty of Thyme</h4>
-
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <div style="background-color: #173F13;"class="navbar-header">
-              <a class="navbar-brand" href="#">Plenty of Thyme</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                  <li><a class="active" href="landing.html"><i class="material-icons" style="font-size:17px">home</i>
-                          </a></li>
-                  <li><a href="library.html">Food Library</a></li>
-                  <li><a href="contactUs.html">Contact Us</a></li>
-                  <li><a href="aboutPOT.html">About PoT</a></li>
-                  <li><a href="aboutus.html">About Us</a></li>
-                  <button id="btnLogout" class="btn btn-primary waves-effect waves-light">
-                            Log out
-                          </button>
-                  <script src='feature/logout.js'></script>
-
-              </ul>
-            </div>
+        <nav class="top-nav green">
+          <div class="nav-wrapper">
+            <a class="brand-logo">Plenty of Thyme</a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="library.html">Food Library</a></li>
+              <li><a href="aboutPOT.html">About PoT</a></li>
+              <li class="active"><a>About Us</a></li>
+              <li><a href="contactUs.html">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            </ul>
+            <ul id="slide-out" class="side-nav hide-on-large-only">
+              <li><a class="center" href="library.html">Food Library</a></li>
+              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+              <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+              <li><a class="center" href="contactUs.html">Contact Us</a></li>
+              <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
+              <script src='feature/logout.js'></script>
+              <script src='feature/navbar.js'></script>
+            </ul>
           </div>
         </nav>
         <br>
         <div>
-            <label for="week_vw" class="btn">Week</label>
-            <label for="twowks_vw" class="btn">Two Weeks</label>
-            <label for="month_vw" class="btn">Month</label>
-            <label for="annual_vw" class="btn">Year</label>
+            <label for="week_vw" class="btn waves-effect waves-light">Week</label>
+            <label for="twowks_vw" class="btn waves-effect waves-light">Two Weeks</label>
+            <label for="month_vw" class="btn waves-effect waves-light">Month</label>
+            <label for="annual_vw" class="btn waves-effect waves-light">Year</label>
         </div>
         <br>
         <div>
-            <label for="bar" class="btn">Bar</label>
-            <label for="pie" class="btn">Pie Chart</label>
+            <label for="bar" class="btn waves-effect waves-light">Bar</label>
+            <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
         </div>
         <br><br />
         <div class="col-xs-6">
@@ -175,8 +169,34 @@
                 </thead>
             </table>
 </div>
-
-            <div class="home_menu">
+</div>
+</div>
+<footer class="page-footer green">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Grow With Us!</h5>
+        <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+        <button class="btn green lighten-2 waves-effect waves-light">Collaborate!</button>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Guide</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Food Fall</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container center">
+      &copy; 2017 Copyright Team SEABASS
+    </div>
+  </div>
+</footer>
+            <!-- shely's code -->
+            <div class="home_menu hide">
                 <div class="col-xs-4 " align="center">
                   <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart"
                     style="width:70px;"/></a>
