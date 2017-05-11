@@ -25,30 +25,32 @@
     </style>
     </head>
 <body>
+    <nav class="top-nav green">
+        <div class="nav-wrapper">
+          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="library.html">Food Library</a></li>
+            <li><a href="aboutPOT.html">About PoT</a></li>
+            <li class="active"><a>About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            <script src='feature/logout.js'></script>
+          </ul>
+          <ul id="slide-out" class="side-nav hide-on-large-only">
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+            <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+            <li><a class="center" href="contactUs.html">Contact Us</a></li>
+            <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            <script src='feature/logout.js'></script>
+          </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="page_div">
             <div class="center">
-                <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-                <h4 class="visible-xs">Plenty of Thyme</h4>
-                <nav class="top-nav green">
-                  <div class="nav-wrapper">
-                    <a class="brand-logo">Plenty of Thyme</a>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                      <li><a href="library.html">Food Library</a></li>
-                      <li><a href="aboutPOT.html">About PoT</a></li>
-                      <li class="active"><a>About Us</a></li>
-                      <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                    </ul>
-                    <ul id="slide-out" class="side-nav hide-on-large-only">
-                      <li><a class="center" href="library.html">Food Library</a></li>
-                      <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                      <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
-                      <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
-                      <script src='feature/logout.js'></script>
-                    </ul>
-                  </div>
-                </nav>
                 <div>
                     <h3 class="hide">Grocery</h3>
                     <h1 class="hidden-xs">What's in store for today?</h1>
@@ -56,26 +58,30 @@
                     <br />
                     <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
                     <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5> </div>
-                <!-- -->
-                <div class="col-sm-4 hidden-xs" align="center">
-                    <button id='btnCart' style=" width: 200px; height: auto" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
+                <div class="col-sm-3 hidden-xs" align="center">
+                    <button id='btnCart' style=" width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:250px; padding:10px;" />
                         <p> Add or modify items
                             <br/>in your fridge. </p>
                     </button>
                 </div>
-                <div class="col-sm-4 hidden-xs" align="center">
-                    <button id='btnStats' style=" width: 200px; height : auto" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="width:150px; padding: 5px;" />
+                <div class="col-sm-1 hidden-xs" align="center">
+                </div>
+                <div class="col-sm-3 hidden-xs center" align="center">
+                    <button id='btnStats' style=" width: 300px; height : auto" class='col-sm-3 hidden-xs center waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:250px; padding: 5px;" />
                         <p> Check out your up <br/> to
                             date statistics. </p>
                     </button>
                 </div>
-                <div class="col-sm-4 hidden-xs" align="center">
-                    <button id='btnCalendar' style="width: 200px; height: auto" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="width:150px;" />
+                <div class="col-sm-1 hidden-xs" align="center">
+                </div>
+                <div class="col-sm-3 hidden-xs" align="center">
+                    <button id='btnCalendar' style="width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:250px;" />
                         <p> Go to the
                             <br/> calendar view. </p>
                     </button>
                 </div>
-                <!-- -->
+                <div class="col-sm-1 hidden-xs" align="center">
+                </div>
                 <br/>
                 <div class="col-xs-12 visible-xs center" style="padding:10px;">
                     <button id='btnCart' style=" width: 250; height: 250px" class='waves-effect waves-light btn btn-action'><img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; height:200px;" /> </button>
@@ -129,5 +135,17 @@
     </footer>
 
 </body>
+</html>
+    <script>
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+
+  $('.button-collapse').sideNav({
+    menuWidth: 200, // Default is 300
+    edge: 'left', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true // Choose whether you can drag to open on touch screens
+  });
+</script>
 
 </html>
