@@ -2,41 +2,45 @@
 <html lang="en">
 
 <head>
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <link rel="stylesheet" href="css/yeti/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-    <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="feature/main.js"></script>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/yeti/bootstrap.css" />
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!-- Import jQuery before materialize.js -->
+  <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="feature/main.js"></script>
+  <style>
         ul {
             list-style-type: none;
         }
-        
+
         body {
             font-family: Verdana, sans-serif;
+            background-image: url(images/thyme+background3.jpg);
         }
         /* Month header */
-        
+
         .month {
             padding: 70px 25px;
             width: 100%;
             background: #52BB51;
         }
         /* Month list */
-        
+
         .month ul {
             margin: 0;
             padding: 0;
         }
-        
+
         .month ul li {
             color: white;
             font-size: 20px;
@@ -44,25 +48,25 @@
             letter-spacing: 3px;
         }
         /* Previous button inside month header */
-        
+
         .month .prev {
             float: left;
             padding-top: 10px;
         }
         /* Next button */
-        
+
         .month .next {
             float: right;
             padding-top: 10px;
         }
         /* Weekdays (Mon-Sun) */
-        
+
         .weekdays {
             margin: 0;
             padding: 10px 0;
             background-color: #52BB51;
         }
-        
+
         .weekdays li {
             display: inline-block;
             width: 13.6%;
@@ -70,13 +74,13 @@
             text-align: center;
         }
         /* Days (1-31) */
-        
+
         .days {
             padding: 10px 0;
             background: #eee;
             margin: 0;
         }
-        
+
         .days li {
             list-style-type: none;
             display: inline-block;
@@ -87,32 +91,32 @@
             color: #777;
         }
         /* Highlight the "current" day */
-        
+
         .days li .active {
             padding: 5px;
             background: #5BD359;
             color: white !important
         }
-        
+
         img {
             width: 100% height: auto;
         }
-        
+
         .center {
             text-align: center;
         }
-        
+
         h3 {
             color: green;
         }
-        
+
         table {
             border: 2px solid black;
             width: 60%;
             height: 30px;
             margin: auto;
         }
-        
+
         th.week {
             border: 2px solid black;
             height: 40px;
@@ -120,7 +124,7 @@
             text-align: center;
             background: #F6EBDF;
         }
-        
+
         th.week_o {
             border: 2px solid black;
             height: 40px;
@@ -128,21 +132,21 @@
             text-align: center;
             background: #80CE7E;
         }
-        
+
         td.food {
             border: 2px solid black;
             height: 80px;
             text-align: center;
             background: #F6EBDF;
         }
-        
+
         td.food_o {
             border: 2px solid black;
             height: 80px;
             text-align: center;
             background: #CFEECE;
         }
-        
+
         .food_list {
             list-style-type: none;
             margin: 0;
@@ -150,16 +154,18 @@
             text-align: center;
         }
     </style>
-    <title>Plenty of Thyme</title>
+    <title>Calendar</title>
 </head>
 
 <body>
-    <nav class="top-nav">
-        <div class="nav-wrapper"> <a class="brand-logo">Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <nav class="top-nav" style="background-color: rgba(65, 96, 33, 0.83);">
+        <div class="nav-wrapper">
+          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+          <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="library.html">Food Library</a></li>
-                <li><a href="aboutPOT.html">About PoT</a></li>
-                <li class="active"><a>About Us</a></li>
+                <li><a class="white-text" href="library.html">Food Library</a></li>
+                <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+                <li class="active white-text"><a>About Us</a></li>
                 <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
                 <script src='feature/logout.js'></script>
             </ul>
@@ -376,9 +382,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </footer>
-    
+
     <div class="footer-copyright">
                 <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
             </div>
@@ -394,7 +400,7 @@
                 <a class="active" href="#"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
             </div>
         </div>
-   
+
 </body>
 
 </html>
