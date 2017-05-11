@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/yeti/bootstrap.css" />
@@ -16,27 +15,30 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <style>
-
-    .vertical-line {
-        border-left: 1px solid #808080;
-        height: 350px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 1px;
-    }
+        body {
+            background-image: url(images/thyme+background3.jpg);
+        }
+        
+        .vertical-line {
+            border-left: 1px solid #808080;
+            height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1px;
+        }
+        
         img {
             width: 100% height: auto;
         }
-
         /*Table for list of wasted food*/
-
+        
         table {
             border: 2px solid black;
             width: 60%;
             height: 30px;
             margin: auto;
         }
-
+        
         th.categories {
             padding: 10px;
             border: 2px solid black;
@@ -44,12 +46,12 @@
             width: 70px;
             text-align: center;
         }
-
+        
         td.waste_items {
             border: 2px solid black;
             height: 80px;
         }
-
+        
         ul.cat {
             font-size: 12px;
             list-style-type: none;
@@ -58,157 +60,108 @@
             overflow: hidden;
             background: none;
         }
-
+        
         li.waste_list {
             color: black;
             text-align: center;
             padding: 14px 16px;
         }
-
+        
         .btn {
-          background-color: #5B9D54;
+            background-color: #5B9D54;
         }
-
+        
         .btn:hover {
-          background: #35752E;
+            background: #35752E;
         }
-
-
     </style>
     <title>Plenty of Thyme</title>
 </head>
 
-<body class="container">
-    <div class="page_div">
-    <div class="center">
-        <h1 class="hidden-xs"> <img style="height: 120px"src="images/logo.png" />Plenty of Thyme</h1>
-        <h4 class="visible-xs">Plenty of Thyme</h4>
-        <nav class="top-nav green">
-          <div class="nav-wrapper">
-            <a class="brand-logo">Plenty of Thyme</a>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+<body>
+    <nav class="top-nav">
+        <div class="nav-wrapper"> <a class="brand-logo">Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="library.html">Food Library</a></li>
-              <li><a href="aboutPOT.html">About PoT</a></li>
-              <li class="active"><a>About Us</a></li>
-              <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-              <script src='feature/logout.js'></script>
+                <li><a href="library.html">Food Library</a></li>
+                <li><a href="aboutPOT.html">About PoT</a></li>
+                <li class="active"><a>About Us</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                <script src='feature/logout.js'></script>
             </ul>
             <ul id="slide-out" class="side-nav hide-on-large-only">
-              <li><a class="center" href="library.html">Food Library</a></li>
-              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-              <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
-              <li><button class="waves-effect waves-light btn red" id="btnLogout">Log out</button></li>
-              <script src='feature/logout.js'></script>
-              <script src='feature/navbar.js'></script>
+                <li><a class="center" href="library.html">Food Library</a></li>
+                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+                <li>
+                    <button class="waves-effect waves-light btn red" id="btnLogout">Log out</button>
+                </li>
+                <script src='feature/logout.js'></script>
+                <script src='feature/navbar.js'></script>
             </ul>
-          </div>
-        </nav>
-        <br>
-        <div>
-            <label for="week_vw" class="btn waves-effect waves-light">Week</label>
-            <label for="twowks_vw" class="btn waves-effect waves-light">Two Weeks</label>
-            <label for="month_vw" class="btn waves-effect waves-light">Month</label>
-            <label for="annual_vw" class="btn waves-effect waves-light">Year</label>
         </div>
-        <br>
-        <div>
-            <label for="bar" class="btn waves-effect waves-light">Bar</label>
-            <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
+    </nav>
+    <br />
+    <div>
+        <div class="container">
+            <div class="center">
+                <div>
+                    <label for="week_vw" class="btn waves-effect waves-light">Week</label>
+                    <label for="twowks_vw" class="btn waves-effect waves-light">Two Weeks</label>
+                    <label for="month_vw" class="btn waves-effect waves-light">Month</label>
+                    <label for="annual_vw" class="btn waves-effect waves-light">Year</label>
+                </div>
+                <br />
+                <div>
+                    <label for="bar" class="btn waves-effect waves-light">Bar</label>
+                    <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
+                </div>
+                <br />
+                <br /> </div>
         </div>
-        <br><br />
-        <div class="col-xs-6">
-            <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;" />
-            <h3 style="padding:10px;">Food Wasted: 75%</h3>
-
-        </div>
+        <div class="col-xs-6"> <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;" />
+            <h3 style="padding:10px;">Food Wasted: 75%</h3> </div>
         <div class="vertical-line" />
         <div class="col-xs-6">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="categories">Fruits:</th>
-                        <th class="categories">Vegetables:</th>
-                        <th class="categories">Dairy:</th>
-                        <th class="categories">Meat & Alternatives:</th>
-                        <th class="categories">Miscellaneous:</th>
-                    </tr>
-                    <tr>
-                        <td class="waste_items">
-                            <ul class="cat">
-                                <li class="waste_list">Banana</li>
-                                <li class="waste_list">Papaya</li>
-                            </ul>
-                        </td>
-                        <td class="waste_items">
-                            <ul class="cat">
-                                <li class="waste_list">Cucumber</li>
-                                <li class="waste_list">Lettuce</li>
-                            </ul>
-                        </td>
-                        <td class="waste_items">
-                            <ul class="cat">
-                                <li class="waste_list">2% Milk</li>
-                                <li class="waste_list">Cheese</li>
-                            </ul>
-                        </td>
-                        <td class="waste_items">
-                            <ul class="cat">
-                                <li class="waste_list">Soybean</li>
-                                <li class="waste_list">Beef Jerky</li>
-                            </ul>
-                        </td>
-                        <td class="waste_items">
-                            <ul class="cat">
-                                <li class="waste_list">Coco Crunch</li>
-                                <li class="waste_list">Jellybeans</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
-</div>
-</div>
-</div>
-<footer class="page-footer green">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Grow With Us!</h5>
-        <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-        <button class="btn green lighten-2 waves-effect waves-light">Collaborate!</button>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Guide</a></li>
-          <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Food Fall</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-        </ul>
-      </div>
+            <p>stuff here</p>
+            <p>stuff here</p>
+            <p>stuff here</p>
+        </div>
     </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container center">
-      &copy; 2017 Copyright Team SEABASS
-    </div>
-  </div>
-</footer>
-            <!-- shely's code -->
-            <div class="home_menu hide">
-                <div class="col-xs-4 " align="center">
-                  <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart"
-                    style="width:70px;"/></a>
+    <br />
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn green lighten-2">Collaborate!</button>
                 </div>
-                <div class="col-xs-4" align="center">
-                  <a  class="active" href="#"><img src="images/stats.png" alt="stats"
-                    style="width:70px;"/></a>
-                </div>
-                <div class="col-xs-4" align="center">
-                  <a href="calendar.html"><img src="images/calendar.png" alt="calendar"
-                    style="width:70px;"/></a>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Guide</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.google.ca">Food Fall</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+                    </ul>
                 </div>
             </div>
-        </body>
+        </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container center"> © 2016 Copyright Team SEABASS </div>
+    </div>
+    <!-- shely's code -->
+    <div class="home_menu hide">
+        <div class="col-xs-4 " align="center">
+            <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
+        </div>
+        <div class="col-xs-4" align="center">
+            <a class="active" href="#"><img src="images/stats.png" alt="stats" style="width:70px;" /></a>
+        </div>
+        <div class="col-xs-4" align="center">
+            <a href="calendar.html"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
+        </div>
+    </div>
+</body>
 
 </html>
