@@ -92,6 +92,11 @@ footer.page-footer {
   vertical-align: bottom;
 }
 
+div.footer-copyright{
+  background-color: rgb(39, 26, 5);
+
+}
+
 .copyright {
   background-color: #ffffff;
   color: #16440E;
