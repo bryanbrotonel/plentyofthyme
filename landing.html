@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
     <link href="css/styles.css" rel="stylesheet" media="screen">
@@ -19,125 +18,117 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <title>Plenty of Thyme</title>
     <style>
-        body {
-            background-image: url(images/thyme+background3.jpg);
-        }
+      body {
+        background-image: url(images/thyme+background3.jpg);
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <nav class="top-nav">
-        <div class="nav-wrapper">
-            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="library.html">Food Library</a></li>
-                <li><a href="aboutPOT.html">About PoT</a></li>
-                <li class="active"><a>About Us</a></li>
-                <li><a href="contactUs.html">Contact Us</a></li>
-                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-                <script src='feature/logout.js'></script>
-            </ul>
-            <ul id="slide-out" class="side-nav hide-on-large-only">
-                <li><a class="center" href="library.html">Food Library</a></li>
-                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
-                <li><a class="center" href="contactUs.html">Contact Us</a></li>
-                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-                <script src='feature/logout.js'></script>
-            </ul>
-        </div>
+      <div class="nav-wrapper">
+        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="library.html">Food Library</a></li>
+          <li><a href="aboutPOT.html">About PoT</a></li>
+          <li class="active"><a>About Us</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav hide-on-large-only">
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li class="active"><a class="center" href="aboutus.html">About Us</a></li>
+          <li><a class="center" href="contactUs.html">Contact Us</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+          <script src='feature/logout.js'></script>
+        </ul>
+      </div>
     </nav>
     <div class="container">
-        <div class="page_div">
-            <div class="center">
-                <div>
-                    <h3 class="hide">Grocery</h3>
-                    <h1 class="hidden-xs">What's in store for today?</h1>
-                    <h4 class="visible-xs">What's in store for today?</h4>
-                    <br />
-                    <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
-                    <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5> </div>
-                <div class="col-sm-3 hidden-xs" align="center">
-                    <button id='btnCart' style=" width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:250px; padding:10px;" />
-                        <p> Add or modify items
-                            <br/>in your fridge. </p>
-                    </button>
-                </div>
-                <div class="col-sm-1 hidden-xs" align="center"> </div>
-                <div class="col-sm-3 hidden-xs center" align="center">
-                    <button id='btnStats' style=" width: 300px; height : auto" class='col-sm-3 hidden-xs center waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:250px; padding: 5px;" />
-                        <p> Check out your up
-                            <br/> to date statistics. </p>
-                    </button>
-                </div>
-                <div class="col-sm-1 hidden-xs" align="center"> </div>
-                <div class="col-sm-3 hidden-xs" align="center">
-                    <button id='btnCalendar' style="width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:250px;" />
-                        <p> Go to the
-                            <br/> calendar view. </p>
-                    </button>
-                </div>
-                <div class="col-sm-1 hidden-xs" align="center"> </div>
-                <br/>
-                <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                    <button id='btnCart' style=" width: 250; height: 250px" class='waves-effect waves-light btn btn-action'><img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; height:200px;" /> </button>
-                </div>
-                <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                    <button id='btnStats' style=" width: 250; height : 250px" class='waves-effect waves-light btn btn-primary'><img src="images/stats.png" alt="stats" style="padding: 8px; height:200px;" /> </button>
-                </div>
-                <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                    <button id='btnCalendar' style="width: 250; height: 250px" class='waves-effect waves-light btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding: 8px; height:200px;" /> </button>
-                </div>
-                <script src='feature/landingnav.js'></script>
-            </div>
-        </div>
-    </div>
-    
-    <br />
-    <br />
-    <div class="footer">
-        <div class='center'>
-            <div>MEDIA CONNECTIONS</div>
-            <div class="center media-connections">
-                <button style='background-color: #3B5998; width: 50px; height: 50px;' class="btn btn-facebook fa fa-facebook waves-effect waves-light"></button>
-                <button style='background-color: #55ACEE; width: 50px; height: 50px;' class="btn btn-action fa fa-twitter waves-effect waves-light"></button>
-                <button style='background-color: #3F729B; width: 50px; height: 50px;' class="btn btn-action fa fa-instagram waves-effect waves-light"></button>
-            </div>
+      <div class="page_div">
+        <div class="center">
+          <div>
+            <h3 class="hide">Grocery</h3>
+            <h1 class="hidden-xs">What's in store for today?</h1>
+            <h4 class="visible-xs">What's in store for today?</h4>
             <br />
-            <br /> </div>
+            <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
+            <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5> </div>
+            <div class="col-sm-3 hidden-xs" align="center">
+              <button id='btnCart' style=" width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:250px; padding:10px;" />
+                <p> Add or modify items
+                  <br/>in your fridge
+                </p>
+              </button>
+            </div>
+            <div class="col-sm-1 hidden-xs" align="center"> </div>
+            <div class="col-sm-3 hidden-xs center" align="center">
+              <button id='btnStats' style=" width: 300px; height : auto" class='col-sm-3 hidden-xs center waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:250px; padding: 5px;" />
+                <p> Check out your up
+                  <br/> to date statistics
+                </p>
+              </button>
+            </div>
+            <div class="col-sm-1 hidden-xs" align="center"> </div>
+            <div class="col-sm-3 hidden-xs" align="center">
+              <button id='btnCalendar' style="width: 300px; height: auto" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:250px;" />
+                <p> Go to the
+                  <br/> calendar view
+                </p>
+              </button>
+            </div>
+            <div class="col-sm-1 hidden-xs" align="center"></div>
+            <br/>
+            <div class="col-xs-12 visible-xs center" style="padding:10px;">
+              <button id='btnCart' style=" width: 250; height: 250px" class='waves-effect waves-light btn btn-action'><img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; height:200px;" /> </button>
+            </div>
+            <div class="col-xs-12 visible-xs center" style="padding:10px;">
+              <button id='btnStats' style=" width: 250; height : 250px" class='waves-effect waves-light btn btn-primary'><img src="images/stats.png" alt="stats" style="padding: 8px; height:200px;" /> </button>
+            </div>
+            <div class="col-xs-12 visible-xs center" style="padding:10px;">
+              <button id='btnCalendar' style="width: 250; height: 250px" class='waves-effect waves-light btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding: 8px; height:200px;" /> </button>
+            </div>
+            <script src='feature/landingnav.js'></script>
+          </div>
+        </div>
+      </div>
+    </div>
+      <br/>
+      <br/>
+    <div class="footer">
+      <div class='center'>
+        <div>MEDIA CONNECTIONS</div>
+        <div class="center media-connections">
+          <button style='background-color: #3B5998; width: 50px; height: 50px;' class="btn btn-facebook fa fa-facebook waves-effect waves-light"></button>
+          <button style='background-color: #55ACEE; width: 50px; height: 50px;' class="btn btn-action fa fa-twitter waves-effect waves-light"></button>
+          <button style='background-color: #3F729B; width: 50px; height: 50px;' class="btn btn-action fa fa-instagram waves-effect waves-light"></button>
+        </div>
+        <br/>
+        <br/>
+      </div>
     </div>
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Grow With Us!</h5>
-                    <p class="grey-text text-lighten-4">We are open source, fam!</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Grow With Us!</h5>
+              <p class="grey-text text-lighten-4">We are open source, fam!</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
     <div class="footer-copyright">
-        <div class="container center"> &copy; 2014 Copyright Text </div>
+      <div class="container center"> &copy; 2014 Copyright Text </div>
     </div>
-</body>
-<script>
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
-    $('.button-collapse').sideNav({
-        menuWidth: 200, // Default is 300
-        edge: 'left', // Choose the horizontal origin
-        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        draggable: true // Choose whether you can drag to open on touch screens
-    });
-</script>
-
+    <script src='feature/navbar.js'></script>
+  </body>
 </html>
