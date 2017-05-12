@@ -1,4 +1,4 @@
-// Initialize Firebase
+<!--// Initialize Firebase
 var config = {
   apiKey: "AIzaSyBWQ0DKA_LDHLrsNEUkFRxh8Dr9rKKnTVA",
   authDomain: "plentyofthyme-c301a.firebaseapp.com",
@@ -18,4 +18,4 @@ firebase.auth().onAuthStateChanged(function(user) {
       window.location.href = 'index.html';
     }, 500);
   }
-});
+});-->
