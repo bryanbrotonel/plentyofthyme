@@ -17,8 +17,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     user1 = firebase.auth().currentUser;
     var itemRef = firebase.database().ref('users/' + user1.uid).child('items');
     itemRef.on('value', function(snapshot) {
-      uiList.innerText = '\n' + JSON.stringify(snapshot.val(), null, 2) + '\n\n';
-      console.log(snapshot.val());
+      if (snapshot.val() != null) {
+        uiList.setAttribute('class', 'container');
+        uiList.innerText = '\n' + JSON.stringify(snapshot.val(), null, 2) + '\n\n';
+        console.log(snapshot.val());
+      } else {
+        uiList.setAttribute('class', 'center container');
+        uiList.innerText = '\nYou have nothing in your fridge yet!'  + '\n\n';
+        console.log(snapshot.val());
+      }
     });
     console.log(name);
   } else {
