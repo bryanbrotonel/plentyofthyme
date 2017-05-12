@@ -22,13 +22,16 @@
     body {
         background-image: url(images/thyme+background3.jpg);
     }
+    
     i {
         color: #2e7d32;
     }
+    
     .promo-caption {
         color: #424242
     }
 </style>
+
 <body>
     <div class="container" id="cntnr">
         <div class="section middle">
@@ -53,30 +56,23 @@
                 <button id="btnSignUp" class="btn btn-secondary waves-effect waves-light">Sign Up</button>
                 <script src="feature/auth.js"></script>
                 <script>
-                var finished_rendering = function() {
-                console.log("finished rendering plugins");
-                var spinner = document.getElementById("spinner");
-                spinner.removeAttribute("style");
-                spinner.removeChild(spinner.childNodes[0]);
-                }
-                FB.Event.subscribe('xfbml.render', finished_rendering);
+                    var finished_rendering = function () {
+                        console.log("finished rendering plugins");
+                        var spinner = document.getElementById("spinner");
+                        spinner.removeAttribute("style");
+                        spinner.removeChild(spinner.childNodes[0]);
+                    }
+                    FB.Event.subscribe('xfbml.render', finished_rendering);
                 </script>
-                <div id="spinner"
-                      style="
+                <div id="spinner" style="
                           background: #4267b2;
                           border-radius: 5px;
                           color: white;
                           height: 40px;
                           text-align: center;
-                          width: 250px;">
-                      Loading
-                      <div
-                      class="fb-login-button"
-                      data-max-rows="1"
-                      data-size="large"
-                      data-button-type="continue_with"
-                      ></div>
-                  </div>
+                          width: 250px;"> Loading
+                    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with"></div>
+                </div>
             </div>
         </div>
         <br>
@@ -173,7 +169,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="card small hoverable">
-                        <div class="card-image" > <img src="images/unicorn.jpg"> <span class="card-title" style="color:black">Andrea Saksono</span> </div>
+                        <div class="card-image"> <img src="images/unicorn.jpg"> <span class="card-title" style="color:black">Andrea Saksono</span> </div>
                         <div class="card-content">
                             <h6>S.N.A.C.K Manager</h6> </div>
                         <div class="card-action"> <a href="mailto:saksonoandrea102@gmail.com" class="e-mail">&#9993;</a>
@@ -197,7 +193,6 @@
                 </div>
             </div>
             <br> </div>
-    </div>
     </div>
     <br>
     <footer class="page-footer">
@@ -225,4 +220,5 @@
         </div>
     </footer>
 </body>
+
 </html>
