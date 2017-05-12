@@ -17,23 +17,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <title>About Us</title>
+  <title>Meet the Team</title>
   <style>
-      body {
-          background-image: url(images/thyme+background3.jpg);
-      }
+    body {
+      background-image: url(images/thyme+background3.jpg);
+    }
   </style>
 </head>
 
 <body>
   <nav class="top-nav">
     <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+      <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="library.html">Food Library</a></li>
-        <li><a href="aboutPOT.html">About PoT</a></li>
-        <li><a>About Us</a></li>
-        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a class="white-text" href="library.html">Food Library</a></li>
+        <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+        <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
+        <li><a class="white-text" href="contactUs.html">ignoreContactUs</a></li>
         <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
       </ul>
       <ul id="slide-out" class="side-nav hide-on-large-only">
@@ -44,14 +45,14 @@
         <li><a class="center" href="library.html">Food Library</a></li>
         <li><a class="center" href="groceryList.html">Grocery List</a></li>
         <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li><a id='active' class="center" href="#">About Us</a></li>
+        <li><a id='active' class="center" href="#">Contact Us</a></li>
         <script>
           const active = document.getElementById('active');
           active.addEventListener('click', e => {
             Materialize.toast('Already on page!', 4000);
           });
         </script>
-        <li><a class="center" href="contactUs.html">Contact Us</a></li>
+        <li><a class="center" href="contactUs.html">ignoreContactUs</a></li>
         <li><a class="center" href="affiliates.html">Our Friends</a></li>
         <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
         <script src='feature/logout.js'></script>
@@ -61,7 +62,7 @@
   </nav>
   <br>
   <div class="container" id="cntnr">
-    <h3>About Us</h3>
+    <h3>Meet the Team</h3>
     <div class="card small hoverable">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="">
@@ -83,7 +84,7 @@
             <span class="card-title">Calvin Lai</span>
           </div>
           <div class="card-content">
-            <h6>Leader</h6>
+            <h6 class="black-text">Leader</h6>
           </div>
           <div class="card-action">
             <a href="mailto:clai-@hotmail.com" class="e-mail">&#9993;</a>
@@ -100,7 +101,7 @@
             <span class="card-title">Bryan Brotonel</span>
           </div>
           <div class="card-content">
-            <h6>Co-Leader</h6>
+            <h6 class="black-text">Co-Leader</h6>
           </div>
           <div class="card-action">
             <a href="mailto:bryanbrotonel@live.ca" class="e-mail">&#9993;</a>
@@ -117,7 +118,7 @@
             <span class="card-title">Shely Lin</span>
           </div>
           <div class="card-content">
-            <h6>Supervisor</h6>
+            <h6 class="black-text">Supervisor</h6>
           </div>
           <div class="card-action">
             <a href="mailto:shelylin@yahoo.ca" class="e-mail">&#9993;</a>
@@ -134,7 +135,7 @@
             <span class="card-title" style="color:black">Andrea Saksono</span>
           </div>
           <div class="card-content">
-            <h6>S.N.A.C.K Manager</h6>
+            <h6 class="black-text">S.N.A.C.K Manager</h6>
           </div>
           <div class="card-action">
             <a href="mailto:saksonoandrea102@gmail.com" class="e-mail">&#9993;</a>
@@ -151,7 +152,7 @@
             <span class="card-title">Sally Lee</span>
           </div>
           <div class="card-content">
-            <h6>Public Relations</h6>
+            <h6 class="black-text">Public Relations</h6>
           </div>
           <div class="card-action">
             <a href="mailto:leesally_@hotmail.com" class="e-mail">&#9993;</a>
@@ -166,26 +167,28 @@
   </div>
   <br/>
   <footer class="page-footer">
-      <div class="container">
-          <div class="row">
-              <div class="col l6 s12">
-                  <h5 class="white-text">Grow With Us!</h5>
-                  <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                  <button class="btn green lighten-2">Collaborate!</button>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Links</h5>
-                  <ul>
-                      <li><a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;'/></a>
-                      <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;'/></a></li>
-                      <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-                  </ul>
-              </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Grow With Us!</h5>
+          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+          <button class="btn green lighten-2">Collaborate!</button>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+          </ul>
+        </div>
       </div>
+    </div>
   </footer>
   <div class="footer-copyright">
-      <div class="container center"> © 2016 Copyright Team SEABASS </div>
+    <div class="container center"> © 2016 Copyright Team SEABASS </div>
   </div>
 </body>
 
