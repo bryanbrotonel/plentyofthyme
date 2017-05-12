@@ -22,8 +22,10 @@
       body {
         background-image: url(images/thyme+background3.jpg);
       }
+
       button {
-        opacity: 0.6;
+        background: black;
+        background: rgba(0, 0, 0, 0.6);
       }
     </style>
   </head>
@@ -60,114 +62,121 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <br />
+    <div class="container" id="cntnr">
       <div class="page_div">
-        <div class="center">
-          <div>
-            <h3 class="hide">Grocery</h3>
-            <h1 class="hidden-xs">What's in store for today?</h1>
-            <h4 class="visible-xs">What's in store for today?</h4>
+          <div class="center">
+            <div>
+              <h3 class="hide">Grocery</h3>
+              <h1 class="hidden-xs">What's in store for today?</h1>
+              <h4 class="visible-xs">What's in store for today?</h4>
+              <br />
+              <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
+              <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5>
+            </div>
+            <div>
+              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                <br/>
+                <button id='btnCart' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
+                  <p>
+                    Add or modify items<br/> in your fridge
+                  </p>
+                </button>
+              </div>
+              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                <br/>
+                <button id='btnStats' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height : 300px" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:150px;" />
+                  <p>
+                    Check out your up<br/> to date statistics
+                  </p>
+                </button>
+              </div>
+              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                <br/>
+                <button id='btnCalendar' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
+                  <p>
+                     Check out the <br/>calendar view
+                   </p>
+                </button>
+              </div>
+            </div>
             <br />
-            <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
-            <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5> </div>
-            <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-              <br/>
-              <button id='btnCart' style="background-color: black; width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
-                <p>
-                  Add or modify items<br/> in your fridge
-                </p>
-              </button>
-            </div>
-            <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-              <br/>
-              <button id='btnStats' style="background-color: black; width: 260px; height : 300px" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:150px;" />
-                <p>
-                  Check out your up<br/> to date statistics
-                </p>
-              </button>
-            </div>
-            <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-              <br/>
-              <button id='btnCalendar' style="background-color: black; width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
-                <p>
-                   Check out the <br/>calendar view
-                 </p>
-              </button>
-            </div>
-            <div class="col-sm-12 visible-sm visible-md">
-              <br/>
-              <button id='btnCart_sm' style="background-color: black; width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+            <div>
+              <div class="col-sm-12 visible-sm visible-md">
                 <br/>
-                <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
-                <p>
-                Add or modify items in your fridge
-                </p>
-              </button>
-            </div>
-            <div class="col-sm-12 visible-sm visible-md">
-              <br/>
-              <button id='btnStats_sm' style="background-color: black; width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
+                <button id='btnCart_sm' style="background: black; background: rgba(0, 0, 0, 0.0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                  <br/>
+                  <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
+                  <p>
+                  Add or modify items in your fridge
+                  </p>
+                </button>
+              </div>
+              <div class="col-sm-12 visible-sm visible-md">
                 <br/>
-                <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
-                <p>
-                  Check out your up to date statistics
-                </p>
-              </button>
-            </div>
-            <div class="col-sm-12 visible-sm visible-md">
-              <br/>
-              <button id='btnCalendar_sm' style="background-color: black; width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                <button id='btnStats_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
+                  <br/>
+                  <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
+                  <p>
+                    Check out your up to date statistics
+                  </p>
+                </button>
+              </div>
+              <div class="col-sm-12 visible-sm visible-md">
                 <br/>
-                <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
-                 <p>
-                   Check out the calendar view
-                 </p>
-              </button>
+                <button id='btnCalendar_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                  <br/>
+                  <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
+                   <p>
+                     Check out the calendar view
+                   </p>
+                </button>
+              </div>
             </div>
             <br/>
-            <div class="col-xs-12 visible-xs center" style="padding:10px;">
-              <button id='btnCart_xs' style="background-color: black; width: 300px; height: 200px" class='waves-effect waves-light btn btn-action'>
-                <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
+            <div>
+              <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                <button id='btnCart_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-action'>
+                  <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
+                  <p>
+                    Add or edit cart
+                  </p>
+                </button>
+              </div>
+              <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                <button id='btnStats_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height : 200px" class='waves-effect waves-light btn btn-primary'>
+                  <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
                 <p>
-                  Add or edit cart
+                Take me to the graphs
                 </p>
-              </button>
+                </button>
+              </div>
+              <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-primary'>
+                  <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
+                  <p>
+                  take me to the calendar, fam
+                  </p>
+                </button>
+              </div>
+              <script src='feature/landingnav.js'></script>
             </div>
-            <div class="col-xs-12 visible-xs center" style="padding:10px;">
-              <button id='btnStats_xs' style="background-color: black; width: 300px; height : 200px" class='waves-effect waves-light btn btn-primary'>
-                <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
-              <p>
-              Take me to the graphs
-              </p>
-              </button>
-            </div>
-            <div class="col-xs-12 visible-xs center" style="padding:10px;">
-              <button id='btnCalendar_xs' style="background-color: black; width: 300px; height: 200px" class='waves-effect waves-light btn btn-primary'>
-                <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
-                <p>
-                take me to the calendar, fam
-                </p>
-              </button>
-            </div>
-            <script src='feature/landingnav.js'></script>
           </div>
+          </div>
+          <!-- <div class="footer">
+            <div class='center'>
+              <div>MEDIA CONNECTIONS</div>
+              <div class="center media-connections">
+                <button style='background-color: #3B5998; width: 50px; height: 50px;' class="btn btn-facebook fa fa-facebook waves-effect waves-light"></button>
+                <button style='background-color: #55ACEE; width: 50px; height: 50px;' class="btn btn-action fa fa-twitter waves-effect waves-light"></button>
+                <button style='background-color: #3F729B; width: 50px; height: 50px;' class="btn btn-action fa fa-instagram waves-effect waves-light"></button>
+              </div>
+              <br/>
+            </div>
+          </div> -->
         </div>
-      </div>
     </div>
       <br/>
-      <br/>
-    <div class="footer">
-      <div class='center'>
-        <div>MEDIA CONNECTIONS</div>
-        <div class="center media-connections">
-          <button style='background-color: #3B5998; width: 50px; height: 50px;' class="btn btn-facebook fa fa-facebook waves-effect waves-light"></button>
-          <button style='background-color: #55ACEE; width: 50px; height: 50px;' class="btn btn-action fa fa-twitter waves-effect waves-light"></button>
-          <button style='background-color: #3F729B; width: 50px; height: 50px;' class="btn btn-action fa fa-instagram waves-effect waves-light"></button>
-        </div>
-        <br/>
-        <br/>
-      </div>
-    </div>
     <footer class="page-footer">
       <div class="container">
         <div class="row">
@@ -193,7 +202,7 @@
       </div>
     </footer>
     <div class="footer-copyright">
-      <div class="container center"> &copy; 2014 Copyright Text </div>
+      <div class="container center"> &copy; 2017 Copyright Text </div>
     </div>
     <script src='feature/navbar.js'></script>
   </body>
