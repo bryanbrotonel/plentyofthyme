@@ -34,12 +34,18 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="library.html">Food Library</a></li>
           <li><a href="aboutPOT.html">About PoT</a></li>
-          <li class="active"><a>About Us</a></li>
+          <li><a>About Us</a></li>
           <li><a href="contactUs.html">Contact Us</a></li>
           <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
         </ul>
         <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li><a class="center" href="landing.html">Home</a></li>
+          <li><a id='active' class="center" href="#">Home</a></li>
+          <script>
+            const active = document.getElementById('active');
+            active.addEventListener('click', e => {
+              Materialize.toast('Already on page!', 4000);
+            });
+          </script>
           <li><a class="center" href="cart.html">Cart</a></li>
           <li><a class="center" href="stats.html">Statistics</a></li>
           <li><a class="center" href="calendar.html">Calendar</a></li>
@@ -88,23 +94,32 @@
             </div>
             <div class="col-sm-12 visible-sm visible-md">
               <br/>
-              <button id='btnCart_sm' style="background-color: black; width: 600px; height: auto" class='waves-effect btn btn-primary'>
+              <button id='btnCart_sm' style="background-color: black; width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                <br/>
                 <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
+                <p>
                 Add or modify items in your fridge
+                </p>
               </button>
             </div>
             <div class="col-sm-12 visible-sm visible-md">
               <br/>
-              <button id='btnStats_sm' style="background-color: black; width: 600px; height : auto" class='waves-effect btn btn-primary'>
+              <button id='btnStats_sm' style="background-color: black; width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
+                <br/>
                 <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
-                Check out your up to date statistics
+                <p>
+                  Check out your up to date statistics
+                </p>
               </button>
             </div>
             <div class="col-sm-12 visible-sm visible-md">
               <br/>
-              <button id='btnCalendar_sm' style="background-color: black; width: 600px; height: auto" class='waves-effect btn btn-primary'>
+              <button id='btnCalendar_sm' style="background-color: black; width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                <br/>
                 <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
-                 Check out the calendar view
+                 <p>
+                   Check out the calendar view
+                 </p>
               </button>
             </div>
             <br/>

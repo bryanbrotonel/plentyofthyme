@@ -26,26 +26,36 @@
 </head>
 
 <body>
-  <nav class="top-nav" style="background-color: rgba(65, 96, 33, 0.83);">
-      <div class="nav-wrapper">
-          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="library.html">Food Library</a></li>
-              <li><a href="aboutPOT.html">About PoT</a></li>
-              <li><a>About Us</a></li>
-              <li class="active"><a href="#">Contact Us</a></li>
-              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-              <script src='feature/logout.js'></script>
-          </ul>
-          <ul id="slide-out" class="side-nav hide-on-large-only">
-              <li><a class="center" href="library.html">Food Library</a></li>
-              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-              <li><a class="center" href="aboutus.html">About Us</a></li>
-              <li class="active"><a class="center" href="#">Contact Us</a></li>
-              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-              <script src='feature/logout.js'></script>
-          </ul>
-      </div>
+  <nav class="top-nav">
+    <div class="nav-wrapper">
+      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="library.html">Food Library</a></li>
+        <li><a href="aboutPOT.html">About PoT</a></li>
+        <li><a>About Us</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+      </ul>
+      <ul id="slide-out" class="side-nav hide-on-large-only">
+        <li><a class="center" href="landing.html">Home</a></li>
+        <li><a class="center" href="cart.html">Cart</a></li>
+        <li><a class="center" href="stats.html">Statistics</a></li>
+        <li><a class="center" href="calendar.html">Calendar</a></li>
+        <li><a class="center" href="library.html">Food Library</a></li>
+        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+        <li><a id='active' class="center" href="#">About Us</a></li>
+        <script>
+          const active = document.getElementById('active');
+          active.addEventListener('click', e => {
+            Materialize.toast('Already on page!', 4000);
+          });
+        </script>
+        <li><a class="center" href="contactUs.html">Contact Us</a></li>
+        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+        <script src='feature/logout.js'></script>
+        <script src='feature/navbar.js'></script>
+      </ul>
+    </div>
   </nav>
   <br>
   <div class="container" id="cntnr">
