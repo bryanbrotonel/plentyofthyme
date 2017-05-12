@@ -17,7 +17,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     user1 = firebase.auth().currentUser;
     var itemRef = firebase.database().ref('users/' + user1.uid).child('items');
     itemRef.on('value', function(snapshot) {
-      uiList.innerText = JSON.stringify(snapshot.val(), null, 2);
+      uiList.innerText = '\n' + JSON.stringify(snapshot.val(), null, 2) + '\n\n';
       console.log(snapshot.val());
     });
     console.log(name);
