@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
     <link href="css/styles.css" rel="stylesheet" media="screen">
@@ -15,20 +16,24 @@
     <script src='feature/main.js'></script>
     <title>Cart</title>
     <style>
-        body{
-          background-image: url(images/thyme+background3.jpg);
+        body {
+            background-image: url(images/thyme+background3.jpg);
         }
+        
         td {
-          padding: 10px;
+            padding: 10px;
         }
+        
         th {
-          padding: 10px;
-          font-size: 120%;
+            padding: 10px;
+            font-size: 120%;
         }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="top-nav">
+<<<<<<< HEAD
       <div class="nav-wrapper">
         <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
         <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
@@ -60,82 +65,110 @@
           <script src='feature/logout.js'></script>
         </ul>
       </div>
+=======
+        <div class="nav-wrapper">
+            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="library.html">Food Library</a></li>
+                <li><a href="aboutPOT.html">About PoT</a></li>
+                <li><a>About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            </ul>
+            <ul id="slide-out" class="side-nav hide-on-large-only">
+                <li><a class="center" href="landing.html">Home</a></li>
+                <li><a id='active' class="center" href="#">Cart</a></li>
+                <script>
+                    const active = document.getElementById('active');
+                    active.addEventListener('click', e => {
+                        Materialize.toast('Already on page!', 4000);
+                    });
+                </script>
+                <li><a class="center" href="stats.html">Statistics</a></li>
+                <li><a class="center" href="calendar.html">Calendar</a></li>
+                <li><a class="center" href="library.html">Food Library</a></li>
+                <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                <li><a class="center" href="aboutus.html">About Us</a></li>
+                <li><a class="center" href="contactUs.html">Contact Us</a></li>
+                <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                <script src='feature/logout.js'></script>
+            </ul>
+        </div>
+>>>>>>> shely
     </nav>
     <br/>
     <div class='container' id="cntnr">
-      <br/>
-      <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
-        <fieldset>
-          <label for="Item1" class="col-sm-12 control-label">Item Name</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="item1name" placeholder="Item 1">
-          </div>
-          <label for="select" class="col-sm-12 control-label">Quantity</label>
-          <div class="col-sm-12">
-            <select class="form-control" id="select">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>5+</option>
-            </select>
-          </div>
-          <br/>
-          <br/>
-          <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
-          <div class="col-sm-12">
-            <input type="date" class="form-control" id="item1date" placeholder="date">
-          </div>
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="item1price" placeholder="price">
-          </div>
-          <label for="item1select" class="col-sm-12 control-label">Categorys</label>
-          <div class="col-sm-12">
-            <select class="form-control" id="item1select">
-              <option>dairy</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-          </div>
-        </fieldset>
-      </div>
-      <div class="center">
-        <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
-      </div>
-      <div class="center">
         <br/>
-        <input class='btn waves-effect waves-light' style='width:90%;' type="button" value="Add more items" onClick="addinput('dynamicInput');">
-      </div>
-      <br/>
-    </div>
+        <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
+            <fieldset>
+                <label for="Item1" class="col-sm-12 control-label">Item Name</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="item1name" placeholder="Item 1"> </div>
+                <label for="select" class="col-sm-12 control-label">Quantity</label>
+                <div class="col-sm-12">
+                    <select class="form-control" id="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+                <br/>
+                <br/>
+                <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
+                <div class="col-sm-12">
+                    <input type="date" class="form-control" id="item1date" placeholder="date"> </div>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="item1price" placeholder="price"> </div>
+                <label for="item1select" class="col-sm-12 control-label">Categorys</label>
+                <div class="col-sm-12">
+                    <select class="form-control" id="item1select">
+                        <option>dairy</option>
+                        <option>produce</option>
+                        <option>meats & alternatives</option>
+                        <option>miscellaneous</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+        <div class="center">
+            <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
+        </div>
+        <div class="center">
+            <br/>
+            <input class='btn waves-effect waves-light' style='width:90%;' type="button" value="Add more items" onClick="addinput('dynamicInput');"> </div>
+        <br/> </div>
     <br/>
     <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Grow With Us!</h5>
-            <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-            <button class="btn green lighten-2 waves-effect waves-light">Collaborate!</button>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-                <li><a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;'/></a>
-                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;'/></a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn green lighten-2 waves-effect waves-light">Collaborate!</button>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     <div class="footer-copyright">
-      <div class="container center">
-        &copy; 2017 Copyright Team SEABASS
-      </div>
+        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
     <script src='feature/grocerylist.js'></script>
     <script src='feature/navbar.js'></script>
-  </body>
+</body>
+
 </html>
