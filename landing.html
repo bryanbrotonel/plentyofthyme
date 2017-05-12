@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
     <link href="css/styles.css" rel="stylesheet" media="screen">
@@ -19,151 +20,130 @@
     <script src='feature/main.js'></script>
     <title>Plenty of Thyme</title>
     <style>
-      body {
-        background-image: url(images/thyme+background3.jpg);
-      }
-
-      button {
-        background: black;
-        background: rgba(0, 0, 0, 0.6);
-      }
+        body {
+            background-image: url(images/thyme+background3.jpg);
+        }
+        
+        button {
+            background: black;
+            background: rgba(0, 0, 0, 0.6);
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="top-nav">
-      <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="library.html">Food Library</a></li>
-          <li><a href="aboutPOT.html">About PoT</a></li>
-          <li><a>About Us</a></li>
-          <li><a href="contactUs.html">Contact Us</a></li>
-          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-        </ul>
-        <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li><a id='active' class="center" href="#">Home</a></li>
-          <script>
-            const active = document.getElementById('active');
-            active.addEventListener('click', e => {
-              Materialize.toast('Already on page!', 4000);
-            });
-          </script>
-          <li><a class="center" href="cart.html">Cart</a></li>
-          <li><a class="center" href="stats.html">Statistics</a></li>
-          <li><a class="center" href="calendar.html">Calendar</a></li>
-          <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="center" href="groceryList.html">Grocery List</a></li>
-          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-          <li><a class="center" href="aboutus.html">About Us</a></li>
-          <li><a class="center" href="contactUs.html">Contact Us</a></li>
-          <li><a class="center" href="affiliates.html">Our Friends</a></li>
-          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-          <script src='feature/logout.js'></script>
-        </ul>
-      </div>
+        <div class="nav-wrapper">
+            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="library.html">Food Library</a></li>
+                <li><a href="aboutPOT.html">About PoT</a></li>
+                <li><a>About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            </ul>
+            <ul id="slide-out" class="side-nav hide-on-large-only">
+                <li><a id='active' class="center" href="#">Home</a></li>
+                <script>
+                    const active = document.getElementById('active');
+                    active.addEventListener('click', e => {
+                        Materialize.toast('Already on page!', 4000);
+                    });
+                </script>
+                <li><a class="center" href="cart.html">Cart</a></li>
+                <li><a class="center" href="stats.html">Statistics</a></li>
+                <li><a class="center" href="calendar.html">Calendar</a></li>
+                <li><a class="center" href="library.html">Food Library</a></li>
+                <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                <li><a class="center" href="aboutus.html">About Us</a></li>
+                <li><a class="center" href="contactUs.html">Contact Us</a></li>
+                <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                <script src='feature/logout.js'></script>
+            </ul>
+        </div>
     </nav>
     <br />
     <div class="container" id="cntnr">
-      <div class="page_div">
-          <div class="center">
-            <div>
-              <h3 class="hide">Grocery</h3>
-              <h1 class="hidden-xs">What's in store for today?</h1>
-              <h4 class="visible-xs">What's in store for today?</h4>
-              <br />
-              <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
-              <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5>
+        <div class="page_div">
+            <div class="center">
+                <div>
+                    <h3 class="hide">Grocery</h3>
+                    <h1 class="hidden-xs">What's in store for today?</h1>
+                    <h4 class="visible-xs">What's in store for today?</h4>
+                    <br />
+                    <h6 class="visible-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h6>
+                    <h5 class="hidden-xs">List of food items that will expire within 2 days (JavaScript? Thanks Cal)</h5> </div>
+                <div>
+                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                        <br/>
+                        <button id='btnCart' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
+                            <p> Add or modify items
+                                <br/> in your fridge </p>
+                        </button>
+                    </div>
+                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                        <br/>
+                        <button id='btnStats' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height : 300px" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:150px;" />
+                            <p> Check out your up
+                                <br/> to date statistics </p>
+                        </button>
+                    </div>
+                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
+                        <br/>
+                        <button id='btnCalendar' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
+                            <p> Check out the
+                                <br/>calendar view </p>
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <div class="col-sm-12 visible-sm visible-md">
+                        <br/>
+                        <button id='btnCart_sm' style="background: black; background: rgba(0, 0, 0, 0.0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                            <br/> <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
+                            <p> Add or modify items in your fridge </p>
+                        </button>
+                    </div>
+                    <div class="col-sm-12 visible-sm visible-md">
+                        <br/>
+                        <button id='btnStats_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
+                            <br/> <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
+                            <p> Check out your up to date statistics </p>
+                        </button>
+                    </div>
+                    <div class="col-sm-12 visible-sm visible-md">
+                        <br/>
+                        <button id='btnCalendar_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
+                            <br/> <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
+                            <p> Check out the calendar view </p>
+                        </button>
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                        <button id='btnCart_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-action'> <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
+                            <p> Add or edit cart </p>
+                        </button>
+                    </div>
+                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                        <button id='btnStats_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height : 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
+                            <p> Take me to the graphs </p>
+                        </button>
+                    </div>
+                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
+                        <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
+                            <p> take me to the calendar, fam </p>
+                        </button>
+                    </div>
+                    <script src='feature/landingnav.js'></script>
+                </div>
             </div>
-            <div>
-              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                <br/>
-                <button id='btnCart' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
-                  <p>
-                    Add or modify items<br/> in your fridge
-                  </p>
-                </button>
-              </div>
-              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                <br/>
-                <button id='btnStats' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height : 300px" class='waves-effect btn btn-primary'><img src="images/stats.png" alt="stats" style="padding:10px; width:150px;" />
-                  <p>
-                    Check out your up<br/> to date statistics
-                  </p>
-                </button>
-              </div>
-              <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                <br/>
-                <button id='btnCalendar' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect btn btn-primary'><img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
-                  <p>
-                     Check out the <br/>calendar view
-                   </p>
-                </button>
-              </div>
-            </div>
-            <br />
-            <div>
-              <div class="col-sm-12 visible-sm visible-md">
-                <br/>
-                <button id='btnCart_sm' style="background: black; background: rgba(0, 0, 0, 0.0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
-                  <br/>
-                  <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
-                  <p>
-                  Add or modify items in your fridge
-                  </p>
-                </button>
-              </div>
-              <div class="col-sm-12 visible-sm visible-md">
-                <br/>
-                <button id='btnStats_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
-                  <br/>
-                  <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
-                  <p>
-                    Check out your up to date statistics
-                  </p>
-                </button>
-              </div>
-              <div class="col-sm-12 visible-sm visible-md">
-                <br/>
-                <button id='btnCalendar_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
-                  <br/>
-                  <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
-                   <p>
-                     Check out the calendar view
-                   </p>
-                </button>
-              </div>
-            </div>
-            <br/>
-            <div>
-              <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                <button id='btnCart_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-action'>
-                  <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
-                  <p>
-                    Add or edit cart
-                  </p>
-                </button>
-              </div>
-              <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                <button id='btnStats_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height : 200px" class='waves-effect waves-light btn btn-primary'>
-                  <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
-                <p>
-                Take me to the graphs
-                </p>
-                </button>
-              </div>
-              <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 300px; height: 200px" class='waves-effect waves-light btn btn-primary'>
-                  <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
-                  <p>
-                  take me to the calendar, fam
-                  </p>
-                </button>
-              </div>
-              <script src='feature/landingnav.js'></script>
-            </div>
-          </div>
-          </div>
-          <!-- <div class="footer">
+        </div>
+        <!-- <div class="footer">
             <div class='center'>
               <div>MEDIA CONNECTIONS</div>
               <div class="center media-connections">
@@ -174,36 +154,35 @@
               <br/>
             </div>
           </div> -->
-        </div>
     </div>
-      <br/>
+    <br/>
     <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Grow With Us!</h5>
-              <p class="grey-text text-lighten-4">We are open source, fam!</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-              <li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
-              <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
-              <li>
-                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;'/></a>
-                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;'/></a></li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#!">Git Hub</a>
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source, fam!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                        </li>
+                        <li> <a class="grey-text text-lighten-3" href="#!">Git Hub</a> </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     <div class="footer-copyright">
-      <div class="container center"> &copy; 2017 Copyright Text </div>
+        <div class="container center"> &copy; 2017 Copyright Text </div>
     </div>
     <script src='feature/navbar.js'></script>
-  </body>
+</body>
+
 </html>

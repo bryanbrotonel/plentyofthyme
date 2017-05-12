@@ -1,111 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="feature/main.js"></script>
-    <style>
-      table {
-        width: 80%;
-        font-size: 14px;
-      }
-      .container5,
-      .container3,
-      .container6 {
-        text-align: left;
-      }
-      body{
-        background-image: url(images/thyme+background3.jpg);
-      }
-      td {
-        padding: 10px;
-      }
-      th {
-        padding: 10px;
-        font-size: 120%;
-      }
-    </style>
-    <title>Plenty of Thyme</title>
-  </head>
-  <body>
-      <nav class="top-nav">
-        <div class="nav-wrapper">
-          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="library.html">Food Library</a></li>
-            <li><a href="aboutPOT.html">About PoT</a></li>
-            <li><a>About Us</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
-            <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-          </ul>
-          <ul id="slide-out" class="side-nav hide-on-large-only">
-            <li><a class="center" href="landing.html">Home</a></li>
-            <li><a class="center" href="cart.html">Cart</a></li>
-            <li><a class="center" href="stats.html">Statistics</a></li>
-            <li><a class="center" href="calendar.html">Calendar</a></li>
-            <li><a class="center" href="library.html">Food Library</a></li>
-            <li><a id='active' class="center" href="#">Grocery List</a></li>
-            <script>
-              const active = document.getElementById('active');
-              active.addEventListener('click', e => {
-                Materialize.toast('Already on page!', 4000);
-              });
-            </script>
-            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-            <li><a class="center" href="aboutus.html">About Us</a></li>
-            <li><a class="center" href="contactUs.html">Contact Us</a></li>
-            <li><a class="center" href="affiliates.html">Our Friends</a></li>
-            <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-            <script src='feature/logout.js'></script>
-            <script src='feature/navbar.js'></script>
-          </ul>
-        </div>
-      </nav>
-    <br/>
-    <div class="container center" style="width: 80%;" id="cntnr">
-      <h1>Grocery List</h1>
-      <h4 class="text-muted">What's in your fridge?</h4>
-      <button id='btnSubmit' class="waves-effect waves-light btn btn-action" style="height: 70px; width:80%; font-size:30px;">Add to List +</button>
-      <br/>
-      <br/>
-      <br/>
-    </div>
-    <div id='list' class="container" style="width: 80%; background-color:black; opacity: 0.6">
-    </div>
-    <br/>
 
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Grow With Us!</h5>
-                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                    <button class="btn green lighten-2">Collaborate!</button>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;'/></a>
-                        <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;'/></a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
-                    </ul>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <script src="feature/main.js"></script>
+        <style>
+            table {
+                width: 80%;
+                font-size: 14px;
+            }
+            
+            .container5,
+            .container3,
+            .container6 {
+                text-align: left;
+            }
+            
+            body {
+                background-image: url(images/thyme+background3.jpg);
+            }
+            
+            td {
+                padding: 10px;
+            }
+            
+            th {
+                padding: 10px;
+                font-size: 120%;
+            }
+        </style>
+        <title>Plenty of Thyme</title>
+    </head>
+
+    <body>
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+                <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="library.html">Food Library</a></li>
+                    <li><a href="aboutPOT.html">About PoT</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav hide-on-large-only">
+                    <li><a class="center" href="landing.html">Home</a></li>
+                    <li><a class="center" href="cart.html">Cart</a></li>
+                    <li><a class="center" href="stats.html">Statistics</a></li>
+                    <li><a class="center" href="calendar.html">Calendar</a></li>
+                    <li><a class="center" href="library.html">Food Library</a></li>
+                    <li><a id='active' class="center" href="#">Grocery List</a></li>
+                    <script>
+                        const active = document.getElementById('active');
+                        active.addEventListener('click', e => {
+                            Materialize.toast('Already on page!', 4000);
+                        });
+                    </script>
+                    <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                    <li><a class="center" href="aboutus.html">About Us</a></li>
+                    <li><a class="center" href="contactUs.html">Contact Us</a></li>
+                    <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                    <script src='feature/logout.js'></script>
+                    <script src='feature/navbar.js'></script>
+                </ul>
+            </div>
+        </nav>
+        <br/>
+        <div class="container center" style="width: 80%;" id="cntnr">
+            <h3 class="visible-xs">Grocery List</h3>
+            <h1 class="hidden-xs">Grocery List</h1>
+            <h4 class="text-muted">What's in your fridge?</h4>
+            <button id='btnSubmit' class="waves-effect waves-light btn btn-action" style="height: 70px; width:80%; font-size:30px;">Add to List +</button>
+            <br/>
+            <br/>
+            <br/> </div>
+        <div id='list' class="container" style="width: 80%; background-color:black; opacity: 0.6"> </div>
+        <br/>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Grow With Us!</h5>
+                        <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                        <button class="btn green lighten-2">Collaborate!</button>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                            </li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </footer>
+        <div class="footer-copyright">
+            <div class="container center"> © 2017 Copyright Team SEABASS </div>
         </div>
-    </footer>
-    <div class="footer-copyright">
-        <div class="container center"> © 2017 Copyright Team SEABASS </div>
-    </div>
-    <script src='feature/displayList.js'></script>
-  </body>
+        <script src='feature/displayList.js'></script>
+    </body>
+
 </html>
