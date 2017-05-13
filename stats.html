@@ -3,6 +3,7 @@
 
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
   <link href="css/styles.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -210,6 +211,93 @@
                 <li><a href="aboutPOT.html">About PoT</a></li>
                 <li><a>About Us</a></li>
                 <li><a href="contactUs.html">Contact Us</a></li>
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="feature/main.js"></script>
+    <style>
+        body {
+            background-image: url(images/thyme+background3.jpg);
+        }
+        
+        .vertical-line {
+            border-left: 1px solid #808080;
+            height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1px;
+        }
+        
+        img {
+            width: 100% height: auto;
+        }
+        /*Table for list of wasted food*/
+        
+        table {
+            border: 2px solid black;
+            width: 60%;
+            height: 30px;
+            margin: auto;
+        }
+        
+        th.categories {
+            padding: 10px;
+            border: 2px solid black;
+            height: 40px;
+            width: 70px;
+            text-align: center;
+        }
+        
+        td.waste_items {
+            border: 2px solid black;
+            height: 80px;
+        }
+        
+        ul.cat {
+            font-size: 12px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: none;
+        }
+        
+        li.waste_list {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+        }
+        
+        .btn {
+            background-color: #5B9D54;
+        }
+        
+        .btn:hover {
+            background: #35752E;
+        }
+    </style>
+    <title>Plenty of Thyme</title>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="nav-wrapper">
+            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="white-text" href="library.html">Food Library</a></li>
+                <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+                <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
+                <li><a class="white-text" href="contactUs.html">ignoreContactUs</a></li>
+>>>>>>> shely
                 <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
             </ul>
             <ul id="slide-out" class="side-nav hide-on-large-only">
@@ -226,13 +314,21 @@
                 <li><a class="center" href="library.html">Food Library</a></li>
                 <li><a class="center" href="groceryList.html">Grocery List</a></li>
                 <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+<<<<<<< HEAD
                 <li><a class="center" href="aboutus.html">About Us</a></li>
                 <li><a class="center" href="contactUs.html">Contact Us</a></li>
+=======
+                <li><a class="center" href="aboutus.html">Contact Us</a></li>
+                <li><a class="center" href="contactUs.html">ignoreContactUs</a></li>
+>>>>>>> shely
                 <li><a class="center" href="affiliates.html">Our Friends</a></li>
                 <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
                 <script src='feature/logout.js'></script>
                 <script src='feature/navbar.js'></script>
             </ul>
+<<<<<<< HEAD
+>>>>>>> shely
+=======
 >>>>>>> shely
         </div>
     </nav>
@@ -240,6 +336,7 @@
     <div>
         <div class="container" id="cntnr">
             <div class="center">
+<<<<<<< HEAD
                 <br/>
                 <div>
                     <label for="week_vw" class="btn waves-effect waves-light">Week</label>
@@ -262,6 +359,39 @@
                 <p>stuff here</p>
                 <p>stuff here</p>
             </div>
+=======
+                <h3>Food Waste!</h3>
+                <br/>
+                <br />
+                <div>
+                    <div class="container" id="cntnr">
+                        <div class="center">
+                            <br/>
+                            <div>
+                                <label for="week_vw" class="btn waves-effect waves-light">Week</label>
+                                <label for="twowks_vw" class="btn waves-effect waves-light">Two Weeks</label>
+                                <label for="month_vw" class="btn waves-effect waves-light">Month</label>
+                                <label for="annual_vw" class="btn waves-effect waves-light">Year</label>
+                            </div>
+                            <br />
+                            <div>
+                                <label for="bar" class="btn waves-effect waves-light">Bar</label>
+                                <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
+                            </div>
+                            <br />
+                            <br /> </div>
+                        <div class="col-xs-6"> <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;" />
+                            <h3 style="padding:10px;">Food Wasted: 75%</h3> </div>
+                        <div class="vertical-line" />
+                        <div class="col-xs-6">
+                            <p>stuff here</p>
+                            <p>stuff here</p>
+                            <p>stuff here</p>
+                        </div>
+                    </div>
+                </div>
+                <br /> </div>
+>>>>>>> shely
         </div>
     </div>
     <br />
@@ -271,7 +401,11 @@
                 <div class="col l6 s12">
                     <h5 class="white-text">Grow With Us!</h5>
                     <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+<<<<<<< HEAD
                     <button class="btn green waves-effect waves-light lighten-2">Collaborate!</button>
+=======
+                    <button class="btn green lighten-2">Collaborate!</button>
+>>>>>>> shely
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
@@ -288,6 +422,7 @@
     </footer>
     <div class="footer-copyright">
         <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+<<<<<<< HEAD
     </div>
     <!-- shely's code -->
     <div class="home_menu hide">
@@ -301,6 +436,10 @@
             <a href="calendar.html"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
         </div>
     </div>
+=======
+    </div>
+    <script src='feature/displayList.js'></script>
+>>>>>>> shely
 </body>
 
 </html>
