@@ -33,38 +33,36 @@
 
 <body>
     <nav class="top-nav">
-
-      <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="white-text" href="library.html">Food Library</a></li>
-          <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-          <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
-          <li><a class="white-text" href="contactUs.html">ignoreContactUs</a></li>
-          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-        </ul>
-        <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li><a class="center" href="landing.html">Home</a></li>
-          <li><a id='active' class="center" href="#">Cart</a></li>
-          <script>
-            const active = document.getElementById('active');
-            active.addEventListener('click', e => {
-              Materialize.toast('Already on page!', 4000);
-            });
-          </script>
-          <li><a class="center" href="stats.html">Statistics</a></li>
-          <li><a class="center" href="calendar.html">Calendar</a></li>
-          <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="center" href="groceryList.html">Grocery List</a></li>
-          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-          <li><a class="center" href="aboutus.html">Contact Us</a></li>
-          <li><a class="center" href="contactUs.html">ignoreContactUs</a></li>
-          <li><a class="center" href="affiliates.html">Our Friends</a></li>
-          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-          <script src='feature/logout.js'></script>
-        </ul>
-      </div>
+        <div class="nav-wrapper">
+            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="white-text" href="library.html">Food Library</a></li>
+                <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+                <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
+                <li><a class="white-text" href="contactUs.html">ignoreContactUs</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+            </ul>
+            <ul id="slide-out" class="side-nav hide-on-large-only">
+                <li><a class="center" href="landing.html">Home</a></li>
+                <li><a id='active' class="center" href="#">Cart</a></li>
+                <script>
+                    const active = document.getElementById('active');
+                    active.addEventListener('click', e => {
+                        Materialize.toast('Already on page!', 4000);
+                    });
+                </script>
+                <li><a class="center" href="stats.html">Statistics</a></li>
+                <li><a class="center" href="calendar.html">Calendar</a></li>
+                <li><a class="center" href="library.html">Food Library</a></li>
+                <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                <li><a class="center" href="aboutus.html">Contact Us</a></li>
+                <li><a class="center" href="contactUs.html">ignoreContactUs</a></li>
+                <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                <script src='feature/logout.js'></script>
+            </ul>
+        </div>
     </nav>
     <br/>
     <div class='container' id="cntnr">
