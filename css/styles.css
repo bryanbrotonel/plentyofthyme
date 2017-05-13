@@ -99,8 +99,9 @@ div.footer-copyright{
     padding:10px;
 }
 
-
-
+.feature {
+  color: #00c853;
+}
 
 /*Media connections*/
 
@@ -152,4 +153,16 @@ div.footer-copyright{
 
 .email:hover {
     color: #d3edff;
+}
+
+.brand-logo {
+  font-family: 'Handlee', cursive;
+}
+
+@font-face {
+  font-family: 'Handlee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Handlee Regular'), local('Handlee-Regular'), url(https://fonts.gstatic.com/s/handlee/v5/juOaTHBX9N7mCQYS68pw6QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
