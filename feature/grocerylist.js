@@ -7,7 +7,7 @@
     const proObject = document.getElementById('object');
     const btnSubmit = document.getElementById('btnSubmit');
 
-    const select = document.getElementById('select');
+    const select = document.getElementById('qty');
     const itemDate1 = document.getElementById('item1date');
     const itemSelect1 = document.getElementById('item1select');
 
