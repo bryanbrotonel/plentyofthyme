@@ -18,6 +18,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     var itemRef = firebase.database().ref('users/' + user1.uid);
     itemRef.on('value', function(snapshot) {
       if (snapshot.val() != null) {
+        var list  = snapshot.val();
+        console.log(list); 
         uiList.setAttribute('class', 'container');
         uiList.innerText = '\n' + JSON.stringify(snapshot.val(), null, 2) + '\n\n';
         console.log(snapshot.val());
