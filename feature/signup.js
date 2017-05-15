@@ -12,8 +12,10 @@
 
     const txtEmail = document.getElementById('Email');
     const txtPassword = document.getElementById('Password');
+    const txtConPassword = document.getElementById('confirmPassword');
     const btnCancel = document.getElementById('btnCancel');
     const btnSignUp = document.getElementById('btnSignUp');
+
 
     btnCancel.addEventListener('click', e => {
       window.location.href='index.html';
@@ -33,12 +35,17 @@
           Materialize.toast('Please enter your password', 4000);
           return;
         }
-
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
-        promise.catch(e => Materialize.toast(e.message, 4000));
-        promise.catch(e => console.log(e.message));
-        document.getElementById('Password').value = "";
-
+        if (txtConPassword.value == txtPassword.value) {
+          const promise = auth.createUserWithEmailAndPassword(email, pass);
+          promise.catch(e => Materialize.toast(e.message, 4000));
+          promise.catch(e => console.log(e.message));
+          document.getElementById('Password').value = "";
+          document.getElementById('confirmPassword').value = "";
+        } else {
+          Materialize.toast('Passwords do not match!', 4000);
+          document.getElementById('Password').value = "";
+          document.getElementById('confirmPassword').value = "";
+        }
     });
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
