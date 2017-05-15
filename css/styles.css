@@ -115,6 +115,16 @@ div.footer-copyright{
   color: white;
 }
 
+.fa-lg {
+  background: transparent;
+  margin: auto;
+}
+
+.fa-lg:hover {
+  opacity: 0.7;
+  color: white;
+}
+
 #myTable:hover  {
     color:black;
 }
