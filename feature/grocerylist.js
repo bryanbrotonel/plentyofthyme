@@ -39,12 +39,19 @@
         console.log('invalid price');
         return;
       }
-      firebase.database().ref().child('users/' + user1.uid).child('items').push({
-        name: itemName,
+    //  firebase.database().ref().child('users/' + user1.uid).child('items').push({
+      firebase.database().ref().child('users/' + user1.uid).child(itemDate).child(itemName).set({
+        //name: itemName,
         price: itemPrice,
-        date: itemDate,
+        //date: itemDate,
         category: itemCat,
         quantity: amount
+        // })
+        // name: itemName,
+        // price: itemPrice,
+        // date: itemDate,
+        // category: itemCat,
+        // quantity: amount
       });
       Materialize.toast('Successfully added ' + itemName + '.', 4000);
       document.getElementById('item1name').value = "";;
