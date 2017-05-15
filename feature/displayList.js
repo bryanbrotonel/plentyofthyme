@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // Get elements
     const uiList = document.getElementById('list');
     user1 = firebase.auth().currentUser;
-    var itemRef = firebase.database().ref('users/' + user1.uid).child('items');
+    var itemRef = firebase.database().ref('users/' + user1.uid);
     itemRef.on('value', function(snapshot) {
       if (snapshot.val() != null) {
         uiList.setAttribute('class', 'container');
