@@ -15,6 +15,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     user1 = firebase.auth().currentUser;
 
     // Get elements
+    var buttons = [];
+    var values = [];
+    var i = 0;
+
     const uiList = document.getElementById('list');
     var ul = document.createElement('ul');
     var li = document.createElement('li');
@@ -28,6 +32,8 @@ firebase.auth().onAuthStateChanged(function(user) {
           childSnapshot.forEach(function (childChildSnapshot){
             var li = document.createElement('li');
             value = childChildSnapshot.val();
+            values[i] = value.name + value.date;
+            i++;
             string = value.name + "\t" + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
@@ -38,19 +44,30 @@ firebase.auth().onAuthStateChanged(function(user) {
             ul.appendChild(li);
           });
         });
+
         uiList.appendChild(ul);
-        // var list  = snapshot.val();
-        // console.log(list);
-        // uiList.setAttribute('class', 'container');
-        // console.log(snapshot.val());
+        for (i = 0; i < values.length; i++) {
+          buttons[i] = document.getElementById(values[i]);
+        }
+        buttons[0].addEventListener('click', e => {
+          buttons[0].remove();
+        });
+        var j = 1;
+        for (i = 1; i < buttons.length; i++) {
+          buttons[i].addEventListener('click', e => {
+            buttons[j].remove();
+            j++;
+          });
+        }
       } else {
         uiList.setAttribute('class', 'center container');
         uiList.innerText = '\nYou have nothing in your fridge yet!'  + '\n\n';
         console.log(snapshot.val());
       }
     });
-    console.log(name);
+
   } else {
     window.location.href='login.html';
   }
+
 });
