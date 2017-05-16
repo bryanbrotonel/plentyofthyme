@@ -1,4 +1,4 @@
-var calendar = document.getElementById('calendar');
+var weekcalendar = document.getElementById('calendar');
 var week1 = document.createElement('table');
 var week2 = document.createElement('table');
 
@@ -86,5 +86,5 @@ week2.appendChild(days2_tr);
 week2.appendChild(spots2_tr);
 
 
-calendar.appendChild(week1);
-calendar.appendChild(week2);
+weekcalendar.appendChild(week1);
+weekcalendar.appendChild(week2);
