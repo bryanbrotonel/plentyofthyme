@@ -32,10 +32,15 @@
 </head>
 
 <body>
-  <div id="navbg"></div>
+  <div id="navbg" align="middle" style="font-size:63px;">
+  <a href="landing.html" class="brand-logo white-text hidden-xs">
+    <img style="height: 270px;padding:5px;margin-top:3%;" src="images/logo.png"/>Plenty of Thyme</a>
+  <a href="landing.html" class="col-xs-12 brand-logo white-text visible-xs" style="font-size:48px;">
+    <img align="middle" style="height: 230px;padding:5px;margin-top:10%;" src="images/logo.png"/>Plenty of Thyme</a>
+</div>
   <nav class="top-nav">
     <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="white-text" href="library.html">Food Library</a></li>
         <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
@@ -65,7 +70,13 @@
   <div class="container" id="cntnr">
     <div class="page_div">
       <div class="center">
-        <h4>What's in store for today?</h4>
+        <h4 id="funfacts">What's in store for today?</h4>
+        <script>
+          const funfacts = document.getElementById('funfacts');
+          funfacts.addEventListener('click', e => {
+            Materialize.toast('Did you know: Food waste generates 3.3 billion tons of CO2!', 4000);
+          });
+        </script>
         <div>
           <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
             <br/>
@@ -134,7 +145,7 @@
           </div>
           <div class="col-xs-12 visible-xs center" style="padding:10px;">
             <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 280px; height: 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
-                            <p> take me to the calendar, fam </p>
+                            <p> take me to the calendar </p>
                         </button>
           </div>
           <script src='feature/landingnav.js'></script>
