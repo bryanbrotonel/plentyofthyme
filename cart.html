@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
@@ -68,44 +67,53 @@
     </div>
   </nav>
   <br/>
-  <div class='container' id="cntnr">
-    <br/>
-    <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
-      <fieldset>
-        <div class="col-sm-12">
-          <input type="text" class="form-control" id="item1name" placeholder="Item Name">
-        </div>
-        <div class="col-sm-12">
-          <input type="number" class="form-control" id="qty" placeholder="Quantity">
-        </div>
-        <div hidden="col-sm-12">
+
+    <div class='container' id="cntnr">
+      <br/>
+      <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
+        <fieldset id='main'>
           <br/>
-          <br/>
-        </div>
-        <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
-        <div class="col-sm-12">
-          <input type="date" class="form-control" id="item1date" placeholder="date">
-        </div>
-        <div class="col-sm-12">
-          <input type="text" class="form-control" id="item1price" placeholder="Price">
-        </div>
-        <label for="item1select" class="col-sm-12 control-label">Category</label>
-        <div class="col-sm-12">
-          <select id="item1select">
+          <label for="Item1" class="col-sm-12">Item Name</label>
+          <div class="col-sm-12">
+            <input type="text" id="item1name" placeholder="Item">
+          </div>
+          <label for="Item1" class="col-sm-12 control-label">Quantity</label>
+
+          <div class="col-sm-12">
+            <input type="number" id="qty" placeholder="Quantity">
+          </div>
+          <div hidden="col-sm-12">
+            <br/>
+            <br/>
+          </div>
+          <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
+          <div class="col-sm-12">
+            <input type="date" id="item1date" placeholder="date">
+          </div>
+          <label for="Item1" class="col-sm-12 control-label">Price</label>
+          <div class="col-sm-12">
+            <input type="text" id="item1price" placeholder="Price">
+          </div>
+          <label for="item1select" class="col-sm-12">Category</label>
+          <div class="col-sm-12">
+            <select id="item1select">
               <option>dairy</option>
               <option>produce</option>
               <option>meats & alternatives</option>
               <option>miscellaneous</option>
             </select>
-        </div>
-      </fieldset>
-    </div>
-    <div class="center">
-      <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
-    </div>
-    <div class="center">
+            <br/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="center">
+        <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
+      </div>
+      <div class="center">
+        <br/>
+        <button id ='btnAdd' class='btn waves-effect waves-light' style='width:90%;'>Add more items</button>
+      </div>
       <br/>
-      <input class='btn waves-effect waves-light' style='width:90%;' type="button" value="Add more items" onClick="addinput('dynamicInput');">
     </div>
     <br/>
   </div>
@@ -145,5 +153,6 @@
     $('select').material_select();
   });
 </script>
+
 
 </html>
