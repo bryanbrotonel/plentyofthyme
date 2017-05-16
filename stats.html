@@ -16,71 +16,73 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
   <style>
-  body {
-    background-image: url(images/thyme+background3.jpg);
-  }
+    #navbg {
+      background-image: url(images/thyme+background3.jpg);
+      height: 350px;
+    }
 
-  .vertical-line {
-    border-left: 1px solid #808080;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1px;
-  }
+    .vertical-line {
+      border-left: 1px solid #808080;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1px;
+    }
 
-  img {
-    width: 100% height: auto;
-  }
-  /*Table for list of wasted food*/
+    img {
+      width: 100% height: auto;
+    }
+    /*Table for list of wasted food*/
 
-  table {
-    border: 2px solid black;
-    width: 60%;
-    height: 30px;
-    margin: auto;
-  }
+    table {
+      border: 2px solid black;
+      width: 60%;
+      height: 30px;
+      margin: auto;
+    }
 
-  th.categories {
-    padding: 10px;
-    border: 2px solid black;
-    height: 40px;
-    width: 70px;
-    text-align: center;
-  }
+    th.categories {
+      padding: 10px;
+      border: 2px solid black;
+      height: 40px;
+      width: 70px;
+      text-align: center;
+    }
 
-  td.waste_items {
-    border: 2px solid black;
-    height: 80px;
-  }
+    td.waste_items {
+      border: 2px solid black;
+      height: 80px;
+    }
 
-  ul.cat {
-    font-size: 12px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: none;
-  }
+    ul.cat {
+      font-size: 12px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: none;
+    }
 
-  li.waste_list {
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-  }
+    li.waste_list {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+    }
 
-  .btn {
-    background-color: #5B9D54;
+    .btn {
+      background-color: #5B9D54;
 
-  }
+    }
 
-  .btn:hover {
-    background: #35752E;
-  }
+    .btn:hover {
+      background: #35752E;
+    }
   </style>
   <title>Plenty of Thyme</title>
 </head>
 
 <body>
+  <div id="navbg"></div>
   <nav class="top-nav">
     <div class="nav-wrapper">
       <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a><a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>

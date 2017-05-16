@@ -20,8 +20,9 @@
             list-style-type: none;
         }
 
-        body {
-            background-image: url(images/thyme+background3.jpg);
+        #navbg {
+          background-image: url(images/thyme+background3.jpg);
+          height: 350px;
         }
         /* Month header */
 
@@ -149,261 +150,262 @@
 </head>
 
 <body>
-    <nav class="top-nav">
-        <div class="nav-wrapper">
-            <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="white-text" href="library.html">Food Library</a></li>
-                <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-                <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
-                <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-            </ul>
-            <ul id="slide-out" class="side-nav hide-on-large-only">
-                <li><a class="center" href="landing.html">Home</a></li>
-                <li><a class="center" href="cart.html">Cart</a></li>
-                <li><a class="center" href="stats.html">Statistics</a></li>
-                <li><a id='active' class="center" href="#">Calendar</a></li>
-                <script>
-                    const active = document.getElementById('active');
-                    active.addEventListener('click', e => {
-                        Materialize.toast('Already on page!', 4000);
-                    });
-                </script>
-                <li><a class="center" href="library.html">Food Library</a></li>
-                <li><a class="center" href="groceryList.html">Grocery List</a></li>
-                <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                <li><a class="center" href="aboutus.html">Contact Us</a></li>
-                <li><a class="center" href="affiliates.html">Our Friends</a></li>
-                <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                <script src='feature/logout.js'></script>
-                <script src='feature/navbar.js'></script>
-            </ul>
-        </div>
-    </nav>
-    <br>
-    <div class="container" id="cntnr">
-        <div class="page_div">
-            <div class="center" id='cntnr2'>
-              <div id='mainCalendar'>
+  <div id="navbg"></div>
+  <nav class="top-nav">
+      <div class="nav-wrapper">
+          <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="white-text" href="library.html">Food Library</a></li>
+              <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+              <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+          </ul>
+          <ul id="slide-out" class="side-nav hide-on-large-only">
+              <li><a class="center" href="landing.html">Home</a></li>
+              <li><a class="center" href="cart.html">Cart</a></li>
+              <li><a class="center" href="stats.html">Statistics</a></li>
+              <li><a id='active' class="center" href="#">Calendar</a></li>
+              <script>
+                  const active = document.getElementById('active');
+                  active.addEventListener('click', e => {
+                      Materialize.toast('Already on page!', 4000);
+                  });
+              </script>
+              <li><a class="center" href="library.html">Food Library</a></li>
+              <li><a class="center" href="groceryList.html">Grocery List</a></li>
+              <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+              <li><a class="center" href="aboutus.html">Contact Us</a></li>
+              <li><a class="center" href="affiliates.html">Our Friends</a></li>
+              <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+              <script src='feature/logout.js'></script>
+              <script src='feature/navbar.js'></script>
+          </ul>
+      </div>
+  </nav>
+  <br>
+  <div class="container" id="cntnr">
+      <div class="page_div">
+          <div class="center" id='cntnr2'>
+            <div id='mainCalendar'>
 
-                <br/>
-                <h3>Calendar</h3>
-                <!--
-                <div class="month">
-                    <ul>
-                        <li class="prev">&#10094;</li>
-                        <li class="next">&#10095;</li>
-                        <li> May
-                            <br> <span style="font-size:18px">2017</span> </li>
-                    </ul>
-                </div>
-                <ul class="weekdays">
-                    <li>Mo</li>
-                    <li>Tu</li>
-                    <li>We</li>
-                    <li>Th</li>
-                    <li>Fr</li>
-                    <li>Sa</li>
-                    <li>Su</li>
-                </ul>
-                <ul class="days">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li><span class="active">10</span></li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                </ul>
-              -->
+              <br/>
+              <h3>Calendar</h3>
+              <!--
+              <div class="month">
+                  <ul>
+                      <li class="prev">&#10094;</li>
+                      <li class="next">&#10095;</li>
+                      <li> May
+                          <br> <span style="font-size:18px">2017</span> </li>
+                  </ul>
               </div>
-                <div id='calendar'>
-                  <script src='feature/mainCalendar.js'></script>
-                    <!--<table>
-                        <caption>Week of April 23, 2017</caption>
-                        <thead>
-                            <tr>
-                                <th class="week_o">Sunday</th>
-                                <th class="week">Monday</th>
-                                <th class="week_o">Tuesday</th>
-                                <th class="week">Wednesday</th>
-                                <th class="week_o">Thursday</th>
-                                <th class="week">Friday</th>
-                                <th class="week_o">Saturday</th>
-                            </tr>
-                            <tr>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li class="text-muted">Eggs</li>
-                                        <li class="text-muted">Bread</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li class="text-muted">Dumplings</li>
-                                        <li class="text-muted">Tea</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li class="text-muted">Tofu</li>
-                                        <li class="text-muted">Kimchi</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li class="text-muted">Chicken</li>
-                                        <li class="text-muted">Beef</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li class="text-muted">Lettuce</li>
-                                        <li class="text-muted">Red Onions</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li>Zuchini</li>
-                                        <li>Broccoli</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li>Burger</li>
-                                        <li>Hot Dog</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div>
-                    <br>
-                    <table>
-                        <caption>Week of April 30, 2017</caption>
-                        <thead>
-                            <tr>
-                                <th class="week_o">Sunday</th>
-                                <th class="week">Monday</th>
-                                <th class="week_o">Tuesday</th>
-                                <th class="week">Wednesday</th>
-                                <th class="week_o">Thursday</th>
-                                <th class="week">Friday</th>
-                                <th class="week_o">Saturday</th>
-                            </tr>
-                            <tr>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li>Kale</li>
-                                        <li>Tomato</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li>Almonds</li>
-                                        <li>Yogurt</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li>Milk</li>
-                                        <li>Lettuce</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li>Pizza Pops</li>
-                                        <li>Ground Beef</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li>Olive Oil</li>
-                                        <li>Avocado</li>
-                                    </ul>
-                                </td>
-                                <td class="food">
-                                    <ul class="food_list">
-                                        <li>Quinoa</li>
-                                        <li>Pizza</li>
-                                    </ul>
-                                </td>
-                                <td class="food_o">
-                                    <ul class="food_list">
-                                        <li>Steak</li>
-                                        <li>French Fries</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
-                  -->
-                    <br>
-                    <div class="center"> <a href="" class="btn waves-effect waves-light btn-success btn-lg">Print</a> </div>
-                </div>
+              <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+              </ul>
+              <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li><span class="active">10</span></li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+              </ul>
+            -->
             </div>
-        </div>
-    </div>
-    <br />
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Grow With Us!</h5>
-                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                    <button class="btn green lighten-2 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="footer-copyright">
-        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
-    </div>
-    <!-- shely's code ! -->
-    <div class="home_menu hide">
-        <div class="col-xs-4 " align="center">
-            <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
-        </div>
-        <div class="col-xs-4" align="center">
-            <a href="stats.html"><img src="images/stats.png" alt="stats" style="width:70px;" /></a>
-        </div>
-        <div class="col-xs-4" align="center">
-            <a class="active" href="#"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
-        </div>
-    </div>
+              <div id='calendar'>
+                <script src='feature/mainCalendar.js'></script>
+                  <!--<table>
+                      <caption>Week of April 23, 2017</caption>
+                      <thead>
+                          <tr>
+                              <th class="week_o">Sunday</th>
+                              <th class="week">Monday</th>
+                              <th class="week_o">Tuesday</th>
+                              <th class="week">Wednesday</th>
+                              <th class="week_o">Thursday</th>
+                              <th class="week">Friday</th>
+                              <th class="week_o">Saturday</th>
+                          </tr>
+                          <tr>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li class="text-muted">Eggs</li>
+                                      <li class="text-muted">Bread</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li class="text-muted">Dumplings</li>
+                                      <li class="text-muted">Tea</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li class="text-muted">Tofu</li>
+                                      <li class="text-muted">Kimchi</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li class="text-muted">Chicken</li>
+                                      <li class="text-muted">Beef</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li class="text-muted">Lettuce</li>
+                                      <li class="text-muted">Red Onions</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li>Zuchini</li>
+                                      <li>Broccoli</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li>Burger</li>
+                                      <li>Hot Dog</li>
+                                  </ul>
+                              </td>
+                          </tr>
+                      </thead>
+                  </table>
+              </div>
+              <div>
+                  <br>
+                  <table>
+                      <caption>Week of April 30, 2017</caption>
+                      <thead>
+                          <tr>
+                              <th class="week_o">Sunday</th>
+                              <th class="week">Monday</th>
+                              <th class="week_o">Tuesday</th>
+                              <th class="week">Wednesday</th>
+                              <th class="week_o">Thursday</th>
+                              <th class="week">Friday</th>
+                              <th class="week_o">Saturday</th>
+                          </tr>
+                          <tr>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li>Kale</li>
+                                      <li>Tomato</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li>Almonds</li>
+                                      <li>Yogurt</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li>Milk</li>
+                                      <li>Lettuce</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li>Pizza Pops</li>
+                                      <li>Ground Beef</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li>Olive Oil</li>
+                                      <li>Avocado</li>
+                                  </ul>
+                              </td>
+                              <td class="food">
+                                  <ul class="food_list">
+                                      <li>Quinoa</li>
+                                      <li>Pizza</li>
+                                  </ul>
+                              </td>
+                              <td class="food_o">
+                                  <ul class="food_list">
+                                      <li>Steak</li>
+                                      <li>French Fries</li>
+                                  </ul>
+                              </td>
+                          </tr>
+                      </thead>
+                  </table>
+                -->
+                  <br>
+                  <div class="center"> <a href="" class="btn waves-effect waves-light btn-success btn-lg">Print</a> </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <br />
+  <footer class="page-footer">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">Grow With Us!</h5>
+                  <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                  <button class="btn green lighten-2 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                      <li>
+                          <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                          <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <div class="footer-copyright">
+      <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+  </div>
+  <!-- shely's code ! -->
+  <div class="home_menu hide">
+      <div class="col-xs-4 " align="center">
+          <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
+      </div>
+      <div class="col-xs-4" align="center">
+          <a href="stats.html"><img src="images/stats.png" alt="stats" style="width:70px;" /></a>
+      </div>
+      <div class="col-xs-4" align="center">
+          <a class="active" href="#"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
+      </div>
+  </div>
 </body>
 
 </html>
