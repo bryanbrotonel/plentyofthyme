@@ -64,13 +64,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(snapshot.val());
       }
     });
-<<<<<<< HEAD
     console.log(name);
-=======
-
-  } else {
-    window.location.href='login.html';
->>>>>>> claidev2
   }
 
 });
