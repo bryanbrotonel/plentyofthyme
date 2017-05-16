@@ -1,11 +1,10 @@
-
 var user1;
 var name;
 var btnSubmit = document.getElementById('btnSubmit');
 console.log(btnSubmit);
 
 btnSubmit.addEventListener('click', e => {
-  window.location.href='cart.html';
+  window.location.href = 'cart.html';
 });
 
 var string = "";
@@ -24,8 +23,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     itemRef.on('value', function(snapshot) {
       if (snapshot.val() != null) {
-        snapshot.forEach(function (childSnapshot){
-          childSnapshot.forEach(function (childChildSnapshot){
+        snapshot.forEach(function(childSnapshot) {
+          childSnapshot.forEach(function(childChildSnapshot) {
             var li = document.createElement('li');
             value = childChildSnapshot.val();
             string = value.name + "\t" + value.date + '\n';
@@ -45,12 +44,10 @@ firebase.auth().onAuthStateChanged(function(user) {
         // console.log(snapshot.val());
       } else {
         uiList.setAttribute('class', 'center container');
-        uiList.innerText = '\nYou have nothing in your fridge yet!'  + '\n\n';
+        uiList.innerText = '\nYou have nothing in your fridge yet!' + '\n\n';
         console.log(snapshot.val());
       }
     });
     console.log(name);
-  } else {
-    window.location.href='login.html';
   }
 });
