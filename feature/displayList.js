@@ -16,6 +16,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     // Get elements
     var buttons = [];
     var values = [];
+    var dates = [];
+    var names = [];
     var i = 0;
 
     const uiList = document.getElementById('list');
@@ -25,13 +27,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     user1 = firebase.auth().currentUser;
     var itemRef = firebase.database().ref('users/' + user1.uid);
 
-    itemRef.on('value', function(snapshot) {
+    itemRef.once('value', function(snapshot) {
       if (snapshot.val() != null) {
         snapshot.forEach(function(childSnapshot) {
           childSnapshot.forEach(function(childChildSnapshot) {
             var li = document.createElement('li');
             value = childChildSnapshot.val();
             values[i] = value.name + value.date;
+            dates[i] = value.date;
+            names[i] = value.name;
             i++;
             string = value.name + "\t" + value.date + '\n';
             string2 = document.createTextNode(string);
@@ -50,11 +54,14 @@ firebase.auth().onAuthStateChanged(function(user) {
         }
         buttons[0].addEventListener('click', e => {
           buttons[0].remove();
+          itemRef.child(dates[0]).child(names[0]).remove();
         });
         var j = 1;
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
             buttons[j].remove();
+            console.log(dates[j]);
+            itemRef.child(dates[j]).child(names[j]).remove();
             j++;
           });
         }
