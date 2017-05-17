@@ -68,7 +68,8 @@
         price: itemPrice,
         date: itemDate,
         category: itemCat,
-        quantity: amount
+        quantity: amount,
+        expired: no
         // })
         // name: itemName,
         // price: itemPrice,
