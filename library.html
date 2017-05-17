@@ -79,7 +79,13 @@
             <tr>
               <th>Food</th>
               <th>Refridgerator at 4 C or lower</th>
-              <th>Freezer at -18 C or lower</th>
+              <th id="funfacts2">Freezer at -18 C or lower</th>
+              <script>
+                const funfacts2 = document.getElementById('funfacts2');
+                funfacts2.addEventListener('click', e => {
+                  Materialize.toast('Did you know: A European/North American consumer wastes 100kg of food annually!', 4000);
+                });
+              </script>
             </tr>
           </thead>
           <thead>
@@ -119,7 +125,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Chicken/Turkey - whole</td>
+              <td id="funfacts">Chicken/Turkey - whole</td>
+              <script>
+                const funfacts = document.getElementById('funfacts');
+                funfacts.addEventListener('click', e => {
+                  Materialize.toast('Did you know: Chopsticks go into the green bin!', 4000);
+                });
+              </script>
               <td>2-3 days</td>
               <td>1 year</td>
             </tr>

@@ -75,7 +75,13 @@
               <a href="http://foodfall.ca/"> <img src="images/Hamish.png" style="height:140px;" align="left"></a>
               <br>
               <br/>
-              <p style="text-align:center;">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+              <p style="text-align:center;" id="funfacts">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+              <script>
+                  const funfacts = document.getElementById('funfacts');
+                  funfacts.addEventListener('click', e => {
+                      Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+                  });
+              </script>
               <br /> </div>
           <div class="visible-xs">
               <div class="navbar navbar-inverse" style="background-color:transparent;">
@@ -105,7 +111,13 @@
                   <a href="http://use-it-up.azurewebsites.net/index.php"> <img src="images/luli.png" style="height:140px;" align="left"></a>
                   <br>
                   <br/>
-                  <p style="text-align:center;">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+                  <p id="funfacts2" style="text-align:center;">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+                  <script>
+                      const funfacts2 = document.getElementById('funfacts2');
+                      funfacts2.addEventListener('click', e => {
+                          Materialize.toast('Did you know: 1/4 of food wasted could feed 795 MILLION hungry people!', 4000);
+                      });
+                  </script>
               </div>
               <br /> </div>
           <div class="visible-xs">
