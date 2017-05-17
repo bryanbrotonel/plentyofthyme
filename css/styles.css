@@ -2,13 +2,15 @@ body {
     color:white;
 
 }
+
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
-nav.top-nav {
-        background-color: rgba(65, 96, 33, 0.83);
 
-}
+/*nav.top-nav {
+    background-color: rgba(65, 96, 33, 0.83);
+}*/
+
 .page_div {
   margin-bottom: 130px;
   clear: both;
@@ -157,4 +159,70 @@ div.footer-copyright{
   font-weight: 400;
   src: local('Handlee Regular'), local('Handlee-Regular'), url(https://fonts.gstatic.com/s/handlee/v5/juOaTHBX9N7mCQYS68pw6QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+    padding-top: 80px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+/*
+ * Custom styles
+ */
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-container {
+    padding: 10px 0 20px 0;
+    color:white;
+}
+
+.navbar.navbar-fixed-top.fixed-theme. {
+    box-shadow: 0 0 5px white;
+}
+
+.navbar-brand.fixed-theme {
+    font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 6s;
+    -webkit-transition:  1s;
+}
+
+.navbar.navbar-fixed-top {
+    min-height: 80px;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    min-height: 30px;
+}
+
+#navbar-nav#nav-mobile > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+@media (max-width: 767px) {
+    #navbar-nav#nav-mobile > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
 }

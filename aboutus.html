@@ -28,41 +28,103 @@
 
 <body>
   <div id="navbg"></div>
-  <nav class="top-nav">
-    <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="white-text" href="library.html">Food Library</a></li>
-        <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="white-text" href="aboutUs.html">About Us</a></li>
-        <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-      </ul>
-      <ul id="slide-out" class="side-nav hide-on-large-only">
-        <li><a class="center" href="landing.html">Home</a></li>
-        <li><a class="center" href="cart.html">Cart</a></li>
-        <li><a class="center" href="stats.html">Statistics</a></li>
-        <li><a class="center" href="calendar.html">Calendar</a></li>
-        <li><a class="center" href="library.html">Food Library</a></li>
-        <li><a class="center" href="groceryList.html">Grocery List</a></li>
-        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li><a id='active' class="center" href="#">About Us</a></li>
-        <script>
-          const active = document.getElementById('active');
-          active.addEventListener('click', e => {
-            Materialize.toast('Already on page!', 4000);
+  <div class="nav-wrapper">
+    <nav id="header" class="navbar navbar-fixed-top" style="background-color: rgba(65, 96, 33, 0.83);">
+      <div id="header-container" class="container navbar-container">
+        <div class="navbar-header">
+          <script>
+          $(document).ready(function(){
+            var myNavBar = {
+              flagAdd: true,
+              elements: [],
+              init: function (elements) {
+                  this.elements = elements;
+              },
+              add : function() {
+                  if(this.flagAdd) {
+                      for(var i=0; i < this.elements.length; i++) {
+                          document.getElementById(this.elements[i]).className += " fixed-theme";
+                      }
+                      this.flagAdd = false;
+                  }
+              },
+              remove: function() {
+                  for(var i=0; i < this.elements.length; i++) {
+                      document.getElementById(this.elements[i]).className =
+                              document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+                  }
+                  this.flagAdd = true;
+              }
+            };
+
+            myNavBar.init(  [
+              "header",
+              "header-container",
+              "brand"
+            ]);
+
+            function offSetManager(){
+              var yOffset = 0;
+              var currYOffSet = window.pageYOffset;
+
+              if(yOffset < currYOffSet) {
+                  myNavBar.add();
+              }
+              else if(currYOffSet == yOffset){
+                  myNavBar.remove();
+              }
+            }
+
+            window.onscroll = function(e) {
+              offSetManager();
+            }
+
+            offSetManager();
           });
-        </script>
-        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-        <script src='feature/logout.js'></script>
-        <script src='feature/navbar.js'></script>
-      </ul>
-    </div>
-  </nav>
+          </script>
+          <a href="#" data-activates="slide-out" class="button-collapse white-text">
+            <i class="material-icons" style="color:white;">menu</i>
+          </a>
+          <ul id="slide-out" class="side-nav hide-on-large-only">
+            <li><a class="center" href="landing.html">Home</a></li>
+            <li><a class="center" href="cart.html">Cart</a></li>
+            <li><a class="center" href="stats.html">Statistics</a></li>
+            <li><a class="center" href="calendar.html">Calendar</a></li>
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li><a class="center" href="groceryList.html">Grocery List</a></li>
+            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+            <li><a id='active' class="center" href="#">About Us</a></li>
+            <script>
+              const active = document.getElementById('active');
+              active.addEventListener('click', e => {
+                Materialize.toast('Already on page!', 4000);
+              });
+            </script>
+            <li><a class="center" href="affiliates.html">Our Friends</a></li>
+            <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+            <script src='feature/logout.js'></script>
+            <script src='feature/navbar.js'></script>
+          </ul>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="white-text" href="library.html" style="font-size:20px;">Food Library</a></li>
+            <li><a class="white-text" href="aboutPOT.html" style="font-size:20px;">About PoT</a></li>
+            <li><a class="white-text" href="aboutUs.html" style="font-size:20px;">About Us</a></li>
+            <li><a class="white-text" href="affiliates.html" style="font-size:20px;">Our Friends</a></li>
+            <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+  </div>
   <br>
+  <div style="text-align:center;">
+    <h2>Meet the Team</h2>
+    <hr style="width:80%;">
+  </div>
   <div class="container" id="cntnr">
-    <h3>Meet the Team</h3>
     <div class="card small hoverable">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src=""> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span>
