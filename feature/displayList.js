@@ -45,7 +45,6 @@ firebase.auth().onAuthStateChanged(function(user) {
             string = value.name + "\t" + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
-            li.setAttribute('data-target', 'modal1');
             li.setAttribute('class', 'btn waves-light waves-effect');
             li.setAttribute('id', value.name + value.date);
             li.setAttribute('style', 'background-color: black; opacity: 0.6;');
@@ -59,14 +58,21 @@ firebase.auth().onAuthStateChanged(function(user) {
           buttons[i] = document.getElementById(values[i]);
         }
         buttons[0].addEventListener('click', e => {
-          buttons[0].remove();
-          itemRef.child(dates[0]).child(names[0]).remove();
+          $('#modal1').modal('open');
+          document.getElementById('remove').addEventListener('click', e => {
+            buttons[0].remove();
+            itemRef.child(dates[0]).child(names[0]).remove();
+          });
         });
         var j = 1;
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
-            $('#modal1').modal('open');
-            remove(j);
+            document.getElementById('remove').addEventListener('click', e => {
+              buttons[j].remove();
+              console.log(dates[j]);
+              itemRef.child(dates[j]).child(names[j]).remove();
+              j++;
+            });
           });
         }
       } else {
@@ -76,13 +82,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       }
     });
     console.log(name);
-
-    function remove(i) {
-      buttons[i].remove();
-      console.log(dates[i]);
-      itemRef.child(dates[i]).child(names[i]).remove();
-      i++;
-    }
   }
 
 });
