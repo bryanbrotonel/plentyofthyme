@@ -45,7 +45,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             string = value.name + "\t" + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
-            li.setAttribute('data-target', 'modal1');
+            // li.setAttribute('data-target', 'modal1');
             li.setAttribute('class', 'btn waves-light waves-effect');
             li.setAttribute('id', value.name + value.date);
             li.setAttribute('style', 'background-color: black; opacity: 0.6;');
@@ -59,21 +59,49 @@ firebase.auth().onAuthStateChanged(function(user) {
           buttons[i] = document.getElementById(values[i]);
         }
         buttons[0].addEventListener('click', e => {
-          $('#modal1').modal('open');
-          document.getElementById('remove').addEventListener('click', e => {
-            buttons[0].remove();
-            itemRef.child(dates[0]).child(names[0]).remove();
+          $('#modalMain').modal('open');
+          document.getElementById('mod').addEventListener('click', e => {
+            $('#modalEdit').modal('open');
+            document.getElementById('save').addEventListener('click', e => {
+              Materialize.toast('Saved!', 4000);
+            });
+
           });
+          document.getElementById('remove').addEventListener('click', e => {
+            $('#modalDelete').modal('open');
+            document.getElementById('confirmDelete').addEventListener('click', e => {
+              buttons[0].remove();
+              // itemRef.child(dates[0]).child(names[0]).remove();
+            });
+          });
+
         });
         var j = 1;
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
-            document.getElementById('remove').addEventListener('click', e => {
-              buttons[j].remove();
-              console.log(dates[j]);
-              itemRef.child(dates[j]).child(names[j]).remove();
-              j++;
+            $('#modalMain').modal('open');
+            document.getElementById('mod').addEventListener('click', e => {
+              $('#modalEdit').modal('open');
+              document.getElementById('save').addEventListener('click', e => {
+
+              });
+
             });
+            document.getElementById('remove').addEventListener('click', e => {
+              $('#modalDelete').modal('open');
+              document.getElementById('confirmDelete').addEventListener('click', e => {
+                buttons[j].remove();
+                itemRef.child(dates[j]).child(names[j]).remove();
+              });
+            });
+
+          //   document.getElementById('remove').addEventListener('click', e => {
+          //     buttons[j].remove();
+          //     console.log(dates[j]);
+          //     itemRef.child(dates[j]).child(names[j]).remove();
+          //     j++;
+          //   });
+          // });
           });
         }
       } else {
