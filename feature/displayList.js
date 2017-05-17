@@ -58,21 +58,49 @@ firebase.auth().onAuthStateChanged(function(user) {
           buttons[i] = document.getElementById(values[i]);
         }
         buttons[0].addEventListener('click', e => {
-          $('#modal1').modal('open');
-          document.getElementById('remove').addEventListener('click', e => {
-            buttons[0].remove();
-            itemRef.child(dates[0]).child(names[0]).remove();
+          $('#modalMain').modal('open');
+          document.getElementById('mod').addEventListener('click', e => {
+            $('#modalEdit').modal('open');
+            document.getElementById('save').addEventListener('click', e => {
+
+            });
+
           });
+          document.getElementById('remove').addEventListener('click', e => {
+            $('#modalDelete').modal('open');
+            document.getElementById('confirmDelete').addEventListener('click', e => {
+              buttons[0].remove();
+              // itemRef.child(dates[0]).child(names[0]).remove();
+            });
+          });
+
         });
         var j = 1;
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
-            document.getElementById('remove').addEventListener('click', e => {
-              buttons[j].remove();
-              console.log(dates[j]);
-              itemRef.child(dates[j]).child(names[j]).remove();
-              j++;
+            $('#modalMain').modal('open');
+            document.getElementById('mod').addEventListener('click', e => {
+              $('#modalEdit').modal('open');
+              document.getElementById('save').addEventListener('click', e => {
+
+              });
+
             });
+            document.getElementById('remove').addEventListener('click', e => {
+              $('#modalDelete').modal('open');
+              document.getElementById('confirmDelete').addEventListener('click', e => {
+                buttons[j].remove();
+                itemRef.child(dates[j]).child(names[j]).remove();
+              });
+            });
+
+          //   document.getElementById('remove').addEventListener('click', e => {
+          //     buttons[j].remove();
+          //     console.log(dates[j]);
+          //     itemRef.child(dates[j]).child(names[j]).remove();
+          //     j++;
+          //   });
+          // });
           });
         }
       } else {
