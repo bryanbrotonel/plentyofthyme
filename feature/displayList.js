@@ -9,6 +9,11 @@ btnSubmit.addEventListener('click', e => {
 
 var string = "";
 
+$(document).ready(function() {
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     user1 = firebase.auth().currentUser;
@@ -53,16 +58,21 @@ firebase.auth().onAuthStateChanged(function(user) {
           buttons[i] = document.getElementById(values[i]);
         }
         buttons[0].addEventListener('click', e => {
-          buttons[0].remove();
-          itemRef.child(dates[0]).child(names[0]).remove();
+          $('#modal1').modal('open');
+          document.getElementById('remove').addEventListener('click', e => {
+            buttons[0].remove();
+            itemRef.child(dates[0]).child(names[0]).remove();
+          });
         });
         var j = 1;
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
-            buttons[j].remove();
-            console.log(dates[j]);
-            itemRef.child(dates[j]).child(names[j]).remove();
-            j++;
+            document.getElementById('remove').addEventListener('click', e => {
+              buttons[j].remove();
+              console.log(dates[j]);
+              itemRef.child(dates[j]).child(names[j]).remove();
+              j++;
+            });
           });
         }
       } else {
