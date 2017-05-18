@@ -1,3 +1,4 @@
+// unused
 var weekcalendar = document.getElementById('calendar');
 var week1 = document.createElement('table');
 var week2 = document.createElement('table');
