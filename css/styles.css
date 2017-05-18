@@ -5,7 +5,23 @@ html, body {
 
 body {
   color: white;
-  background: #E5D8AC;
+  background: #ffffff;
+}
+
+ .outer {
+    min-height: 120px;
+    min-width: 180px;
+    height: 160px;
+    width: 200px;
+    padding: 3px; 
+  }
+.inner {
+    height: 100%;
+    resize: none;
+  }
+
+navbg {
+    height: 300px;
 }
 
 .page_div {
