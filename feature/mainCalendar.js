@@ -8,6 +8,10 @@ var m2 = document.createElement('li');
 var m3 = document.createElement('li');
 var cntnr = document.getElementById('cntnr2');
 
+<<<<<<< HEAD
+=======
+month.setAttribute('class', 'month');
+>>>>>>> 1aed4470eea4028bdc3f5005139cc13482ffaaed
 
 days.setAttribute('id', 'dayy');
 var tomorrow = new Date();
@@ -141,9 +145,12 @@ for (var i = 1; i <= lastDay.getDate(); i++) {
   days.appendChild(li);
 }
 
+var divA = document.createElement('div');
+divA.setAttribute('class', 'month');
+divA.appendChild(month);
 console.log(month);
 console.log(days);
-calendar.appendChild(month);
+calendar.appendChild(divA);
 calendar.appendChild(days);
 
 // Updates calendar based on month

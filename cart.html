@@ -16,8 +16,9 @@
   <title>Cart</title>
 
   <style>
-    body {
+    #navbg {
       background-image: url(images/thyme+background3.jpg);
+      height: 350px;
     }
 
     td {
@@ -33,6 +34,7 @@
 </head>
 
 <body>
+  <div id="navbg"></div>
   <nav class="top-nav">
     <div class="nav-wrapper">
       <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
@@ -40,8 +42,8 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="white-text" href="library.html">Food Library</a></li>
         <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="white-text" href="aboutUs.html">Contact Us</a></li>
-        <li><a class="white-text" href="contactUs.html">ignoreContactUs</a></li>
+        <li><a class="white-text" href="aboutUs.html">About Us</a></li>
+        <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
         <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
       </ul>
       <ul id="slide-out" class="side-nav hide-on-large-only">
@@ -58,8 +60,7 @@
         <li><a class="center" href="library.html">Food Library</a></li>
         <li><a class="center" href="groceryList.html">Grocery List</a></li>
         <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="center" href="aboutus.html">Contact Us</a></li>
-        <li><a class="center" href="contactUs.html">ignoreContactUs</a></li>
+        <li><a class="center" href="aboutus.html">About Us</a></li>
         <li><a class="center" href="affiliates.html">Our Friends</a></li>
         <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
         <script src='feature/logout.js'></script>
@@ -124,7 +125,7 @@
         <div class="col l6 s12">
           <h5 class="white-text">Grow With Us!</h5>
           <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green lighten-2 waves-effect waves-light">Collaborate!</button>
+          <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
@@ -133,7 +134,6 @@
               <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
               <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
             </li>
-            <li><a class="grey-text text-lighten-3" href="#!">Git Hub</a></li>
           </ul>
         </div>
       </div>
