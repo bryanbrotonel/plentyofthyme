@@ -64,61 +64,87 @@
     </div>
   </nav>
   <br/>
+
   <div class="container-fluid">
     <div class="center">
       <div>
         <h3 class="hidden">Guide</h3>
         <h1 class="hidden-xs">Your personal food library.</h1>
-        <h4 class="visible-xs">Your personal food library.</h4> </div>
+        <h4 class="visible-xs">Your personal food library.</h4>
+      </div>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search food item...">
+      <div>
+        <div class="lib-headers">
+          <div class="visible-lg">
+            <span style="float:left;">Food</span>
+            <span style="padding-left:35%;padding-right:15%;">Fridge at 4°C or lower</span>
+            <span id="funfacts" style="float:right;">Freezer at -18°C or lower</span>
+          </div>
+          <div class="visible-md">
+            <span style="float:left;">Food</span>
+            <span style="padding-left:25%;padding-right:10%;">Fridge at 4°C or lower</span>
+            <span style="float:right;">Freezer at -18°C or lower</span>
+          </div>
+          <div class="visible-sm">
+            <span style="float:left;">Food</span>
+            <span style="padding-left:20%;padding-right:5%;">Fridge at 4°C or lower</span>
+            <span style="float:right;">Freezer at -18°C or lower</span>
+          </div>
+          <div class="lib-headers">
+            <span class="visible-xs fa fa-cutlery" style="float:left;padding-left:3%;"></span>
+            <span class="visible-xs fa fa-snowflake-o" style="float:left;padding-left:40%;">4°C</span>
+            <span class="visible-xs fa fa-snowflake-o" style="padding-left:86%;">8°C</span>
+          </div>
+          <script>
+            const funfacts = document.getElementById('funfacts');
+            funfacts.addEventListener('click', e => {
+              Materialize.toast('Did you know: A European/North American consumer wastes 100kg of food annually!', 4000);
+            });
+          </script>
+        </div>
+        <hr/>
+
+        <div class="food" align="left">
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#foodlib">
+              <span class="fa fa-chevron-down" style="margin:0px;"></span>
+            </button>
+            <a class="category white-text" style="text-align:left;">Fresh Meat</a>
+          </div>
+          <br/>
+      <div class="collapse navbar-collapse" id="foodlib">
+        <ul class="food-title">
+          <span style="float:left;padding-left:3%;">Beef</span>
+          <span style="float:left;padding-left:40%;">2-4 days</span>
+          <span style="padding-left:80%;">10-12 mnth</span>
+          <li>Pork</li>
+          <li>Lamb</li>
+          <li>Veal</li>
+          <li>Ground meat</li>
+        </ul>
+      </div>
     </div>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search food item...">
-        <div>
-          <thead>
-            <div class="lib-headers">
-              <div class="visible-lg">
-                <span style="float:left;">Food</span>
-                <span style="padding-left:35%;padding-right:15%;">Fridge at 4°C or lower</span>
-                <span id="funfacts2" style="float:right;">Freezer at -18°C or lower</span>
-              </div>
-              <div class="visible-md">
-                <span style="float:left;">Food</span>
-                <span style="padding-left:25%;padding-right:10%;">Fridge at 4°C or lower</span>
-                <span id="funfacts2" style="float:right;">Freezer at -18°C or lower</span>
-              </div>
-              <div class="visible-sm">
-                <span style="float:left;">Food</span>
-                <span style="padding-left:20%;padding-right:5%;">Fridge at 4°C or lower</span>
-                <span id="funfacts2" style="float:right;">Freezer at -18°C or lower</span>
-              </div>
-              <div class="lib-headers visible-xs fa fa-cutlery fa-lg" style="padding-left:5px;"></div>
-              <div class="lib-headers visible-sm visible-xs fa fa-snowflake-o fa-lg" style="text-align:center;">4°C</div>
-              <script>
-                const funfacts2 = document.getElementById('funfacts2');
-                funfacts2.addEventListener('click', e => {
-                  Materialize.toast('Did you know: A European/North American consumer wastes 100kg of food annually!', 4000);
-                });
-              </script>
-            </div>
-          </thead>
-          <hr/>
-          <thead>
-            <div id="myTable">
-              <div class="dropdown menu">
+    <br/>
+
+
+
+              <!-- <div class="dropdown menu">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#foodlib">
               <span class="glyphicon glyphicon-chevron-down"></span>
             </button>
+            <div class="collapse" id="foodlib">
+              <div class="category dropdown-toggle" data-toggle="dropdown">Fresh meat</div>
+              <tbody>
+                <ul class="food-title dropdown-toggle" data-toggle="dropdown">
+                  <li>Beef</li>
+                  <li>Pork</li>
+                  <li>Lamb</li>
+                  <li>Veal</li>
+                  <li>Ground meat</li>
+                </ul>
+              </div>
           </div>
-          <div class="collapse" id="foodlib">
-            <div class="category dropdown-toggle" data-toggle="dropdown">Fresh meat</div>
-            <tbody>
-              <ul class="food-title">
-                <li>Beef</li>
-                <li>Pork</li>
-                <li>Lamb</li>
-                <li>Veal</li>
-                <li>Ground meat</li>
-              </ul>
-            </div>
+
               <tr>
                 <ul class="food title" align=middle>
                   <il>2-4 days</li>
@@ -505,7 +531,7 @@
       </div>
 </div>
   <br/>
-  <br/>
+  <br/> -->
 
 
   <footer class='page-footer'>
