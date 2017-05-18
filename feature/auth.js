@@ -43,7 +43,7 @@
         promise.catch(e => console.log(e.message));
     });
 
-
+    // add event listener
     btnSignUp.addEventListener('click', e=> {
         window.location.href='signup.html';
     })
