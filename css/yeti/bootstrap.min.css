@@ -3267,7 +3267,7 @@ textarea.form-group-lg .form-control, select[multiple].form-group-lg .form-contr
   border-color: #cccccc
 }
 
-.btn-default .badge {
+.btn-default {
   color: #e7e7e7;
   background-color: #333333
 }
@@ -4959,7 +4959,7 @@ a.label:hover, a.label:focus {
   background-color: #d32a0e
 }
 
-.badge {
+/*.badge {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -4972,7 +4972,7 @@ a.label:hover, a.label:focus {
   text-align: center;
   background-color: #008cba;
   border-radius: 10px
-}
+}*/
 
 .badge:empty {
   display: none
