@@ -222,3 +222,14 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;}
 }
+
+/*Food library*/
+.lib-headers {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.category {
+  font-size: 20px;
+  font-style: italic;
+}
