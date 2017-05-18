@@ -54,7 +54,8 @@
         category: itemCat,
         quantity: amount,
         id: itemDate + itemName,
-        expired: 'no'
+        expired: 'no',
+        amountUsed: 0
       });
 
       // confirmation message, form reset
@@ -94,7 +95,9 @@
         category: itemCat,
         quantity: amount,
         id: itemDate + itemName,
-        expired: 'no'
+        expired: 'no',
+        amountUsed: 0
+
       });
 
       // success message, form reset
