@@ -1,131 +1,111 @@
 (function() {
 
-    var iName2;
-    var iName3;
-    var iPrice2;
-    var iPrice3;
-    var iDate2;
-    var iDate3;
-    var cat2;
-    var cat3
-    var iSelect2;
-    var iSelect3;
+  // Get elements
+  const itemName1 = document.getElementById('item1name');
+  const itemPrice1 = document.getElementById('item1price');
+  const proObject = document.getElementById('object');
+  const btnSubmit = document.getElementById('btnSubmit');
+  const main = document.getElementById('main');
 
-    var itemName2;
-    var itemName3;
-    var itemPrice2;
-    var itemPrice3;
-    var itemDate2;
-    var itemDate3;
-    var itemSelect2;
-    var itemSelect3
-    var select2;
-    var select3;
+  const select = document.getElementById('qty');
+  const itemDate1 = document.getElementById('item1date');
+  const itemSelect1 = document.getElementById('item1select');
+  const btnAdd = document.getElementById('btnAdd');
 
-    // Get elements
-    const itemName1 = document.getElementById('item1name');
-    const itemPrice1 = document.getElementById('item1price');
-    const proObject = document.getElementById('object');
-    const btnSubmit = document.getElementById('btnSubmit');
-    const main = document.getElementById('main');
+  // get references
+  var user1;
+  var name;
 
-    const select = document.getElementById('qty');
-    const itemDate1 = document.getElementById('item1date');
-    const itemSelect1 = document.getElementById('item1select');
-    const btnAdd = document.getElementById('btnAdd');
+  // access to user via database
+  firebase.auth().onAuthStateChanged(function(user) {
 
-    // Create ref
-    // var user = firebase.auth().currentUser;
-    // if (user != null) {
-    //   name = user.displayName;
-    // }
-    var user1;
-    var name;
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        user1 = firebase.auth().currentUser;
-        name = user1.uid;
-        console.log(name);
-      } else {
-        window.location.href='login.html';
-      }
-    });
-
-    function isNumber(n) {
-      return !isNaN(parseFloat(n)) && isFinite(n);
+    // validation, login redirect on log out
+    if (user) {
+      user1 = firebase.auth().currentUser;
+      name = user1.uid;
+    } else {
+      window.location.href='index.html';
     }
+  });
 
+  // checks if number is valid
+  function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
+  // adds items to database
   function addItem(itemName, itemPrice, itemDate, itemCat, amount, name, price, date, cat, qty) {
+
+    // form validation
     if(itemName != "" && itemPrice != "" && itemDate != "" && itemCat != "" && amount != "") {
+
+      // price validation
       if (!isNumber(itemPrice)) {
         Materialize.toast('Please enter a valid price', 4000);
         console.log('invalid price');
         return;
       }
-    //  firebase.database().ref().child('users/' + user1.uid).child('items').push({
+
+      // actual data storage
       firebase.database().ref().child('users/' + user1.uid).child(itemDate).child(itemName).set({
         name: itemName,
         price: itemPrice,
         date: itemDate,
         category: itemCat,
         quantity: amount,
-        expired: no
-        // })
-        // name: itemName,
-        // price: itemPrice,
-        // date: itemDate,
-        // category: itemCat,
-        // quantity: amount
+        id: itemDate + itemName,
+        expired: 'no'
       });
+
+      // confirmation message, form reset
       Materialize.toast('Successfully added ' + itemName + '.', 4000);
       name.value = "";
       price.value = "";
       qty.value = "";
       date.value = "";
       cat.value = "";
-      // document.getElementById('item1name').value = "";;
-      // document.getElementById('item1price').value = "";
-      // document.getElementById('qty').value = "";
-      // document.getElementById('item1date').value = "";
-      // document.getElementById('item1select').value = "";
+
     } else {
+
+      // failure message
       Materialize.toast('Please fill in all fields.', 4000);
       console.log('missing fields');
     }
   }
 
+  // adds to database 2,3
   function addItem(itemName, itemPrice, itemDate, itemCat, amount, name, price, date, cat, qty, itemNum) {
+
+    // validation
     if(itemName != "" && itemPrice != "" && itemDate != "" && itemCat != "" && amount != "") {
+
+      // price validation
       if (!isNumber(itemPrice)) {
         Materialize.toast('Please enter a valid price', 4000);
         console.log('invalid price');
         return;
       }
-    //  firebase.database().ref().child('users/' + user1.uid).child('items').push({
+
+      // actual storage
       firebase.database().ref().child('users/' + user1.uid).child(itemDate).child(itemName).set({
         name: itemName,
         price: itemPrice,
         date: itemDate,
         category: itemCat,
-        quantity: amount
-        // })
-        // name: itemName,
-        // price: itemPrice,
-        // date: itemDate,
-        // category: itemCat,
-        // quantity: amount
+        quantity: amount,
+        id: itemDate + itemName,
+        expired: 'no'
       });
+
+      // success message, form reset
       Materialize.toast('Successfully added ' + itemName + '.', 4000);
       name.value = "";
       price.value = "";
       qty.value = "";
       date.value = "";
       cat.value = "";
-      // document.getElementById('item1name').value = "";;
-      // document.getElementById('item1price').value = "";
-      // document.getElementById('qty').value = "";
-      // document.getElementById('item1date').value = "";
-      // document.getElementById('item1select').value = "";
+
+      // fail message
     } else {
       Materialize.toast('Please fill in all fields for item ' + itemNum + '.', 4000);
       console.log('missing fields');
