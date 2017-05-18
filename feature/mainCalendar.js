@@ -8,11 +8,6 @@ var m2 = document.createElement('li');
 var m3 = document.createElement('li');
 var cntnr = document.getElementById('cntnr2');
 
-<<<<<<< HEAD
-=======
-month.setAttribute('class', 'month');
->>>>>>> 1aed4470eea4028bdc3f5005139cc13482ffaaed
-
 days.setAttribute('id', 'dayy');
 var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate());
@@ -20,7 +15,6 @@ tomorrow.setDate(tomorrow.getDate());
 var date = new Date();
 var y = date.getFullYear();
 var m = date.getMonth();
-var d = date.getDay();
 var firstDay = new Date(y, m, 1);
 var lastDay = new Date(y, m + 1, 0);
 
@@ -81,35 +75,6 @@ function monthString() {
   }
 }
 
-// converts day of week to string
-function dayString() {
-  switch (d) {
-    case 0:
-      return 'Monday';
-      break;
-    case 1:
-      return 'Tuesday';
-      break;
-    case 2:
-      return 'Wednesday';
-      break;
-    case 3:
-      return 'Thursday';
-      break;
-    case 4:
-      return 'Friday';
-      break;
-    case 5:
-      return 'Saturday';
-      break;
-    case 6:
-      return 'Sunday';
-      break;
-    default:
-      break;
-  }
-}
-
 
 monthString();
 var year = document.createElement('span');
@@ -122,11 +87,9 @@ m3.appendChild(year);
 month.setAttribute('class', 'month');
 days.setAttribute('class', 'days');
 
-
-month.appendChild(m1);
-
 month.appendChild(m3);
 
+month.appendChild(m1);
 month.appendChild(m2);
 
 console.log(tomorrow.getDate());
@@ -145,21 +108,17 @@ for (var i = 1; i <= lastDay.getDate(); i++) {
   days.appendChild(li);
 }
 
-var divA = document.createElement('div');
-divA.setAttribute('class', 'month');
-divA.appendChild(month);
 console.log(month);
 console.log(days);
-calendar.appendChild(divA);
+calendar.appendChild(month);
 calendar.appendChild(days);
 
 // Updates calendar based on month
 function refreshCalendar() {
   console.log('HELLO');
   month.removeChild(m1);
-      month.removeChild(m3);
-
   month.removeChild(m2);
+  month.removeChild(m3);
   m3 = document.createElement('li');
   monthString();
   m3.appendChild(document.createElement('br'));
@@ -167,9 +126,8 @@ function refreshCalendar() {
   year.appendChild(document.createTextNode(y));
   year.setAttribute('style', 'font-size:18px');
   m3.appendChild(year);
-      month.appendChild(m1);
-
   month.appendChild(m3);
+  month.appendChild(m1);
   month.appendChild(m2);
 
   lastDay = new Date(y, m + 1, 0);
@@ -274,7 +232,6 @@ alt = 0;
 
 // creates dates 2
 for (var i = 0; i < 7; i++) {
-  var newDate = document.createTextNode(tomorrow.getDate());
   var day = document.createTextNode(tomorrow.toDateString());
   var th = document.createElement('th');
   if (alt == 0) {
@@ -284,10 +241,7 @@ for (var i = 0; i < 7; i++) {
     th.setAttribute('class', 'week');
     alt = 0;
   }
-
-  th.appendChild(day);
-
-        
+  th.appendChild(day)
   days2_tr.appendChild(th);
   tomorrow.setDate(tomorrow.getDate() + 1);
 }
