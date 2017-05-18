@@ -14,12 +14,13 @@
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <title>Plenty of Thyme</title>
+  <title>Log In</title>
 </head>
 
 <style>
   #navbg {
     background-image: url(images/thyme+background3.jpg);
+    height: 250px;
   }
 </style>
 
@@ -30,100 +31,77 @@
 </script>
 
 <body>
-  <header>
-    <div class="navbar-fixed">
-      <nav class="top-nav z-depth-2 green darken-2">
-        <div class="nav-wrapper">
-          <!-- <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a> -->
-          <img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="white-text" href="library.html">Food Library</a></li>
-            <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-            <li><a class="white-text" href="aboutUs.html">About Us</a></li>
-            <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
-          </ul>
-          <ul id="slide-out" class="side-nav hide-on-large-only">
-            <li><a id="active" class="center" href="#">Home</a></li>
-            <script>
-              const active = document.getElementById('active');
-              active.addEventListener('click', e => {
-                Materialize.toast('Already on page!', 4000);
-              });
-            </script>
-            <li><a class="center" href="library.html">Food Library</a></li>
-            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-            <li><a class="center" href="aboutus.html">About Us</a></li>
-            <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
-            <script src="feature/logout.js"></script>
-            <script src="feature/navbar.js"></script>
-          </ul>
+  <div class="navbar-fixed">
+    <nav class="top-nav z-depth-2 green darken-2">
+      <div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="white-text" href="library.html">Food Library</a></li>
+          <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="white-text" href="aboutUs.html">About Us</a></li>
+          <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav hide-on-large-only">
+          <li><a id="active" class="center" href="#">Home</a></li>
+          <script>
+            const active = document.getElementById('active');
+            active.addEventListener('click', e => {
+              Materialize.toast('Already on page!', 4000);
+            });
+          </script>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="center" href="aboutus.html">About Us</a></li>
+          <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
+          <script src="feature/logout.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="center" id="navbg">
+    <p class="brand-logo white-text hidden-sm hidden-xs" style="font-size:54px;position:relative">
+      <img style="height: 180px; padding:5px; position:relative;" src="images/logo.png" />Plenty of Thyme</p>
+    <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text green">Log in</button>
+  </div>
+  <div id="loginmodal" class="modal">
+    <div class="modal-content">
+      <form class="black-text center-align">
+        <div class="row">
+          <div class="col s6 input-field">
+            <input type="email" style="width: 250px" id="txtEmail">
+            <label for="email">Email</label>
+          </div>
+          <div class="col s6 input-field">
+            <input type="password" style="width: 250px" id="txtPassword">
+            <label for="password">Password</label>
+          </div>
         </div>
-      </nav>
+      </form>
     </div>
-    <div class="center" id="navbg">
-      <br>
-      <p class="brand-logo white-text hide-on-med-and-down" style="font-size:50px;"><img style="height: 100px; " src="images/logo.png" />Plenty of Thyme</p>
-      <p class=" white-text hide-on-med-and-down" style="font-size:20px;">Spend your time wisely</p>
-      <p class="brand-logo white-text hide-on-med-and-up" style="font-size:50px;">Plenty of Thyme</p>
-      <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text green">Log in</button>
-      <button data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text green">Sign Up</button>
-      <br>
-      <br>
+    <div class="modal-footer">
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
+      <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+      <script src="feature/auth.js"></script>
     </div>
-    <div id="loginmodal" class="modal">
-      <div class="modal-content">
-        <form class="black-text center-align">
-          <div class="row">
-            <div class="col s6 input-field">
-              <input type="email" style="width: 250px" id="txtEmail">
-              <label for="email">Email</label>
-            </div>
-            <div class="col s6 input-field">
-              <input type="password" style="width: 250px" id="txtPassword">
-              <label for="password">Password</label>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
-        <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-        <script src="feature/auth.js"></script>
-      </div>
-    </div>
-    <div id="signupmodal" class="modal modal-fixed-footer black-text">
-      <div class="modal-content">
-        <h4>Sign Up</h4>
-        <form class="container center-align">
-          <div class="input-field">
-            <i class="material-icons prefix">person</i>
-            <input type="text" id="fName" class="validate" style="width: 250px" placeholder="First Name">
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">person</i>
-            <input type="text" id="lName" class="validate" style="width: 250px" placeholder="Last Name">
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">email</i>
-            <input type="email" id="Email" class="validate" style="width: 250px" placeholder="Email">
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">lock</i>
-            <input type="password" id="Password" class="validate" style="width: 250px" placeholder="Password">
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">lock</i>
-            <input type="password" id="confirmPassword" class="validate" style="width: 250px" placeholder="Confirm Password">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-        <script src="feature/auth.js"></script>
-      </div>
-    </div>
-  </header>
+  </div>
   <div class="container black-text">
+    <!-- <div>
+        <form>
+          <div class="form-group input-field"> <i class="material-icons prefix">email</i>
+            <input type="email" style="width: 250px" id="txtEmail">
+            <label for="txtEmail">Email</label>
+          </div>
+          <div class="form-group input-field"> <i class="material-icons prefix">lock</i>
+            <input type="password" class="input-field" id="txtPassword">
+            <label for="txtPassword">Password</label>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button id="btnLogin" class="btn btn-action waves-effect waves-light">Log in</button>
+        <button id="btnSignUp" class="btn btn-secondary waves-effect waves-light">Sign Up</button>
+        <script src="feature/auth.js"></script>
+      </div>-->
     <div class="section">
       <h3>About us</h3>
       <div class="center">
@@ -135,8 +113,8 @@
     <div>
       <div>
         <h4>Introduction</h4>
-        <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving.
-        </blockquote>
+        <p> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving.
+        </p>
       </div>
       <div>
         <h4>Why Use Plenty of Thyme?</h4>
@@ -144,19 +122,19 @@
         <br>
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons green-text">schedule</i>
+            <div class="center promo"> <i class="fa fa-clock-o fa-5x feature"></i>
               <h5 class="promo-caption">Plenty of thyme</h5>
               <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons green-text">favorite</i>
+            <div class="center promo"> <i class="fa fa-heart fa-5x feature"></i>
               <h5 class="promo-caption">Save food</h5>
               <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons green-text">attach_money</i>
+            <div class="center promo"> <i class="fa fa-usd fa-5x feature"></i>
               <h5 class="promo-caption">Keep your money</h5>
               <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
             </div>
@@ -253,7 +231,7 @@
           <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Friends</h5>
+          <h5 class="white-text">Links</h5>
           <ul>
             <li>
               <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
