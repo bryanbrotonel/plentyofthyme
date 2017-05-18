@@ -1,7 +1,7 @@
 // set variables
 var values = [];
 var objects = [];
-var wasted;
+var wasted = 0;
 
 // access to firebase users
 firebase.auth().onAuthStateChanged(function(user) {
@@ -24,8 +24,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       for (i = 0; i < objects.length; i++) {
         if (objects[i].expired.equals('yes')) {
-
+          wasted += objects[i].price;
         }
       }
     });
   });
+
+console.log(wasted);
