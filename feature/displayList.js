@@ -1,30 +1,32 @@
-var user1;
+// create variables
 var name;
+var string = "";
+var string2 = "";
+var buttons = [];
+var values = [];
+var dates = [];
+var names = [];
+var i = 0;
+var j = 1;
+const uiList = document.getElementById('list');
 var btnSubmit = document.getElementById('btnSubmit');
-console.log(btnSubmit);
+var ul = document.createElement('ul');
+var li = document.createElement('li');
+
+// add event listener
 btnSubmit.addEventListener('click', e => {
   window.location.href = 'cart.html';
 });
-var string = "";
+
+// modal box set up
 $(document).ready(function() {
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
+
+// access to firebase users
 firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    user1 = firebase.auth().currentUser;
-    // Get elements
-    var buttons = [];
-    var values = [];
-    var dates = [];
-    var names = [];
-    var i = 0;
-    const uiList = document.getElementById('list');
-    var ul = document.createElement('ul');
-    var li = document.createElement('li');
-    var string2;
-    user1 = firebase.auth().currentUser;
-    var itemRef = firebase.database().ref('users/' + user1.uid);
+    var itemRef = firebase.database().ref('users/' + user.uid);
     itemRef.once('value', function(snapshot) {
       if (snapshot.val() != null) {
         snapshot.forEach(function(childSnapshot) {
@@ -46,10 +48,15 @@ firebase.auth().onAuthStateChanged(function(user) {
             ul.appendChild(li);
           });
         });
+
         uiList.appendChild(ul);
+
+        // store buttons
         for (i = 0; i < values.length; i++) {
           buttons[i] = document.getElementById(values[i]);
         }
+
+        // add event listener
         buttons[0].addEventListener('click', e => {
           $('#modalMain').modal('open');
           document.getElementById('mod').addEventListener('click', e => {
@@ -62,11 +69,12 @@ firebase.auth().onAuthStateChanged(function(user) {
             $('#modalDelete').modal('open');
             document.getElementById('confirmDelete').addEventListener('click', e => {
               buttons[0].remove();
-              // itemRef.child(dates[0]).child(names[0]).remove();
+              itemRef.child(dates[0]).child(names[0]).remove();
             });
           });
         });
-        var j = 1;
+
+        // add event listeners
         for (i = 1; i < buttons.length; i++) {
           buttons[i].addEventListener('click', e => {
             $('#modalMain').modal('open');
@@ -78,24 +86,16 @@ firebase.auth().onAuthStateChanged(function(user) {
               $('#modalDelete').modal('open');
               document.getElementById('confirmDelete').addEventListener('click', e => {
                 buttons[j].remove();
-                // itemRef.child(dates[j]).child(names[j]).remove();
+                itemRef.child(dates[j]).child(names[j]).remove();
               });
             });
-            //   document.getElementById('remove').addEventListener('click', e => {
-            //     buttons[j].remove();
-            //     console.log(dates[j]);
-            //     itemRef.child(dates[j]).child(names[j]).remove();
-            //     j++;
-            //   });
-            // });
           });
         }
+
       } else {
+        // Fill container when list is empty
         uiList.setAttribute('class', 'center container');
         uiList.innerText = '\nYou have nothing in your fridge yet!'+'\n\n';
-        console.log(snapshot.val());
       }
     });
-    console.log(name);
-  }
 });

@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="images/potIcon.png" />
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
@@ -21,57 +21,9 @@
       height: 350px;
     }
 
-    .vertical-line {
-      border-left: 1px solid #808080;
-      height: 350px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 1px;
-    }
-
-    img {
-      width: 100% height: auto;
-    }
-    /*Table for list of wasted food*/
-
-    table {
-      border: 2px solid black;
-      width: 60%;
-      height: 30px;
-      margin: auto;
-    }
-
-    th.categories {
-      padding: 10px;
-      border: 2px solid black;
-      height: 40px;
-      width: 70px;
-      text-align: center;
-    }
-
-    td.waste_items {
-      border: 2px solid black;
-      height: 80px;
-    }
-
-    ul.cat {
-      font-size: 12px;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: none;
-    }
-
-    li.waste_list {
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-    }
 
     .btn {
       background-color: #5B9D54;
-
     }
 
     .btn:hover {
@@ -81,157 +33,179 @@
   <title>Plenty of Thyme</title>
 </head>
 
+<script>
+  $(document).ready(function() {
+    $("#weekly").click(function() {
+      $("#week").show();
+      $("#biweek").hide();
+      $("#month").hide();
+    });
+    $("#twowks").click(function() {
+      $("#week").hide();
+      $("#biweek").show();
+      $("#month").hide();
+    });
+    $("#monthly").click(function() {
+      $("#week").hide();
+      $("#biweek").hide();
+      $("#month").show();
+    });
+  });
+</script>
+
 <body>
-  <div id="navbg"></div>
-  <nav class="top-nav">
-    <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a><a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="white-text" href="library.html">Food Library</a></li>
-        <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="white-text" href="aboutUs.html">About Us</a></li>
-        <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-      </ul>
-      <ul id="slide-out" class="side-nav hide-on-large-only">
-        <li><a class="center" href="landing.html">Home</a></li>
-        <li><a class="center" href="cart.html">Cart</a></li>
-        <li><a id='active' class="center" href="#">Statistics</a></li>
-        <script>
-        const active = document.getElementById('active');
-        active.addEventListener('click', e => {
-          Materialize.toast('Already on page!', 4000);
-        });
-        </script>
-        <li><a class="center" href="calendar.html">Calendar</a></li>
-        <li><a class="center" href="library.html">Food Library</a></li>
-        <li><a class="center" href="groceryList.html">Grocery List</a></li>
-        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="center" href="aboutUs.html">About Us</a></li>
-        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-        <script src='feature/logout.js'></script>
-        <script src='feature/navbar.js'></script>
-      </ul>
-    </div>
-  </nav>
+  <header>
+    <nav class="top-nav green darken-2">
+      <div class="nav-wrapper">
+        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a><a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="white-text" href="library.html">Food Library</a></li>
+          <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="white-text" href="aboutUs.html">About Us</a></li>
+          <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav hide-on-large-only">
+          <li><a class="center" href="landing.html">Home</a></li>
+          <li><a class="center" href="cart.html">Cart</a></li>
+          <li><a id='active' class="center" href="#">Statistics</a></li>
+          <script>
+            const active = document.getElementById('active');
+            active.addEventListener('click', e => {
+              Materialize.toast('Already on page!', 4000);
+            });
+          </script>
+          <li><a class="center" href="calendar.html">Calendar</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="groceryList.html">Grocery List</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="center" href="aboutUs.html">About Us</a></li>
+          <li><a class="center" href="affiliates.html">Our Friends</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+          <script src='feature/logout.js'></script>
+          <script src='feature/navbar.js'></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <br />
   <div>
     <div class="container" id="cntnr">
       <div class="center">
-        <h3>Food Waste!</h3>
-        <div class="visible-lg">
-          <label for="week" class="btn waves-effect waves-light">Week</label>
-          <label for="twowks" class="btn waves-effect waves-light">Two Weeks</label>
-          <label for="month" class="btn waves-effect waves-light">Month</label>
-          <label for="annual" class="btn waves-effect waves-light">Year</label>
+        <h3>Stats for Your Plants</h3>
+        <div class="hide-on-med-and-down row">
+          <label id="weekly" class="btn waves-effect waves-light white-text">Week</label>
+          <label id="twowks" class="btn waves-effect waves-light white-text">Bi-Weekly</label>
+          <label id="monthly" class="btn waves-effect waves-light white-text">Month</label>
         </div>
-        <br />
-        <div class="visible-lg">
-          <label for="bar" class="btn waves-effect waves-light">Bar</label>
-          <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
-        </div>
-        <div class="visible-sm visible-md">
-          <label for="week" class="btn waves-effect waves-light">Week</label>
-          <label for="twowks" class="btn waves-effect waves-light">Two Weeks</label>
-          <label for="month" class="btn waves-effect waves-light">Month</label>
-          <label for="annual" class="btn waves-effect waves-light">Year</label>
-        </div>
-        <br />
-        <div class="visible-sm visible-md">
-          <label for="bar" class="btn waves-effect waves-light">Bar</label>
-          <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
-        </div>
-        <div class="visible-xs center">
-          <label for="week" class="btn waves-effect waves-light" style="width:150px;">Week</label>
-          <label for="twowks" class="btn waves-effect waves-light">Two Weeks</label>
+        <div class="hide-on-med-and-up row">
+          <label id="weekly" class="btn waves-effect waves-light" style="width:100px;">Week</label>
+          <label id="twowks" class="btn waves-effect waves-light" style="width:110px;">Bi-Weekly</label>
+          <label id="monthly" class="btn waves-effect waves-light" style="width:100px;">Month</label>
           <br class="visible-xs">
-          <br class="visible-xs" />
-          <label for="month" class="btn waves-effect waves-light" style="width:150px;">Month</label>
-          <label for="annual" class="btn waves-effect waves-light" style="width:150px;">Year</label>
-        </div>
-        <br />
-        <div class="visible-xs center">
-          <label for="bar" class="btn waves-effect waves-light" style="width:130px;">Bar</label>
-          <label for="pie" class="btn waves-effect waves-light">Pie Chart</label>
-        </div>
-        <br />
-        <br /> </div>
-
-        <div class="col-lg-6 visible-lg" align="middle">
-          <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;" />
-          <h3 class="hidden-xs" style="padding:10px;">Food Wasted: 75%</h3>
-          <h5 class="visible-xs" style="padding:2px;text-align:center;">Food Wasted: 75%</h5></div>
-          <div class="vertical-line visible-lg" />
-          <div class="col-lg-6">
-            <p>stuff here</p>
-            <p>stuff here</p>
-            <p>stuff here</p>
-          </div>
-          <br/>
-        </div>
-        <div class="col-sm-6 col-md-6 visible-sm visible-md" align="middle">
-          <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;"/>
-          <h4 class="hidden-xs" style="padding:3px;">Food Wasted: 75%</h4>
-          <h5 class="visible-xs" style="padding:2px;text-align:center;">Food Wasted: 75%</h5></div>
-          <div class="vertical-line visible-sm visible-md"/>
-          <div class="col-sm-6 col-md-6 visible-sm visible-md">
-            <p>stuff here</p>
-            <p>stuff here</p>
-            <p>stuff here</p>
-          </div>
-          <br/>
-        </div>
-        <div class="visible-xs" align="middle">
-          <img src="images/pie chart.png" alt="pie chart" style="width:150px;height:150px;"/>
-          <h4 class="hidden-xs" style="padding:3px;">Food Wasted: 75%</h4>
-          <h5 class="visible-xs" style="padding:2px;text-align:center;">Food Wasted: 75%</h5>
-          <hr style="width:80%"/></div>
-          <div class="col-xs-12 visible-xs" style="text-align:center;">
-            <p>stuff here</p>
-            <p>stuff here</p>
-            <p>stuff here</p>
-          </div>
-          <br />
         </div>
       </div>
-      <br/>
-      <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Grow With Us!</h5>
-              <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-              <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li>
-                  <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-                  <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-                </li>
-              </ul>
-            </div>
+      <div id="week" class="container">
+        <h4>Week</h4>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Money, money, money!</h5>
+          <h4 class="card-panel red-text">10$</h4>
+          <h6 class="card-panel black-text">You're not good at this.</h6>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Garbage count</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span class="badge red-text">10</span>Apples</li>
+            <li class="collection-item"><span class="badge red-text">10</span>Bananas</li>
+            <li class="collection-item"><span class="badge red-text">10</span>Grapes</li>
+            <li class="collection-item"><span class="badge red-text">10</span>Oranges</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <br>
+      </div>
+      <div id="biweek" class="container">
+        <h4>Bi-Weekly</h4>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Money, money, money!</h5>
+          <h4 class="card-panel red-text">20$</h4>
+          <h6 class="card-panel black-text">You're really not good at this.</h6>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Garbage count</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span class="badge red-text">20</span>Apples</li>
+            <li class="collection-item"><span class="badge red-text">20</span>Bananas</li>
+            <li class="collection-item"><span class="badge red-text">20</span>Grapes</li>
+            <li class="collection-item"><span class="badge red-text">20</span>Oranges</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <br>
+      </div>
+      <div id="month" class="container">
+        <h4>Month</h4>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Money, money, money!</h5>
+          <h4 class="card-panel red-text">40$</h4>
+          <h6 class="card-panel black-text">What are you doing..</h6>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Garbage count</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span class="badge red-text">40</span>Apples</li>
+            <li class="collection-item"><span class="badge red-text">40</span>Bananas</li>
+            <li class="collection-item"><span class="badge red-text">40</span>Grapes</li>
+            <li class="collection-item"><span class="badge red-text">40</span>Oranges</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <br>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Grow With Us!</h5>
+            <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+            <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-      <div class="footer-copyright">
-        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
       </div>
-      <!-- shely's code -->
-      <div class="home_menu hide">
-        <div class="col-xs-4 " align="center">
-          <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
-        </div>
-        <div class="col-xs-4" align="center">
-          <a class="active" href="#"><img src="images/stats.png" alt="stats" style="width:70px;" /></a>
-        </div>
-        <div class="col-xs-4" align="center">
-          <a href="calendar.html"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
-        </div>
+    </footer>
+    <div class="footer-copyright">
+      <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+    </div>
+    <!-- shely's code -->
+    <div class="home_menu hide">
+      <div class="col-xs-4 " align="center">
+        <a href="grocerylist.html"><img src="images/shoppingcart2.png" alt="cart" style="width:70px;" /></a>
       </div>
+      <div class="col-xs-4" align="center">
+        <a class="active" href="#"><img src="images/stats.png" alt="stats" style="width:70px;" /></a>
+      </div>
+      <div class="col-xs-4" align="center">
+        <a href="calendar.html"><img src="images/calendar.png" alt="calendar" style="width:70px;" /></a>
+      </div>
+    </div>
 
-      <script src='feature/displayList.js'></script> </body>
+    <script src='feature/displayList.js'></script>
+</body>
 
-      </html>
+</html>

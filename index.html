@@ -19,6 +19,7 @@
 <style>
     #navbg {
         background-image: url(images/thyme+background3.jpg);
+        height: 250px;
     }
 </style>
 <script>
@@ -26,89 +27,89 @@
         $('.modal').modal();
     });
 </script>
+<header>
+    <div class="navbar-fixed">
+        <nav class="top-nav z-depth-2" style="background-color: #334120">
+            <div class="nav-wrapper">
+                <!-- <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a> --><img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="white-text" href="library.html">Food Library</a></li>
+                    <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+                    <li><a class="white-text" href="aboutUs.html">About Us</a></li>
+                    <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav hide-on-large-only">
+                    <li><a id="active" class="center" href="#">Home</a></li>
+                    <script>
+                        const active = document.getElementById('active');
+                        active.addEventListener('click', e => {
+                            Materialize.toast('Already on page!', 4000);
+                        });
+                    </script>
+                    <li><a class="center" href="library.html">Food Library</a></li>
+                    <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                    <li><a class="center" href="aboutus.html">About Us</a></li>
+                    <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
+                    <script src="feature/logout.js"></script>
+                    <script src="feature/navbar.js"></script>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="center" id="navbg" style="height: 300px;">
+        <br>
+        <p class="brand-logo white-text hide-on-med-and-down" style="font-size:50px;"><img style="height: 100px; " src="images/logo.png" />Plenty of Thyme</p>
+        <p class=" white-text hide-on-med-and-down" style="font-size:20px;">Spend your time wisely</p>
+        <p class="brand-logo white-text hide-on-med-and-up" style="font-size:50px;padding:30px;">Plenty of Thyme</p>
+        <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
+        <button data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
+        <br>
+        <br> </div>
+    <div id="loginmodal" class="modal">
+        <div class="modal-content">
+            <form class="black-text center-align">
+                <div class="row">
+                    <div class="col s6 input-field">
+                        <input type="email" style="width: 250px" id="txtEmail">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col s6 input-field">
+                        <input type="password" style="width: 250px" id="txtPassword">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
+            <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+            <script src="feature/auth.js"></script>
+        </div>
+    </div>
+    <div id="signupmodal" class="modal modal-fixed-footer black-text">
+        <div class="modal-content">
+            <h4>Sign Up</h4>
+            <form class="container center-align">
+                <div class="input-field"> <i class="material-icons prefix">person</i>
+                    <input type="text" id="fName" class="validate" style="width: 250px" placeholder="First Name"> </div>
+                <div class="input-field"> <i class="material-icons prefix">person</i>
+                    <input type="text" id="lName" class="validate" style="width: 250px" placeholder="Last Name"> </div>
+                <div class="input-field"> <i class="material-icons prefix">email</i>
+                    <input type="email" id="Email" class="validate" style="width: 250px" placeholder="Email"> </div>
+                <div class="input-field"> <i class="material-icons prefix">lock</i>
+                    <input type="password" id="Password" class="validate" style="width: 250px" placeholder="Password"> </div>
+                <div class="input-field"> <i class="material-icons prefix">lock</i>
+                    <input type="password" id="confirmPassword" class="validate" style="width: 250px" placeholder="Confirm Password"> </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+            <script src="feature/auth.js"></script>
+        </div>
+    </div>
+</header>
 
 <body>
-    <header>
-        <div class="navbar-fixed">
-            <nav class="top-nav z-depth-2" style="background-color: #334120">
-                <div class="nav-wrapper">
-                    <!-- <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a> --><img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a class="white-text" href="library.html">Food Library</a></li>
-                        <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-                        <li><a class="white-text" href="aboutUs.html">About Us</a></li>
-                        <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
-                    </ul>
-                    <ul id="slide-out" class="side-nav hide-on-large-only">
-                        <li><a id="active" class="center" href="#">Home</a></li>
-                        <script>
-                            const active = document.getElementById('active');
-                            active.addEventListener('click', e => {
-                                Materialize.toast('Already on page!', 4000);
-                            });
-                        </script>
-                        <li><a class="center" href="library.html">Food Library</a></li>
-                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                        <li><a class="center" href="aboutus.html">About Us</a></li>
-                        <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="center" id="navbg" style="height: 300px;">
-            <br>
-            <p class="brand-logo white-text hide-on-med-and-down" style="font-size:50px;"><img style="height: 100px; " src="images/logo.png" />Plenty of Thyme</p>
-            <p class=" white-text hide-on-med-and-down" style="font-size:20px;">Spend your time wisely</p>
-            <p class="brand-logo white-text hide-on-med-and-up" style="font-size:50px;padding:30px;">Plenty of Thyme</p>
-            <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
-            <button data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
-            <br>
-            <br> </div>
-        <div id="loginmodal" class="modal">
-            <div class="modal-content">
-                <form class="black-text center-align">
-                    <div class="row">
-                        <div class="col s6 input-field">
-                            <input type="email" style="width: 250px" id="txtEmail">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="col s6 input-field">
-                            <input type="password" style="width: 250px" id="txtPassword">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
-                <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-                <script src="feature/auth.js"></script>
-            </div>
-        </div>
-        <div id="signupmodal" class="modal modal-fixed-footer black-text">
-            <div class="modal-content">
-                <h4>Sign Up</h4>
-                <form class="container center-align">
-                    <div class="input-field"> <i class="material-icons prefix">person</i>
-                        <input type="text" id="fName" class="validate" style="width: 250px" placeholder="First Name"> </div>
-                    <div class="input-field"> <i class="material-icons prefix">person</i>
-                        <input type="text" id="lName" class="validate" style="width: 250px" placeholder="Last Name"> </div>
-                    <div class="input-field"> <i class="material-icons prefix">email</i>
-                        <input type="email" id="Email" class="validate" style="width: 250px" placeholder="Email"> </div>
-                    <div class="input-field"> <i class="material-icons prefix">lock</i>
-                        <input type="password" id="Password" class="validate" style="width: 250px" placeholder="Password"> </div>
-                    <div class="input-field"> <i class="material-icons prefix">lock</i>
-                        <input type="password" id="confirmPassword" class="validate" style="width: 250px" placeholder="Confirm Password"> </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-                <script src="feature/auth.js"></script>
-            </div>
-        </div>
-    </header>
     <div class="container black-text" style="padding:0px 0px 30px 0px">
         <h4>Food Waste Problem</h4>
         <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
@@ -238,7 +239,7 @@
         <h3 class="visible-sm visible-md black-text">FOOD FALL</h3>
         <h2 class="visible-lg black-text">FOOD FALL</h2>
         <div class="visible-xs">
-            <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.83)">
+            <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.87)">
                 <a href="http://foodfall.ca/"> <img src="images/hamish.png" style=" height:140px;" align="center"> </a>
             </button>
             <p class="col-xs-6 col-sm-8 col-md-4 col-lg-4 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>

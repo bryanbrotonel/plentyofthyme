@@ -1,37 +1,76 @@
-// Get Elements...
-
+// Set variables
 var calendar = document.getElementById('mainCalendar');
+var cntnr = document.getElementById('cntnr2');
 var month = document.createElement('ul');
 var days = document.createElement('ul');
 var m1 = document.createElement('li');
 var m2 = document.createElement('li');
 var m3 = document.createElement('li');
-var cntnr = document.getElementById('cntnr2');
-
-days.setAttribute('id', 'dayy');
+var year = document.createElement('span');
 var tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate());
-
 var date = new Date();
 var y = date.getFullYear();
 var m = date.getMonth();
 var firstDay = new Date(y, m, 1);
 var lastDay = new Date(y, m + 1, 0);
 
-console.log(lastDay.getDate());
+month.setAttribute('class', 'month');
+days.setAttribute('class', 'days');
+days.setAttribute('id', 'dayy');
+tomorrow.setDate(tomorrow.getDate());
 
+// set up m1, left button
 m1.appendChild(document.createTextNode('<'));
 m1.setAttribute('class', 'btn waves-effect waves-light');
 m1.setAttribute('id', 'prev');
 m1.setAttribute('style', 'background-color:black; opacity:0.6;');
 
-
+// set up m2, right button
 m2.appendChild(document.createTextNode('>'));
 m2.setAttribute('class', 'btn waves-effect waves-light');
 m2.setAttribute('id', 'next');
 m2.setAttribute('style', 'background-color:black; opacity:0.6;');
 
-// converts month to string
+// Updates calendar based on month
+function refreshCalendar() {
+  console.log('HELLO');
+  month.removeChild(m1);
+  month.removeChild(m2);
+  month.removeChild(m3);
+  m3 = document.createElement('li');
+  monthString();
+  m3.appendChild(document.createElement('br'));
+  year = document.createElement('span');
+  year.appendChild(document.createTextNode(y));
+  year.setAttribute('style', 'font-size:18px');
+  m3.appendChild(year);
+  month.appendChild(m3);
+  month.appendChild(m1);
+  month.appendChild(m2);
+
+  lastDay = new Date(y, m + 1, 0);
+  document.getElementById('dayy').remove();
+  days = document.createElement('ul');
+  days.setAttribute('class', 'days');
+  days.setAttribute('id', 'dayy');
+
+  for (var i = 1; i <= lastDay.getDate(); i++) {
+    var li = document.createElement('li');
+    li.setAttribute('id', i);
+    if (i == tomorrow.getDate()) {
+      var active1 = document.createElement('span');
+      active1.setAttribute('class', 'active');
+      active1.appendChild(document.createTextNode(i));
+      li.appendChild(active1);
+    } else {
+      li.appendChild(document.createTextNode(i));
+    }
+    days.appendChild(li);
+  }
+  cntnr.insertBefore(days, weekcalendar);
+}
+
+// converts month to string and appends to m3, header
 function monthString() {
   switch (m) {
     case 0:
@@ -75,28 +114,23 @@ function monthString() {
   }
 }
 
-
-monthString();
-var year = document.createElement('span');
+// set up m3
 year.appendChild(document.createTextNode(tomorrow.getFullYear()));
 year.setAttribute('style', 'font-size:18px');
-
+monthString();
 m3.appendChild(document.createElement('br'));
 m3.appendChild(year);
 
-month.setAttribute('class', 'month');
-days.setAttribute('class', 'days');
-
+// add to month
 month.appendChild(m3);
-
 month.appendChild(m1);
 month.appendChild(m2);
-
-console.log(tomorrow.getDate());
 
 for (var i = 1; i <= lastDay.getDate(); i++) {
   var li = document.createElement('li');
   li.setAttribute('id', i);
+
+  // set active date
   if (i == tomorrow.getDate()) {
     var active1 = document.createElement('span');
     active1.setAttribute('class', 'active');
@@ -108,49 +142,12 @@ for (var i = 1; i <= lastDay.getDate(); i++) {
   days.appendChild(li);
 }
 
-console.log(month);
-console.log(days);
 calendar.appendChild(month);
+var divA = document.createElement('div');
+divA.setAttribute('class', 'month');
+divA.appendChild(month);
+calendar.appendChild(divA);
 calendar.appendChild(days);
-
-// Updates calendar based on month
-function refreshCalendar() {
-  console.log('HELLO');
-  month.removeChild(m1);
-  month.removeChild(m2);
-  month.removeChild(m3);
-  m3 = document.createElement('li');
-  monthString();
-  m3.appendChild(document.createElement('br'));
-  year = document.createElement('span');
-  year.appendChild(document.createTextNode(y));
-  year.setAttribute('style', 'font-size:18px');
-  m3.appendChild(year);
-  month.appendChild(m3);
-  month.appendChild(m1);
-  month.appendChild(m2);
-
-  lastDay = new Date(y, m + 1, 0);
-  document.getElementById('dayy').remove();
-  days = document.createElement('ul');
-  days.setAttribute('class', 'days');
-  days.setAttribute('id', 'dayy');
-
-  for (var i = 1; i <= lastDay.getDate(); i++) {
-    var li = document.createElement('li');
-    li.setAttribute('id', i);
-    if (i == tomorrow.getDate()) {
-      var active1 = document.createElement('span');
-      active1.setAttribute('class', 'active');
-      active1.appendChild(document.createTextNode(i));
-      li.appendChild(active1);
-    } else {
-      li.appendChild(document.createTextNode(i));
-    }
-    days.appendChild(li);
-  }
-  cntnr.insertBefore(days, weekcalendar);
-}
 
 // add event listeners
 m1.addEventListener('click', e => {
@@ -175,7 +172,7 @@ m2.addEventListener('click', e => {
   console.log(m);
 });
 
-// Get Elements
+// Set variables
 var weekcalendar = document.getElementById('calendar');
 var week1 = document.createElement('table');
 var week2 = document.createElement('table');
@@ -183,10 +180,7 @@ var week2 = document.createElement('table');
 var caption1 = document.createElement('caption');
 var caption2 = document.createElement('caption');
 var tomorrow = new Date();
-
 tomorrow.setDate(tomorrow.getDate());
-
-caption1.appendChild(document.createTextNode('Week of ' + tomorrow.toDateString()));
 
 var days_tr = document.createElement('tr');
 var spots_tr = document.createElement('tr');
@@ -194,10 +188,14 @@ var days2_tr = document.createElement('tr');
 var spots2_tr = document.createElement('tr');
 var alt = 0;
 
+caption1.appendChild(document.createTextNode('Week of ' + tomorrow.toDateString()));
+
 // Create dates
 for (var i = 0; i < 7; i++) {
   var day = document.createTextNode(tomorrow.toDateString());
   var th = document.createElement('th');
+
+  // styling
   if (alt == 0) {
     th.setAttribute('class', 'week_o');
     alt++;
@@ -216,6 +214,8 @@ alt = 0;
 for (var i = 0; i < 7; i++) {
   var td = document.createElement('td');
   td.setAttribute('id', 'exp' + i);
+
+  // styling
   if (alt == 0) {
     td.setAttribute('class', 'food_o');
     alt++;
@@ -234,6 +234,8 @@ alt = 0;
 for (var i = 0; i < 7; i++) {
   var day = document.createTextNode(tomorrow.toDateString());
   var th = document.createElement('th');
+
+  // styling
   if (alt == 0) {
     th.setAttribute('class', 'week_o');
     alt++;
@@ -251,6 +253,8 @@ alt = 1;
 for (var i = 7; i < 14; i++) {
   var td = document.createElement('td');
   td.setAttribute('id', 'exp' + i);
+
+  // styling
   if (alt == 0) {
     td.setAttribute('class', 'food');
     alt++;
@@ -269,7 +273,6 @@ week1.appendChild(spots_tr);
 week2.appendChild(caption2);
 week2.appendChild(days2_tr);
 week2.appendChild(spots2_tr);
-
 
 weekcalendar.appendChild(week1);
 weekcalendar.appendChild(week2);
