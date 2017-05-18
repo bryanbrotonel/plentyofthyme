@@ -16,14 +16,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
   <style>
-    #navbg {
-      background-image: url(images/thyme+background3.jpg);
-      height: 350px;
-    }
+  #navbg {
+    background-image: url(images/thyme+background3.jpg);
+    height: 350px;
+  }
 
-    th {
-      font-size: 120%;
-    }
+  th {
+    font-size: 120%;
+  }
   </style>
   <title>Food Library</title>
 </head>
@@ -48,10 +48,10 @@
         <li><a class="center" href="calendar.html">Calendar</a></li>
         <li><a id='active' class="center" href="#">Food Library</a></li>
         <script>
-          const active = document.getElementById('active');
-          active.addEventListener('click', e => {
-            Materialize.toast('Already on page!', 4000);
-          });
+        const active = document.getElementById('active');
+        active.addEventListener('click', e => {
+          Materialize.toast('Already on page!', 4000);
+        });
         </script>
         <li><a class="center" href="groceryList.html">Grocery List</a></li>
         <li><a class="center" href="aboutPOT.html">About PoT</a></li>
@@ -74,500 +74,478 @@
       </div>
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search food item...">
       <div>
-        <div class="lib-headers">
+        <div class="lib-headers" id="funfacts">
           <div class="visible-lg">
-            <span style="float:left;">Food</span>
-            <span style="padding-left:35%;padding-right:15%;">Fridge at 4°C or lower</span>
-            <span id="funfacts" style="float:right;">Freezer at -18°C or lower</span>
+            <div class="col-lg-4">Food</div>
+            <div class="col-lg-4">Fridge at 4°C or lower</div>
+            <div class="col-lg-4">Freezer at -18°C or lower</div>
           </div>
           <div class="visible-md">
-            <span style="float:left;">Food</span>
-            <span style="padding-left:25%;padding-right:10%;">Fridge at 4°C or lower</span>
-            <span style="float:right;">Freezer at -18°C or lower</span>
+            <div class="col-md-4">Food</div>
+            <div class="col-md-4">Fridge at 4°C or lower</div>
+            <div class="col-md-4">Freezer at -18°C or lower</div>
           </div>
           <div class="visible-sm">
-            <span style="float:left;">Food</span>
-            <span style="padding-left:20%;padding-right:5%;">Fridge at 4°C or lower</span>
-            <span style="float:right;">Freezer at -18°C or lower</span>
+            <div class="col-sm-4">Food</div>
+            <div class="col-sm-4">Fridge at 4°C or lower</div>
+            <div class="col-sm-4">Freezer at -18°C or lower</div>
           </div>
-          <div class="lib-headers">
-            <span class="visible-xs fa fa-cutlery" style="float:left;padding-left:3%;"></span>
-            <span class="visible-xs fa fa-snowflake-o" style="float:left;padding-left:40%;">4°C</span>
-            <span class="visible-xs fa fa-snowflake-o" style="padding-left:86%;">8°C</span>
+          <div class="visible-xs">
+            <div class="col-xs-4 fa fa-cutlery"></div>
+            <div class="col-xs-4 fa fa-snowflake-o">4°C</div>
+            <div class="col-xs-4 fa fa-snowflake-o">-18°C</div>
           </div>
           <script>
-            const funfacts = document.getElementById('funfacts');
-            funfacts.addEventListener('click', e => {
-              Materialize.toast('Did you know: A European/North American consumer wastes 100kg of food annually!', 4000);
-            });
+          const funfacts = document.getElementById('funfacts');
+          funfacts.addEventListener('click', e => {
+            Materialize.toast('Did you know: A European/North American consumer wastes 100kg of food annually!', 4000);
+          });
           </script>
         </div>
-        <hr/>
-
-        <div class="food" align="left">
+      </div>
+        <br class="visible-sm"><br />
+        <div class="food">
+          <hr>
           <div>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#foodlib">
-              <span class="fa fa-chevron-down" style="margin:0px;"></span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshmeat">
+              <span class="fa fa-chevron-down"></span>
             </button>
-            <a class="category white-text" style="text-align:left;">Fresh Meat</a>
+            <a class="category white-text">Fresh Meat</a>
           </div>
           <br/>
-      <div class="collapse navbar-collapse" id="foodlib">
-        <ul class="food-title">
-          <span style="float:left;padding-left:3%;">Beef</span>
-          <span style="float:left;padding-left:40%;">2-4 days</span>
-          <span style="padding-left:80%;">10-12 mnth</span>
-          <li>Pork</li>
-          <li>Lamb</li>
-          <li>Veal</li>
-          <li>Ground meat</li>
+          <div class="collapse navbar-collapse" id="freshmeat">
+            <div class="col-xs-4">Beef</div>
+            <div class="col-xs-4">2-4 days</div>
+            <div class="col-xs-4">10-12 months</div>
+
+            <div class="col-xs-4">Pork</div>
+            <div class="col-xs-4">2-4 days</div>
+            <div class="col-xs-4">8-12 months</div>
+
+            <div class="col-xs-4">Lamb</div>
+            <div class="col-xs-4">2-4 days</div>
+            <div class="col-xs-4">8-12 months</div>
+
+            <div class="col-xs-4">Veal</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">8-12 months</div>
+
+            <div class="col-xs-4">Ground meat</div>
+            <div class="col-xs-4">1-2 days</div>
+            <div class="col-xs-4">2-3 months</div>
+        </div>
+          <hr style="width:100%;"/>
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshpoultry">
+              <span class="fa fa-chevron-down"></span>
+            </button>
+            <a class="category white-text">Fresh Poultry</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="freshpoultry">
+            <div id="funfacts2" class="col-xs-4">Chicken/Turkey - whole</div>
+            <script>
+              const funfacts2 = document.getElementById('funfacts2');
+              funfacts2.addEventListener('click', e => {
+                Materialize.toast('Did you know: Chopsticks go into the green bin!', 4000);
+              });
+            </script>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">1 year</div>
+
+            <div class="col-xs-4">Chicken/Turkey - pieces</div>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">6 months</div>
+          </div>
+          <hr style="width:100%;"/>
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshfish">
+              <span class="fa fa-chevron-down"></span>
+            </button>
+            <a class="category white-text">Fresh Fish</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="freshfish">
+              <div class="col-xs-4">Lean fish - cod, flounder, etc.</div>
+              <div class="col-xs-4">3-4 days</div>
+              <div class="col-xs-4">6 months</div>
+
+              <div class="col-xs-4">Fatty fish - salmon, etc.</div>
+              <div class="col-xs-4">2-3 days</div>
+              <div class="col-xs-4">6 months</div>
+
+              <div class="col-xs-4">Shellfish - crab, lobster, clams, etc.</div>
+              <div class="col-xs-4">12-24 hours</div>
+              <div class="col-xs-4">2-4 months</div>
+
+              <div class="col-xs-4">Scallops, shrimp, cooked shellfish</div>
+              <div class="col-xs-4">1-2 days</div>
+              <div class="col-xs-4">2-4 months</div>
+          </div>
+          <hr style="width:100%;"/>
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ham">
+              <span class="fa fa-chevron-down"></span>
+            </button>
+            <a class="category white-text">Ham</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="ham">
+              <div class="col-xs-4">Canned ham</div>
+              <div class="col-xs-4">6-9 months</div>
+              <div class="col-xs-4">Don't freeze</div>
+
+              <div class="col-xs-4">Fatty fish - salmon, etc.</div>
+              <div class="col-xs-4">2-3 days</div>
+              <div class="col-xs-4">6 months</div>
+          </div>
+        </div>
+      </div>
+        <br/>
+      </div>
+    </div>
+</br>
+
+
+
+<!--<div class="food-title">
+<div>Canned ham</div>
+<div>6-9 months</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Cooked ham</div>
+<div>3-4 days</div>
+<div>2-3 months</div>
+</div>
+<thead>
+<div class="food-title">
+<div class="category">Bacon and sausages</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Bacon</div>
+<div>1 week</div>
+<div>1 month</div>
+</div>
+<div class="food-title">
+<div>Raw sausage</div>
+<div>1-2 days</div>
+<div>1-2 months</div>
+</div>
+<div class="food-title">
+<div>Pre-cooked sausage links or patties</div>
+<div>1 week</div>
+<div>1-2 months</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Hot dogs</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Unopened hotdogs</div>
+<div>2 weeks</div>
+<div>1-2 months</div>
+</div>
+<div class="food-title">
+<div>Opened hotdogs</div>
+<div>1 week</div>
+<div>1-2 months</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Lunch meat and deli food</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Unopened lunch meat</div>
+<div>2 weeks</div>
+<div>1-2 months</div>
+</div>
+<div class="food-title">
+<div>Opened lunch meat</div>
+<div>3-5 days</div>
+<div>1-2 months</div>
+</div>
+<div class="food-title">
+<div>Deli packaged lunch meat</div>
+<div>3-4 days</div>
+<div>2-3 months</div>
+</div>
+<div class="food-title">
+<div>Deli or homemade salads</div>
+<div>3-5 days</div>
+<div>Don't freeze</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Leftovers</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Cooked meat, stews, egg or vegetable dishes</div>
+<div>3-4 days</div>
+<div>2-3 months</div>
+</div>
+<div class="food-title">
+<div>Cooked poultry and fish</div>
+<div>3-4 days</div>
+<div>4-6 months</div>
+</div>
+<div class="food-title">
+<div>Meat broth and gravy</div>
+<div>3-4 days</div>
+<div>4-6 months</div>
+</div>
+<div class="food-title">
+<div>Soups</div>
+<div>2-3 days</div>
+<div>4 months</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Frozen dinners</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Keep frozen until ready to cook</div>
+<div>&nbsp;</div>
+<div>3-4 months</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Eggs</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Fresh in shell</div>
+<div>3-4 weeks</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Fresh out of shell</div>
+<div>2-4 days</div>
+<div>4 months</div>
+</div>
+<div class="food-title">
+<div>Hard-cooked</div>
+<div>1 week</div>
+<div>Doesn't freeze well</div>
+</div>
+<div class="food-title">
+<div>Egg substitutes un-opened</div>
+<div>10 days</div>
+<div>1 year</div>
+</div>
+<div class="food-title">
+<div>Egg substitutes opened</div>
+<div>3 days</div>
+<div>Don't freeze</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Dairy products</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Unopened milk</div>
+<div>Best before date</div>
+<div>6 weeks</div>
+</div>
+<div class="food-title">
+<div>Opened milk</div>
+<div>3 days</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Unopened cottage cheese</div>
+<div>Best before date</div>
+<div>Doesn't freeze well</div>
+</div>
+<div class="food-title">
+<div>Opened cottage cheese</div>
+<div>3 days</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Unopened yogurt</div>
+<div>Best before date</div>
+<div>1-2 months</div>
+</div>
+<div class="food-title">
+<div>Opened yogurt</div>
+<div>3 days</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Soft cheese</div>
+<div>1 week</div>
+<div>Doesn't freeze well</div>
+</div>
+<div class="food-title">
+<div>Semi-soft cheese</div>
+<div>2-3 weeks</div>
+<div>8 weeks</div>
+</div>
+<div class="food-title">
+<div>Firm cheese</div>
+<div>5 weeks</div>
+<div>3 months</div>
+</div>
+<div class="food-title">
+<div>Hard cheese</div>
+<div>10 months</div>
+<div>1 year</div>
+</div>
+<div class="food-title">
+<div>Processed cheese</div>
+<div>5 months</div>
+<div>3 months</div>
+</div>
+<div class="food-title">
+<div>Unopened salted butter</div>
+<div>8 weeks</div>
+<div>1 year</div>
+</div>
+<div class="food-title">
+<div>Unopened unsalted butter</div>
+<div>8 weeks</div>
+<div>3 months</div>
+</div>
+<div class="food-title">
+<div>Opened butter</div>
+<div>3 weeks</div>
+<div>Don't freeze</div>
+</div>
+</tbody>
+<thead>
+<div class="food-title">
+<div class="category">Vegetables</div>
+</div>
+</thead>
+<tbody>
+<div class="food-title">
+<div>Beans green or waxed</div>
+<div>5 days</div>
+<div>8 months</div>
+</div>
+<div class="food-title">
+<div>Carrots</div>
+<div>2 weeks</div>
+<div>10-12 months</div>
+</div>
+<div class="food-title">
+<div>Celery</div>
+<div>2 weeks</div>
+<div>10-12 months</div>
+</div>
+<div class="food-title">
+<div>Leaf lettuce</div>
+<div>3-7 days</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Iceburg lettuce</div>
+<div>1-2 weeks</div>
+<div>Don't freeze</div>
+</div>
+<div class="food-title">
+<div>Spinach</div>
+<div>2-4 weeks</div>
+<div>10-12 months</div>
+</div>
+<div class="food-title">
+<div>Summer squash</div>
+<div>1 week</div>
+<div>10-12 months</div>
+</div>
+<div class="food-title">
+<div>Winter squash</div>
+<div>2 weeks</div>
+<div>10-12 months</div>
+</div>
+<div class="food-title">
+<div>Tomatoes</div>
+<div>Don't refrigerate</div>
+<div>2 months</div>
+</div>
+</tbody>
+</div>
+
+<script>
+function myFunction() {
+// Declare variables
+var input, filter, table, tr, td, i;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+// Loop through all table rows, and hide those who don't match the search query
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[0];
+if (td) {
+if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+tr[i].style.display = "";
+} else {
+tr[i].style.display = "none";
+}
+}
+}
+}
+</script>
+</div>
+</div>
+<br/>
+<br/> -->
+
+<footer class='page-footer'>
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Grow With Us!</h5>
+        <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+        <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li>
+            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+          </li>
         </ul>
       </div>
     </div>
-    <br/>
-
-
-
-              <!-- <div class="dropdown menu">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#foodlib">
-              <span class="glyphicon glyphicon-chevron-down"></span>
-            </button>
-            <div class="collapse" id="foodlib">
-              <div class="category dropdown-toggle" data-toggle="dropdown">Fresh meat</div>
-              <tbody>
-                <ul class="food-title dropdown-toggle" data-toggle="dropdown">
-                  <li>Beef</li>
-                  <li>Pork</li>
-                  <li>Lamb</li>
-                  <li>Veal</li>
-                  <li>Ground meat</li>
-                </ul>
-              </div>
-          </div>
-
-              <tr>
-                <ul class="food title" align=middle>
-                  <il>2-4 days</li>
-                  <li>2-4 days</li>
-                  <li>2-4 days</li>
-                  <li>3-4 days</li>
-                  <li>1-2 days</li>
-                </ul>
-              </tr>
-
-                <il>10 - 12 months</il>
-              </div>
-              <div class="food-title">
-
-                <div>8 - 12 months</div>
-              </div>
-              <div class="food-title">
-
-                <div>8 - 12 months</div>
-              </div>
-              <div class="food-title">
-                <div>8 - 12 months</div>
-              </div>
-              <div class="food-title">
-                <div>2 - 3 months</div>
-              </div>
-            </tbody>
-          </thead>
-
-          <hr/>
-          <thead>
-            <div class="food-title">
-              <div class="category">Fresh poultry</div>
-            </div>
-          </thead>
-          <tbody>
-            <div class="food-title">
-              <div id="funfacts">Chicken/Turkey - whole</div>
-              <script>
-                const funfacts = document.getElementById('funfacts');
-                funfacts.addEventListener('click', e => {
-                  Materialize.toast('Did you know: Chopsticks go into the green bin!', 4000);
-                });
-              </script>
-              <div>2-3 days</div>
-              <div>1 year</div>
-            </div>
-            <div class="food-title">
-              <div>Chicken/Turkey - pieces</div>
-              <div>2-3 days</div>
-              <div>6 months</div>
-            </div>
-            <thead>
-              <div class="food-title">
-                <div class="category">Fresh fish</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Lean fish - cod, flounder etc.</div>
-                <div>3-4 days</div>
-                <div>6 months</div>
-              </div>
-              <div class="food-title">
-                <div>Fatty fish - salmon etc.</div>
-                <div>3-4 days</div>
-                <div>2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Shellfish - clams, crab, lobster etc.</div>
-                <div>12-24 hours</div>
-                <div>2-4 months</div>
-              </div>
-              <div class="food-title">
-                <div>Scallops, shrimp, cooked shellfish</div>
-                <div>1-2 days</div>
-                <div>2-4 months</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Ham</div>
-              </div>
-            </thead>
-            <div class="food-title">
-              <div>Canned ham</div>
-              <div>6-9 months</div>
-              <div>Don't freeze</div>
-            </div>
-            <div class="food-title">
-              <div>Cooked ham</div>
-              <div>3-4 days</div>
-              <div>2-3 months</div>
-            </div>
-            <thead>
-              <div class="food-title">
-                <div class="category">Bacon and sausages</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Bacon</div>
-                <div>1 week</div>
-                <div>1 month</div>
-              </div>
-              <div class="food-title">
-                <div>Raw sausage</div>
-                <div>1-2 days</div>
-                <div>1-2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Pre-cooked sausage links or patties</div>
-                <div>1 week</div>
-                <div>1-2 months</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Hot dogs</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Unopened hotdogs</div>
-                <div>2 weeks</div>
-                <div>1-2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Opened hotdogs</div>
-                <div>1 week</div>
-                <div>1-2 months</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Lunch meat and deli food</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Unopened lunch meat</div>
-                <div>2 weeks</div>
-                <div>1-2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Opened lunch meat</div>
-                <div>3-5 days</div>
-                <div>1-2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Deli packaged lunch meat</div>
-                <div>3-4 days</div>
-                <div>2-3 months</div>
-              </div>
-              <div class="food-title">
-                <div>Deli or homemade salads</div>
-                <div>3-5 days</div>
-                <div>Don't freeze</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Leftovers</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Cooked meat, stews, egg or vegetable dishes</div>
-                <div>3-4 days</div>
-                <div>2-3 months</div>
-              </div>
-              <div class="food-title">
-                <div>Cooked poultry and fish</div>
-                <div>3-4 days</div>
-                <div>4-6 months</div>
-              </div>
-              <div class="food-title">
-                <div>Meat broth and gravy</div>
-                <div>3-4 days</div>
-                <div>4-6 months</div>
-              </div>
-              <div class="food-title">
-                <div>Soups</div>
-                <div>2-3 days</div>
-                <div>4 months</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Frozen dinners</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Keep frozen until ready to cook</div>
-                <div>&nbsp;</div>
-                <div>3-4 months</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Eggs</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Fresh in shell</div>
-                <div>3-4 weeks</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Fresh out of shell</div>
-                <div>2-4 days</div>
-                <div>4 months</div>
-              </div>
-              <div class="food-title">
-                <div>Hard-cooked</div>
-                <div>1 week</div>
-                <div>Doesn't freeze well</div>
-              </div>
-              <div class="food-title">
-                <div>Egg substitutes un-opened</div>
-                <div>10 days</div>
-                <div>1 year</div>
-              </div>
-              <div class="food-title">
-                <div>Egg substitutes opened</div>
-                <div>3 days</div>
-                <div>Don't freeze</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Dairy products</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Unopened milk</div>
-                <div>Best before date</div>
-                <div>6 weeks</div>
-              </div>
-              <div class="food-title">
-                <div>Opened milk</div>
-                <div>3 days</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Unopened cottage cheese</div>
-                <div>Best before date</div>
-                <div>Doesn't freeze well</div>
-              </div>
-              <div class="food-title">
-                <div>Opened cottage cheese</div>
-                <div>3 days</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Unopened yogurt</div>
-                <div>Best before date</div>
-                <div>1-2 months</div>
-              </div>
-              <div class="food-title">
-                <div>Opened yogurt</div>
-                <div>3 days</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Soft cheese</div>
-                <div>1 week</div>
-                <div>Doesn't freeze well</div>
-              </div>
-              <div class="food-title">
-                <div>Semi-soft cheese</div>
-                <div>2-3 weeks</div>
-                <div>8 weeks</div>
-              </div>
-              <div class="food-title">
-                <div>Firm cheese</div>
-                <div>5 weeks</div>
-                <div>3 months</div>
-              </div>
-              <div class="food-title">
-                <div>Hard cheese</div>
-                <div>10 months</div>
-                <div>1 year</div>
-              </div>
-              <div class="food-title">
-                <div>Processed cheese</div>
-                <div>5 months</div>
-                <div>3 months</div>
-              </div>
-              <div class="food-title">
-                <div>Unopened salted butter</div>
-                <div>8 weeks</div>
-                <div>1 year</div>
-              </div>
-              <div class="food-title">
-                <div>Unopened unsalted butter</div>
-                <div>8 weeks</div>
-                <div>3 months</div>
-              </div>
-              <div class="food-title">
-                <div>Opened butter</div>
-                <div>3 weeks</div>
-                <div>Don't freeze</div>
-              </div>
-            </tbody>
-            <thead>
-              <div class="food-title">
-                <div class="category">Vegetables</div>
-              </div>
-            </thead>
-            <tbody>
-              <div class="food-title">
-                <div>Beans green or waxed</div>
-                <div>5 days</div>
-                <div>8 months</div>
-              </div>
-              <div class="food-title">
-                <div>Carrots</div>
-                <div>2 weeks</div>
-                <div>10-12 months</div>
-              </div>
-              <div class="food-title">
-                <div>Celery</div>
-                <div>2 weeks</div>
-                <div>10-12 months</div>
-              </div>
-              <div class="food-title">
-                <div>Leaf lettuce</div>
-                <div>3-7 days</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Iceburg lettuce</div>
-                <div>1-2 weeks</div>
-                <div>Don't freeze</div>
-              </div>
-              <div class="food-title">
-                <div>Spinach</div>
-                <div>2-4 weeks</div>
-                <div>10-12 months</div>
-              </div>
-              <div class="food-title">
-                <div>Summer squash</div>
-                <div>1 week</div>
-                <div>10-12 months</div>
-              </div>
-              <div class="food-title">
-                <div>Winter squash</div>
-                <div>2 weeks</div>
-                <div>10-12 months</div>
-              </div>
-              <div class="food-title">
-                <div>Tomatoes</div>
-                <div>Don't refrigerate</div>
-                <div>2 months</div>
-              </div>
-            </tbody>
-        </div>
-
-        <script>
-          function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-              td = tr[i].getElementsByTagName("td")[0];
-              if (td) {
-                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                  tr[i].style.display = "";
-                } else {
-                  tr[i].style.display = "none";
-                }
-              }
-            }
-          }
-        </script>
-      </div>
-</div>
-  <br/>
-  <br/> -->
-
-
-  <footer class='page-footer'>
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grow With Us!</h5>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="footer-copyright">
-    <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
   </div>
+</footer>
+<div class="footer-copyright">
+  <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+</div>
 
-  <script>
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
-    $('.button-collapse').sideNav({
-      menuWidth: 200, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-    });
-  </script>
+<script>
+// Initialize collapse button
+$(".button-collapse").sideNav();
+$('.button-collapse').sideNav({
+  menuWidth: 200, // Default is 300
+  edge: 'left', // Choose the horizontal origin
+  closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  draggable: true // Choose whether you can drag to open on touch screens
+});
+</script>
 </body>
 
 </html>
