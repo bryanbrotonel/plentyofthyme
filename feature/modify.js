@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
     // adds each object to calendar if it expires within 2 weeks
     for (i = 0; i < objects.length; i++) {
-      var expDate = 'exp'
+      expDate = 'exp'
       itemDate = objects[i].date.charAt(8) + objects[i].date.charAt(9);
       difference = (itemDate - tomorrow.getDate());
       expDate = expDate + (itemDate - tomorrow.getDate());

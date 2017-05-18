@@ -33,31 +33,12 @@
   <title>Plenty of Thyme</title>
 </head>
 
-<script>
-  $(document).ready(function() {
-    $("#weekly").click(function() {
-      $("#week").show();
-      $("#biweek").hide();
-      $("#month").hide();
-    });
-    $("#twowks").click(function() {
-      $("#week").hide();
-      $("#biweek").show();
-      $("#month").hide();
-    });
-    $("#monthly").click(function() {
-      $("#week").hide();
-      $("#biweek").hide();
-      $("#month").show();
-    });
-  });
-</script>
-
 <body>
   <header>
     <nav class="top-nav green darken-2">
       <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a><a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a class="white-text" href="library.html">Food Library</a></li>
           <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
@@ -92,20 +73,22 @@
   <div>
     <div class="container" id="cntnr">
       <div class="center">
-        <h3>Stats for Your Plants</h3>
-        <div class="hide-on-med-and-down row">
-          <label id="weekly" class="btn waves-effect waves-light white-text">Week</label>
-          <label id="twowks" class="btn waves-effect waves-light white-text">Bi-Weekly</label>
-          <label id="monthly" class="btn waves-effect waves-light white-text">Month</label>
+        <h3 class="hide-on-small-only">Stats for Your Plants</h3>
+        <div class="hide-on-small-only row">
+          <button onclick="week()" class="btn waves-effect waves-light white-text">Week</button>
+          <button onclick="biweek()" class="btn waves-effect waves-light white-text">Bi-Weekly</button>
+          <button onclick="month()" class="btn waves-effect waves-light white-text">Month</button>
         </div>
+        <h4 class="hide-on-med-and-up">Stats for Your Plants</h4>
         <div class="hide-on-med-and-up row">
-          <label id="weekly" class="btn waves-effect waves-light" style="width:100px;">Week</label>
-          <label id="twowks" class="btn waves-effect waves-light" style="width:110px;">Bi-Weekly</label>
-          <label id="monthly" class="btn waves-effect waves-light" style="width:100px;">Month</label>
+          <button onclick="mobileweek()" class="btn waves-effect waves-light" style="width:100px;">Week</button>
+          <button onclick="mobilebiweek()" class="btn waves-effect waves-light" style="width:110px;">Bi-Weekly</button>
+          <button onclick="mobilemonth()" class="btn waves-effect waves-light" style="width:100px;">Month</button>
           <br class="visible-xs">
         </div>
+        <script src='feature/statsbutton.js'></script>
       </div>
-      <div id="week" class="container">
+      <div id="week">
         <h4>Week</h4>
         <div class="divider"></div>
         <div class="section">
@@ -126,7 +109,7 @@
         <div class="divider"></div>
         <br>
       </div>
-      <div id="biweek" class="container">
+      <div id="biweek">
         <h4>Bi-Weekly</h4>
         <div class="divider"></div>
         <div class="section">
@@ -147,7 +130,7 @@
         <div class="divider"></div>
         <br>
       </div>
-      <div id="month" class="container">
+      <div id="month">
         <h4>Month</h4>
         <div class="divider"></div>
         <div class="section">
@@ -205,7 +188,7 @@
       </div>
     </div>
 
-    <script src='feature/displayList.js'></script>
+    <script src='feature/stats.js'></script>
 </body>
 
 </html>
