@@ -40,7 +40,6 @@ firebase.auth().onAuthStateChanged(function(user) {
             string = value.name + "\t" + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
-            // li.setAttribute('data-target', 'modal1');
             li.setAttribute('class', 'btn waves-light waves-effect');
             li.setAttribute('id', value.name + value.date);
             li.setAttribute('style', 'background-color: black; opacity: 0.6;');
