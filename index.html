@@ -16,25 +16,76 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <title>Log In</title>
 </head>
-<style>
-  body {
-    background-image: url(images/thyme+background3.jpg);
-  }
 
-  .promo-caption {
-    color: #424242
+<style>
+  #navbg {
+    background-image: url(images/thyme+background3.jpg);
+    height: 250px;
   }
 </style>
 
+<script>
+  $(document).ready(function() {
+    $('.modal').modal();
+  });
+</script>
+
 <body>
-  <div class="container" id="cntnr">
-    <div class="section middle">
-      <div class="center">
-        <img style="height: 230px" src="images/logo.png" />
-        <h2 class="brand-logo">Plenty of Thyme</h2>
-        <h6>A guide to spending your thyme wisely.</h6>
-        <br> </div>
-      <div>
+  <div class="navbar-fixed">
+    <nav class="top-nav z-depth-2 green darken-2">
+      <div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="white-text" href="library.html">Food Library</a></li>
+          <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="white-text" href="aboutUs.html">About Us</a></li>
+          <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav hide-on-large-only">
+          <li><a id="active" class="center" href="#">Home</a></li>
+          <script>
+            const active = document.getElementById('active');
+            active.addEventListener('click', e => {
+              Materialize.toast('Already on page!', 4000);
+            });
+          </script>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="center" href="aboutus.html">About Us</a></li>
+          <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
+          <script src="feature/logout.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="center" id="navbg">
+    <p class="brand-logo white-text hidden-sm hidden-xs" style="font-size:54px;position:relative">
+      <img style="height: 180px; padding:5px; position:relative;" src="images/logo.png" />Plenty of Thyme</p>
+    <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text green">Log in</button>
+  </div>
+  <div id="loginmodal" class="modal">
+    <div class="modal-content">
+      <form class="black-text center-align">
+        <div class="row">
+          <div class="col s6 input-field">
+            <input type="email" style="width: 250px" id="txtEmail">
+            <label for="email">Email</label>
+          </div>
+          <div class="col s6 input-field">
+            <input type="password" style="width: 250px" id="txtPassword">
+            <label for="password">Password</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
+      <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+      <script src="feature/auth.js"></script>
+    </div>
+  </div>
+  <div class="container black-text">
+    <!-- <div>
         <form>
           <div class="form-group input-field"> <i class="material-icons prefix">email</i>
             <input type="email" style="width: 250px" id="txtEmail">
@@ -50,10 +101,7 @@
         <button id="btnLogin" class="btn btn-action waves-effect waves-light">Log in</button>
         <button id="btnSignUp" class="btn btn-secondary waves-effect waves-light">Sign Up</button>
         <script src="feature/auth.js"></script>
-      </div>
-    </div>
-    <br>
-    <div class="divider grey"></div>
+      </div>-->
     <div class="section">
       <h3>About us</h3>
       <div class="center">
@@ -75,19 +123,19 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4">
             <div class="center promo"> <i class="fa fa-clock-o fa-5x feature"></i>
-              <h5 class="promo-caption" style="color:white">Plenty of thyme</h5>
-              <p class="light center">Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
+              <h5 class="promo-caption">Plenty of thyme</h5>
+              <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
             <div class="center promo"> <i class="fa fa-heart fa-5x feature"></i>
-              <h5 class="promo-caption" style="color:white">Save food</h5>
+              <h5 class="promo-caption">Save food</h5>
               <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
             <div class="center promo"> <i class="fa fa-usd fa-5x feature"></i>
-              <h5 class="promo-caption" style="color:white">Keep your money</h5>
+              <h5 class="promo-caption">Keep your money</h5>
               <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
             </div>
           </div>
@@ -98,8 +146,11 @@
       <div class="divider grey"></div>
       <h4>Who are we?</h4>
       <div class="card small hoverable">
-        <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src=""> </div>
-        <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span>
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span>
           <p><a href="#">Git Hub</a></p>
         </div>
         <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -183,8 +234,8 @@
           <h5 class="white-text">Links</h5>
           <ul>
             <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
             </li>
           </ul>
         </div>

@@ -1,11 +1,12 @@
-body {
-    color:white;
-
+html, body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
-/*nav.top-nav {
-    background-color: rgba(65, 96, 33, 0.83);
-}*/
+body {
+    color:white;
+    background: #E5D8AC;
+    font-family: 'Raleway', sans-serif;
+}
 
 .page_div {
   margin-bottom: 130px;
@@ -41,11 +42,6 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-body {
-  background: #E5D8AC;
-  font-family: 'Raleway', sans-serif;
 }
 
 hr {
@@ -157,13 +153,6 @@ div.footer-copyright{
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-html, body {
-    overflow-x: hidden; /* Prevent scroll on narrow devices */
-}
-
-body {
-    padding-top: 80px;
-}
 
 footer {
     padding: 30px 0;
