@@ -10,13 +10,6 @@ var i = 0;
 var j = 1;
 const uiList = document.getElementById('list');
 var btnSubmit = document.getElementById('btnSubmit');
-<<<<<<< HEAD
-console.log(btnSubmit);
-btnSubmit.addEventListener('click', e => {
-  window.location.href = 'cart.html';
-});
-var string = "";
-=======
 var ul = document.createElement('ul');
 var li = document.createElement('li');
 
@@ -26,33 +19,14 @@ btnSubmit.addEventListener('click', e => {
 });
 
 // modal box set up
->>>>>>> claidev2
 $(document).ready(function() {
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
-<<<<<<< HEAD
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    user1 = firebase.auth().currentUser;
-    // Get elements
-    var buttons = [];
-    var values = [];
-    var dates = [];
-    var names = [];
-    var i = 0;
-    const uiList = document.getElementById('list');
-    var ul = document.createElement('ul');
-    var li = document.createElement('li');
-    var string2;
-    user1 = firebase.auth().currentUser;
-    var itemRef = firebase.database().ref('users/' + user1.uid);
-=======
 
 // access to firebase users
 firebase.auth().onAuthStateChanged(function(user) {
     var itemRef = firebase.database().ref('users/' + user.uid);
->>>>>>> claidev2
     itemRef.once('value', function(snapshot) {
       if (snapshot.val() != null) {
         snapshot.forEach(function(childSnapshot) {
@@ -74,6 +48,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             ul.appendChild(li);
           });
         });
+
         uiList.appendChild(ul);
 
         // store buttons
@@ -111,19 +86,9 @@ firebase.auth().onAuthStateChanged(function(user) {
               $('#modalDelete').modal('open');
               document.getElementById('confirmDelete').addEventListener('click', e => {
                 buttons[j].remove();
-                // itemRef.child(dates[j]).child(names[j]).remove();
+                itemRef.child(dates[j]).child(names[j]).remove();
               });
             });
-<<<<<<< HEAD
-            //   document.getElementById('remove').addEventListener('click', e => {
-            //     buttons[j].remove();
-            //     console.log(dates[j]);
-            //     itemRef.child(dates[j]).child(names[j]).remove();
-            //     j++;
-            //   });
-            // });
-=======
->>>>>>> claidev2
           });
         }
 
@@ -131,14 +96,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         // Fill container when list is empty
         uiList.setAttribute('class', 'center container');
         uiList.innerText = '\nYou have nothing in your fridge yet!'+'\n\n';
-<<<<<<< HEAD
-        console.log(snapshot.val());
       }
     });
-    console.log(name);
-  }
-=======
-      }
-    });
->>>>>>> claidev2
 });
