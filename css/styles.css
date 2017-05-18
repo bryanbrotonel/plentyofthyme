@@ -1,11 +1,11 @@
 html, body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
 }
 
 body {
-    color:white;
-    background: #E5D8AC;
-    font-family: 'Raleway', sans-serif;
+  color: white;
+  background: #E5D8AC;
 }
 
 .page_div {
@@ -86,17 +86,18 @@ footer.page-footer {
   min-height: 85px;
   width: 100%;
   vertical-align: bottom;
-    box-shadow: 0px 500px 0px 500px #000;
+  box-shadow: 0px 500px 0px 500px #000;
 }
 
-div.footer-copyright{
+div.footer-copyright {
   background-color: rgb(39, 26, 5);
-    padding:10px;
+  padding: 10px;
 }
 
 .feature {
   color: #00c853;
 }
+
 
 /*Media connections*/
 
@@ -109,6 +110,7 @@ div.footer-copyright{
   opacity: 0.7;
   color: white;
 }
+
 
 /*Search bar implementation*/
 
@@ -138,7 +140,7 @@ div.footer-copyright{
 }
 
 .email:hover {
-    color: #d3edff;
+  color: #d3edff;
 }
 
 .brand-logo {
@@ -153,69 +155,69 @@ div.footer-copyright{
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-
 footer {
-    padding: 30px 0;
+  padding: 30px 0;
 }
+
 
 /*
  * Custom styles
  */
+
 .navbar-brand {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .navbar-container {
-    padding: 10px 0 20px 0;
-    color:white;
+  padding: 10px 0 20px 0;
+  color: white;
 }
 
 .navbar.navbar-fixed-top.fixed-theme. {
-    box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px white;
 }
 
 .navbar-brand.fixed-theme {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .navbar-container.fixed-theme {
-    padding: 0;
+  padding: 0;
 }
 
-.navbar-brand.fixed-theme,
-.navbar-container.fixed-theme,
-.navbar.navbar-fixed-top.fixed-theme,
-.navbar-brand,
-.navbar-container{
-    transition: 6s;
-    -webkit-transition:  1s;
+.navbar-brand.fixed-theme, .navbar-container.fixed-theme, .navbar.navbar-fixed-top.fixed-theme, .navbar-brand, .navbar-container {
+  transition: 6s;
+  -webkit-transition: 1s;
 }
 
 .navbar.navbar-fixed-top {
-    min-height: 80px;
+  min-height: 80px;
 }
 
 .navbar.navbar-fixed-top.fixed-theme {
-    min-height: 30px;
+  min-height: 30px;
 }
 
-#navbar-nav#nav-mobile > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    line-height: 80px;
+#navbar-nav#nav-mobile>li>a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 80px;
 }
 
 @media (max-width: 767px) {
-    #navbar-nav#nav-mobile > li > a {
+  #navbar-nav#nav-mobile>li>a {
     line-height: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+  }
 }
 
+
 /*Food library*/
+
 .lib-headers {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .category {
