@@ -80,8 +80,23 @@
         <h3 class="hidden">Guide</h3>
         <h1 class="hidden-xs">Your personal food library.</h1>
         <h4 class="visible-xs">Your personal food library.</h4>
+        <script>
+          document.getElementById("myInput").onkeyup=function() {
+            var matcher = new RegExp(document.getElementById("myInput").value, "gi");
+            for(var i=0; i<document.getElementsByClassName("food").length;i++) {
+              if(
+                matcher.test(document.getElementsByClassName("name")[i].innerHTML) ||
+                matcher.test(document.getElementsByClassName("food")[i].innerHTML)
+              ) {
+                document.getElementsByClassName("food")[i].style.display="inline-block";
+              } else {
+                document.getElementsByClassName("food")[i].style.display="none";
+              }
+            }
+          }
+        </script>
       </div>
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search food item...">
+      <input type="text" id="myInput" placeholder="Search food item...">
       <div>
         <div class="lib-headers" id="funfacts">
           <div class="visible-lg">
@@ -375,7 +390,7 @@
           <div class="col-xs-4">1 week</div>
           <div class="col-xs-4">Doesn't freeze well</div>
 
-          <div class="col-xs-4">Semi-oft cheese</div>
+          <div class="col-xs-4">Semi-soft cheese</div>
           <div class="col-xs-4">2-3 weeks</div>
           <div class="col-xs-4">8 weeks</div>
 
@@ -412,7 +427,7 @@
         </div>
         <br/>
         <div class="collapse navbar-collapse" id="veggies">
-          <div class="col-xs-4">Beans green or waxed</div>
+          <div class="col-xs-4">Beans: green/waxed</div>
           <div class="col-xs-4">5 days</div>
           <div class="col-xs-4">8 months</div>
 
@@ -439,7 +454,7 @@
           <div class="col-xs-4">Summer squash</div>
           <div class="col-xs-4">1 week</div>
           <div class="col-xs-4">10-12 months</div>
-+
+
           <div class="col-xs-4">Winter squash</div>
           <div class="col-xs-4">2 weeks</div>
           <div class="col-xs-4">10-12 months</div>
@@ -452,7 +467,6 @@
     </div>
     <br/>
   </div>
-</div>
 </br>
 
 <footer class='page-footer'>
