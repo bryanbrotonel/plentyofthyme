@@ -1,5 +1,5 @@
 // set variables
-var values = [];
+// var values = [];
 var objects = [];
 var wasted = 0;
 
@@ -11,10 +11,9 @@ firebase.auth().onAuthStateChanged(function(user) {
       if (snapshot.val() != null) {
         snapshot.forEach(function(childSnapshot) {
           childSnapshot.forEach(function(childChildSnapshot) {
+            console.log(i);
             objects[i] = childChildSnapshot.val();
-            values[i] = value.name + value.date;
-            dates[i] = value.date;
-            names[i] = value.name;
+            // values[i] = objects[i].name + objects[i].date;
             i++;
           });
         });
@@ -22,6 +21,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       }
 
+      console.log(i);
+      i = 0;
+      console.log(i);
       for (i = 0; i < objects.length; i++) {
         if (objects[i].expired.equals('yes')) {
           wasted += objects[i].price;
