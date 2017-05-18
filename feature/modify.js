@@ -1,4 +1,3 @@
-
 // Declare variables
 var buttons = []; //
 var values = []; // unique ids of each item in database
@@ -29,6 +28,7 @@ firebase.auth().onAuthStateChanged((user) => {
       });
     });
 
+    // adds each object to calendar if it expires within 2 weeks
     for (i = 0; i < objects.length; i++) {
       var expDate = 'exp'
       itemDate = objects[i].date.charAt(8) + objects[i].date.charAt(9);
@@ -39,21 +39,10 @@ firebase.auth().onAuthStateChanged((user) => {
         // document.getElementById(expDate).remove();
         // document.createElement('');
 
+        // add to calendar
         document.getElementById(expDate).appendChild(document.createTextNode(objects[i].name));
         document.getElementById(expDate).appendChild(document.createElement('br'));
       }
     }
   });
 });
-
-
-
-// for (i = 0; i < values.length; i++) {
-//   buttons[i] = document.getElementById(values[i]);
-// }
-//
-// for (i = 0; i < buttons.length; i++) {
-//   buttons[i].addEventListener('click', e => {
-//     document.getElementById(values[i]).remove();
-//   });
-// }
