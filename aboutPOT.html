@@ -2,146 +2,145 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.png" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <title>Plenty of Thyme | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="icon" type="image/png" href="images/potIcon.png" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <title>Plenty of Thyme | About</title>
+    
 </head>
 
 <body>
-  <header>
-    <ul id="dropdown1" class="dropdown-content">
-      <li class="active"><a class="center black-text">PoT</a></li>
-      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
-      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
-    </ul>
-    <nav class="top-nav">
-      <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-          <li><a class="white-text" href="stats.html">Stats</a></li>
-          <li><a class="white-text" href="calendar.html">Calendar</a></li>
-          <li><a class="white-text" href="library.html">Food Library</a></li>
-          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+    <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li class="active"><a class="center black-text">PoT</a></li>
+            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
         </ul>
-        <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li class="active"><a class="center" href="landing.html">Home</a></li>
-          <li><a class="center" href="groceryList.html">Grocery List</a></li>
-          <li><a class="center" href="stats.html">Stats</a></li>
-          <li><a class="center" href="calendar.html">Calendar</a></li>
-          <li class="divider"></li>
-          <li><a class="center" href="library.html">Food Library</a></li>
-          <li class="active"><a class="center">About PoT</a></li>
-          <li><a class="center" href="aboutUs.html">About Us</a></li>
-          <li><a class="center" href="affiliates.html">Our Friends</a></li>
-          <script src="feature/navbar.js"></script>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <br/>
-  <div class="container" id="cntnr">
-    <h3>About Plenty of Thyme</h3>
-    <div class="center">
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4>Introduction</h4>
-        <p> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving.
-        </p>
-      </div>
-      <div>
-        <h4>Why Use Plenty of Thyme?</h4>
-        <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
-        <br>
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div id="funfacts3" class="center promo"> <i class="fa fa-clock-o fa-5x feature"></i>
-              <script>
-                const funfacts3 = document.getElementById('funfacts3');
-                funfacts3.addEventListener('click', e => {
-                  Materialize.toast('Did you know: CO2 released from food waste is accelerating global climate change!', 4000);
-                });
-              </script>
-              <h5 class="promo-caption" style="color:white">Plenty of thyme</h5>
-              <p class="light center">Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+                <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
+                    <li><a class="white-text" href="stats.html">Stats</a></li>
+                    <li><a class="white-text" href="calendar.html">Calendar</a></li>
+                    <li><a class="white-text" href="library.html">Food Library</a></li>
+                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav hide-on-large-only">
+                    <li class="active"><a class="center" href="landing.html">Home</a></li>
+                    <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                    <li><a class="center" href="stats.html">Stats</a></li>
+                    <li><a class="center" href="calendar.html">Calendar</a></li>
+                    <li class="divider"></li>
+                    <li><a class="center" href="library.html">Food Library</a></li>
+                    <li class="active"><a class="center">About PoT</a></li>
+                    <li><a class="center" href="aboutUs.html">About Us</a></li>
+                    <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                    <script src="feature/navbar.js"></script>
+                </ul>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div id="funfacts" class="center promo"> <i class="fa fa-heart fa-5x feature"></i>
-              <script>
-                const funfacts = document.getElementById('funfacts');
-                funfacts.addEventListener('click', e => {
-                  Materialize.toast('Did you know: Food wasted in rich countries is almost equal to the amount of food produced in Sub-Saharan Africa!', 4000);
-                });
-              </script>
-              <h5 class="promo-caption" style="color:white">Save food</h5>
-              <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
+        </nav>
+    </header>
+    <br/>
+    <div class="container" id="cntnr">
+        <h3>About Plenty of Thyme</h3>
+        <div class="center">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div id="funfacts2" class="center promo"> <i class="fa fa-usd fa-5x feature"></i>
-              <script>
-                const funfacts2 = document.getElementById('funfacts2');
-                funfacts2.addEventListener('click', e => {
-                  Materialize.toast('Did you know: A European/North American consumers wastes up to 15x more than a typical African consumer!', 4000);
-                });
-              </script>
-              <h5 class="promo-caption" style="color:white">Keep your money</h5>
-              <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
+        </div>
+        <div>
+            <div>
+                <h4>Introduction</h4>
+                <p> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </p>
             </div>
-          </div>
+            <div>
+                <h4>Why Use Plenty of Thyme?</h4>
+                <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div id="funfacts3" class="center promo"> <i class="fa fa-clock-o fa-5x feature large material-icons" style="color:white; color:rgb(221, 255, 158)">schedule</i>
+                            <script>
+                                const funfacts3 = document.getElementById('funfacts3');
+                                funfacts3.addEventListener('click', e => {
+                                    Materialize.toast('Did you know: CO2 released from food waste is accelerating global climate change!', 4000);
+                                });
+                            </script>
+                            <h5 class="promo-caption" style="color:white">Plenty of thyme</h5>
+                            <p class="light center">Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div id="funfacts" class="center promo"> <i class="fa fa-heart fa-5x feature large material-icons" style="color:white; color:rgb(221, 255, 158)">favorite</i>
+                            <script>
+                                const funfacts = document.getElementById('funfacts');
+                                funfacts.addEventListener('click', e => {
+                                    Materialize.toast('Did you know: Food wasted in rich countries is almost equal to the amount of food produced in Sub-Saharan Africa!', 4000);
+                                });
+                            </script>
+                            <h5 class="promo-caption" style="color:white">Save food</h5>
+                            <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div id="funfacts2" class="center promo"> <i class="fa fa-usd fa-5x feature large material-icons" style="color:white; color:rgb(221, 255, 158)">attach_money</i>
+                            <script>
+                                const funfacts2 = document.getElementById('funfacts2');
+                                funfacts2.addEventListener('click', e => {
+                                    Materialize.toast('Did you know: A European/North American consumers wastes up to 15x more than a typical African consumer!', 4000);
+                                });
+                            </script>
+                            <h5 class="promo-caption" style="color:white">Keep your money</h5>
+                            <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <br/>
-  <div class="footer hide">
-    <div>
-      <div> MEDIA CONNECTIONS </div>
-      <div class="media-connections">
-        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grow With Us!</h5>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+    <br/>
+    <div class="footer hide">
+        <div>
+            <div> MEDIA CONNECTIONS </div>
+            <div class="media-connections">
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+            </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png' alt='guide?' style='width50px; height:50px;" /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png' alt='foodfall' style='width:50px; height:50px;" /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </footer>
-  <div class="footer-copyright">
-    <div class="container center"> &copy; 2016 Copyright Team SEABASS </div>
-  </div>
-</body>
-
+    <br />
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png' alt='guide?' style='width50px; height:50px;" /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png' alt='foodfall' style='width:50px; height:50px;" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container center"> &copy; 2016 Copyright Team SEABASS </div>
+    </div>
+</body>    
+    
 </html>
