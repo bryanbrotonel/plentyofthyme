@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="images/potIcon.png" />
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
 
@@ -75,23 +75,24 @@
         <h3 class="hidden">Guide</h3>
         <h1 class="hidden-xs">Plenty of Food.</h1>
         <h4 class="visible-xs">Plenty of Food.</h4>
-        <script>
-          document.getElementById("myInput").onkeyup = function() {
-            var matcher = new RegExp(document.getElementById("myInput").value, "gi");
-            for (var i = 0; i < document.getElementsByClassName("food").length; i++) {
-              if (
-                matcher.test(document.getElementsByClassName("name")[i].innerHTML) ||
-                matcher.test(document.getElementsByClassName("food")[i].innerHTML)
-              ) {
-                document.getElementsByClassName("food")[i].style.display = "inline-block";
-              } else {
-                document.getElementsByClassName("food")[i].style.display = "none";
-              }
-            }
-          }
-        </script>
+
       </div>
       <input type="text" id="myInput" placeholder="Search food item...">
+      <script>
+        document.getElementById("myInput").onkeyup = function() {
+          var matcher = new RegExp(document.getElementById("myInput").value, "gi");
+          for (var i = 0; i < document.getElementsByClassName("food").length; i++) {
+            if (
+              matcher.test(document.getElementsByClassName("name")[i].innerHTML) ||
+              matcher.test(document.getElementsByClassName("food")[i].innerHTML)
+            ) {
+              document.getElementsByClassName("food")[i].style.display = "inline-block";
+            } else {
+              document.getElementsByClassName("food")[i].style.display = "none";
+            }
+          }
+        }
+      </script>
       <div>
         <div class="lib-headers" id="funfacts">
           <div class="visible-lg">
