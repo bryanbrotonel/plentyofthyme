@@ -2,165 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.png" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <title>Plenty of Thyme | Friends</title>
-  <style>
-    #navbg {
-      background-image: url(images/thyme+background3.jpg);
-      height: 350px;
-    }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="icon" type="image/png" href="images/potIcon.png" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <title>Plenty of Thyme | Friends</title>
+    <style>
+        #navbg {
+            background-image: url(images/thyme+background3.jpg);
+            height: 350px;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
-      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
-      <li class="active"><a class="center black-text">Friends</a></li>
-    </ul>
-    <nav class="top-nav">
-      <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-          <li><a class="white-text" href="stats.html">Stats</a></li>
-          <li><a class="white-text" href="calendar.html">Calendar</a></li>
-          <li><a class="white-text" href="library.html">Food Library</a></li>
-          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+    <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
         </ul>
-        <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li class="active"><a class="center" href="landing.html">Home</a></li>
-          <li><a class="center" href="groceryList.html">Grocery List</a></li>
-          <li><a class="center" href="stats.html">Stats</a></li>
-          <li><a class="center" href="calendar.html">Calendar</a></li>
-          <li class="divider"></li>
-          <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-          <li><a class="center" href="aboutUs.html">About Us</a></li>
-          <li class="active"><a class="center" href="affiliates.html">Our Friends</a></li>
-          <script src="feature/navbar.js"></script>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <br>
-  <div class="container" id="cntnr">
-    <div class="center">
-      <br>
-      <h3>Our Friends</h3>
-      <div>
-        <p>The following are some apps that may be of interest to you!</p>
-      </div>
-      <br />
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="<!-- VID HERE -->" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <br />
-      <div class="hidden-xs">
-        <a href="http://foodfall.ca/"> <img src="images/Hamish.png" style="height:140px;" align="left"></a>
-        <br>
-        <br/>
-        <p style="text-align:center;" id="funfacts">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
-        <script>
-          const funfacts = document.getElementById('funfacts');
-          funfacts.addEventListener('click', e => {
-            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-          });
-        </script>
-        <br /> </div>
-      <div class="visible-xs">
-        <div class="navbar navbar-inverse" style="background-color:transparent;">
-          <div class="container-fluid">
-            <div class="navbar-header"> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h4 class="visible-xs">FOOD FALL</h4></a> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-sm">FOOD FALL</h3></a>              <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-md">FOOD FALL</h3></a> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-lg">FOOD FALL</h3></a>              </div>
-          </div>
-          <div id="p1">
+        <nav class="top-nav" style="background-color: #334120">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="center" href="landing.html">Waste Manager</a></li>
+                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
+                    <li><a class="white-text" href="stats.html">Stats</a></li>
+                    <li><a class="white-text" href="calendar.html">Calendar</a></li>
+                    <li><a class="white-text">Food Library</a></li>
+                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav hide-on-md-and-up">
+                    <li><a class="center" href="index.html">Home</a></li>
+                    <li><a class="center" href="landing.html">Waste Manager</a>
+                        <li class="divider"></li>
+                        <ul>
+                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                            <li><a class="center" href="stats.html">Stats</a></li>
+                            <li><a class="center" href="calendar.html">Calendar</a></li>
+                        </ul>
+                        <li class="divider"></li>
+                        <li><a class="center" href="library.html">Food Library</a></li>
+                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                        <li><a class="center" href="aboutus.html">About Us</a></li>
+                        <li class="active"><a class="center" href="#">Our Friends</a></li>
+                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                        <script src="feature/logout.js"></script>
+                        <script src="feature/navbar.js"></script>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="container" id="cntnr">
+        <div class="center">
+            <br>
+            <h3>Our Friends</h3>
+            <div>
+                <p>The following are some apps that may be of interest to you!</p>
+            </div>
+            <br />
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="<!-- VID HERE -->" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <br />
+            <div class="hidden-xs">
+                <a href="http://foodfall.ca/"> <img src="images/Hamish.png" style="height:140px;" align="left"></a>
+                <br>
+                <br/>
+                <p style="text-align:center;" id="funfacts">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+                <script>
+                    const funfacts = document.getElementById('funfacts');
+                    funfacts.addEventListener('click', e => {
+                        Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+                    });
+                </script>
+                <br /> </div>
+            <div class="visible-xs">
+                <div class="navbar navbar-inverse" style="background-color:transparent;">
+                    <div class="container-fluid">
+                        <div class="navbar-header"> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h4 class="visible-xs">FOOD FALL</h4></a> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-sm">FOOD FALL</h3></a> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-md">FOOD FALL</h3></a> <a href="http://foodfall.ca/" class="navbar-brand white-text" style="color:black;"><h3 class="visible-lg">FOOD FALL</h3></a> </div>
+                    </div>
+                    <div id="p1">
+                        <br>
+                        <br/>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
             <br>
             <br/>
-            <ul class="nav navbar-nav navbar-right">
-              <li>Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br/>
-      <div class="divider grey"></div>
-      <br/>
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://drive.google.com/file/d/0B5JGWFfTGGLPbUtmSjZINVZOMFk/preview"></iframe>" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <br />
-      <div class="hidden-xs">
-        <div>
-          <a href="http://use-it-up.azurewebsites.net/index.php"> <img src="images/luli.png" style="height:140px;" align="left"></a>
-          <br>
-          <br/>
-          <p id="funfacts2" style="text-align:center;">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
-          <script>
-            const funfacts2 = document.getElementById('funfacts2');
-            funfacts2.addEventListener('click', e => {
-              Materialize.toast('Did you know: 1/4 of food wasted could feed 795 MILLION hungry people!', 4000);
-            });
-          </script>
+            <div class="divider grey"></div>
+            <br/>
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://drive.google.com/file/d/0B5JGWFfTGGLPbUtmSjZINVZOMFk/preview"></iframe>" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <br />
+            <div class="hidden-xs">
+                <div>
+                    <a href="http://use-it-up.azurewebsites.net/index.php"> <img src="images/luli.png" style="height:140px;" align="left"></a>
+                    <br>
+                    <br/>
+                    <p id="funfacts2" style="text-align:center;">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+                    <script>
+                        const funfacts2 = document.getElementById('funfacts2');
+                        funfacts2.addEventListener('click', e => {
+                            Materialize.toast('Did you know: 1/4 of food wasted could feed 795 MILLION hungry people!', 4000);
+                        });
+                    </script>
+                </div>
+                <br /> </div>
+            <div class="visible-xs">
+                <div class="navbar navbar-inverse" style="background-color:transparent;">
+                    <div class="container-fluid">
+                        <div class="navbar-header"> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color:black;"><h4 class="visible-xs">USE IT UP</h4></a>
+                            <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color:black;">
+                                <h3 class="visible-sm">USE IT UP</h3></a> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color: black;"><h3 class="visible-md">USE IT UP</h3></a> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color: black;"><h3 class="visible-lg">USE IT UP</h3></a> </div>
+                    </div>
+                    <div id="p2">
+                        <br>
+                        <br/>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</li>
+                        </ul>
+                        <br> </div>
+                </div>
+            </div>
         </div>
         <br /> </div>
-      <div class="visible-xs">
-        <div class="navbar navbar-inverse" style="background-color:transparent;">
-          <div class="container-fluid">
-            <div class="navbar-header"> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color:black;"><h4 class="visible-xs">USE IT UP</h4></a>
-              <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color:black;">
-                <h3 class="visible-sm">USE IT UP</h3></a> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text" style="color: black;"><h3 class="visible-md">USE IT UP</h3></a> <a href="http://use-it-up.azurewebsites.net/index.php" class="navbar-brand white-text"
-                style="color: black;"><h3 class="visible-lg">USE IT UP</h3></a> </div>
-          </div>
-          <div id="p2">
-            <br>
-            <br/>
-            <ul class="nav navbar-nav navbar-right">
-              <li>An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</li>
-            </ul>
-            <br>
-          </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn green darken-3 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
-    <br />
-  </div>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grow With Us!</h5>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green darken-3 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="footer-copyright">
-    <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
-  </div>
-
 </body>
 
 </html>
