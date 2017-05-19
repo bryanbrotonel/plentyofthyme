@@ -66,43 +66,58 @@
         <br> </div>
     <div id="loginmodal" class="modal">
         <div class="modal-content">
-            <form class="black-text center-align">
-                <div class="row">
-                    <div class="col s6 input-field">
-                        <input type="email" style="width: 250px" id="txtEmail">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="col s6 input-field">
-                        <input type="password" style="width: 250px" id="txtPassword">
-                        <label for="password">Password</label>
-                    </div>
+            <form class="black-text center">
+              <h4>Welcome back!</h4>
+              <p class='center'>We hope you enjoy your stay!</p>
+              <hr style='width:80%'/>
+                  <br/>
+                  <!-- <label class='col-sm-12' for="email">Email</label> -->
+                  <!-- <i class="material-icons prefix">email</i> -->
+                  <input type="email" placeholder="Email" style="width: 80%" id="txtEmail"><br/>
+                  <!-- <label class='col-sm-12' for="password">Password</label> -->
+                  <!-- <i class="material-icons prefix">lock</i> -->
+                  <input type="password" placeholder="Password" style="width: 80%" id="txtPassword">
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+          <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
+            <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
+        </div>
+    </div>
+    <div id="signupmodal" class="modal modal-fixed-footer black-text">
+        <div class="modal-content center">
+            <h4>Join us!</h4>
+            <p>Help us help reduce food waste together!</p>
+            <hr style='width:80%'/>
+            <form class="container center-align">
+              <br/>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" id="fName" class="validate" style="width: 80%" placeholder="First Name">
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" id="lName" class="validate" style="width: 80%" placeholder="Last Name">
+                 </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input type="email" id="Email" class="validate" style="width: 80%" placeholder="Email">
+                  </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">lock</i>
+                  <input type="password" id="Password" class="validate" style="width: 80%" placeholder="Password">
+                  </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">lock</i>
+                  <input type="password" id="confirmPassword" class="validate" style="width: 80%" placeholder="Confirm Password">
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-            <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
-            <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-        </div>
-    </div>
-    <div id="signupmodal" class="modal modal-fixed-footer black-text">
-        <div class="modal-content">
-            <h4>Sign Up</h4>
-            <form class="container center-align">
-                <div class="input-field"> <i class="material-icons prefix">person</i>
-                    <input type="text" id="fName" class="validate" style="width: 250px" placeholder="First Name"> </div>
-                <div class="input-field"> <i class="material-icons prefix">person</i>
-                    <input type="text" id="lName" class="validate" style="width: 250px" placeholder="Last Name"> </div>
-                <div class="input-field"> <i class="material-icons prefix">email</i>
-                    <input type="email" id="Email" class="validate" style="width: 250px" placeholder="Email"> </div>
-                <div class="input-field"> <i class="material-icons prefix">lock</i>
-                    <input type="password" id="Password" class="validate" style="width: 250px" placeholder="Password"> </div>
-                <div class="input-field"> <i class="material-icons prefix">lock</i>
-                    <input type="password" id="confirmPassword" class="validate" style="width: 250px" placeholder="Confirm Password"> </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-            <script src="feature/auth.js"></script>
+          <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+          <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+          <script src="feature/auth.js"></script>
         </div>
     </div>
 </header>
@@ -149,13 +164,6 @@
             </div>
         </div>
     </div>
-    <div class="hidden-xs ourFunctions black-text center" style="height:400px;">
-        <div class="col-xs-4">
-            <div> Menu </div>
-        </div>
-        <div class="col-xs-4">
-            <button> Food Library</button>
-        </div>
     </div>
     <div class="visible-xs ourFunctions black-text center" style="background-image: url(images/spices.jpeg); height:490px; background-size: 100% auto; background-repeat: no-repeat;">
         <div class="container" style="<!--background-color: rgba(0, 0, 0, 0.65);--> height:auto; ">
