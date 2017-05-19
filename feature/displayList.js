@@ -17,6 +17,8 @@ var li = document.createElement('li');
 var slider = document.getElementById('slider');
 var expired = document.getElementById('expired');
 
+ul.setAttribute('class', 'collection');
+
 // add event listener
 btnSubmit.addEventListener('click', e => {
   window.location.href = 'cart.html';
@@ -42,14 +44,15 @@ firebase.auth().onAuthStateChanged(function(user) {
             dates[i] = value.date;
             names[i] = value.name;
             i++;
-            string = value.name + "\t" + value.date + '\n';
+            string = value.name + "\t" + 'expires on ' + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
-            li.setAttribute('class', 'btn waves-light waves-effect');
+            li.setAttribute('class', 'btn waves-light waves-effect collection-item');
             li.setAttribute('id', value.name + value.date);
-            li.setAttribute('style', 'background-color: black; opacity: 0.6;');
+            li.setAttribute('style', 'width: 100%; background-color: black; opacity: 0.6;');
             li.appendChild(document.createElement('br'));
             ul.appendChild(li);
+            ul.appendChild(document.createElement('br'));
           });
         });
 
