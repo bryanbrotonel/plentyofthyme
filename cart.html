@@ -1,123 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-  <link href="css/styles.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link href="css/calendar.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.png" />
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src='feature/main.js'></script>
   <title>Cart</title>
-
-  <style>
-    #navbg {
-      background-image: url(images/thyme+background3.jpg);
-      height: 350px;
-    }
-
-    td {
-      padding: 10px;
-    }
-
-    th {
-      padding: 10px;
-      font-size: 120%;
-    }
-  </style>
-
 </head>
 
 <body>
-  <div id="navbg"></div>
-  <nav class="top-nav">
-    <div class="nav-wrapper">
-      <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-      <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="white-text" href="library.html">Food Library</a></li>
-        <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="white-text" href="aboutUs.html">About Us</a></li>
-        <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-      </ul>
-      <ul id="slide-out" class="side-nav hide-on-large-only">
-        <li><a class="center" href="landing.html">Home</a></li>
-        <li><a id='active' class="center" href="#">Cart</a></li>
-        <script>
-          const active = document.getElementById('active');
-          active.addEventListener('click', e => {
-            Materialize.toast('Already on page!', 4000);
-          });
-        </script>
-        <li><a class="center" href="stats.html">Statistics</a></li>
-        <li><a class="center" href="calendar.html">Calendar</a></li>
-        <li><a class="center" href="library.html">Food Library</a></li>
-        <li><a class="center" href="groceryList.html">Grocery List</a></li>
-        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-        <li><a class="center" href="aboutus.html">About Us</a></li>
-        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-        <script src='feature/logout.js'></script>
-      </ul>
-    </div>
-  </nav>
-  <br/>
-
-    <div class='container' id="cntnr">
-      <br/>
-      <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
-        <fieldset id='main'>
+  <header>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    </ul>
+    <nav class="top-nav">
+      <div class="nav-wrapper">
+        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a class="white-text" href="groceryList.html">Grocery List</a></li>
+          <li><a class="white-text" href="stats.html">Stats</a></li>
+          <li><a class="white-text" href="calendar.html">Calendar</a></li>
+          <li><a class="white-text" href="library.html">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav hide-on-large-only">
+          <li><a class="center" href="landing.html">Home</a></li>
+          <li class="active"><a class="center" href="groceryList.html">Grocery List</a></li>
+          <li><a class="center" href="stats.html">Stats</a></li>
+          <li><a class="center" href="calendar.html">Calendar</a></li>
+          <li class="divider"></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="center" href="aboutUs.html">About Us</a></li>
+          <li><a class="center" href="affiliates.html">Our Friends</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+          <script src="feature/logout.js"></script>
+          <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+    <br>
+  </header>
+  <div class='container' id="cntnr">
+    <br/>
+    <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
+      <fieldset id='main'>
+        <br/>
+        <div class="col-sm-12">
+          <input type="text" id="item1name" placeholder="Item Name">
+        </div>
+        <div class="col-sm-12">
+          <input type="number" id="qty" placeholder="Quantity">
+        </div>
+        <div hidden="col-sm-12">
           <br/>
-          <label for="Item1" class="col-sm-12">Item Name</label>
-          <div class="col-sm-12">
-            <input type="text" id="item1name" placeholder="Item">
-          </div>
-          <label for="Item1" class="col-sm-12 control-label">Quantity</label>
-
-          <div class="col-sm-12">
-            <input type="number" id="qty" placeholder="Quantity">
-          </div>
-          <div hidden="col-sm-12">
-            <br/>
-            <br/>
-          </div>
-          <label for="item1date" class="col-sm-12 control-label">Expiration Date</label>
-          <div class="col-sm-12">
-            <input type="date" id="item1date" placeholder="date">
-          </div>
-          <label for="Item1" class="col-sm-12 control-label">Price</label>
-          <div class="col-sm-12">
-            <input type="text" id="item1price" placeholder="Price">
-          </div>
-          <label for="item1select" class="col-sm-12">Category</label>
-          <div class="col-sm-12">
-            <select id="item1select">
+          <br/>
+        </div>
+        <div class="col-sm-12">
+          <input type="date" id="item1date" placeholder="Expiration date">
+        </div>
+        <div class="col-sm-12">
+          <input type="text" id="item1price" placeholder="Price">
+        </div>
+        <label for="item1select" class="col-sm-12">Category</label>
+        <div class="col-sm-12">
+          <select id="item1select">
               <option>dairy</option>
               <option>produce</option>
               <option>meats & alternatives</option>
               <option>miscellaneous</option>
             </select>
-            <br/>
-          </div>
-        </fieldset>
-      </div>
-      <div class="center">
-        <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
-      </div>
-      <div class="center">
-        <br/>
-        <button id ='btnAdd' class='btn waves-effect waves-light' style='width:90%;'>Add more items</button>
-      </div>
+          <br/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="center">
+      <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
+    </div>
+    <div class="center">
       <br/>
+      <button id='btnAdd' class="btn btn-primary waves-effect waves-light" style='width:90%;'>Add more items</button>
+    </div>
+    <div class="center">
+      <br/>
+      <a class="btn btn-primary waves-effect waves-light" href="groceryList.html" style='width:90%;'>Back to Grocery List</a>
     </div>
     <br/>
+  </div>
+  <br/>
   </div>
   <br/>
   <footer class="page-footer">
