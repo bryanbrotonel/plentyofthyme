@@ -312,7 +312,24 @@
             <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(255, 255, 255, 0.45)">
                 <a href="http://foodfall.ca/"> <img src="images/luli.png" style=" height:140px;" align="center"> </a>
             </button>
-            <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+            <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+            <script>
+                const funfacts = document.getElementById('funfacts');
+                funfacts.addEventListener('click', e => {
+                    Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+                });
+            </script>
+        </div>
+    </div>
+    <div class="container redulist">
+        <h4 class="visible-xs black-text">REDU-LIST</h4>
+        <h3 class="visible-sm visible-md black-text">REDU-LIST</h3>
+        <h2 class="visible-lg black-text">REDU-LIST</h2>
+        <div>
+            <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(255, 255, 255, 0.45)">
+                <a href="https://redulist.firebaseapp.com"> <img src="images/mikeks.png" style=" width:130px;" align="center"> </a>
+            </button>
+            <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
             <script>
                 const funfacts = document.getElementById('funfacts');
                 funfacts.addEventListener('click', e => {
