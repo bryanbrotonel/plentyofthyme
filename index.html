@@ -32,13 +32,13 @@
         <nav class="top-nav z-depth-2" style="background-color: #334120">
             <div class="nav-wrapper">
                 <!-- <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a> --><img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <ul id="nav-mobile" class="right hidden-xs">
                     <li><a class="white-text" href="library.html">Food Library</a></li>
                     <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
                     <li><a class="white-text" href="aboutUs.html">About Us</a></li>
                     <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
                 </ul>
-                <ul id="slide-out" class="side-nav hide-on-large-only">
+                <ul id="slide-out" class="side-nav hidden-lg hidden-xl">
                     <li><a id="active" class="center" href="#">Home</a></li>
                     <script>
                         const active = document.getElementById('active');
@@ -224,17 +224,24 @@
             </div>
         </div>
     </div>
-    <div class="hidden-sm hidden-xs visible-md visible-lg">
-        <div class="col-lg-6" style="background-image: url(images/strawberries.jpeg); height:500px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-        <div class="col-lg-6 col-lg-offset-6 white-text" style="height:500px; background-color:rgba(0, 0, 0, 0.8);">
+    <div class="hidden-sm hidden-xs">
+        <!-- Medium view -->
+        <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+        <div class="col-md-6 visible-md white-text" style="height:320px; background-color:rgba(0, 0, 0, 0.8);">
+            <h4 class="white-text" style="text-align:center">Our Friends</h4>
+            <p class="white-text" style="vertical-align:middle">The following are some apps that may be of interest to you!</p>
+        </div>
+        <!-- Large view -->
+        <div class="col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:410px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+        <div class="col-lg-6 visible-lg white-text" style="height:410px; background-color:rgba(0, 0, 0, 0.8);">
             <h4 class="white-text">Our Friends</h4>
             <p class="white-text">The following are some apps that may be of interest to you!</p>
         </div>
+        
     </div>
-    
-    
-    <div class="visible-sm visible-xs hidden-md hidden-lg">
-        <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
+    <div class="hidden-md hidden-lg hidden-xl">
+        <!-- Xtra Small view -->
+        <div class="visible-xs"style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
             <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
                 <div class="inner">
                     <h4 class="white-text">Our Friends</h4>
@@ -242,6 +249,16 @@
                 </div>
             </div>
         </div>
+        <!-- Small view -->
+        <div class="visible-sm"style="padding: 30px; background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
+            <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
+                <div class="inner" style="height:400px; ">
+                    <h4 class="white-text" >Our Friends</h4>
+                    <p class="white-text">The following are some apps that may be of interest to you!</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="container"></div>
     <div class="container foodfall">
