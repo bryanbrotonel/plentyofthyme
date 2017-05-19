@@ -31,6 +31,7 @@
         txtEmail.value = "";
         txtPassword.value = "";
         promise.catch(e => console.log(e.message));
+        setTimeout(function(){window.location.href = 'landing.html'}, 1000);
       } else {
         Materialize.toast('Please fill all required fields!', 4000)
       }
@@ -60,7 +61,6 @@
             loginbutton.setAttribute('class', 'hidden');
             signupbutton.setAttribute('class', 'hidden');
 
-            // window.location.href = 'landing.html';
         } else {
             console.log('not logged in');
         }
