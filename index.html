@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-  <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plenty of Thyme</title>
 </head>
 <style>
@@ -31,12 +32,13 @@
     <div class="navbar-fixed">
         <nav class="top-nav z-depth-2" style="background-color: #334120">
             <div class="nav-wrapper">
-                <!-- <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a> --><img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
+                <a href="#" data-activates="slide-out" class="button-collapse white-text"> <i class="material-icons">menu</i></a> <img class="brand-logo hide-on-med-and-up" style="height: 55px;" src="images/logo.png" />
                 <ul id="nav-mobile" class="right hidden-xs">
                     <li><a class="white-text" href="library.html">Food Library</a></li>
                     <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
                     <li><a class="white-text" href="aboutUs.html">About Us</a></li>
                     <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
                 </ul>
                 <ul id="slide-out" class="side-nav hidden-lg hidden-xl">
                     <li><a id="active" class="center" href="#">Home</a></li>
@@ -50,6 +52,7 @@
                     <li><a class="center" href="aboutPOT.html">About PoT</a></li>
                     <li><a class="center" href="aboutus.html">About Us</a></li>
                     <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
                     <script src="feature/logout.js"></script>
                     <script src="feature/navbar.js"></script>
                 </ul>
@@ -123,7 +126,7 @@
         </div>
     </div>
     <div style="background-color: rgba(0, 0, 0, 0.71);">
-        <div class="container white-text" style="padding:10px 0px 30px 0px;">
+        <div class="container white-text" style="padding:10px 0px 0px 0px;">
             <div>
                 <h4>Why Use Plenty of Thyme?</h4>
                 <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
@@ -151,8 +154,31 @@
             </div>
         </div>
     </div>
+    <div class="hidden-xs ourFunctions black-text center" style="height:400px;">
+        <div class="col-xs-4">
+            <div> Menu </div>
+        </div>
+        <div class="col-xs-4">
+            <button> Food Library</button>
+        </div>
+    </div>
+    <div class="visible-xs ourFunctions black-text center" style="background-image: url(images/spices.jpeg); height:490px; background-size: 100% auto; background-repeat: no-repeat;">
+        <div class="container" style="<!--background-color: rgba(0, 0, 0, 0.65);--> height:auto; ">
+            <h4> Feature </h4>
+            <div class="col-xs-12">
+                <a href="landing.html">
+                    <button style="color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Waste Managment </button>
+                </a>
+            </div>
+            <h4> Resource </h4>
+            <div class="col-xs-12">
+                <a href="library.html">
+                    <button style="color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Library </button>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="container black-text" style="padding:0px 0px 30px 0px">
-        <div class="divider grey"></div>
         <h4>Who are we?</h4>
         <div class="card small hoverable">
             <div class="card-image waves-effect waves-block waves-light"> <img class="activator"> </div>
@@ -237,9 +263,7 @@
             <h4 class="white-text">Our Friends</h4>
             <p class="white-text">The following are some apps that may be of interest to you!</p>
         </div>
-        
     </div>
-
     <div class="visible-sm visible-xs hidden-md hidden-lg">
         <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
             <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
@@ -250,15 +274,14 @@
             </div>
         </div>
         <!-- Small view -->
-        <div class="visible-sm"style="padding: 30px; background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
+        <div class="visible-sm" style="padding: 30px; background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
             <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
                 <div class="inner" style="height:400px; ">
-                    <h4 class="white-text" >Our Friends</h4>
+                    <h4 class="white-text">Our Friends</h4>
                     <p class="white-text">The following are some apps that may be of interest to you!</p>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="container"></div>
     <div class="container foodfall">
