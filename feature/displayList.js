@@ -4,14 +4,20 @@ var string = "";
 var string2 = "";
 var buttons = [];
 var values = [];
+var objects = [];
 var dates = [];
 var names = [];
+var expiry;
 var i = 0;
 var j = 1;
 const uiList = document.getElementById('list');
 var btnSubmit = document.getElementById('btnSubmit');
 var ul = document.createElement('ul');
 var li = document.createElement('li');
+var slider = document.getElementById('slider');
+var expired = document.getElementById('expired');
+
+ul.setAttribute('class', 'collection');
 
 // add event listener
 btnSubmit.addEventListener('click', e => {
@@ -33,18 +39,20 @@ firebase.auth().onAuthStateChanged(function(user) {
           childSnapshot.forEach(function(childChildSnapshot) {
             var li = document.createElement('li');
             value = childChildSnapshot.val();
+            objects[i] = childChildSnapshot.val();
             values[i] = value.name + value.date;
             dates[i] = value.date;
             names[i] = value.name;
             i++;
-            string = value.name + "\t" + value.date + '\n';
+            string = value.name + "\t" + 'expires on ' + value.date + '\n';
             string2 = document.createTextNode(string);
             li.appendChild(string2);
-            li.setAttribute('class', 'btn waves-light waves-effect');
+            li.setAttribute('class', 'btn waves-light waves-effect collection-item');
             li.setAttribute('id', value.name + value.date);
-            li.setAttribute('style', 'background-color: black; opacity: 0.6;');
+            li.setAttribute('style', 'width: 100%; background-color: black; opacity: 0.6;');
             li.appendChild(document.createElement('br'));
             ul.appendChild(li);
+            ul.appendChild(document.createElement('br'));
           });
         });
 
@@ -61,7 +69,25 @@ firebase.auth().onAuthStateChanged(function(user) {
           document.getElementById('mod').addEventListener('click', e => {
             $('#modalEdit').modal('open');
             document.getElementById('save').addEventListener('click', e => {
+              console.log(slider.value);
+              console.log(expired.value)
+              if (expired.value === 'Yaaaaas (shame...)') {
+                expiry = 'yes';
+              } else {
+                expiry = 'no';
+              }
+              firebase.database().ref().child('users/' + user.uid).child(objects[0].date).child(objects[0].name).set({
+                name: objects[0].name,
+                price: objects[0].price,
+                date: objects[0].date,
+                category: objects[0].category,
+                quantity: objects[0].quantity,
+                id: objects[0].date + objects[0].name,
+                expired: expiry,
+                amountUsed: slider.value
+              });
               Materialize.toast('Saved!', 4000);
+
             });
           });
           document.getElementById('remove').addEventListener('click', e => {
@@ -80,6 +106,21 @@ firebase.auth().onAuthStateChanged(function(user) {
             document.getElementById('mod').addEventListener('click', e => {
               $('#modalEdit').modal('open');
               document.getElementById('save').addEventListener('click', e => {});
+              if (expired.value === 'Yaaaaas (shame...)') {
+                expiry = 'yes';
+              } else {
+                expiry = 'no';
+              }
+              firebase.database().ref().child('users/' + user.uid).child(objects[j].date).child(objects[j].name).set({
+                name: objects[j].name,
+                price: objects[j].price,
+                date: objects[j].date,
+                category: objects[j].category,
+                quantity: objects[j].quantity,
+                id: objects[j].date + objects[j].name,
+                expired: expiry,
+                amountUsed: slider.value
+              });
             });
             document.getElementById('remove').addEventListener('click', e => {
               $('#modalDelete').modal('open');

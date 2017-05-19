@@ -7,11 +7,12 @@
   <link href="css/styles.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" type="image/png" href="images/potIcon.png" />
+  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
   <style>
@@ -111,7 +112,7 @@
         <label>
           How much have you used?
         </label>
-        <input style='height:150px;' class='slider center' type='range' min='0' max='100'></input>
+        <input id='slider' style='height:150px;' class='slider center' type='range' min='0' max='100'></input>
         <br/>
         <div id='slidervalue' class='center'>
           50% Used!
@@ -121,8 +122,8 @@
             Has this item Expired?
           </label>
           <select id="expired" placeholder='Expired?'>
-            <option>Yaaaaas (shame...)</option>
             <option>Nawwwww (hurray!)</option>
+            <option>Yaaaaas (shame...)</option>
           </select>
         </div>
       </div>
