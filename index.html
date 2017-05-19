@@ -35,6 +35,7 @@
                     <li><a class="white-text" href="aboutPOT.html">About PoT</a></li>
                     <li><a class="white-text" href="aboutUs.html">About Us</a></li>
                     <li><a class="white-text" href="affiliates.html">Our Friends</a></li>
+                    <li><a class="waves-effect waves-light hidden" id="btnLogout">Log out</a></li>
                 </ul>
                 <ul id="slide-out" class="side-nav hidden-lg hidden-xl">
                     <li><a id="active" class="center" href="#">Home</a></li>
@@ -48,6 +49,7 @@
                     <li><a class="center" href="aboutPOT.html">About PoT</a></li>
                     <li><a class="center" href="aboutus.html">About Us</a></li>
                     <li><a class="center" href="affiliates.hetml">Our Friends</a></li>
+                    <li><a class="center waves-effect waves-light hidden" id="btnLogout1">Log out</a></li>
                 </ul>
             </div>
         </nav>
@@ -57,8 +59,8 @@
         <p class="brand-logo white-text hide-on-med-and-down" style="font-size:50px;"><img style="height: 100px; " src="images/logo.png" />Plenty of Thyme</p>
         <p class=" white-text hide-on-med-and-down" style="font-size:20px;">Spend your time wisely</p>
         <p class="brand-logo white-text hide-on-med-and-up" style="font-size:50px;padding:30px;">Plenty of Thyme</p>
-        <button data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
-        <button data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
+        <button id='loginbutton' data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
+        <button id='signupbutton' data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
         <br>
         <br> </div>
     <div id="loginmodal" class="modal">
@@ -114,7 +116,7 @@
         <div class="modal-footer">
           <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
           <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
-          <script src="feature/auth.js"></script>
+          <script src="feature/auth"></script>
         </div>
     </div>
 </header>
@@ -344,6 +346,7 @@
         <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
     <script src="feature/navbar.js"></script>
+    <script src='feature/auth.js'></script>
 </body>
 
 </html>
