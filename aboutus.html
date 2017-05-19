@@ -17,37 +17,44 @@
 
 <body>
   <header>
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
-      <li class="active"><a class="center black-text">Team</a></li>
-      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
-    </ul>
-    <nav class="top-nav">
-      <div class="nav-wrapper">
-        <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
-        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-          <li><a class="white-text" href="stats.html">Stats</a></li>
-          <li><a class="white-text" href="calendar.html">Calendar</a></li>
-          <li><a class="white-text" href="library.html">Food Library</a></li>
-          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
         </ul>
-        <ul id="slide-out" class="side-nav hide-on-large-only">
-          <li class="active"><a class="center" href="landing.html">Home</a></li>
-          <li><a class="center" href="groceryList.html">Grocery List</a></li>
-          <li><a class="center" href="stats.html">Stats</a></li>
-          <li><a class="center" href="calendar.html">Calendar</a></li>
-          <li class="divider"></li>
-          <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-          <li class="active"><a class="center">About Us</a></li>
-          <li><a class="center" href="affiliates.html">Our Friends</a></li>
-          <script src="feature/navbar.js"></script>
-        </ul>
-      </div>
-    </nav>
-  </header>
+        <nav class="top-nav" style="background-color: #334120">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="center" href="landing.html">Waste Manager</a></li>
+                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
+                    <li><a class="white-text" href="stats.html">Stats</a></li>
+                    <li><a class="white-text" href="calendar.html">Calendar</a></li>
+                    <li><a class="white-text">Food Library</a></li>
+                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav hide-on-md-and-up">
+                    <li><a class="center" href="index.html">Home</a></li>
+                    <li><a class="center" href="landing.html">Waste Manager</a>
+                        <li class="divider"></li>
+                        <ul>
+                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
+                            <li><a class="center" href="stats.html">Stats</a></li>
+                            <li><a class="center" href="calendar.html">Calendar</a></li>
+                        </ul>
+                        <li class="divider"></li>
+                        <li><a class="center" href="library.html">Food Library</a></li>
+                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+                        <li class="active"><a class="center" href="#">About Us</a></li>
+                        <li><a class="center" href="affiliates.html">Our Friends</a></li>
+                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+                        <script src="feature/logout.js"></script>
+                        <script src="feature/navbar.js"></script>
+                </ul>
+            </div>
+        </nav>
+    </header>
   <div class="container" id="cntnr">
     <div>
       <h3>Meet the Team</h3>
