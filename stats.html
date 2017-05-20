@@ -18,44 +18,44 @@
 
 <body>
   <header>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
-            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
-            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    </ul>
+    <nav class="top-nav">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="center" href="landing.html">Waste Manager</a></li>
+          <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
+          <li class="active"><a class="white-text" href="#">Stats</a></li>
+          <li><a class="white-text" href="calendar.html">Calendar</a></li>
+          <li class="active"><a class="white-text">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
         </ul>
-        <nav class="top-nav">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="center" href="landing.html">Waste Manager</a></li>
-                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-                    <li class="active"><a class="white-text" href="#">Stats</a></li>
-                    <li><a class="white-text" href="calendar.html">Calendar</a></li>
-                    <li class="active"><a class="white-text">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-                </ul>
-                <ul id="slide-out" class="side-nav hide-on-md-and-up">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="landing.html">Waste Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
-                            <li class="active"><a class="center" href="stats.html">Stats</a></li>
-                            <li><a class="center" href="calendar.html">Calendar</a></li>
-                        </ul>
-                        <li class="divider"></li>
-                        <li><a class="center" href="library.html">Food Library</a></li>
-                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                        <li><a class="center" href="aboutUs.html">About Us</a></li>
-                        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <ul id="slide-out" class="side-nav hide-on-md-and-up">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="landing.html">Waste Manager</a>
+            <li class="divider"></li>
+            <ul>
+              <li><a class="center" href="groceryList.html">Grocery List</a></li>
+              <li class="active"><a class="center" href="stats.html">Stats</a></li>
+              <li><a class="center" href="calendar.html">Calendar</a></li>
+            </ul>
+            <li class="divider"></li>
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+            <li><a class="center" href="aboutUs.html">About Us</a></li>
+            <li><a class="center" href="affiliates.html">Our Friends</a></li>
+            <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+            <script src="feature/logout.js"></script>
+            <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <br />
   <div>
     <div class="container" id="cntnr">
@@ -85,15 +85,24 @@
         </div>
         <div class="divider"></div>
         <div class="section">
-          <h5>Garbage count</h5>
+          <h5>Money down the drain!</h5>
           <ul class="collection black-text">
-            <li class="collection-item"><span class="badge red-text">10</span>Apples</li>
-            <li class="collection-item"><span class="badge red-text">10</span>Bananas</li>
-            <li class="collection-item"><span class="badge red-text">10</span>Grapes</li>
-            <li class="collection-item"><span class="badge red-text">10</span>Oranges</li>
+            <li class="collection-item"><span id="wkdairymoney" class="badge red-text">$10</span>Dairy</li>
+            <li class="collection-item"><span id="wkprodmoney" class="badge red-text">$10</span>Produce</li>
+            <li class="collection-item"><span id="wkmamoney" class="badge red-text">$10</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="wkmiscmoney" class="badge red-text">$10</span>Miscellaneous</li>
           </ul>
         </div>
         <div class="divider"></div>
+        <div class="section">
+          <h5>Let's take a look..</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span id="wkdairypercent" class="badge green-text">25%</span>Dairy</li>
+            <li class="collection-item"><span id="wkprodpercent" class="badge green-text">25%</span>Produce</li>
+            <li class="collection-item"><span id="wkmapercent" class="badge green-text">25%</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="wkmiscpercent" class="badge green-text">25%</span>Miscellaneous</li>
+          </ul>
+        </div>
         <br>
       </div>
       <div id="biweek">
@@ -106,15 +115,24 @@
         </div>
         <div class="divider"></div>
         <div class="section">
-          <h5>Garbage count</h5>
+          <h5>Money down the drain!</h5>
           <ul class="collection black-text">
-            <li class="collection-item"><span class="badge red-text">20</span>Apples</li>
-            <li class="collection-item"><span class="badge red-text">20</span>Bananas</li>
-            <li class="collection-item"><span class="badge red-text">20</span>Grapes</li>
-            <li class="collection-item"><span class="badge red-text">20</span>Oranges</li>
+            <li class="collection-item"><span id="bwkdairymoney" class="badge red-text">$20</span>Dairy</li>
+            <li class="collection-item"><span id="bwkprodmoney" class="badge red-text">$20</span>Proudce</li>
+            <li class="collection-item"><span id="bwkmamoney" class="badge red-text">$20</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="bwkmsicmoney" class="badge red-text">$20</span>Miscellaneous</li>
           </ul>
         </div>
         <div class="divider"></div>
+        <div class="section">
+          <h5>Let's take a look..</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span id="bwkdairypercent" class="badge green-text">25%</span>Dairy</li>
+            <li class="collection-item"><span id="bwkprodpercent" class="badge green-text">25%</span>Produce</li>
+            <li class="collection-item"><span id="bwkmapercent" class="badge green-text">25%</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="bwkmiscpercent" class="badge green-text">25%</span>Miscellaneous</li>
+          </ul>
+        </div>
         <br>
       </div>
       <div id="month">
@@ -127,19 +145,28 @@
         </div>
         <div class="divider"></div>
         <div class="section">
-          <h5>Garbage count</h5>
+          <h5>Money down the drain!</h5>
           <ul class="collection black-text">
-            <li class="collection-item"><span class="badge red-text">40</span>Apples</li>
-            <li class="collection-item"><span class="badge red-text">40</span>Bananas</li>
-            <li class="collection-item"><span class="badge red-text">40</span>Grapes</li>
-            <li class="collection-item"><span class="badge red-text">40</span>Oranges</li>
+            <li class="collection-item"><span id="modairymoney" class="badge red-text">$40</span>Dairy</li>
+            <li class="collection-item"><span id="moprodmoney" class="badge red-text">$40</span>Proudce</li>
+            <li class="collection-item"><span id="momamoney" class="badge red-text">$40</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="momsicmoney" class="badge red-text">$40</span>Miscellaneous</li>
           </ul>
         </div>
         <div class="divider"></div>
+        <div class="section">
+          <h5>Let's take a look..</h5>
+          <ul class="collection black-text">
+            <li class="collection-item"><span id="modairypercent" class="badge green-text">25%</span>Dairy</li>
+            <li class="collection-item"><span id="moprodpercent" class="badge green-text">25%</span>Produce</li>
+            <li class="collection-item"><span id="momapercent" class="badge green-text">25%</span>Meats & Alternatives</li>
+            <li class="collection-item"><span id="momiscpercent" class="badge green-text">25%</span>Miscellaneous</li>
+          </ul>
+        </div>
         <br />
       </div>
     </div>
-      <br />
+    <br />
     <footer class="page-footer">
       <div class="container">
         <div class="row">
@@ -163,7 +190,7 @@
     <div class="footer-copyright">
       <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
-   
+
 
     <script src='feature/stats.js'></script>
 </body>
