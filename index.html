@@ -37,14 +37,14 @@
       <div class="nav-wrapper">
         <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
         <a href="#" data-activates="slide-out" class="button-collapse white-text"> <i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hidden-xs">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a class="white-text" href="#mission">Mission</a></li>
           <li><a class="white-text" href="#aboutPoT">About PoT</a></li>
           <li><a class="white-text" href="#aboutUs">About Us</a></li>
           <li><a class="white-text" href="#affiliates">Our Friends</a></li>
           <li><a class="waves-effect waves-light hidden" id="btnLogout">Log out</a></li>
         </ul>
-        <ul id="slide-out" class="side-nav hidden-lg hidden-xl">
+        <ul id="slide-out" class="side-nav">
           <li class="active"><a class="center" href="#">Home</a></li>
           <!-- <script>
             const active = document.getElementById('active');
@@ -75,7 +75,6 @@
       <div class="modal-content">
         <form class="center">
           <h4>Hello there.</h4>
-          <p class='center'>Come in.</p>
           <div class="divider"></div>
           <br/>
           <!-- <label class='col-sm-12' for="email">Email</label> -->
@@ -118,18 +117,20 @@
 </header>
 
 <body>
-  <div id="mission" class="section scrollspy container black-text" style="padding:0px 0px 30px 0px">
-    <h4>Food Waste Problem</h4>
-    <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
-    <div>
-      <div class="center">
-        <div class="videoWrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
+  <div id="mission" class="section scrollspy black-text">
+    <div class="container">
+      <h4>Food Waste Problem</h4>
+      <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
+      <div>
+        <div class="center">
+          <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div style="background-color: rgba(0, 0, 0, 0.71);">
+  <div class="grey darken-3">
     <div id="aboutPoT" class="section scrollspy container white-text" style="padding:10px 0px 0px 0px;">
       <div>
         <h4>Why Use Plenty of Thyme?</h4>
@@ -137,19 +138,19 @@
         <br>
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons" style="color:rgb(221, 255, 158)">schedule</i>
-              <h5 class="promo-caption">Plenty of thyme</h5>
+            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">schedule</i>
+              <h5 class="promo-caption">Plenty of Thyme</h5>
               <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons" style="color:rgb(221, 255, 158)">favorite</i>
+            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">favorite</i>
               <h5 class="promo-caption">Save food</h5>
               <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons" style="color:rgb(221, 255, 158)">attach_money</i>
+            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">attach_money</i>
               <h5 class="promo-caption">Keep your money</h5>
               <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
             </div>
@@ -248,16 +249,16 @@
     </div>
   </div>
 
-  <div id="affiliates" class="section scrollspy hidden-sm hidden-xs">
+  <div id="affiliates" class=" section scrollspy hidden-sm hidden-xs">
     <!-- Medium view -->
     <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-    <div class="col-md-6 visible-md white-text" style="height:320px; background-color:rgba(0, 0, 0, 0.8);">
+    <div class="col-md-6 visible-md white-text grey darken-4" style="height:320px;">
       <h4 class="white-text" style="text-align:center">Our Friends</h4>
       <p class="white-text" style="vertical-align:middle">The following are some apps that may be of interest to you!</p>
     </div>
     <!-- Large view -->
     <div id="affiliates" class="section scrollspy col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:410px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-    <div class="col-lg-6 visible-lg white-text" style="height:410px; background-color:rgba(0, 0, 0, 0.8);">
+    <div class="col-lg-6 visible-lg white-text grey darken-4" style="height:410px;">
       <h4 class="white-text">Our Friends</h4>
       <p class="white-text">The following are some apps that may be of interest to you!</p>
     </div>
@@ -272,69 +273,68 @@
       </div>
     </div>
     <!-- Small view -->
-    <div id="affiliates" class="section scrollspy visible-sm" style="padding: 30px; background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
+    <!-- <div class="visible-sm" style="padding: 30px background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
       <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
         <div class="inner" style="height:400px; ">
           <h4 class="white-text">Our Friends</h4>
           <p class="white-text">The following are some apps that may be of interest to you!</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <div class="container"></div>
-  <div class="container foodfall">
-    <h4 class="visible-xs black-text">FOOD FALL</h4>
-    <h3 class="visible-sm visible-md black-text">FOOD FALL</h3>
-    <h2 class="visible-lg black-text">FOOD FALL</h2>
-    <div>
-      <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.88)">
+  <div class="grey lighten-3">
+    <div class="container"></div>
+    <div class="container foodfall">
+      <h4 class="hide-on-med-and-up black-text">Food Fall</h4>
+      <h3 class="hide-on-small-only black-text">Food Fall</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.88)">
                 <a href="http://foodfall.ca/"> <img src="images/hamish.png" style=" height:140px;" align="center"> </a>
             </button>
-      <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
-      <script>
-        const funfacts2 = document.getElementById('funfacts2');
-        funfacts2.addEventListener('click', e => {
-          Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-        });
-      </script>
+        <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+        <script>
+          const funfacts2 = document.getElementById('funfacts2');
+          funfacts2.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
+      </div>
+      <br/>
     </div>
-    <br/>
-  </div>
-  <div class="container useitup">
-    <h4 class="visible-xs black-text">USE IT UP</h4>
-    <h3 class="visible-sm visible-md black-text">USE IT UP</h3>
-    <h2 class="visible-lg black-text">USE IT UP</h2>
-    <div>
-      <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(255, 255, 255, 0.45)">
+    <div class="container useitup">
+      <h4 class="hide-on-med-and-up black-text">Use It Up</h4>
+      <h3 class="hide-on-small-only black-text">Use It Up</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
                 <a href="http://foodfall.ca/"> <img src="images/luli.png" style=" height:140px;" align="center"> </a>
             </button>
-      <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
-      <script>
-        const funfacts = document.getElementById('funfacts');
-        funfacts.addEventListener('click', e => {
-          Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-        });
-      </script>
+        <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+        <script>
+          const funfacts = document.getElementById('funfacts');
+          funfacts.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
+      </div>
     </div>
-  </div>
-  <div class="container redulist">
-    <h4 class="visible-xs black-text">REDU-LIST</h4>
-    <h3 class="visible-sm visible-md black-text">REDU-LIST</h3>
-    <h2 class="visible-lg black-text">REDU-LIST</h2>
-    <div>
-      <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(255, 255, 255, 0.45)">
+    <div class="container redulist">
+      <h4 class="hide-on-med-and-up black-text">redu-list</h4>
+      <h3 class="hide-on-small-only black-text">redu-list</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
                 <a href="https://redulist.firebaseapp.com"> <img src="images/mikeks.png" style=" width:130px;" align="center"> </a>
             </button>
-      <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
-      <script>
-        const funfacts = document.getElementById('funfacts');
-        funfacts.addEventListener('click', e => {
-          Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-        });
-      </script>
+        <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
+        <script>
+          const funfacts = document.getElementById('funfacts');
+          funfacts.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
+      </div>
     </div>
+    <br>
   </div>
-  <br>
   <footer class="page-footer">
     <div class="container">
       <div class="row">
