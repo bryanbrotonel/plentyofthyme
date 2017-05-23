@@ -5,7 +5,6 @@ html, body {
 
 body {
   color: white;
-  background: #f5f5f5;
 }
 
 .outer {
@@ -228,6 +227,7 @@ footer {
     padding-bottom: 10px;
   }
 }
+
 
 /*Food library*/
 
