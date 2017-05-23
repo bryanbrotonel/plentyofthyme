@@ -76,6 +76,7 @@ firebase.auth().onAuthStateChanged(function(user) {
               } else {
                 expiry = 'no';
               }
+              console.log(expiry);
               firebase.database().ref().child('users/' + user.uid).child(objects[0].date).child(objects[0].name).set({
                 name: objects[0].name,
                 price: objects[0].price,
@@ -111,6 +112,7 @@ firebase.auth().onAuthStateChanged(function(user) {
               } else {
                 expiry = 'no';
               }
+              console.log(expiry);
               firebase.database().ref().child('users/' + user.uid).child(objects[j].date).child(objects[j].name).set({
                 name: objects[j].name,
                 price: objects[j].price,
