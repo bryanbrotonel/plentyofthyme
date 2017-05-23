@@ -7,11 +7,12 @@
   <link href="css/styles.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" type="image/png" href="images/potIcon.jpeg" />
+  <link rel="icon" type="image/png" href="images/potIcon.png" />
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
@@ -34,44 +35,36 @@
 
 <body>
   <header>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
-            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
-            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    </ul>
+    <nav class="top-nav" style="background-color: #334120">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
+        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a class="white-text">Waste Manager</a></li>
+          <li><a class="white-text">Food Library</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
         </ul>
-        <nav class="top-nav" style="background-color: #334120">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li class="active"><a class="center" href="#">Waste Manager</a></li>
-                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-                    <li><a class="white-text" href="stats.html">Stats</a></li>
-                    <li><a class="white-text" href="calendar.html">Calendar</a></li>
-                    <li><a class="white-text">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="waves-effect waves-light btn red" id="btnLogout">Log out</a></li>
-                </ul>
-                <ul id="slide-out" class="side-nav hide-on-md-and-up">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li class="active"><a class="center" href="#">Waste Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li><a class="center" href="calendar.html">Calendar</a></li>
-                        </ul>
-                        <li class="divider"></li>
-                        <li><a class="center" href="library.html">Food Library</a></li>
-                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                        <li><a class="center" href="aboutUs.html">About Us</a></li>
-                        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <ul id="slide-out" class="side-nav hide-on-md-and-up">
+          <ul>
+            <li class="active"><a class="center" href="#">Waste Manager</a></li>
+          </ul>
+          <li class="divider"></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+          <li><a class="center" href="aboutUs.html">About Us</a></li>
+          <li><a class="center" href="affiliates.html">Our Friends</a></li>
+          <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
+          <script src="feature/logout.js"></script>
+          <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <br />
   <div class="container" style="">
     <div class="page_div">
@@ -180,9 +173,7 @@
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
+            <li><a class="grey-text text-lighten-3" href="index.html">About</a></li>
             <li>
               <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
               <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
