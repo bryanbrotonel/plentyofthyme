@@ -18,6 +18,8 @@
     const btnSignUp = document.getElementById('btnSignUp');
     const logininbutton = document.getElementById('loginbutton');
     const signupbutton = document.getElementById('signupbutton');
+    const btnGrocery_mobile = document.getElementById('btnGrocery_mobile');
+    const btnGrocery_main = document.getElementById('btnGrocery_main');
 
     // login
     btnLogin.addEventListener('click', e => {
@@ -31,27 +33,27 @@
         txtEmail.value = "";
         txtPassword.value = "";
         promise.catch(e => console.log(e.message));
-        setTimeout(function(){window.location.href = 'landing.html'}, 1000);
+        // setTimeout(function(){window.location.href = 'landing.html'}, 1000);
       } else {
         Materialize.toast('Please fill all required fields!', 4000)
       }
     });
 
-    // create account
-    btnSignUp.addEventListener('click', e => {
-        // check for real email validation
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
-        promise.catch(e => console.log(e.message));
-    });
+    // // create account
+    // btnSignUp.addEventListener('click', e => {
+    //     // check for real email validation
+    //     const email = txtEmail.value;
+    //     const pass = txtPassword.value;
+    //     const auth = firebase.auth();
+    //
+    //     const promise = auth.createUserWithEmailAndPassword(email, pass);
+    //     promise.catch(e => console.log(e.message));
+    // });
 
     // add event listener
-    btnSignUp.addEventListener('click', e=> {
-        window.location.href='signup.html';
-    })
+    // btnSignUp.addEventListener('click', e=> {
+    //     window.location.href='signup.html';
+    // })
     // add a realtime user
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
@@ -60,9 +62,18 @@
             btnLogout.setAttribute('class', 'center waves-effect waves-light btn  white-text');
             loginbutton.setAttribute('class', 'hidden');
             signupbutton.setAttribute('class', 'hidden');
+            btnGrocery_mobile.setAttribute('class', 'center white-text waves-effect waves-light');
+            btnGrocery_main.setAttribute('class', 'center white-text waves-effect waves-light');
 
         } else {
             console.log('not logged in');
+            Materialize.toast('Successfully logged out!', 4000);
+            btnLogout1.setAttribute('class', 'center waves-effect waves-light hidden');
+            loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
+            signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
+            btnGrocery_mobile.setAttribute('class', 'hidden');
+            btnGrocery_main.setAttribute('class', 'hidden');
+
         }
     });
 
@@ -73,19 +84,14 @@
     // add event listeners
     btnLogout1.addEventListener('click', e => {
         firebase.auth().signOut();
-        Materialize.toast('Successfully logged out!', 4000);
-        btnLogout1.setAttribute('class', 'center waves-effect waves-light hidden');
-        loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
-        signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
+
     });
 
     btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
-        Materialize.toast('Successfully logged out!', 4000);
-        btnLogout.setAttribute('class', ' waves-effect waves-light hidden');
-        loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
-        signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
+    });
 
-
+    signupbutton.addEventListener('click', e => {
+      window.location.href='signup.html';
     });
 }());

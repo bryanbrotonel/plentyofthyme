@@ -38,24 +38,26 @@
         <a href="landing.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a>
         <a href="#" data-activates="slide-out" class="button-collapse white-text"> <i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="white-text" href="#mission">Mission</a></li>
-          <li><a class="white-text" href="#aboutPoT">About PoT</a></li>
-          <li><a class="white-text" href="#aboutUs">About Us</a></li>
-          <li><a class="white-text" href="#affiliates">Our Friends</a></li>
+          <li><a class="white-text waves-effect waves-light hidden" href="landing.html" id='btnGrocery_main'>Grocery Manager</a></li>
+          <li><a class="white-text waves-effect waves-light" href="#mission">Mission</a></li>
+          <li><a class="white-text waves-effect waves-light" href="#aboutPoT">About PoT</a></li>
+          <li><a class="white-text waves-effect waves-light" href="#aboutUs">About Us</a></li>
+          <li><a class="white-text waves-effect waves-light" href="#affiliates">Our Friends</a></li>
           <li><a class="waves-effect waves-light hidden" id="btnLogout">Log out</a></li>
         </ul>
         <ul id="slide-out" class="side-nav">
-          <li class="active"><a class="center" href="#">Home</a></li>
-          <!-- <script>
+          <li id='active' class="active"><a class="center" href="#">Home</a></li>
+          <li><a class="center waves-effect waves-light hidden" href="landing.html" id='btnGrocery_mobile'>Grocery Manager</a></li>
+          <script>
             const active = document.getElementById('active');
             active.addEventListener('click', e => {
               Materialize.toast('Already on page!', 4000);
             });
-          </script> -->
-          <li><a class="center" href="#mission">Mission</a></li>
-          <li><a class="center" href="#aboutPot">About PoT</a></li>
-          <li><a class="center" href="#aboutUs">About Us</a></li>
-          <li><a class="center" href="#affiliatesl">Our Friends</a></li>
+          </script>
+          <li><a class="center waves-effect waves-light" href="#mission">Mission</a></li>
+          <li><a class="center waves-effect waves-light" href="#aboutPot">About PoT</a></li>
+          <li><a class="center waves-effect waves-light" href="#aboutUs">About Us</a></li>
+          <li><a class="center waves-effect waves-light" href="#affiliatesl">Our Friends</a></li>
           <li><a class="center waves-effect waves-light hidden" id="btnLogout1">Log out</a></li>
         </ul>
       </div>
@@ -67,7 +69,7 @@
     <p class="brand-logo white-text hide-on-med-and-up" style="font-size:45px;padding:30px;">Plenty of Thyme</p>
     <br class="hide-on-med-and-down">
     <button id='loginbutton' data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
-    <button id='signupbutton' data-target="signupmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
+    <button id='signupbutton' class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
     <br>
   </div>
   <div id="loginmodal" class="modal black-text">
@@ -87,12 +89,12 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
     </div>
   </div>
-  <div id="signupmodal" class="modal black-text">
+  <!-- <div id="signupmodal" class="modal black-text">
     <div class="container">
       <div class="modal-content">
         <form class="center">
@@ -109,10 +111,10 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
       <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
-      <script src="feature/auth"></script>
-    </div>
+      <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button>
+      <!-- <script src="feature/auth"></script> -->
+    <!-- </div> -->
   </div>
 </header>
 
@@ -323,8 +325,8 @@
             </button>
         <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
         <script>
-          const funfacts = document.getElementById('funfacts');
-          funfacts.addEventListener('click', e => {
+          const funfacts3 = document.getElementById('funfacts');
+          funfacts3.addEventListener('click', e => {
             Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
           });
         </script>
