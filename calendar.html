@@ -17,46 +17,54 @@
   <title>Calendar</title>
 </head>
 
+<style>
+  body {
+    background-image: url(images/ingredients5.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+  }
+</style>
+
 <body>
-   <header>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
-            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
-            <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+  <header>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+      <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+      <li><a class="center black-text" href="affiliates.html">Friends</a></li>
+    </ul>
+    <nav class="top-nav" style="background-color: #334120">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="center" href="#">Waste Manager</a></li>
+          <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
+          <li><a class="white-text" href="stats.html">Stats</a></li>
+          <li class="active"><a class="white-text" href="#">Calendar</a></li>
+          <li><a class="white-text">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
         </ul>
-        <nav class="top-nav" style="background-color: #334120">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="center" href="#">Waste Manager</a></li>
-                    <li><a class="white-text" href="groceryList.html">Grocery List</a></li>
-                    <li><a class="white-text" href="stats.html">Stats</a></li>
-                    <li class="active"><a class="white-text" href="#">Calendar</a></li>
-                    <li><a class="white-text">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
-                </ul>
-                <ul id="slide-out" class="side-nav hide-on-md-and-up">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="#">Waste Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li class="active"><a class="center" href="#">Calendar</a></li>
-                        </ul>
-                        <li class="divider"></li>
-                        <li><a class="center" href="library.html">Food Library</a></li>
-                        <li><a class="center" href="aboutPOT.html">About PoT</a></li>
-                        <li><a class="center" href="aboutUs.html">About Us</a></li>
-                        <li><a class="center" href="affiliates.html">Our Friends</a></li>
-                        <li><a class="waves-effect waves-light btn" id="btnLogout1">Log out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <ul id="slide-out" class="side-nav hide-on-md-and-up">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="#">Waste Manager</a>
+            <li class="divider"></li>
+            <ul>
+              <li><a class="center" href="groceryList.html">Grocery List</a></li>
+              <li><a class="center" href="stats.html">Stats</a></li>
+              <li class="active"><a class="center" href="#">Calendar</a></li>
+            </ul>
+            <li class="divider"></li>
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li><a class="center" href="aboutPOT.html">About PoT</a></li>
+            <li><a class="center" href="aboutUs.html">About Us</a></li>
+            <li><a class="center" href="affiliates.html">Our Friends</a></li>
+            <li><a class="waves-effect waves-light btn" id="btnLogout1">Log out</a></li>
+            <script src="feature/logout.js"></script>
+            <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <br>
   <div class="container" id="cntnr">
     <div class="page_div">
@@ -253,14 +261,15 @@
         <div class="col l6 s12">
           <h5 class="white-text">Grow With Us!</h5>
           <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green lighten-2 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+          <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text">Friends</h5>
           <ul>
             <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
             </li>
           </ul>
         </div>
