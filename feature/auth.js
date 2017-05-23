@@ -56,8 +56,8 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log(firebaseUser);
-            btnLogout1.setAttribute('class', 'center waves-effect waves-light btn red white-text');
-            btnLogout.setAttribute('class', 'center waves-effect waves-light btn red white-text');
+            btnLogout1.setAttribute('class', 'center waves-effect waves-light btn  white-text');
+            btnLogout.setAttribute('class', 'center waves-effect waves-light btn  white-text');
             loginbutton.setAttribute('class', 'hidden');
             signupbutton.setAttribute('class', 'hidden');
 
