@@ -95,10 +95,19 @@ firebase.auth().onAuthStateChanged(function(user) {
     //   }
     // }
 
+
     // this week's money wasted
     for (i = 0; i < objects.length; i++) {
       var date = objects[i].date.charAt(8) + objects[i].date.charAt(9);
-      if ((today.getDate() - date) < 7 && (today.getDate() - date) >= 0) {
+      var month = (objects[i].date.charAt(5) + objects[i].date.charAt(6)) - 1;
+      var year = objects[i].date.substring(0, 4);
+      var todayInDays = today.getMonth() * 30.5 + today.getDate() + (today.getYear() * 365);
+      var dateInDays = parseFloat((month * 30.5)) + parseFloat(date) + parseFloat((year - 1900) * 365);
+      var difference = todayInDays - dateInDays;
+      // console.log(todayInDays);
+      // console.log(dateInDays);
+      // console.log(difference);
+      if ((difference) < 7 && (difference) >= 0) {
         if (objects[i].expired === ('yes')) {
           weekWasted += (objects[i].price * (1 - (objects[i].amountUsed / 100)));
           if (objects[i].category === ('dairy')) {
@@ -116,7 +125,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         }
       }
 
-      if ((today.getDate() - date) < 14 && (today.getDate() - date) >= 0) {
+      if ((difference) < 14 && (difference) >= 0) {
         if (objects[i].expired === ('yes')) {
           biWeekWasted += (objects[i].price * (1 - (objects[i].amountUsed / 100)));
           if (objects[i].category === ('dairy')) {
@@ -134,7 +143,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         }
       }
 
-      if ((today.getDate() - date) <= 31 && (today.getDate() - date) >= 0) {
+      if ((difference) <= 31 && (difference) >= 0) {
         if (objects[i].expired === ('yes')) {
           moWasted += (objects[i].price * (1 - (objects[i].amountUsed / 100)));
           if (objects[i].category === ('dairy')) {
@@ -154,7 +163,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this week's money wasted
-    weekDisplay.innerText = '$' + round(weekWasted, 4) + ' wasted this week.';
+    weekDisplay.innerText = '$' + round(weekWasted, 2) + ' wasted this week.';
     if (weekWasted == 0) {
       weekTextDisplay.innerText = 'Excellent work!';
     } else if (weekWasted <= 25) {
@@ -164,7 +173,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this bi week's money wasted
-    biWeekDisplay.innerText = '$' + round(biWeekWasted, 4) + ' wasted these weeks.';
+    biWeekDisplay.innerText = '$' + round(biWeekWasted, 2) + ' wasted these weeks.';
     if (biWeekWasted == 0) {
       biWeekTextDisplay.innerText = 'Excellent work!';
     } else if (biWeekWasted <= 50) {
@@ -174,7 +183,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this month's money wasted
-    moDisplay.innerText = '$' + round(moWasted, 4) + ' wasted this month.';
+    moDisplay.innerText = '$' + round(moWasted, 2) + ' wasted this month.';
     if (moWasted == 0) {
       moTextDisplay.innerText = 'Excellent work!';
     } else if (moWasted <= 100) {
@@ -185,42 +194,42 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
     // this week's wastes
-    weekDairyMoney.innerText = '$' + dairyWasted + ' wasted this week.';
-    weekProduceMoney.innerText = '$' + produceWasted + ' wasted this week.';
-    weekMeatMoney.innerText = '$' + meatWasted + ' wasted this week.';
-    weekMiscMoney.innerText = '$' + miscWasted + ' wasted this week.';
+    weekDairyMoney.innerText = '$' + round(dairyWasted, 2) + ' wasted this week.';
+    weekProduceMoney.innerText = '$' + round(produceWasted, 2) + ' wasted this week.';
+    weekMeatMoney.innerText = '$' + round(meatWasted, 2)+ ' wasted this week.';
+    weekMiscMoney.innerText = '$' + round(miscWasted, 2) + ' wasted this week.';
 
     if (weekWasted != 0) {
-      weekDairyPercent.innerText = round((dairyWasted / weekWasted), 4) * 100 + '%';
-      weekProducePercent.innerText = round((produceWasted / weekWasted), 4) * 100 + '%';
-      weekMeatPercent.innerText = round((meatWasted / weekWasted), 4) * 100 + '%';
-      weekMiscPercent.innerText = round((miscWasted / weekWasted), 4) * 100 + '%';
+      weekDairyPercent.innerText = round((dairyWasted / weekWasted) * 100, 2) + '%';
+      weekProducePercent.innerText = round((produceWasted / weekWasted) * 100, 2) + '%';
+      weekMeatPercent.innerText = round((meatWasted / weekWasted) * 100, 2) + '%';
+      weekMiscPercent.innerText = round((miscWasted / weekWasted) * 100, 2) + '%';
     }
 
     // this biweek's wastes
-    biWeekDairyMoney.innerText = '$' + biDairyWasted + ' wasted these weeks.';
-    biWeekProduceMoney.innerText = '$' + biProduceWasted + ' wasted these weeks.';
-    biWeekMeatMoney.innerText = '$' + biMeatWasted + ' wasted these weeks.';
-    biWeekMiscMoney.innerText = '$' + biMiscWasted + ' wasted these weeks.';
+    biWeekDairyMoney.innerText = '$' + round(biDairyWasted, 2) + ' wasted these weeks.';
+    biWeekProduceMoney.innerText = '$' + round(biProduceWasted, 2) + ' wasted these weeks.';
+    biWeekMeatMoney.innerText = '$' + round(biMeatWasted, 2) + ' wasted these weeks.';
+    biWeekMiscMoney.innerText = '$' + round(biMiscWasted, 2) + ' wasted these weeks.';
 
     if (biWeekWasted != 0) {
-      biWeekDairyPercent.innerText = round((biDairyWasted / biWeekWasted), 4) * 100 + '%';
-      biWeekProducePercent.innerText = round((biProduceWasted / biWeekWasted), 4) * 100 + '%';
-      biWeekMeatPercent.innerText = round((biMeatWasted / biWeekWasted), 4) * 100 + '%';
-      biWeekMiscPercent.innerText = round((biMiscWasted / biWeekWasted), 4) * 100 + '%';
+      biWeekDairyPercent.innerText = round((biDairyWasted / biWeekWasted * 100), 2) + '%';
+      biWeekProducePercent.innerText = round((biProduceWasted / biWeekWasted * 100), 2) + '%';
+      biWeekMeatPercent.innerText = round((biMeatWasted / biWeekWasted * 100), 2) + '%';
+      biWeekMiscPercent.innerText = round((biMiscWasted / biWeekWasted * 100), 2) + '%';
     }
 
     // this month''s wastes
-    moDairyMoney.innerText = '$' + moDairyWasted + ' wasted this month.';
-    moProduceMoney.innerText = '$' + moProduceWasted + ' wasted this month.';
-    moMeatMoney.innerText = '$' + moMeatWasted + ' wasted this month.';
-    moMiscMoney.innerText = '$' + moMiscWasted + ' wasted this month.';
+    moDairyMoney.innerText = '$' + round(moDairyWasted, 2) + ' wasted this month.';
+    moProduceMoney.innerText = '$' + round(moProduceWasted, 2) + ' wasted this month.';
+    moMeatMoney.innerText = '$' + round(moMeatWasted, 2) + ' wasted this month.';
+    moMiscMoney.innerText = '$' + round(moMiscWasted, 2) + ' wasted this month.';
 
     if (moWasted != 0) {
-      moDairyPercent.innerText = round((moDairyWasted / moWasted), 4) * 100 + '%';
-      moProducePercent.innerText = round((moProduceWasted / moWasted), 4) * 100 + '%';
-      moMeatPercent.innerText = round((moMeatWasted / moWasted), 4) * 100 + '%';
-      moMiscPercent.innerText = round((moMiscWasted / moWasted), 4) * 100 + '%';
+      moDairyPercent.innerText = round((moDairyWasted / moWasted * 100), 2) + '%';
+      moProducePercent.innerText = round((moProduceWasted / moWasted  * 100), 2) + '%';
+      moMeatPercent.innerText = round((moMeatWasted / moWasted  * 100), 2) + '%';
+      moMiscPercent.innerText = round((moMiscWasted / moWasted * 100), 2) + '%';
     }
 
   });
