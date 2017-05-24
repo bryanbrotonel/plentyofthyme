@@ -18,6 +18,10 @@
     <script src="feature/main.js"></script>
     <title>Plenty of Thyme</title>
     <style>
+        nav {
+            background-color: #334120;
+        }
+        
         body {
             background-image: url(images/ingredients5.jpg);
             background-repeat: repeat-y;
@@ -40,10 +44,10 @@
                 <ul class="right hidden-xs hidden-sm">
                     <li><a class="center" href="index.html">Home</a></li>
                     <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="landing.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="center black-text" href="landing.html">Menu</a></li>
-                        <li class="active"><a class="center black-text" href="#">Grocery List</a></li>
+                        <li class="active"><a class="center black-text" href="#">Menu</a></li>
+                        <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
                         <li><a class="center black-text" href="stats.html">Stats</a></li>
                         <li><a class="center black-text" href="calendar.html">Calendar</a></li>
                     </ul>
@@ -53,10 +57,10 @@
                 <ul id="slide-out" class="side-nav visible-xs visible-sm">
                     <li><a class="center" href="index.html">Home</a></li>
                     <li><a class="center">Food Library</a></li>
-                    <li><a class="center" href="landing.html">Grocery Manager</a>
+                    <li class="active"><a class="center" href="#">Grocery Manager</a>
                         <li class="divider"></li>
                         <ul>
-                            <li class="active"><a class="center" href="#">Grocery List</a></li>
+                            <li class="active"><a class="center" href="groceryList.html">Grocery List</a></li>
                             <li><a class="center" href="stats.html">Stats</a></li>
                             <li><a class="center" href="calendar.html">Calendar</a></li>
                         </ul>
@@ -83,7 +87,6 @@
                     <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
                         <br/>
                         <button id='btnCart' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect waves-light btn btn-primary'> <img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
-
                             <p> Add or modify items
                                 <br/> in your fridge </p>
                         </button>
@@ -150,7 +153,6 @@
                         <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 280px; height: 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
                             <p> take me to the calendar </p>
                         </button>
-
                     </div>
                     <script src='feature/landingnav.js'></script>
                 </div>
@@ -161,39 +163,37 @@
                 <p/> </div>
         <br/> </div>
     <br/>
-    
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text" id="funfacts">Grow With Us!</h5>
-          <script>
-            const funfacts = document.getElementById('funfacts');
-            funfacts.addEventListener('click', e => {
-              Materialize.toast('Did you know: Small amounts of grease belong with your food scraps!', 4000);
-            });
-          </script>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text" id="funfacts">Grow With Us!</h5>
+                    <script>
+                        const funfacts = document.getElementById('funfacts');
+                        funfacts.addEventListener('click', e => {
+                            Materialize.toast('Did you know: Small amounts of grease belong with your food scraps!', 4000);
+                        });
+                    </script>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Friends</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+                            <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Friends</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
-              <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </div>
     </footer>
     <div class="footer-copyright">
         <div class="center"> &copy; 2017 Copyright Text </div>
     </div>
     <script src='feature/navbar.js'></script>
-
 </body>
 
 </html>
