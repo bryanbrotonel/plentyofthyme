@@ -61,7 +61,19 @@
             <li><a class="waves-effect waves-light btn" id="btnLogout1">Log out</a></li>
             <script src="feature/logout.js"></script>
             <script src="feature/navbar.js"></script>
-        </ul>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1839020849753162";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+   <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="aboutPOT.html">PoT</a></li>
+            <li><a class="center black-text" href="aboutUs.html">Team</a></li>
+            <li><a class="center black-text" href="affiliates.html">Friends</a></li>        </ul>
       </div>
     </nav>
   </header>
@@ -70,187 +82,16 @@
     <div class="page_div">
       <div class="center" id='cntnr2'>
         <div id='mainCalendar'>
-
           <br/>
           <h3>Calendar</h3>
-          <!--
-              <div class="month">
-                  <ul>
-                      <li class="prev">&#10094;</li>
-                      <li class="next">&#10095;</li>
-                      <li> May
-                          <br> <span style="font-size:18px">2017</span> </li>
-                  </ul>
-              </div>
-              <ul class="weekdays">
-                  <li>Mo</li>
-                  <li>Tu</li>
-                  <li>We</li>
-                  <li>Th</li>
-                  <li>Fr</li>
-                  <li>Sa</li>
-                  <li>Su</li>
-              </ul>
-              <ul class="days">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                  <li>8</li>
-                  <li>9</li>
-                  <li><span class="active">10</span></li>
-                  <li>12</li>
-                  <li>13</li>
-                  <li>14</li>
-                  <li>15</li>
-                  <li>16</li>
-                  <li>17</li>
-                  <li>18</li>
-                  <li>19</li>
-                  <li>20</li>
-                  <li>21</li>
-                  <li>22</li>
-                  <li>23</li>
-                  <li>24</li>
-                  <li>25</li>
-                  <li>26</li>
-                  <li>27</li>
-                  <li>28</li>
-                  <li>29</li>
-                  <li>30</li>
-                  <li>31</li>
-              </ul>
-            -->
         </div>
         <div id='calendar'>
           <script src='feature/mainCalendar.js'></script>
           <script src='feature/modify.js'></script>
-          <!--<table>
-                      <caption>Week of April 23, 2017</caption>
-                      <thead>
-                          <tr>
-                              <th class="week_o">Sunday</th>
-                              <th class="week">Monday</th>
-                              <th class="week_o">Tuesday</th>
-                              <th class="week">Wednesday</th>
-                              <th class="week_o">Thursday</th>
-                              <th class="week">Friday</th>
-                              <th class="week_o">Saturday</th>
-                          </tr>
-                          <tr>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li class="text-muted">Eggs</li>
-                                      <li class="text-muted">Bread</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li class="text-muted">Dumplings</li>
-                                      <li class="text-muted">Tea</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li class="text-muted">Tofu</li>
-                                      <li class="text-muted">Kimchi</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li class="text-muted">Chicken</li>
-                                      <li class="text-muted">Beef</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li class="text-muted">Lettuce</li>
-                                      <li class="text-muted">Red Onions</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li>Zuchini</li>
-                                      <li>Broccoli</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li>Burger</li>
-                                      <li>Hot Dog</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                      </thead>
-                  </table>
-              </div>
-              <div>
-                  <br>
-                  <table>
-                      <caption>Week of April 30, 2017</caption>
-                      <thead>
-                          <tr>
-                              <th class="week_o">Sunday</th>
-                              <th class="week">Monday</th>
-                              <th class="week_o">Tuesday</th>
-                              <th class="week">Wednesday</th>
-                              <th class="week_o">Thursday</th>
-                              <th class="week">Friday</th>
-                              <th class="week_o">Saturday</th>
-                          </tr>
-                          <tr>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li>Kale</li>
-                                      <li>Tomato</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li>Almonds</li>
-                                      <li>Yogurt</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li>Milk</li>
-                                      <li>Lettuce</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li>Pizza Pops</li>
-                                      <li>Ground Beef</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li>Olive Oil</li>
-                                      <li>Avocado</li>
-                                  </ul>
-                              </td>
-                              <td class="food">
-                                  <ul class="food_list">
-                                      <li>Quinoa</li>
-                                      <li>Pizza</li>
-                                  </ul>
-                              </td>
-                              <td class="food_o">
-                                  <ul class="food_list">
-                                      <li>Steak</li>
-                                      <li>French Fries</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                      </thead>
-                  </table>
-                -->
           <br>
           <div class="center"> <a href="" class="btn waves-effect waves-light btn-success btn-lg">Print</a> </div>
-        </div>
+          <br/>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplentyofthyme.azurewebsites.net&layout=button&size=large&mobile_iframe=true&appId=1839020849753162&width=73&height=28" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>        </div>
       </div>
     </div>
   </div>
