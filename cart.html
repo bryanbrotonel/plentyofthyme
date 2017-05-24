@@ -13,48 +13,46 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="feature/main.js"></script>
-
-  <title>Cart</title>
+  <title>Cart | Plenty of Thyme</title>
 </head>
 
 <body>
   <header>
-        <nav class="top-nav">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <!-- MED adn UP -->
-                <ul class="right hidden-xs hidden-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="landing.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="center black-text" href="landing.html">Menu</a></li>
-                        <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
-                        <li><a class="center black-text" href="stats.html">Stats</a></li>
-                        <li><a class="center black-text" href="calendar.html">Calendar</a></li>
-                    </ul>
-                    <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
-                </ul>
-                <!-- XS and SM adn MD -->
-                <ul id="slide-out" class="side-nav visible-xs visible-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="center" href="landing.html">Grocery Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li class="active"><a class="center" href="#">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li><a class="center" href="calendar.html">Calendar</a></li>
-                        </ul>
-                        <li class="divider"></li>
-                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <br />
+    <nav class="top-nav">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <!-- MED adn UP -->
+        <ul class="right hidden-xs hidden-sm">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="landing.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="landing.html">Menu</a></li>
+            <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
+            <li><a class="center black-text" href="stats.html">Stats</a></li>
+            <li><a class="center black-text" href="calendar.html">Calendar</a></li>
+          </ul>
+          <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
+        </ul>
+        <!-- XS and SM adn MD -->
+        <ul id="slide-out" class="side-nav visible-xs visible-sm">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="landing.html">Grocery Manager</a>
+            <li class="divider"></li>
+            <ul>
+              <li class="active"><a class="center" href="groceryList.html">Grocery List</a></li>
+              <li><a class="center" href="stats.html">Stats</a></li>
+              <li><a class="center" href="calendar.html">Calendar</a></li>
+            </ul>
+            <li><a class="waves-effect waves-light center" id="btnLogout1">Log Out</a></li>
+            <script src="feature/logout.js"></script>
+            <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <br />
   <div class='container' id="cntnr">
     <br/>
     <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
