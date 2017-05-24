@@ -30,6 +30,10 @@ $(document).ready(function() {
   $('.modal').modal();
 });
 
+function retrieveID() {
+  return this.getAttribute('listID');
+}
+
 // access to firebase users
 firebase.auth().onAuthStateChanged(function(user) {
     var itemRef = firebase.database().ref('users/' + user.uid);
@@ -61,6 +65,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         // store buttons
         for (i = 0; i < values.length; i++) {
           buttons[i] = document.getElementById(values[i]);
+          buttons[i].setAttribute('listID', i);
+          buttons[i].setAttribute('onclick', 'retrieveID();');
         }
 
         // add event listener
@@ -94,8 +100,10 @@ firebase.auth().onAuthStateChanged(function(user) {
           document.getElementById('remove').addEventListener('click', e => {
             $('#modalDelete').modal('open');
             document.getElementById('confirmDelete').addEventListener('click', e => {
+              console.log('this is j: ' + j);
+              console.log('this is i: ' + i);
               buttons[0].remove();
-              itemRef.child(dates[0]).child(names[0]).remove();
+              // itemRef.child(dates[0]).child(names[0]).remove();
             });
           });
         });
@@ -127,8 +135,10 @@ firebase.auth().onAuthStateChanged(function(user) {
             document.getElementById('remove').addEventListener('click', e => {
               $('#modalDelete').modal('open');
               document.getElementById('confirmDelete').addEventListener('click', e => {
+                console.log('this is j: ' + j);
+                console.log('this is i: ' + i);
                 buttons[j].remove();
-                itemRef.child(dates[j]).child(names[j]).remove();
+                // itemRef.child(dates[j]).child(names[j]).remove();
               });
             });
           });
