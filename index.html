@@ -25,6 +25,11 @@
     height: 120px;
     width: 120px;
   }
+
+  .resimg {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
 <script>
@@ -32,7 +37,7 @@
     $('.modal').modal();
   });
   $(document).ready(function() {
-    $('.scrollspy').scrollSpy();
+    $('.').();
   });
 </script>
 <header>
@@ -131,21 +136,19 @@
 </header>
 
 <body>
-  <div id="mission" class="section scrollspy black-text">
+  <div id="mission" class="section  black-text">
     <div class="container">
       <h4>Food Waste Problem</h4>
       <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
-      <div>
-        <div class="center">
-          <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
-          </div>
+      <div class="center">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
   <div class="grey darken-3">
-    <div id="aboutPoT" class="section scrollspy container white-text" style="padding:10px 0px 0px 0px;">
+    <div id="aboutPoT" class="section  container white-text" style="padding:10px 0px 0px 0px;">
       <div>
         <h4>Why Use Plenty of Thyme?</h4>
         <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
@@ -189,23 +192,40 @@
       </div>
     </div>
   </div>
-  <div id="aboutUs" class="section scrollspy container black-text" style="padding:0px 0px 30px 0px">
+  <div id="aboutUs" class="section  container black-text" style="padding:0px 0px 30px 0px">
     <h4>Who are we?</h4>
+    <br>
     <div class="center-align">
-      <div class="col s12 m7">
-        <!-- <h2 class="header">Horizontal Card</h2> -->
+      <div class="col m6 hide-on-med-and-down">
         <div class="card horizontal">
           <div class="card-image">
             <img src="images/team.jpg">
-            <span class="card-title">Team SEABASS</span>
+            <span class="card-title hide-on-med-and-up">Team SEABASS</span>
           </div>
           <div class="card-stacked">
             <div class="card-content left-align">
               <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p>
-              <img class="hidden-xs" src="images/mvLogo.png" alt="Metro Vancouver" style="height:55px;">
+              <img src="images/mvLogo.png" alt="Metro Vancouver">
               <br>
               <br>
-              <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT">
+              <img src="images/BCITlog.jpeg" alt="BCIT">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" hide-on-large-only">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/team.jpg">
+              <span class="card-title">Team SEABASS</span>
+            </div>
+            <div class="card-content left-align">
+              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p>
+              <img src="images/mvLogo.png" alt="Metro Vancouver" style="height: auto; width: 100%;">
+              <br>
+              <br>
+              <img src="images/BCITlog.jpeg" alt="BCIT">
             </div>
           </div>
         </div>
@@ -251,8 +271,9 @@
         </div>
       </div>
     </div>
-    <!-- xs sm md -->
-    <!-- <div class="card small hoverable hidden-md hidden-lg hidden-xl" style="height: 500px;">
+  </div>
+  <!-- xs sm md -->
+  <!-- <div class="card small hoverable hidden-md hidden-lg hidden-xl" style="height: 500px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -262,8 +283,8 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <!-- md and lg-->
-    <!-- <div class="card small hoverable visible-md visible-lg hidden-xl" style="height: 800px;">
+  <!-- md and lg-->
+  <!-- <div class="card small hoverable visible-md visible-lg hidden-xl" style="height: 800px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -273,8 +294,8 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <!-- xl -->
-    <!-- <div class="card small hoverable visible-xl hidden-xs hidden-sm hidden-md hidden-lg" style="height: 1500px;">
+  <!-- xl -->
+  <!-- <div class="card small hoverable visible-xl hidden-xs hidden-sm hidden-md hidden-lg" style="height: 1500px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -284,31 +305,31 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <div id="affiliates" class="  scrollspy hidden-sm hidden-xs">
-      <!-- Medium view -->
-      <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-      <div class="col-md-6 visible-md white-text grey darken-4" style="height:320px;">
-        <h4 class="white-text" style="text-align:center">Our Friends</h4>
-        <p class="white-text" style="vertical-align:middle; ">Check out our friends who also love to reduce food waste!</p>
-      </div>
-      <!-- Large view -->
-      <div id="affiliates" class=" scrollspy col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:397px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-      <div class="col-lg-6 visible-lg white-text grey darken-4" style="height:397px;">
-        <h4 class="white-text">Our Friends</h4>
-        <p class="white-text">Check out our friends who also love to reduce food waste!</p>
-      </div>
+  <div id="affiliates" class="   hidden-sm hidden-xs">
+    <!-- Medium view -->
+    <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+    <div class="col-md-6 visible-md white-text grey darken-4" style="height:320px;">
+      <h4 class="white-text" style="text-align:center">Our Friends</h4>
+      <p class="white-text" style="vertical-align:middle; ">Check out our friends who also love to reduce food waste!</p>
     </div>
-    <div id="affiliates" class=" scrollspy visible-sm visible-xs hidden-md hidden-lg">
-      <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
-        <div class="outer container black-text" style="width: 80%; background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
-          <div class="inner">
-            <h4 class="white-text">Our Friends</h4>
-            <p class="white-text">Check out our friends who also love to reduce food waste!</p>
-          </div>
+    <!-- Large view -->
+    <div id="affiliates" class="  col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:397px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+    <div class="col-lg-6 visible-lg white-text grey darken-4" style="height:397px;">
+      <h4 class="white-text">Our Friends</h4>
+      <p class="white-text">Check out our friends who also love to reduce food waste!</p>
+    </div>
+  </div>
+  <div id="affiliates" class="  visible-sm visible-xs hidden-md hidden-lg">
+    <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
+      <div class="outer container black-text" style="width: 80%; background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
+        <div class="inner">
+          <h4 class="white-text">Our Friends</h4>
+          <p class="white-text">Check out our friends who also love to reduce food waste!</p>
         </div>
       </div>
-      <!-- Small view -->
-      <!-- <div class="visible-sm" style="padding: 30px background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
+    </div>
+    <!-- Small view -->
+    <!-- <div class="visible-sm" style="padding: 30px background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
       <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
         <div class="inner" style="height:400px; ">
           <h4 class="white-text">Our Friends</h4>
@@ -316,82 +337,82 @@
         </div>
       </div>
     </div> --></div>
-    <div class="grey lighten-3">
-      <div class="container foodfall">
-        <h4 class="hide-on-med-and-up black-text">Food Fall</h4>
-        <h3 class="hide-on-small-only black-text">Food Fall</h3>
-        <div>
-          <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.88)">
+  <div class="grey lighten-3">
+    <div class="container foodfall">
+      <h4 class="hide-on-med-and-up black-text">Food Fall</h4>
+      <h3 class="hide-on-small-only black-text">Food Fall</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.88)">
                     <a href="http://foodfall.ca/"> <img src="images/hamish.png" style=" height:140px;" align="center"> </a>
                 </button>
-          <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
-          <script>
-            const funfacts2 = document.getElementById('funfacts2');
-            funfacts2.addEventListener('click', e => {
-              Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-            });
-          </script>
-        </div>
-        <br/> </div>
-      <div class="container useitup">
-        <h4 class="hide-on-med-and-up black-text">Use It Up</h4>
-        <h3 class="hide-on-small-only black-text">Use It Up</h3>
-        <div>
-          <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
+        <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+        <script>
+          const funfacts2 = document.getElementById('funfacts2');
+          funfacts2.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
+      </div>
+      <br/> </div>
+    <div class="container useitup">
+      <h4 class="hide-on-med-and-up black-text">Use It Up</h4>
+      <h3 class="hide-on-small-only black-text">Use It Up</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
                     <a href="http://foodfall.ca/"> <img src="images/luli.png" style=" height:140px;" align="center"> </a>
                 </button>
-          <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
-          <script>
-            const funfacts = document.getElementById('funfacts');
-            funfacts.addEventListener('click', e => {
-              Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-            });
-          </script>
-        </div>
+        <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+        <script>
+          const funfacts = document.getElementById('funfacts');
+          funfacts.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
       </div>
-      <div class="container redulist">
-        <h4 class="hide-on-med-and-up black-text">redu-list</h4>
-        <h3 class="hide-on-small-only black-text">redu-list</h3>
-        <div>
-          <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
+    </div>
+    <div class="container redulist">
+      <h4 class="hide-on-med-and-up black-text">redu-list</h4>
+      <h3 class="hide-on-small-only black-text">redu-list</h3>
+      <div>
+        <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
                     <a href="https://redulist.firebaseapp.com"> <img src="images/mikeks.png" style=" width:130px;" align="center"> </a>
                 </button>
-          <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
-          <script>
-            const funfacts3 = document.getElementById('funfacts');
-            funfacts3.addEventListener('click', e => {
-              Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-            });
-          </script>
-        </div>
+        <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
+        <script>
+          const funfacts3 = document.getElementById('funfacts');
+          funfacts3.addEventListener('click', e => {
+            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
+          });
+        </script>
       </div>
-      <br> </div>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Grow With Us!</h5>
-            <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-            <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Friends</h5>
-            <ul>
-              <li>
-                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
-                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
-                <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="footer-copyright">
-      <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
-    <script src="feature/navbar.js"></script>
-    <script src='feature/auth.js'></script>
+    <br> </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Grow With Us!</h5>
+          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+          <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Friends</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-copyright">
+    <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+  </div>
+  <script src="feature/navbar.js"></script>
+  <script src='feature/auth.js'></script>
 </body>
 
 </html>
