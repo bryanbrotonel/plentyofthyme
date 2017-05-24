@@ -109,368 +109,377 @@
         <br class="visible-sm">
         <br><br />
 
-        <div data-page="home" class="page">
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for food item..." >
+        <div id="food">
+          <hr style="color:white;width:95%;" />
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshmeat"> <li class="fa fa-chevron-down"></li></button>
+            <a class="category white-text">Fresh Meat</a>
+            <br/>
+            <div class="collapse navbar-collapse" id="freshmeat">
+              <br>
+              <div class="col-xs-4">Beef</div>
+              <div class="col-xs-4">2-4 days</div>
+              <div class="col-xs-4">10-12 months</div>
+              <div class="col-xs-12 visible-xs">&nbsp;</div>
+              <div class="col-xs-4">Pork</div>
+              <div class="col-xs-4">2-4 days</div>
+              <div class="col-xs-4">8-12 months</div>
+              <div class="col-xs-12 visible-xs">&nbsp;</div>
+              <div class="col-xs-4">Lamb</div>
+              <div class="col-xs-4">2-4 days</div>
+              <div class="col-xs-4">8-12 months</div>
+              <div class="col-xs-12 visible-xs">&nbsp;</div>
+              <div class="col-xs-4">Veal</div>
+              <div class="col-xs-4">3-4 days</div>
+              <div class="col-xs-4">8-12 months</div>
+              <div class="col-xs-12 visible-xs">&nbsp;</div>
+              <div class="col-xs-4">Ground meat</div>
+              <div class="col-xs-4">1-2 days</div>
+              <div class="col-xs-4">2-3 months</div>
+            </div>
+            <hr style="color:white;width:95%;" />
+            <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshpoultry"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Fresh Poultry</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="freshpoultry">
+            <br>
+            <div id="funfacts2" class="col-xs-4">Chicken / Turkey : whole</div>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">1 year</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Chicken / Turkey : pieces</div>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">6 months</div>
+          </div>
           <script>
-          var mySearchbar = app.searchbar('.searchbar', {
-            searchList: '.list-block-search',
-            searchIn: '.item'
+          const funfacts2 = document.getElementById('funfacts2');
+          funfacts2.addEventListener('click', e => {
+            Materialize.toast('Did you know: Chopsticks go into the green bin!', 4000);
           });
           </script>
-          <form data-search-list=".list-block-search" data-search-in=".item" class="searchbar searchbar-init">
-            <div class="col-lg-12 searchbar-input">
-              <input type="search" placeholder="Search food item..." > <a href="#" class="searchbar-clear"></a>
-            </form>
-
-            <div class="list-block list-block-search searchbar-found">
-              <hr style="color:white;width:95%;">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshmeat"> <li class="fa fa-chevron-down"></li></button> <a class="category white-text">Fresh Meat</a>
-                <br/>
-                <div class="collapse navbar-collapse" id="freshmeat">
-                  <br>
-                  <div class="item col-xs-4">Beef</div>
-                  <div class="col-xs-4">2-4 days</div>
-                  <div class="col-xs-4">10-12 months</div>
-                  <div class="col-xs-12 visible-xs">&nbsp;</div>
-                  <div class="col-xs-4">Pork</div>
-                  <div class="col-xs-4">2-4 days</div>
-                  <div class="col-xs-4">8-12 months</div>
-                  <div class="col-xs-12 visible-xs">&nbsp;</div>
-                  <div class="col-xs-4">Lamb</div>
-                  <div class="col-xs-4">2-4 days</div>
-                  <div class="col-xs-4">8-12 months</div>
-                  <div class="col-xs-12 visible-xs">&nbsp;</div>
-                  <div class="col-xs-4">Veal</div>
-                  <div class="col-xs-4">3-4 days</div>
-                  <div class="col-xs-4">8-12 months</div>
-                  <div class="col-xs-12 visible-xs">&nbsp;</div>
-                  <div class="col-xs-4">Ground meat</div>
-                  <div class="col-xs-4">1-2 days</div>
-                  <div class="col-xs-4">2-3 months</div>
-                </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshpoultry"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Fresh Poultry</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="freshpoultry">
-                    <br>
-                    <div id="funfacts2" class="col-xs-4">Chicken / Turkey : whole</div>
-                    <div class="col-xs-4">2-3 days</div>
-                    <div class="col-xs-4">1 year</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Chicken / Turkey : pieces</div>
-                    <div class="col-xs-4">2-3 days</div>
-                    <div class="col-xs-4">6 months</div>
-                  </div>
-                  <script>
-                  const funfacts2 = document.getElementById('funfacts2');
-                  funfacts2.addEventListener('click', e => {
-                    Materialize.toast('Did you know: Chopsticks go into the green bin!', 4000);
-                  });
-                  </script>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshfish"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Fresh Fish</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="freshfish">
-                    <br>
-                    <div class="col-xs-4">Lean fish : cod, flounder, etc.</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">6 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Fatty fish : salmon, etc.</div>
-                    <div class="col-xs-4">2-3 days</div>
-                    <div class="col-xs-4">6 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Shellfish : crab, lobster, clams, etc.</div>
-                    <div class="col-xs-4">12-24 hours</div>
-                    <div class="col-xs-4">2-4 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Scallops, shrimp, cooked shellfish</div>
-                    <div class="col-xs-4">1-2 days</div>
-                    <div class="col-xs-4">2-4 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ham"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Ham</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="ham">
-                    <br>
-                    <div class="col-xs-4">Ham - canned</div>
-                    <div class="col-xs-4">6-9 months</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Ham - cooked</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">2-3 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#baconsausage"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Bacon and Sausages</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="baconsausage">
-                    <br>
-                    <div class="col-xs-4">Bacon</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">1 month</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Raw sausage</div>
-                    <div class="col-xs-4">1-2 days</div>
-                    <div class="col-xs-4">1-2 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Pre-cooked sausage links /patties</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">1-2 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hotdogs"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Hot Dogs</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="hotdogs">
-                    <br>
-                    <div class="col-xs-4">Hotdogs - unopened</div>
-                    <div class="col-xs-4">2 weeks</div>
-                    <div class="col-xs-4">1-2 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Hotdogs - opened</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">1-2 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#deli"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Lunch meat and deli</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="deli">
-                    <br>
-                    <div class="col-xs-4">Lunch meat - unopened</div>
-                    <div class="col-xs-4">2 weeks</div>
-                    <div class="col-xs-4">1-2 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Lunch meat - opened</div>
-                    <div class="col-xs-4">3-5 days</div>
-                    <div class="col-xs-4">1-2 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Deli packaged lunch meat</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">2-3 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Deli or homemade salads</div>
-                    <div class="col-xs-4">3-5 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#leftovers"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Leftovers</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="leftovers">
-                    <br>
-                    <div class="col-xs-4">Cooked meat /stews /egg /vegetable dishes</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">2-3 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Cooked poultry and fish</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">4-6 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Meat broth and gravy</div>
-                    <div class="col-xs-4">3-4 days</div>
-                    <div class="col-xs-4">4-6 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Soups</div>
-                    <div class="col-xs-4">2-3 days</div>
-                    <div class="col-xs-4">4 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#frozen"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Frozen Dinners</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="frozen">
-                    <br>
-                    <div class="col-xs-4">Keep frozen until ready to cook</div>
-                    <div class="col-xs-4">-</div>
-                    <div class="col-xs-4">3-4 months</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#eggs"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Eggs</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="eggs">
-                    <br>
-                    <div class="col-xs-4">Fresh in shell</div>
-                    <div class="col-xs-4">3-4 weeks</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Fresh out of shell</div>
-                    <div class="col-xs-4">2-4 days</div>
-                    <div class="col-xs-4">4 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Hard-cooked</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">Doesn't freeze well</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Egg substitutes - unopened</div>
-                    <div class="col-xs-4">10 days</div>
-                    <div class="col-xs-4">1 year</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Egg substitutes - opened</div>
-                    <div class="col-xs-4">3 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dairy"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Dairy Products</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="dairy">
-                    <br>
-                    <div class="col-xs-4">Milk - unopened</div>
-                    <div class="col-xs-4">Best before date</div>
-                    <div class="col-xs-4">6 weeks</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Milk - opened</div>
-                    <div class="col-xs-4">3 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Cottage Cheese - unopened</div>
-                    <div class="col-xs-4">Best before date</div>
-                    <div class="col-xs-4">Doesn't freeze well</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Cottage Cheese - opened</div>
-                    <div class="col-xs-4">3 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Yogurt - unopened</div>
-                    <div class="col-xs-4">Best before date</div>
-                    <div class="col-xs-4">1-2 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Yogurt - opened</div>
-                    <div class="col-xs-4">3 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Soft cheese</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">Doesn't freeze well</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Semi-soft cheese</div>
-                    <div class="col-xs-4">2-3 weeks</div>
-                    <div class="col-xs-4">8 weeks</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Firm cheese</div>
-                    <div class="col-xs-4">5 weeks</div>
-                    <div class="col-xs-4">3 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Hard cheese</div>
-                    <div class="col-xs-4">10 months</div>
-                    <div class="col-xs-4">1 year</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Processed cheese</div>
-                    <div class="col-xs-4">5 months</div>
-                    <div class="col-xs-4">3 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Salted butter - unopened</div>
-                    <div class="col-xs-4">8 weeks</div>
-                    <div class="col-xs-4">1 year</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Unsalted butter - opened</div>
-                    <div class="col-xs-4">8 weeks</div>
-                    <div class="col-xs-4">3 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Butter - opened</div>
-                    <div class="col-xs-4">3 weeks</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                  </div>
-                  <hr style="color:white;width:95%;" />
-                  <div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#veggies"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Vegetables</a>
-                  </div>
-                  <br/>
-                  <div class="collapse navbar-collapse" id="veggies">
-                    <br>
-                    <div class="col-xs-4">Beans: green /waxed</div>
-                    <div class="col-xs-4">5 days</div>
-                    <div class="col-xs-4">8 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Carrots</div>
-                    <div class="col-xs-4">2 weeks</div>
-                    <div class="col-xs-4">10-12 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Celery</div>
-                    <div class="col-xs-4">2 weeks</div>
-                    <div class="col-xs-4">10-12 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Leaf lettuce</div>
-                    <div class="col-xs-4">3-7 days</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Iceburg lettuce</div>
-                    <div class="col-xs-4">1-2 weeks</div>
-                    <div class="col-xs-4">Don't freeze</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Spinach</div>
-                    <div class="col-xs-4">2-4 weeks</div>
-                    <div class="col-xs-4">10-12 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Summer squash</div>
-                    <div class="col-xs-4">1 week</div>
-                    <div class="col-xs-4">10-12 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Winter squash</div>
-                    <div class="col-xs-4">2 weeks</div>
-                    <div class="col-xs-4">10-12 months</div>
-                    <div class="col-xs-12 visible-xs">&nbsp;</div>
-                    <div class="col-xs-4">Tomatoes</div>
-                    <div class="col-xs-4">Don't refrigerate</div>
-                    <div class="col-xs-4">2 months</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshfish"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Fresh Fish</a>
           </div>
-          <br />
-        </div>
-        <br />
-
-        <footer class='page-footer'>
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Grow With Us!</h5>
-                <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li>
-                    <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-                    <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="freshfish">
+            <br>
+            <div class="col-xs-4">Lean fish : cod, flounder, etc.</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">6 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Fatty fish : salmon, etc.</div>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">6 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Shellfish : crab, lobster, clams, etc.</div>
+            <div class="col-xs-4">12-24 hours</div>
+            <div class="col-xs-4">2-4 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Scallops, shrimp, cooked shellfish</div>
+            <div class="col-xs-4">1-2 days</div>
+            <div class="col-xs-4">2-4 months</div>
           </div>
-        </footer>
-
-        <div class="footer-copyright">
-          <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ham"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Ham</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="ham">
+            <br>
+            <div class="col-xs-4">Ham - canned</div>
+            <div class="col-xs-4">6-9 months</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Ham - cooked</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">2-3 months</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#baconsausage"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Bacon and Sausages</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="baconsausage">
+            <br>
+            <div class="col-xs-4">Bacon</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">1 month</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Raw sausage</div>
+            <div class="col-xs-4">1-2 days</div>
+            <div class="col-xs-4">1-2 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Pre-cooked sausage links /patties</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">1-2 months</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hotdogs"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Hot Dogs</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="hotdogs">
+            <br>
+            <div class="col-xs-4">Hotdogs - unopened</div>
+            <div class="col-xs-4">2 weeks</div>
+            <div class="col-xs-4">1-2 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Hotdogs - opened</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">1-2 months</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#deli"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Lunch meat and deli</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="deli">
+            <br>
+            <div class="col-xs-4">Lunch meat - unopened</div>
+            <div class="col-xs-4">2 weeks</div>
+            <div class="col-xs-4">1-2 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Lunch meat - opened</div>
+            <div class="col-xs-4">3-5 days</div>
+            <div class="col-xs-4">1-2 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Deli packaged lunch meat</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">2-3 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Deli or homemade salads</div>
+            <div class="col-xs-4">3-5 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#leftovers"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Leftovers</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="leftovers">
+            <br>
+            <div class="col-xs-4">Cooked meat /stews /egg /vegetable dishes</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">2-3 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Cooked poultry and fish</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">4-6 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Meat broth and gravy</div>
+            <div class="col-xs-4">3-4 days</div>
+            <div class="col-xs-4">4-6 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Soups</div>
+            <div class="col-xs-4">2-3 days</div>
+            <div class="col-xs-4">4 months</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#frozen"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Frozen Dinners</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="frozen">
+            <br>
+            <div class="col-xs-4">Keep frozen until ready to cook</div>
+            <div class="col-xs-4">-</div>
+            <div class="col-xs-4">3-4 months</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#eggs"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Eggs</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="eggs">
+            <br>
+            <div class="col-xs-4">Fresh in shell</div>
+            <div class="col-xs-4">3-4 weeks</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Fresh out of shell</div>
+            <div class="col-xs-4">2-4 days</div>
+            <div class="col-xs-4">4 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Hard-cooked</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">Doesn't freeze well</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Egg substitutes - unopened</div>
+            <div class="col-xs-4">10 days</div>
+            <div class="col-xs-4">1 year</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Egg substitutes - opened</div>
+            <div class="col-xs-4">3 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dairy"> <span class="fa fa-chevron-down"></span> </button> <a class="category white-text">Dairy Products</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="dairy">
+            <br>
+            <div class="col-xs-4">Milk - unopened</div>
+            <div class="col-xs-4">Best before date</div>
+            <div class="col-xs-4">6 weeks</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Milk - opened</div>
+            <div class="col-xs-4">3 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Cottage Cheese - unopened</div>
+            <div class="col-xs-4">Best before date</div>
+            <div class="col-xs-4">Doesn't freeze well</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Cottage Cheese - opened</div>
+            <div class="col-xs-4">3 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Yogurt - unopened</div>
+            <div class="col-xs-4">Best before date</div>
+            <div class="col-xs-4">1-2 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Yogurt - opened</div>
+            <div class="col-xs-4">3 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Soft cheese</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">Doesn't freeze well</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Semi-soft cheese</div>
+            <div class="col-xs-4">2-3 weeks</div>
+            <div class="col-xs-4">8 weeks</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Firm cheese</div>
+            <div class="col-xs-4">5 weeks</div>
+            <div class="col-xs-4">3 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Hard cheese</div>
+            <div class="col-xs-4">10 months</div>
+            <div class="col-xs-4">1 year</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Processed cheese</div>
+            <div class="col-xs-4">5 months</div>
+            <div class="col-xs-4">3 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Salted butter - unopened</div>
+            <div class="col-xs-4">8 weeks</div>
+            <div class="col-xs-4">1 year</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Unsalted butter - opened</div>
+            <div class="col-xs-4">8 weeks</div>
+            <div class="col-xs-4">3 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Butter - opened</div>
+            <div class="col-xs-4">3 weeks</div>
+            <div class="col-xs-4">Don't freeze</div>
+          </div>
+          <hr style="color:white;width:95%;" />
+          <div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#veggies"> <span class="fa fa-chevron-down"></span> </button>
+            <a class="category white-text">Vegetables</a>
+          </div>
+          <br/>
+          <div class="collapse navbar-collapse" id="veggies">
+            <br>
+            <div class="col-xs-4">Beans: green /waxed</div>
+            <div class="col-xs-4">5 days</div>
+            <div class="col-xs-4">8 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Carrots</div>
+            <div class="col-xs-4">2 weeks</div>
+            <div class="col-xs-4">10-12 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Celery</div>
+            <div class="col-xs-4">2 weeks</div>
+            <div class="col-xs-4">10-12 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Leaf lettuce</div>
+            <div class="col-xs-4">3-7 days</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Iceburg lettuce</div>
+            <div class="col-xs-4">1-2 weeks</div>
+            <div class="col-xs-4">Don't freeze</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Spinach</div>
+            <div class="col-xs-4">2-4 weeks</div>
+            <div class="col-xs-4">10-12 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Summer squash</div>
+            <div class="col-xs-4">1 week</div>
+            <div class="col-xs-4">10-12 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Winter squash</div>
+            <div class="col-xs-4">2 weeks</div>
+            <div class="col-xs-4">10-12 months</div>
+            <div class="col-xs-12 visible-xs">&nbsp;</div>
+            <div class="col-xs-4">Tomatoes</div>
+            <div class="col-xs-4">Don't refrigerate</div>
+            <div class="col-xs-4">2 months</div>
+          </div>
         </div>
+        <!-- Search function -->
         <script>
-        // Initialize collapse button
-        $(".button-collapse").sideNav();
-        $('.button-collapse').sideNav({
-          menuWidth: 200, // Default is 300
-          edge: 'left', // Choose the horizontal origin
-          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-          draggable: true // Choose whether you can drag to open on touch screens
-        });
+        function searchFunction() {
+          var input, filter, food, item, i;
+
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          food = document.getElementById("food");
+          item = food.getElementsByTagName('div');
+
+          for(i = 0; i < item.length; i++) {
+            if(item.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              item[i].style.display = "";
+            } else {
+              item[i].style.display = "none";
+            }
+          }
+        }
         </script>
-      </body>
-      </html>
+      </div>
+    </div>
+    <br />
+  </div>
+  <br />
+
+  <footer class='page-footer'>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Grow With Us!</h5>
+          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+          <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-copyright">
+    <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+  </div>
+  <script>
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  $('.button-collapse').sideNav({
+    menuWidth: 200, // Default is 300
+    edge: 'left', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true // Choose whether you can drag to open on touch screens
+  });
+  </script>
+</body>
+</html>
