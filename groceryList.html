@@ -2,173 +2,171 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="icon" type="image/png" href="images/potIcon.png" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="feature/main.js"></script>
-    <link rel="manifest" href="/manifest.json">
-    <title>Grocery List | Plenty of Thyme</title>
-    <style>
-        body {
-            background-image: url(images/ingredients3.jpeg);
-            background-repeat: repeat-y;
-            background-size: 100% auto;
-        }
-        
-        table {
-            width: 80%;
-            font-size: 14px;
-        }
-        
-        td {
-            padding: 10px;
-        }
-        
-        th {
-            padding: 10px;
-            font-size: 120%;
-        }
-        
-        #cntnr {
-            background: rgba(0, 0, 0, 0.72);
-        }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.png" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="feature/main.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <title>Grocery List | Plenty of Thyme</title>
+  <style>
+    body {
+      background-image: url(images/ingredients3.jpeg);
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+    }
+
+    table {
+      width: 80%;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    th {
+      padding: 10px;
+      font-size: 120%;
+    }
+
+    #cntnr {
+      background: rgba(0, 0, 0, 0.72);
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="top-nav">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <!-- MED adn UP -->
-                <ul class="right hidden-xs hidden-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="landing.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="center black-text" href="menu.html">Menu</a></li>
-                        <li class="active"><a class="center black-text">Grocery List</a></li>
-                        <li><a class="center black-text" href="stats.html">Stats</a></li>
-                        <li><a class="center black-text" href="calendar.html">Calendar</a></li>
-                    </ul>
-                    <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
-                </ul>
-                <!-- XS and SM adn MD -->
-                <ul id="slide-out" class="side-nav visible-xs visible-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="center" href="menu.html">Grocery Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li class="active"><a class="center">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li><a class="center" href="calendar.html">Calendar</a></li>
-                        </ul>
-                        <li><a class="waves-effect waves-light center" id="btnLogout1">Log Out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <br/>
-    <div>
-        <div class="container center" style="width: 80%;" id="cntnr">
-            <h3 class="visible-xs">Grocery List</h3>
-            <h1 class="hidden-xs">Grocery List</h1>
-            <h5 class="text-muted">What's in your fridge?</h5>
-            <button id='btnSubmit' class="waves-effect waves-light btn" style="height: 70px; width:80%; font-size:25px;">Add to List</button>
-            <br/>
-            <br/>
-            <br/>
-            <div id="modalMain" class="modal black-text">
-                <div class="modal-content">
-                    <p> What would you like to do with this?</p>
-                </div>
-                <div class='modal-footer'> <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a> <a id="remove" class="modal-action modal-close waves-effect waves-green btn-flat ">Remove</a> <a id='mod' class="modal-action modal-close waves-effect waves-red btn-flat ">Edit</a> </div>
-            </div>
-            <div id="modalDelete" class="modal black-text">
-                <div class="modal-content">
-                    <p>Are you sure you want to delete this item?</p>
-                </div>
-                <div class='modal-footer'> <a class="modal-action modal-close waves-effect waves-red btn-flat ">Disagree</a> <a id="confirmDelete" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a> </div>
-            </div>
-            <div id="modalEdit" class="modal black-text">
-                <div id='modalEdit2' class="modal-content center">
-                    <h2>Edit or Modify Item</h2>
-                    <br/>
-                    <label> How much have you used? </label>
-                    <input id='slider' style='height:150px;' class='slider center' type='range' min='0' max='100'></input>
-                    <br/>
-                    <div id='slidervalue' class='center'> 50% Used! </div>
-                    <div id='slidercheck' class='checkbox'>
-                        <label> Has this item Expired? </label>
-                        <select id="expired" placeholder='Expired?'>
+  <header>
+    <nav class="top-nav">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <!-- MED adn UP -->
+        <ul class="right hidden-xs hidden-sm">
+          <li><a class="center white-text" href="index.html">Home</a></li>
+          <li><a class="center white-text" href="library.html">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="landing.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="menu.html">Menu</a></li>
+            <li class="active"><a class="center black-text">Grocery List</a></li>
+            <li><a class="center black-text" href="stats.html">Stats</a></li>
+            <li><a class="center black-text" href="calendar.html">Calendar</a></li>
+          </ul>
+          <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
+        </ul>
+        <!-- XS and SM adn MD -->
+        <ul id="slide-out" class="side-nav visible-xs visible-sm">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="menu.html">Grocery Manager</a>
+            <li class="divider"></li>
+            <ul>
+              <li class="active"><a class="center">Grocery List</a></li>
+              <li><a class="center" href="stats.html">Stats</a></li>
+              <li><a class="center" href="calendar.html">Calendar</a></li>
+            </ul>
+            <li><a class="waves-effect waves-light center" id="btnLogout1">Log Out</a></li>
+            <script src="feature/logout.js"></script>
+            <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <br/>
+  <div>
+    <div class="container center" style="width: 80%;" id="cntnr">
+      <h3 class="visible-xs">Grocery List</h3>
+      <h1 class="hidden-xs">Grocery List</h1>
+      <h5 class="text-muted">What's in your fridge?</h5>
+      <button id='btnSubmit' class="waves-effect waves-light btn" style="height: 70px; width:80%; font-size:25px;">Add to List</button>
+      <br/>
+      <br/>
+      <br/>
+      <div id="modalMain" class="modal black-text">
+        <div class="modal-content">
+          <p> What would you like to do with this?</p>
+        </div>
+        <div class='modal-footer'> <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a> <a id="remove" class="modal-action modal-close waves-effect waves-green btn-flat ">Remove</a> <a id='mod' class="modal-action modal-close waves-effect waves-red btn-flat ">Edit</a>          </div>
+      </div>
+      <div id="modalDelete" class="modal black-text">
+        <div class="modal-content">
+          <p>Are you sure you want to delete this item?</p>
+        </div>
+        <div class='modal-footer'> <a class="modal-action modal-close waves-effect waves-red btn-flat ">Disagree</a> <a id="confirmDelete" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a> </div>
+      </div>
+      <div id="modalEdit" class="modal black-text">
+        <div id='modalEdit2' class="modal-content center">
+          <h2>Edit or Modify Item</h2>
+          <br/>
+          <label> How much have you used? </label>
+          <input id='slider' style='height:150px;' class='slider center' type='range' min='0' max='100'></input>
+          <br/>
+          <div id='slidervalue' class='center'> 50% Used! </div>
+          <div id='slidercheck' class='checkbox'>
+            <label> Has this item Expired? </label>
+            <select id="expired" placeholder='Expired?'>
                             <option>Nawwwww (hurray!)</option>
                             <option>Yaaaaas (shame...)</option>
                         </select>
-                    </div>
-                </div>
-                <div class='modal-footer'> <a class='modal-action modal-close waves-effect waves-red btn-flat'>Cancel</a> <a id='save' class='modal-action modal-close waves-light waves-effect waves-red btn-flat'>Save</a> </div>
-            </div>
+          </div>
         </div>
-        <div id='list' class="container" style="width: 80%; background-color:black; opacity: 0.6"> </div>
-        <br/>
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Grow With Us!</h5>
-                        <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                        <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Friends</h5>
-                        <ul>
-                            <li>
-                                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
-                                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
-                                <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <div class="footer-copyright">
-            <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+        <div class='modal-footer'> <a class='modal-action modal-close waves-effect waves-red btn-flat'>Cancel</a> <a id='save' class='modal-action modal-close waves-light waves-effect waves-red btn-flat'>Save</a> </div>
+      </div>
+    </div>
+    <div id='list' class="container" style="width: 80%; background-color:black; opacity: 0.6"> </div>
+    <br/>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Grow With Us!</h5>
+            <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+            <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Friends</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+                <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+                <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <script src='feature/displayList.js'></script>
-        <script>
-            $(document).ready(function () {
-                $('select').material_select();
-            });
-            $(".slider").on("input", function () {
-                var mod = document.getElementById('modalEdit2');
-                var modval = document.createTextNode(this.value);
-                var moddiv = document.getElementById('slidervalue');
-                var sliderdiv = document.getElementById('slidercheck');
-                if (this.value >= 70) {
-                    moddiv.innerText = this.value + '% Used! Hurray!';
-                }
-                else if (this.value >= 30 && this.value <= 70) {
-                    moddiv.innerText = this.value + '% Used! Getting there!';
-                }
-                else {
-                    moddiv.innerText = this.value + '% Used! Not bad!';
-                }
-                // mod.insertBefore(moddiv, sliderdiv);
-            });
-            $(".dropdown-button").dropdown();
-        </script>
+      </div>
+    </footer>
+    <div class="footer-copyright">
+      <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+    </div>
+    <script src='feature/displayList.js'></script>
+    <script>
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+      $(".slider").on("input", function() {
+        var mod = document.getElementById('modalEdit2');
+        var modval = document.createTextNode(this.value);
+        var moddiv = document.getElementById('slidervalue');
+        var sliderdiv = document.getElementById('slidercheck');
+        if (this.value >= 70) {
+          moddiv.innerText = this.value + '% Used! Hurray!';
+        } else if (this.value >= 30 && this.value <= 70) {
+          moddiv.innerText = this.value + '% Used! Getting there!';
+        } else {
+          moddiv.innerText = this.value + '% Used! Not bad!';
+        }
+        // mod.insertBefore(moddiv, sliderdiv);
+      });
+      $(".dropdown-button").dropdown();
+    </script>
 </body>
 
 </html>
