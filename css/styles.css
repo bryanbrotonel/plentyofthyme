@@ -1,10 +1,8 @@
 html, body {
   overflow-x: hidden;
   /* Prevent scroll on narrow devices */
-}
-
-body {
   color: white;
+  background: #fafafa;
 }
 
 .outer {
@@ -96,7 +94,7 @@ hr {
 }
 
 footer.page-footer {
-  background-color: rgba(57, 38, 7, 0.85);
+  background-color: rgba(57, 38, 7, 0.96);
   color: white;
   /*text-align: center;*/
   min-height: 85px;
@@ -189,9 +187,11 @@ footer {
   color: white;
 }
 
+/*
 .navbar.navbar-fixed-top.fixed-theme. {
   box-shadow: 0 0 5px white;
 }
+*/
 
 .navbar-brand.fixed-theme {
   font-size: 18px;
