@@ -48,7 +48,7 @@
 
 <body>
   <header>
-    <div class="navbar-fixed">
+    <div class="navbar-fixed-top">
       <nav class="top-nav">
         <div class="nav-wrapper">
           <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
@@ -61,9 +61,8 @@
           <!-- XS and SM adn MD -->
           <ul id="slide-out" class="side-nav visible-xs visible-sm">
             <li><a class="center" href="index.html">Home</a></li>
-            <li><a class="center">Food Library</a></li>
-            <li class="active"><a class="center" href="#">Grocery Manager</a>
-              <li class="divider"></li>
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li class="active"><a class="center">Grocery Manager</a>
               <li><a class="waves-effect waves-light btn" id="btnLogout1">Log out</a></li>
               <script src="feature/logout.js"></script>
               <script src="feature/navbar.js"></script>
@@ -72,7 +71,9 @@
       </nav>
     </div>
   </header>
-  <br />
+  <br>
+  <br>
+  <br>
   <div class="container">
     <div>
       <div class="center">
@@ -94,7 +95,7 @@
               <img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
               <br>
               <br>
-              <h6>New Items?</h6>
+              <h6>Add items to your cart</h6>
             </div>
           </div>
           <div class="col-lg-4">
@@ -103,7 +104,7 @@
               <img src="images/stats.png" alt="stats" style="padding:8px; width:150px;" />
               <br>
               <br>
-              <h6>Count your money!</h6>
+              <h6>Check your up-to-date statistics</h6>
             </div>
           </div>
           <div class="col-lg-4">
@@ -112,7 +113,7 @@
               <img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
               <br>
               <br>
-              <h6>Check your calendar!</h6>
+              <h6>Check your calendar</h6>
             </div>
           </div>
           <!-- <br class='hidden-xs hidden-sm hidden-md' />
@@ -132,7 +133,7 @@
             <div id='btnCart_sm' class='waves-effect waves-light btnmd'>
               <br/>
               <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
-              <p> Add or modify items in your fridge</p>
+              <h6>Add items to your cart</h6>
             </div>
           </div>
           <div class="col-sm-12">
@@ -140,7 +141,7 @@
             <div id='btnStats_sm' class='waves-effect waves-light btnmd'>
               <br/>
               <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
-              <p> Check out your up-to-date statistics </p>
+              <h6>Check your up-to-date statistics</h6>
             </div>
           </div>
           <div class="col-sm-12">
@@ -148,7 +149,7 @@
             <div id='btnCalendar_sm' class='waves-effect waves-light btnmd'>
               <br/>
               <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
-              <p> Check out the calendar view </p>
+              <h6>Check your calendar</h6>
             </div>
           </div>
         </div>
@@ -157,21 +158,21 @@
             <div id='btnCart_xs' class='waves-effect waves-light btnsm'>
               <br>
               <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
-              <p> Add or edit cart </p>
+              <h6>Add items to your cart</h6>
             </div>
           </div>
           <div class="col-xs-12" style="padding:10px;">
             <div id='btnStats_xs' class='waves-effect waves-light btnsm'>
               <br>
               <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
-              <p> Take me to the graphs </p>
+              <h6>Check your up-to-date statistics</h6>
             </div>
           </div>
           <div class="col-xs-12" style="padding:10px;">
             <div id='btnCalendar_xs' class='waves-effect waves-light btnsm'>
               <br>
               <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
-              <p> take me to the calendar </p>
+              <h6>Check your calendar</h6>
             </div>
           </div>
           <script src='feature/landingnav.js'></script>
