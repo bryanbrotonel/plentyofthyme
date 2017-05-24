@@ -57,8 +57,8 @@
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       console.log(firebaseUser);
-      btnLogout1.setAttribute('class', 'center waves-effect waves-light btn  white-text');
-      btnLogout.setAttribute('class', 'center waves-effect waves-light btn  white-text');
+      btnLogout1.setAttribute('class', 'center waves-effect waves-light');
+      btnLogout.setAttribute('class', 'center waves-effect waves-light btn white-text');
       loginbutton.setAttribute('class', 'hidden');
       signupbutton.setAttribute('class', 'hidden');
       // btnGrocery_mobile.setAttribute('class', 'center white-text waves-effect waves-light');
@@ -68,8 +68,8 @@
     } else {
       console.log('not logged in');
       // Materialize.toast('Successfully logged out!', 4000);
-      btnLogout.setAttribute('class', 'center waves-effect waves-light hidden');
-      btnLogout1.setAttribute('class', 'center waves-effect waves-light hidden');
+      btnLogout.setAttribute('class', 'hidden');
+      btnLogout1.setAttribute('class', 'hidden');
       loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
       signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
       // btnGrocery_mobile.setAttribute('class', 'hidden');
