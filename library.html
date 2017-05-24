@@ -109,7 +109,7 @@
         <br class="visible-sm">
         <br><br />
 
-        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for food item..." >
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for food item...">
         <div id="food">
           <hr style="color:white;width:95%;" />
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#freshmeat"> <li class="fa fa-chevron-down"></li></button>
@@ -433,11 +433,7 @@
           item = food.getElementsByTagName('div');
 
           for(i = 0; i < item.length; i++) {
-            if(item.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              item[i].style.display = "";
-            } else {
-              item[i].style.display = "none";
-            }
+            item[i].setAttribute('id', item[i]);
           }
         }
         </script>
