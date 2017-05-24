@@ -2,151 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="icon" type="image/png" href="images/potIcon.png" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <link rel="manifest" href="/manifest.json">
-    <title>Plenty of Thyme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="images/potIcon.png" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <title>Plenty of Thyme</title>
 </head>
 <style>
 #navbg {
-        background-image: url(images/thyme+background3.jpg);
-        /*height: 250px;*/
-    }
-    
-    .img-circle {
-        height: 120px;
-        width: 120px;
-    }
-    
-    .resimg {
-        width: 100%;
-        height: auto;
-    }
+    background-image: url(images/thyme+background3.jpg);
+    /*height: 250px;*/
+  }
+
+  .img-circle {
+    height: 120px;
+    width: 120px;
+  }
+
+  .resimg {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
 <script>
-    $(document).ready(function () {
-        $('.modal').modal();
-        $('#teama2').hide();
-        $('#teamb2').hide();
-        $('#andrea2').hide();
-        const funfacts3 = document.getElementById('funfacts3');
-        funfacts3.addEventListener('click', e => {
-            Materialize.toast('Did you know: CO2 released from food waste is accelerating global climate change!', 4000);
-        });
-        const funfacts = document.getElementById('funfacts');
-        funfacts.addEventListener('click', e => {
-            Materialize.toast('Did you know: Food wasted in rich countries is almost equal to the amount of food produced in Sub-Saharan Africa!', 4000);
-        });
-        const funfacts2 = document.getElementById('funfacts2');
-        funfacts2.addEventListener('click', e => {
-            Materialize.toast('Did you know: A European/North American consumers wastes up to 15x more than a typical African consumer!', 4000);
-        });
-        $("#teama1").click(function () {
-            $("#teama1").hide();
-            $("#teama2").show();
-        });
-        $("#teama2").click(function () {
-            $("#teama2").hide();
-            $("#teama1").show();
-        });
-        $("#teamb1").click(function () {
-            $("#teamb1").hide();
-            $("#teamb2").show();
-        });
-        $("#teamb2").click(function () {
-            $("#teamb2").hide();
-            $("#teamb1").show();
-        });
-        $("#andrea1").click(function () {
-            $("#andrea1").hide();
-            $("#andrea2").show();
-        });
-        $("#andrea2").click(function () {
-            $("#andrea2").hide();
-            $("#andrea1").show();
-        });
+  $(document).ready(function() {
+    $('.modal').modal();
+    $('#teama2').hide();
+    $('#teamb2').hide();
+    $('#andrea2').hide();
+    const funfacts3 = document.getElementById('funfacts3');
+    funfacts3.addEventListener('click', e => {
+      Materialize.toast('Did you know: CO2 released from food waste is accelerating global climate change!', 4000);
     });
+    const funfacts = document.getElementById('funfacts');
+    funfacts.addEventListener('click', e => {
+      Materialize.toast('Did you know: Food wasted in rich countries is almost equal to the amount of food produced in Sub-Saharan Africa!', 4000);
+    });
+    const funfacts2 = document.getElementById('funfacts2');
+    funfacts2.addEventListener('click', e => {
+      Materialize.toast('Did you know: A European/North American consumers wastes up to 15x more than a typical African consumer!', 4000);
+    });
+    $("#teama1").click(function() {
+      $("#teama1").hide();
+      $("#teama2").show();
+    });
+    $("#teama2").click(function() {
+      $("#teama2").hide();
+      $("#teama1").show();
+    });
+    $("#teamb1").click(function() {
+      $("#teamb1").hide();
+      $("#teamb2").show();
+    });
+    $("#teamb2").click(function() {
+      $("#teamb2").hide();
+      $("#teamb1").show();
+    });
+    $("#andrea1").click(function() {
+      $("#andrea1").hide();
+      $("#andrea2").show();
+    });
+    $("#andrea2").click(function() {
+      $("#andrea2").hide();
+      $("#andrea1").show();
+    });
+  });
 </script>
 <header>
-    <header>
-        <nav class="top-nav">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <!-- MED adn UP -->
-                <ul class="right hidden-xs hidden-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="menu.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="center black-text" href="menu.html">Menu</a></li>
-                        <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
-                        <li><a class="center black-text" href="stats.html">Stats</a></li>
-                        <li class="active"><a class="center black-text">Calendar</a></li>
-                    </ul>
-                    <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
-                </ul>
-                <!-- XS and SM adn MD -->
-                <ul id="slide-out" class="side-nav visible-xs visible-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="center" href="menu.html">Grocery Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li><a class="center" href="groceryList.html">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li class="active"><a class="center">Calendar</a></li>
-                        </ul>
-                        <li><a class="waves-effect waves-light center" id="btnLogout1">Log Out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="center" id="navbg">
-        <br>
-        <h2 class=" white-text hide-on-small-only" style="padding:25px;">Spend your thyme wisely.</h2>
-        <br class="hide-on-med-and-up">
-        <br class="hide-on-med-and-up">
-        <h3 class="brand-logo white-text hide-on-med-and-up">Plenty of Thyme</h3>
-        <!-- <br class="hide-on-med-and-down"> -->
-        <button id='loginbutton' data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
-        <button id='signupbutton' class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
-        <br>
-        <br> </div>
-    <div id="loginmodal" class="modal black-text">
-        <div class="container">
-            <div class="modal-content">
-                <form class="center">
-                    <h4>Hello there.</h4>
-                    <div class="divider"></div>
-                    <br/>
-                    <!-- <label class='col-sm-12' for="email">Email</label> -->
-                    <!-- <i class="material-icons prefix">email</i> -->
-                    <input type="email" placeholder="Email" style="width: 80%" id="txtEmail">
-                    <br/>
-                    <!-- <label class='col-sm-12' for="password">Password</label> -->
-                    <!-- <i class="material-icons prefix">lock</i> -->
-                    <input type="password" placeholder="Password" style="width: 80%" id="txtPassword"> </form>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
-            <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
-            <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
-        </div>
+  <header>
+    <nav class="top-nav">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+        <!-- MED adn UP -->
+        <ul class="right hidden-xs hidden-sm">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="dropdown-button white-text" href="menu.html" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a class="center black-text" href="menu.html">Menu</a></li>
+            <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
+            <li><a class="center black-text" href="stats.html">Stats</a></li>
+            <li class="active"><a class="center black-text">Calendar</a></li>
+          </ul>
+          <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
+        </ul>
+        <!-- XS and SM adn MD -->
+        <ul id="slide-out" class="side-nav visible-xs visible-sm">
+          <li><a class="center" href="index.html">Home</a></li>
+          <li><a class="center" href="library.html">Food Library</a></li>
+          <li><a class="center" href="menu.html">Grocery Manager</a>
+            <li class="divider"></li>
+            <ul>
+              <li><a class="center" href="groceryList.html">Grocery List</a></li>
+              <li><a class="center" href="stats.html">Stats</a></li>
+              <li class="active"><a class="center">Calendar</a></li>
+            </ul>
+            <li><a class="waves-effect waves-light center" id="btnLogout1">Log Out</a></li>
+            <script src="feature/logout.js"></script>
+            <script src="feature/navbar.js"></script>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="center" id="navbg">
+    <br>
+    <h2 class=" white-text hide-on-small-only" style="padding:25px;">Spend your thyme wisely.</h2>
+    <br class="hide-on-med-and-up">
+    <br class="hide-on-med-and-up">
+    <h3 class="brand-logo white-text hide-on-med-and-up">Plenty of Thyme</h3>
+    <!-- <br class="hide-on-med-and-down"> -->
+    <button id='loginbutton' data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
+    <button id='signupbutton' class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
+    <br>
+    <br> </div>
+  <div id="loginmodal" class="modal black-text">
+    <div class="container">
+      <div class="modal-content">
+        <form class="center">
+          <h4>Hello there.</h4>
+          <div class="divider"></div>
+          <br/>
+          <!-- <label class='col-sm-12' for="email">Email</label> -->
+          <!-- <i class="material-icons prefix">email</i> -->
+          <input type="email" placeholder="Email" style="width: 80%" id="txtEmail">
+          <br/>
+          <!-- <label class='col-sm-12' for="password">Password</label> -->
+          <!-- <i class="material-icons prefix">lock</i> -->
+          <input type="password" placeholder="Password" style="width: 80%" id="txtPassword"> </form>
+      </div>
     </div>
-    <!-- <div id="signupmodal" class="modal black-text">
+    <div class="modal-footer">
+      <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
+      <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
+    </div>
+  </div>
+  <!-- <div id="signupmodal" class="modal black-text">
     <div class="container">
       <div class="modal-content">
         <form class="center">
@@ -171,132 +171,133 @@
 </header>
 
 <body>
-    <div id="mission" class="section  black-text">
-        <div class="container">
-            <h4>Food Waste Problem</h4>
-            <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
-            <div class="center">
-                <div class="videoWrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+  <div id="mission" class="section  black-text">
+    <div class="container">
+      <h4>Food Waste Problem</h4>
+      <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote>
+      <div class="center">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MrTz3AeuSG0" frameborder="0" allowfullscreen></iframe>
         </div>
+      </div>
     </div>
-    <div class="grey darken-3">
-        <div id="aboutPoT" class="section  container white-text" style="padding:10px 0px 0px 0px;">
-            <div>
-                <h4>Why Use Plenty of Thyme?</h4>
-                <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
-                <br>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div id="funfacts3" class="center promo"> <i class="large material-icons light-green-text text-accent-1">schedule</i>
-                            <h5 class="promo-caption">Plenty of Thyme</h5>
-                            <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div id="funfacts" class="center promo"> <i class="large material-icons light-green-text text-accent-1">favorite</i>
-                            <h5 class="promo-caption">Save food</h5>
-                            <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div id="funfacts2" class="center promo"> <i class="large material-icons light-green-text text-accent-1">attach_money</i>
-                            <h5 class="promo-caption">Keep your money</h5>
-                            <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="visible-xs ourFunctions black-text center" style="background-image: url(images/spices.jpeg); height:490px; background-size: 100% auto; background-repeat: no-repeat;">
-        <div class="container" style=" height:auto; ">
-            <h4 style=""> Feature </h4>
-            <div class="col-xs-12">
-                <a href="menu.html">
-                    <button style="height:150px; color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Waste Managment </button>
-                </a>
-            </div>
-            <h4 style=""> Resource </h4>
-            <div class="col-xs-12">
-                <a href="library.html">
-                    <button style="height:150px; color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Library </button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="aboutUs" class="section  container black-text" style="padding:0px 0px 30px 0px">
-        <h4>Who are we?</h4>
+  </div>
+  <div class="grey darken-3">
+    <div id="aboutPoT" class="section  container white-text" style="padding:10px 0px 0px 0px;">
+      <div>
+        <h4>Why Use Plenty of Thyme?</h4>
+        <p> Plenty of Thyme is a web based grocery application that will keep track of the items in your fridge as well as their expiry dates.</p>
         <br>
-        <div class="center-align">
-            <div class="col m6 hide-on-med-and-down">
-                <div class="card horizontal">
-                    <div class="card-image"> <img id="teama1" src="images/team2.jpg"> <img id="teama2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> <span class="card-title hide-on-med-and-up">Team SEABASS</span> </div>
-                    <div class="card-stacked">
-                        <div class="card-content left-align">
-                            <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p> <img src="images/mvLogo.png" alt="Metro Vancouver">
-                            <br>
-                            <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div id="funfacts3" class="center promo"> <i class="large material-icons light-green-text text-accent-1">schedule</i>
+              <h5 class="promo-caption">Plenty of Thyme</h5>
+              <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
             </div>
-            <div class=" hide-on-large-only">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image"> <img id="teamb1" src="images/team2.jpg"> <img id="teamb2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> </div>
-                        <div class="card-content left-align">
-                            <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p> <img src="images/mvLogo.png" alt="Metro Vancouver" style="height: auto; width: 100%;">
-                            <br>
-                            <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div id="funfacts" class="center promo"> <i class="large material-icons light-green-text text-accent-1">favorite</i>
+              <h5 class="promo-caption">Save food</h5>
+              <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
             </div>
-            <br>
-            <div class="row">
-                <div class="col s6 m4">
-                    <div class="center dp"><img class="z-depth-4 img-circle" src="images/calvin.jpg"></div>
-                    <br>
-                    <h6 class="center black-text">Calvin Lai</h6>
-                    <p class="center text-muted">Leader</p>
-                    <div class="center"> <a class="green-text text-darken-2" href="mailto:clai-@hotmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/clai94" target="_blank"><i class="material-icons">person</i></a> </div>
-                </div>
-                <div class="col s6 m4">
-                    <div class="center dp"><img class="z-depth-4 img-circle" src="images/bryan.jpg"></div>
-                    <br>
-                    <h6 class="center black-text">Bryan Brotonel</h6>
-                    <p class="center text-muted">Co-Leader</p>
-                    <div class="center"> <a class="green-text text-darken-2" href="mailto:bryanbrotonel@live.ca"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/bryanbrotonel" target="_blank"><i class="material-icons">person</i></a> </div>
-                </div>
-                <div class="col s6 m4">
-                    <div class="center dp"><img class="z-depth-4 img-circle" src="images/shely.jpg"></div>
-                    <br>
-                    <h6 class="center black-text">Shely Lin</h6>
-                    <p class="center text-muted">Supervisor</p>
-                    <div class="center"> <a class="green-text text-darken-2" href="mailto:shelylin@yahoo.ca"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/shelzebub" target="_blank"><i class="material-icons">person</i></a> </div>
-                </div>
-                <div class="col s6 m4">
-                    <br class="hide-on-small-only">
-                    <div class="center dp"><img id="andrea1" class="z-depth-4 img-circle" src="images/andrea.jpg"><img id="andrea2" class="z-depth-4 img-circle" src="images/Andrea2.jpg"></div>
-                    <br>
-                    <h6 class="center black-text">Andrea Saksono</h6>
-                    <p class="center text-muted">S.N.A.C.K Manager</p>
-                    <div class="center"> <a class="green-text text-darken-2" href="mailto:saksonoandrea102@gmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/andreasaksono" target="_blank"><i class="material-icons">person</i></a> </div>
-                </div>
-                <div class="col s6 m4">
-                    <br class="hide-on-small-only">
-                    <div class="center dp"><img class="z-depth-4 img-circle" src="images/sally.jpg"></div>
-                    <br>
-                    <h6 class="center black-text">Sally Lee</h6>
-                    <p class="center text-muted">Public Relations</p>
-                    <div class="center"> <a class="green-text text-darken-2" href="mailto:leesally_@hotmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/sallyylee" target="_blank"><i class="material-icons">person</i></a> </div>
-                </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div id="funfacts2" class="center promo"> <i class="large material-icons light-green-text text-accent-1">attach_money</i>
+              <h5 class="promo-caption">Keep your money</h5>
+              <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- xs sm md -->
-    <!-- <div class="card small hoverable hidden-md hidden-lg hidden-xl" style="height: 500px;">
+  </div>
+  <div class="visible-xs ourFunctions black-text center" style="background-image: url(images/spices.jpeg); height:490px; background-size: 100% auto; background-repeat: no-repeat;">
+    <div class="container" style=" height:auto; ">
+      <h4 style=""> Feature </h4>
+      <div class="col-xs-12">
+        <a href="menu.html">
+          <button style="height:150px; color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Waste Managment </button>
+        </a>
+      </div>
+      <h4 style=""> Resource </h4>
+      <div class="col-xs-12">
+        <a href="library.html">
+          <button style="height:150px; color:white; background-color:rgba(28, 28, 42, 0.56); width:80%;"> Food Library </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="aboutUs" class="section  container black-text" style="padding:0px 0px 30px 0px">
+    <h4>Who are we?</h4>
+    <br>
+    <div class="center-align">
+      <div class="col m6 hide-on-med-and-down">
+        <div class="card horizontal">
+          <div class="card-image"> <img id="teama1" src="images/team2.jpg"> <img id="teama2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> <span class="card-title hide-on-med-and-up">Team SEABASS</span> </div>
+          <div class="card-stacked">
+            <div class="card-content left-align">
+              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p> <img src="images/mvLogo.png" alt="Metro Vancouver">
+              <br>
+              <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
+          </div>
+        </div>
+      </div>
+      <div class=" hide-on-large-only">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image"> <img id="teamb1" src="images/team2.jpg"> <img id="teamb2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> </div>
+            <div class="card-content left-align">
+              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we created a web application that keeps track of the grocery items in your possession.</p> <img src="images/mvLogo.png" alt="Metro Vancouver"
+                style="height: auto; width: 100%;">
+              <br>
+              <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s6 m4">
+          <div class="center dp"><img class="z-depth-4 img-circle" src="images/calvin.jpg"></div>
+          <br>
+          <h6 class="center black-text">Calvin Lai</h6>
+          <p class="center text-muted">Leader</p>
+          <div class="center"> <a class="green-text text-darken-2" href="mailto:clai-@hotmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/clai94" target="_blank"><i class="material-icons">person</i></a> </div>
+        </div>
+        <div class="col s6 m4">
+          <div class="center dp"><img class="z-depth-4 img-circle" src="images/bryan.jpg"></div>
+          <br>
+          <h6 class="center black-text">Bryan Brotonel</h6>
+          <p class="center text-muted">Co-Leader</p>
+          <div class="center"> <a class="green-text text-darken-2" href="mailto:bryanbrotonel@live.ca"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/bryanbrotonel" target="_blank"><i class="material-icons">person</i></a>            </div>
+        </div>
+        <div class="col s6 m4">
+          <div class="center dp"><img class="z-depth-4 img-circle" src="images/shely.jpg"></div>
+          <br>
+          <h6 class="center black-text">Shely Lin</h6>
+          <p class="center text-muted">Supervisor</p>
+          <div class="center"> <a class="green-text text-darken-2" href="mailto:shelylin@yahoo.ca"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/shelzebub" target="_blank"><i class="material-icons">person</i></a> </div>
+        </div>
+        <div class="col s6 m4">
+          <br class="hide-on-small-only">
+          <div class="center dp"><img id="andrea1" class="z-depth-4 img-circle" src="images/andrea.jpg"><img id="andrea2" class="z-depth-4 img-circle" src="images/Andrea2.jpg"></div>
+          <br>
+          <h6 class="center black-text">Andrea Saksono</h6>
+          <p class="center text-muted">S.N.A.C.K Manager</p>
+          <div class="center"> <a class="green-text text-darken-2" href="mailto:saksonoandrea102@gmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/andreasaksono" target="_blank"><i class="material-icons">person</i></a>            </div>
+        </div>
+        <div class="col s6 m4">
+          <br class="hide-on-small-only">
+          <div class="center dp"><img class="z-depth-4 img-circle" src="images/sally.jpg"></div>
+          <br>
+          <h6 class="center black-text">Sally Lee</h6>
+          <p class="center text-muted">Public Relations</p>
+          <div class="center"> <a class="green-text text-darken-2" href="mailto:leesally_@hotmail.com"><i class="material-icons">email</i></a> <a class="green-text text-darken-2" href="https://github.com/sallyylee" target="_blank"><i class="material-icons">person</i></a>            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- xs sm md -->
+  <!-- <div class="card small hoverable hidden-md hidden-lg hidden-xl" style="height: 500px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -306,8 +307,8 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <!-- md and lg-->
-    <!-- <div class="card small hoverable visible-md visible-lg hidden-xl" style="height: 800px;">
+  <!-- md and lg-->
+  <!-- <div class="card small hoverable visible-md visible-lg hidden-xl" style="height: 800px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -317,8 +318,8 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <!-- xl -->
-    <!-- <div class="card small hoverable visible-xl hidden-xs hidden-sm hidden-md hidden-lg" style="height: 1500px;">
+  <!-- xl -->
+  <!-- <div class="card small hoverable visible-xl hidden-xs hidden-sm hidden-md hidden-lg" style="height: 1500px;">
       <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/team.jpg"> </div>
       <div class="card-content"> <span class="card-title activator grey-text text-darken-4">Team SEA BASS<i class="material-icons right">more_vert</i></span> </div>
       <div class="card-reveal"><span class="card-title grey-text text-darken-4">Who are we?<i class="material-icons right">close</i></span>
@@ -328,31 +329,31 @@
         <br>
         <br/> <img class="hidden-xs" src="images/BCITlog.jpeg" alt="BCIT"> </div>
     </div> -->
-    <div id="affiliates" class="   hidden-sm hidden-xs">
-        <!-- Medium view -->
-        <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-        <div class="col-md-6 visible-md white-text grey darken-4" style="height:320px;">
-            <h4 class="white-text" style="text-align:center">Our Friends</h4>
-            <p class="white-text" style="vertical-align:middle; ">Check out our friends who also love to reduce food waste!</p>
-        </div>
-        <!-- Large view -->
-        <div id="affiliates" class="  col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:397px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
-        <div class="col-lg-6 visible-lg white-text grey darken-4" style="height:397px;">
-            <h4 class="white-text">Our Friends</h4>
-            <p class="white-text">Check out our friends who also love to reduce food waste!</p>
-        </div>
+  <div id="affiliates" class="   hidden-sm hidden-xs">
+    <!-- Medium view -->
+    <div class="col-md-6 visible-md" style="background-image: url(images/strawberries.jpeg); height:320px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+    <div class="col-md-6 visible-md white-text grey darken-4" style="height:320px;">
+      <h4 class="white-text" style="text-align:center">Our Friends</h4>
+      <p class="white-text" style="vertical-align:middle; ">Check out our friends who also love to reduce food waste!</p>
     </div>
-    <div id="affiliates" class="  visible-sm visible-xs hidden-md hidden-lg">
-        <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
-            <div class="outer container black-text" style="width: 80%; background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
-                <div class="inner">
-                    <h4 class="white-text">Our Friends</h4>
-                    <p class="white-text">Check out our friends who also love to reduce food waste!</p>
-                </div>
-            </div>
+    <!-- Large view -->
+    <div id="affiliates" class="  col-lg-6 visible-lg" style="background-image: url(images/strawberries.jpeg); height:397px; background-size: 100% auto; background-repeat: no-repeat;"> </div>
+    <div class="col-lg-6 visible-lg white-text grey darken-4" style="height:397px;">
+      <h4 class="white-text">Our Friends</h4>
+      <p class="white-text">Check out our friends who also love to reduce food waste!</p>
+    </div>
+  </div>
+  <div id="affiliates" class="  visible-sm visible-xs hidden-md hidden-lg">
+    <div style="padding: 30px; background-image: url(images/strawberries.jpeg); height:300px; background-size: 100% auto; background-repeat: no-repeat;">
+      <div class="outer container black-text" style="width: 80%; background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
+        <div class="inner">
+          <h4 class="white-text">Our Friends</h4>
+          <p class="white-text">Check out our friends who also love to reduce food waste!</p>
         </div>
-        <!-- Small view -->
-        <!-- <div class="visible-sm" style="padding: 30px background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
+      </div>
+    </div>
+    <!-- Small view -->
+    <!-- <div class="visible-sm" style="padding: 30px background-image: url(images/strawberries.jpeg); height:400px; background-size: 100% auto; background-repeat: no-repeat;">
       <div class="outer container black-text" style=" background-color:rgba(154, 39, 39, 0.59); padding:0px 10px 30px 10px;">
         <div class="inner" style="height:400px; ">
           <h4 class="white-text">Our Friends</h4>
@@ -360,64 +361,73 @@
         </div>
       </div>
     </div> --></div>
-    <div class="grey lighten-3">
-        <div class="container foodfall">
-            <h4 class="hide-on-med-and-up black-text">Food Fall</h4>
-            <h3 class="hide-on-small-only black-text">Food Fall</h3>
-            <div>
-                <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="background-color: rgba(0, 0, 0, 0.88)">
-                    <a href="http://foodfall.ca/"> <img src="images/hamish.png" style=" height:140px;" align="center"> </a>
-                </button>
-                <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
-            </div>
-            <br/> </div>
-        <div class="container useitup">
-            <h4 class="hide-on-med-and-up black-text">Use It Up</h4>
-            <h3 class="hide-on-small-only black-text">Use It Up</h3>
-            <div>
-                <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
-                    <a href="http://foodfall.ca/"> <img src="images/luli.png" style=" height:140px;" align="center"> </a>
-                </button>
-                <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
-            </div>
+  <div class="grey lighten-3">
+    <div class="container foodfall">
+      <h4 class="hide-on-med-and-up black-text">Food Fall</h4>
+      <h3 class="hide-on-small-only black-text">Food Fall</h3>
+      <div>
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 card-panel light-blue darken-1">
+          <div class="center">
+            <a href="http://foodfall.ca/"><img src="images/hamish.png" style=" height:140px"> </a>
+          </div>
         </div>
-        <div class="container redulist">
-            <h4 class="hide-on-med-and-up black-text">redu-list</h4>
-            <h3 class="hide-on-small-only black-text">redu-list</h3>
-            <div>
-                <button class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey lighten-5">
-                    <a href="https://redulist.firebaseapp.com"> <img src="images/mikeks.png" style=" width:130px;" align="center"> </a>
-                </button>
-                <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
-            </div>
-        </div>
-        <br> </div>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Grow With Us!</h5>
-                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                    <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Friends</h5>
-                    <ul>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
-                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
-                            <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="footer-copyright">
-        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+        <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
+      </div>
+      <br/>
     </div>
-    <script src="feature/navbar.js"></script>
-    <script src='feature/auth.js'></script>
+    <div class="container useitup">
+      <h4 class="hide-on-med-and-up black-text">Use It Up</h4>
+      <h3 class="hide-on-small-only black-text">Use It Up</h3>
+      <div>
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 light-green lighten-2 card-panel">
+          <div class="center">
+            <a href="http://use-it-up.azurewebsites.net/index.php#home">
+              <img src="images/luli.png" style=" height:140px;">
+            </a>
+          </div>
+        </div>
+        <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
+      </div>
+    </div>
+    <div class="container redulist">
+      <h4 class="hide-on-med-and-up black-text">redu-list</h4>
+      <h3 class="hide-on-small-only black-text">redu-list</h3>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey darken-4 card-panel">
+        <div class="center">
+          <a href="https://redulist.firebaseapp.com">
+            <img src="images/mikeks.png" style=" width:130px;"></a>
+        </div>
+      </div>
+      <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
+    </div>
+    <br>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Grow With Us!</h5>
+          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+          <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Friends</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-copyright">
+    <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
+  </div>
+  <script src="feature/navbar.js"></script>
+  <script src='feature/auth.js'></script>
 </body>
 
 </html>
