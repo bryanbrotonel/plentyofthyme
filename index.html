@@ -37,7 +37,7 @@
     $('.modal').modal();
   });
   $(document).ready(function() {
-    $('.').();
+    // $('.').();
   });
 </script>
 <header>
@@ -49,7 +49,7 @@
         <ul class="right hidden-xs hidden-sm">
           <li class="active"><a class="center">Home</a></li>
           <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a id='btnGrocery_main' class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
           <ul id="dropdown1" class="dropdown-content">
             <li><a class="center black-text" href="#">Menu</a></li>
             <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
@@ -106,8 +106,8 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
     </div>
   </div>
