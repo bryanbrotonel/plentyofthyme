@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="css/styles.css" rel="stylesheet" media="screen">
-  <link rel="icon" type="image/png" href="images/potIcon.png" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <script src="feature/main.js"></script>
-
-  <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="icon" type="image/png" href="images/potIcon.png" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <script src="feature/main.js"></script>
+    <title>Cart</title>
 </head>
 
 <body>
-  <header>
+    <header>
         <nav class="top-nav">
             <div class="nav-wrapper">
                 <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
@@ -55,89 +55,75 @@
         </nav>
     </header>
     <br />
-  <div class='container' id="cntnr">
-    <br/>
-    <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
-      <fieldset id='main'>
+    <div class='container' id="cntnr">
         <br/>
-        <div class="col-sm-12">
-          <input type="text" id="item1name" placeholder="Item Name">
+        <div class="form-group" style="background-color:black; background: rgba(0, 0, 0, 0.65)">
+            <fieldset id='main'>
+                <br/>
+                <div class="col-sm-12">
+                    <input type="text" id="item1name" placeholder="Item Name"> </div>
+                <div class="col-sm-12">
+                    <input type="number" id="qty" placeholder="Quantity"> </div>
+                <div hidden="col-sm-12">
+                    <br/>
+                    <br/> </div>
+                <div class="col-sm-12">
+                    <input type="date" id="item1date" placeholder="Expiration date"> </div>
+                <div class="col-sm-12">
+                    <input type="text" id="item1price" placeholder="Price"> </div>
+                <label for="item1select" class="col-sm-12">Category</label>
+                <div class="col-sm-12">
+                    <select id="item1select">
+                        <option>dairy</option>
+                        <option>produce</option>
+                        <option>meats & alternatives</option>
+                        <option>miscellaneous</option>
+                    </select>
+                    <br/> </div>
+            </fieldset>
         </div>
-        <div class="col-sm-12">
-          <input type="number" id="qty" placeholder="Quantity">
+        <div class="center">
+            <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
         </div>
-        <div hidden="col-sm-12">
-          <br/>
-          <br/>
+        <div class="center">
+            <br/>
+            <button id='btnAdd' class="btn btn-primary waves-effect waves-light" style='width:90%;'>Add more items</button>
         </div>
-        <div class="col-sm-12">
-          <input type="date" id="item1date" placeholder="Expiration date">
-        </div>
-        <div class="col-sm-12">
-          <input type="text" id="item1price" placeholder="Price">
-        </div>
-        <label for="item1select" class="col-sm-12">Category</label>
-        <div class="col-sm-12">
-          <select id="item1select">
-              <option>dairy</option>
-              <option>produce</option>
-              <option>meats & alternatives</option>
-              <option>miscellaneous</option>
-            </select>
-          <br/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="center">
-      <button style='width:90%;' class="btn btn-primary waves-effect waves-light" id='btnSubmit'>Add To List</button>
-    </div>
-    <div class="center">
-      <br/>
-      <button id='btnAdd' class="btn btn-primary waves-effect waves-light" style='width:90%;'>Add more items</button>
-    </div>
-    <div class="center">
-      <br/>
-      <a class="btn btn-primary waves-effect waves-light" href="groceryList.html" style='width:90%;'>Back to Grocery List</a>
-    </div>
+        <div class="center">
+            <br/> <a class="btn btn-primary waves-effect waves-light" href="groceryList.html" style='width:90%;'>Back to Grocery List</a> </div>
+        <br/> </div>
+    <br/> </div>
     <br/>
-  </div>
-  <br/>
-  </div>
-  <br/>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grow With Us!</h5>
-          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-          <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Grow With Us!</h5>
+                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+                    <button class="btn green accent-4 waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
+                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src='images/luli.png' alt='guide?' style='width50px; height:50px;' /></a>
-              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src='images/hamish.png' alt='foodfall' style='width:50px; height:50px;' /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container center"> &copy; 2017 Copyright Team SEABASS </div>
     </div>
-  </footer>
-  <div class="footer-copyright">
-    <div class="container center">
-      &copy; 2017 Copyright Team SEABASS
-    </div>
-  </div>
-  <script src='feature/grocerylist.js'></script>
-  <script src='feature/navbar.js'></script>
+    <script src='feature/grocerylist.js'></script>
+    <script src='feature/navbar.js'></script>
 </body>
-
 <script>
-  $(document).ready(function() {
-    $('select').material_select();
-  });
+    $(document).ready(function () {
+        $('select').material_select();
+    });
 </script>
-
 
 </html>
