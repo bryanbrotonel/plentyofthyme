@@ -35,6 +35,55 @@
 <script>
   $(document).ready(function() {
     $('.modal').modal();
+    $('#teama2').hide();
+    $('#teamb2').hide();
+    $('#andrea2').hide();
+
+    const funfacts3 = document.getElementById('funfacts3');
+    funfacts3.addEventListener('click', e => {
+      Materialize.toast('Did you know: CO2 released from food waste is accelerating global climate change!', 4000);
+    });
+
+    const funfacts = document.getElementById('funfacts');
+    funfacts.addEventListener('click', e => {
+      Materialize.toast('Did you know: Food wasted in rich countries is almost equal to the amount of food produced in Sub-Saharan Africa!', 4000);
+    });
+
+    const funfacts2 = document.getElementById('funfacts2');
+    funfacts2.addEventListener('click', e => {
+      Materialize.toast('Did you know: A European/North American consumers wastes up to 15x more than a typical African consumer!', 4000);
+    });
+
+    $("#teama1").click(function() {
+      $("#teama1").hide();
+      $("#teama2").show();
+    });
+
+    $("#teama2").click(function() {
+      $("#teama2").hide();
+      $("#teama1").show();
+    });
+
+    $("#teamb1").click(function() {
+      $("#teamb1").hide();
+      $("#teamb2").show();
+    });
+
+    $("#teamb2").click(function() {
+      $("#teamb2").hide();
+      $("#teamb1").show();
+    });
+
+    $("#andrea1").click(function() {
+      $("#andrea1").hide();
+      $("#andrea2").show();
+    });
+
+    $("#andrea2").click(function() {
+      $("#andrea2").hide();
+      $("#andrea1").show();
+    });
+
   });
 </script>
 <header>
@@ -46,7 +95,7 @@
         <ul class="right hidden-xs hidden-sm">
           <li class="active"><a class="center">Home</a></li>
           <li><a class="center" href="library.html">Food Library</a></li>
-          <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a id='btnGrocery_main' class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
           <ul id="dropdown1" class="dropdown-content">
             <li><a class="center black-text" href="#">Menu</a></li>
             <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
@@ -104,8 +153,8 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <button class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</button>
+      <button id="btnLogin" class="modal-action modal-close waves-effect waves-green btn-flat ">Log in</button>
       <!-- <button id="btnSignUp" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</button> -->
     </div>
   </div>
@@ -154,19 +203,19 @@
         <br>
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">schedule</i>
+            <div id="funfacts3" class="center promo"> <i class="large material-icons light-green-text text-accent-1">schedule</i>
               <h5 class="promo-caption">Plenty of Thyme</h5>
               <p class="light center">Its in the name! Keep track of your food's expiry dates with our reminders. Our calendar views will keep you posted on your food's life</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">favorite</i>
+            <div id="funfacts" class="center promo"> <i class="large material-icons light-green-text text-accent-1">favorite</i>
               <h5 class="promo-caption">Save food</h5>
               <p class="light center">Keep track of all the food in your kitchen. Help save the world</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="center promo"> <i class="large material-icons light-green-text text-accent-1">attach_money</i>
+            <div id="funfacts2" class="center promo"> <i class="large material-icons light-green-text text-accent-1">attach_money</i>
               <h5 class="promo-caption">Keep your money</h5>
               <p class="light center">Its not a feature, but you won't even realize you're saving money. We'll even count your money for you</p>
             </div>
@@ -198,7 +247,9 @@
       <div class="col m6 hide-on-med-and-down">
         <div class="card horizontal">
           <div class="card-image">
-            <img src="images/team.jpg">
+            <img id="teama1" src="images/team2.jpg">
+            <img id="teama2" src="images/team.jpg">
+            <span class="card-title">Team SEABASS</span>
             <span class="card-title hide-on-med-and-up">Team SEABASS</span>
           </div>
           <div class="card-stacked">
@@ -216,7 +267,8 @@
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
-              <img src="images/team.jpg">
+              <img id="teamb1" src="images/team2.jpg">
+              <img id="teamb2" src="images/team.jpg">
               <span class="card-title">Team SEABASS</span>
             </div>
             <div class="card-content left-align">
@@ -254,7 +306,7 @@
         </div>
         <div class="col s6 m4">
           <br class="hide-on-small-only">
-          <div class="center dp"><img class="z-depth-4 img-circle" src="images/andrea.jpg"></div>
+          <div class="center dp"><img id="andrea1" class="z-depth-4 img-circle" src="images/andrea.jpg"><img id="andrea2" class="z-depth-4 img-circle" src="images/Andrea2.jpg"></div>
           <br>
           <h6 class="center black-text">Andrea Saksono</h6>
           <p class="center text-muted">S.N.A.C.K Manager</p>
@@ -345,12 +397,6 @@
                     <a href="http://foodfall.ca/"> <img src="images/hamish.png" style=" height:140px;" align="center"> </a>
                 </button>
         <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Food Fall is a game about saving food from the despair of unnecessary waste and disposal.</p>
-        <script>
-          const funfacts2 = document.getElementById('funfacts2');
-          funfacts2.addEventListener('click', e => {
-            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-          });
-        </script>
       </div>
       <br/> </div>
     <div class="container useitup">
@@ -361,12 +407,6 @@
                     <a href="http://foodfall.ca/"> <img src="images/luli.png" style=" height:140px;" align="center"> </a>
                 </button>
         <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">An informational app that shows recipes for foods at different stages of ripeness, as well as storage and revival tips.</p>
-        <script>
-          const funfacts = document.getElementById('funfacts');
-          funfacts.addEventListener('click', e => {
-            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-          });
-        </script>
       </div>
     </div>
     <div class="container redulist">
@@ -377,12 +417,6 @@
                     <a href="https://redulist.firebaseapp.com"> <img src="images/mikeks.png" style=" width:130px;" align="center"> </a>
                 </button>
         <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring along with you a shopping list manager and get recipe recommendations with the ingredients of your choice. </p>
-        <script>
-          const funfacts3 = document.getElementById('funfacts');
-          funfacts3.addEventListener('click', e => {
-            Materialize.toast('Did you know: $1 TRILLION USD amounts to food waste or lost!', 4000);
-          });
-        </script>
       </div>
     </div>
     <br> </div>

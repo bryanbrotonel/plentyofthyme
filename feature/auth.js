@@ -61,8 +61,9 @@
       btnLogout.setAttribute('class', 'center waves-effect waves-light btn  white-text');
       loginbutton.setAttribute('class', 'hidden');
       signupbutton.setAttribute('class', 'hidden');
-      btnGrocery_mobile.setAttribute('class', 'center white-text waves-effect waves-light');
-      btnGrocery_main.setAttribute('class', 'center white-text waves-effect waves-light');
+      // btnGrocery_mobile.setAttribute('class', 'center white-text waves-effect waves-light');
+      btnGrocery_main.setAttribute('class', 'dropdown-button white-text');
+      btnGrocery_main.setAttribute('data-activates', 'dropdown1');
 
     } else {
       console.log('not logged in');
@@ -71,7 +72,7 @@
       btnLogout1.setAttribute('class', 'center waves-effect waves-light hidden');
       loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
       signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
-      btnGrocery_mobile.setAttribute('class', 'hidden');
+      // btnGrocery_mobile.setAttribute('class', 'hidden');
       btnGrocery_main.setAttribute('class', 'hidden');
 
     }
