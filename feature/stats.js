@@ -163,7 +163,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this week's money wasted
-    weekDisplay.innerText = '$' + round(weekWasted, 2) + ' wasted this week.';
+    weekDisplay.innerText = '$' + round(weekWasted, 2) + ' wasted this week';
     if (weekWasted == 0) {
       weekTextDisplay.innerText = 'Excellent work!';
     } else if (weekWasted <= 25) {
@@ -173,7 +173,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this bi week's money wasted
-    biWeekDisplay.innerText = '$' + round(biWeekWasted, 2) + ' wasted these weeks.';
+    biWeekDisplay.innerText = '$' + round(biWeekWasted, 2) + ' wasted in these weeks';
     if (biWeekWasted == 0) {
       biWeekTextDisplay.innerText = 'Excellent work!';
     } else if (biWeekWasted <= 50) {
@@ -183,7 +183,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // display this month's money wasted
-    moDisplay.innerText = '$' + round(moWasted, 2) + ' wasted this month.';
+    moDisplay.innerText = '$' + round(moWasted, 2) + ' wasted this month';
     if (moWasted == 0) {
       moTextDisplay.innerText = 'Excellent work!';
     } else if (moWasted <= 100) {
@@ -207,10 +207,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
     // this biweek's wastes
-    biWeekDairyMoney.innerText = '$' + round(biDairyWasted, 2) + ' wasted these weeks.';
-    biWeekProduceMoney.innerText = '$' + round(biProduceWasted, 2) + ' wasted these weeks.';
-    biWeekMeatMoney.innerText = '$' + round(biMeatWasted, 2) + ' wasted these weeks.';
-    biWeekMiscMoney.innerText = '$' + round(biMiscWasted, 2) + ' wasted these weeks.';
+    biWeekDairyMoney.innerText = '$' + round(biDairyWasted, 2) + ' wasted in these weeks.';
+    biWeekProduceMoney.innerText = '$' + round(biProduceWasted, 2) + ' wasted in these weeks.';
+    biWeekMeatMoney.innerText = '$' + round(biMeatWasted, 2) + ' wasted in these weeks.';
+    biWeekMiscMoney.innerText = '$' + round(biMiscWasted, 2) + ' wasted in these weeks.';
 
     if (biWeekWasted != 0) {
       biWeekDairyPercent.innerText = round((biDairyWasted / biWeekWasted * 100), 2) + '%';
