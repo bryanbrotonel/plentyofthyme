@@ -2,199 +2,212 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" type="image/png" href="images/potIcon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="feature/main.js"></script>
-    <title>Plenty of Thyme</title>
-    <style>
-        nav {
-            background-color: #334120;
-            /* Why do i have to add it here? I don't understand...*/
-        }
-        
-        body {
-            background-image: url(images/ingredients5.jpg);
-            background-repeat: repeat-y;
-            background-size: 100% auto;
-        }
-        
-        button {
-            background: black;
-            background: rgba(0, 0, 0, 0.6);
-        }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/yeti/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" type="image/png" href="images/potIcon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="feature/main.js"></script>
+  <title>Plenty of Thyme</title>
+  <style>
+    body {
+      background-image: url(images/ingredients5.jpg);
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+    }
+
+    .btnlg {
+      background: black;
+      background: rgba(0, 0, 0, 0.65);
+      width: 260px;
+      height: 250px
+    }
+
+    .btnmd {
+      background: black;
+      background: rgba(0, 0, 0, 0.65);
+      width: 500px;
+      height: auto;
+    }
+
+    .btnsm {
+      background: black;
+      background: rgba(0, 0, 0, 0.65);
+      width: 280px;
+      height: 200px;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="top-nav">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
-                <!-- MED adn UP -->
-                <ul class="right hidden-xs hidden-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center" href="library.html">Food Library</a></li>
-                    <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">Grocery Manager<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li class="active"><a class="center black-text" href="#">Menu</a></li>
-                        <li><a class="center black-text" href="groceryList.html">Grocery List</a></li>
-                        <li><a class="center black-text" href="stats.html">Stats</a></li>
-                        <li><a class="center black-text" href="calendar.html">Calendar</a></li>
-                    </ul>
-                    <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
-                </ul>
-                <!-- XS and SM adn MD -->
-                <ul id="slide-out" class="side-nav visible-xs visible-sm">
-                    <li><a class="center" href="index.html">Home</a></li>
-                    <li><a class="center">Food Library</a></li>
-                    <li class="active"><a class="center" href="#">Grocery Manager</a>
-                        <li class="divider"></li>
-                        <ul>
-                            <li class="active"><a class="center" href="groceryList.html">Grocery List</a></li>
-                            <li><a class="center" href="stats.html">Stats</a></li>
-                            <li><a class="center" href="calendar.html">Calendar</a></li>
-                        </ul>
-                        <li class="divider"></li>
-                        <li><a class="waves-effect waves-light btn red" id="btnLogout1">Log out</a></li>
-                        <script src="feature/logout.js"></script>
-                        <script src="feature/navbar.js"></script>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <br />
-    <div class="container" style="">
-        <div class="page_div">
-            <div class="center">
-                <h4 id="funfacts2">What's in store for today?</h4>
-                <script>
-                    const funfacts2 = document.getElementById('funfacts2');
-                    funfacts2.addEventListener('click', e => {
-                        Materialize.toast('Did you know: Food waste generates 3.3 billion tons of CO2!', 4000);
-                    });
-                </script>
-                <div>
-                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                        <br/>
-                        <button id='btnCart' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect waves-light btn btn-primary'> <img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
-                            <p> Add or modify items
-                                <br/> in your fridge </p>
-                        </button>
-                    </div>
-                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                        <br/>
-                        <button id='btnStats' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height : 300px" class='waves-effect waves-light btn btn-primary'> <img src="images/stats.png" alt="stats" style="padding:10px; width:150px;" />
-                            <p> Check out your up-
-                                <br/> to-date statistics </p>
-                        </button>
-                    </div>
-                    <div class="col-lg-4 hidden-sm hidden-xs hidden-md">
-                        <br/>
-                        <button id='btnCalendar' style="background: black; background: rgba(0, 0, 0, 0.65); width: 260px; height: 300px" class='waves-effect waves-light btn btn-primary'> <img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
-                            <p> Check out the
-                                <br/>calendar view </p>
-                        </button>
-                    </div>
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' />
-                    <br class='hidden-xs hidden-sm hidden-md' /> </div>
-                <br />
-                <div>
-                    <div class="col-sm-12 visible-sm visible-md">
-                        <br/>
-                        <button id='btnCart_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
-                            <br/> <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
-                            <p> Add or modify items in your fridge </p>
-                        </button>
-                    </div>
-                    <div class="col-sm-12 visible-sm visible-md">
-                        <br/>
-                        <button id='btnStats_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height : auto" class='waves-effect waves-light btn btn-primary'>
-                            <br/> <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
-                            <p> Check out your up-to-date statistics </p>
-                        </button>
-                    </div>
-                    <div class="col-sm-12 visible-sm visible-md">
-                        <br/>
-                        <button id='btnCalendar_sm' style="background: black; background: rgba(0, 0, 0, 0.65); width: 500px; height: auto" class='waves-effect waves-light btn btn-primary'>
-                            <br/> <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
-                            <p> Check out the calendar view </p>
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                        <button id='btnCart_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 280px; height: 200px" class='waves-effect waves-light btn btn-action'> <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
-                            <p> Add or edit cart </p>
-                        </button>
-                    </div>
-                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                        <button id='btnStats_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 280px; height : 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
-                            <p> Take me to the graphs </p>
-                        </button>
-                    </div>
-                    <div class="col-xs-12 visible-xs center" style="padding:10px;">
-                        <button id='btnCalendar_xs' style="background: black; background: rgba(0, 0, 0, 0.65); width: 280px; height: 200px" class='waves-effect waves-light btn btn-primary'> <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
-                            <p> take me to the calendar </p>
-                        </button>
-                    </div>
-                    <script src='feature/landingnav.js'></script>
-                </div>
-            </div>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="top-nav">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo"><img style="height: 70px;padding:5px;" src="images/logo.png" />Plenty of Thyme</a> <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons" style="color:white;">menu</i></a>
+          <!-- MED adn UP -->
+          <ul class="right hidden-xs hidden-sm">
+            <li><a class="center" href="index.html">Home</a></li>
+            <li><a class="center" href="library.html">Food Library</a></li>
+            <li><a class="waves-effect waves-light btn" id="btnLogout">Log out</a></li>
+          </ul>
+          <!-- XS and SM adn MD -->
+          <ul id="slide-out" class="side-nav visible-xs visible-sm">
+            <li><a class="center" href="index.html">Home</a></li>
+            <li><a class="center">Food Library</a></li>
+            <li class="active"><a class="center" href="#">Grocery Manager</a>
+              <li class="divider"></li>
+              <li><a class="waves-effect waves-light btn" id="btnLogout1">Log out</a></li>
+              <script src="feature/logout.js"></script>
+              <script src="feature/navbar.js"></script>
+          </ul>
         </div>
-        <div>
-            <p> &nbsp;
-                <p/> </div>
-        <br/> </div>
-    <br/>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text" id="funfacts">Grow With Us!</h5>
-                    <script>
-                        const funfacts = document.getElementById('funfacts');
-                        funfacts.addEventListener('click', e => {
-                            Materialize.toast('Did you know: Small amounts of grease belong with your food scraps!', 4000);
-                        });
-                    </script>
-                    <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
-                    <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Friends</h5>
-                    <ul>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
-                            <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
-                            <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="footer-copyright">
-        <div class="center"> &copy; 2017 Copyright Text </div>
+      </nav>
     </div>
-    <script src='feature/navbar.js'></script>
+  </header>
+  <br />
+  <div class="container">
+    <div>
+      <div class="center">
+        <div>
+          <h3 class="hide-on-small-only" id="funfacts2">What's in store for today?</h3>
+          <h4 class="hide-on-med-and-up" id="funfacts2">What's in store for today?</h4>
+          <script>
+            const funfacts2 = document.getElementById('funfacts2');
+            funfacts2.addEventListener('click', e => {
+              Materialize.toast('Did you know: Food waste generates 3.3 billion tons of CO2!', 4000);
+            });
+          </script>
+        </div>
+        <br>
+        <div class=" hidden-sm hidden-xs hidden-md">
+          <div class="col-lg-4">
+            <div id='btnCart' class='waves-effect waves-light btnlg'>
+              <br>
+              <img src="images/shoppingcart2.png" alt="cart" style="width:150px;" />
+              <br>
+              <br>
+              <h6>New Items?</h6>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div id='btnStats' class='waves-effect waves-light btnlg'>
+              <br>
+              <img src="images/stats.png" alt="stats" style="padding:8px; width:150px;" />
+              <br>
+              <br>
+              <h6>Count your money!</h6>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div id='btnCalendar' class='waves-effect waves-light btnlg'>
+              <br>
+              <img src="images/calendar.png" alt="calendar" style="padding:10px; width:150px;" />
+              <br>
+              <br>
+              <h6>Check your calendar!</h6>
+            </div>
+          </div>
+          <!-- <br class='hidden-xs hidden-sm hidden-md' />
+          <br class='hidden-xs hidden-sm hidden-md' />
+          <br class='hidden-xs hidden-sm hidden-md' />
+          <br class='hidden-xs hidden-sm hidden-md' />
+          <br class='hidden-xs hidden-sm hidden-md' />
+          <br class='hidden-xs hidden-sm hidden-md' /> -->
+          <br/>
+          <br/>
+          <br/>
+        </div>
+        <br />
+        <div class="visible-sm visible-md">
+          <div class="col-sm-12">
+            <br/>
+            <div id='btnCart_sm' class='waves-effect waves-light btnmd'>
+              <br/> <img src="images/shoppingcart2.png" alt="cart" style="width:210px; padding:10px;" />
+              <p> Add or modify items in your fridge</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <br/>
+            <div id='btnStats_sm' class='waves-effect waves-light btnmd'>
+              <br/> <img src="images/stats.png" alt="stats" style="padding:10px; width:210px; padding: 5px;" />
+              <p> Check out your up-to-date statistics </p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <br/>
+            <div id='btnCalendar_sm' class='waves-effect waves-light btnmd'>
+              <br/> <img src="images/calendar.png" alt="calendar" style="padding:10px; width:210px;" />
+              <p> Check out the calendar view </p>
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs center">
+          <div class="col-xs-12" style="padding:10px;">
+            <div id='btnCart_xs' class='waves-effect waves-light btnsm'>
+              <img src="images/shoppingcart2.png" alt="cart" style="padding: 8px; width: 140px;" />
+              <p> Add or edit cart </p>
+            </div>
+          </div>
+          <div class="col-xs-12" style="padding:10px;">
+            <div id='btnStats_xs' class='waves-effect waves-light btn btnsm'>
+              <img src="images/stats.png" alt="stats" style="padding: 8px; height:140px;" />
+              <p> Take me to the graphs </p>
+            </div>
+          </div>
+          <div class="col-xs-12" style="padding:10px;">
+            <div id='btnCalendar_xs' class='waves-effect waves-light btn btnsm'>
+              <img src="images/calendar.png" alt="calendar" style="padding: 8px; height:140px;" />
+              <p> take me to the calendar </p>
+            </div>
+          </div>
+          <script src='feature/landingnav.js'></script>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p> &nbsp;
+        <p/> </div>
+    <br/> </div>
+  <br/>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text" id="funfacts">Grow With Us!</h5>
+          <script>
+            const funfacts = document.getElementById('funfacts');
+            funfacts.addEventListener('click', e => {
+              Materialize.toast('Did you know: Small amounts of grease belong with your food scraps!', 4000);
+            });
+          </script>
+          <p class="grey-text text-lighten-4">We are open source. Help grow Plenty of Thyme!</p>
+          <button class="btn waves-effect waves-light"><a href="https://github.com/bryanbrotonel/plentyofthyme" style="color:white">Collaborate!</a></button>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Friends</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.google.ca"><img src="images/luli.png" alt="guide?" style="width50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://www.foodfall.ca"><img src="images/hamish.png" alt="foodfall" style="width:50px; height:50px;" /></a>
+              <a class="grey-text text-lighten-3" href="https://redulist.firebaseapp.com"><img src="images/mikeks.png" alt="foodfall" style="width: auto; height:70px;" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-copyright">
+    <div class="center"> &copy; 2017 Copyright Text </div>
+  </div>
+  <script src='feature/navbar.js'></script>
 </body>
 
 </html>
