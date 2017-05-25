@@ -14,6 +14,44 @@ var year = today.getYear();
 var totalDays = parseFloat(day) + parseFloat((month + 1) * 30.5) + parseFloat(year * 365);
 var i = 0;
 var check = 0;
+
+function parse(str) {
+    if(!/^(\d){8}$/.test(str)) return "invalid date";
+    var y = str.substr(0,4),
+        m = str.substr(4,2),
+        d = str.substr(6,2);
+    return new Date(y,m,d);
+}
+
+function toWeekday(date) {
+  switch (date.getDay()) {
+    case 0:
+      return 'Sunday';
+      break;
+    case 1:
+      return 'Monday';
+      break;
+    case 2:
+      return 'Tuesday';
+      break;
+    case 3:
+      return 'Wednesday';
+      break;
+    case 4:
+      return 'Thursday';
+      break;
+    case 5:
+      return 'Friday';
+      break;
+    case 6:
+      return 'Saturday';
+      break;
+    default:
+      return null;
+      break;
+  }
+}
+
 firebase.auth().onAuthStateChanged((user) => {
   database = firebase.database().ref('users/' + user.uid);
 
@@ -30,7 +68,11 @@ firebase.auth().onAuthStateChanged((user) => {
       itemYear = objects[i].date.substring(0, 4);
       totalItemDays = parseFloat(30.5 * itemMonth) + parseFloat(itemDate) + parseFloat((itemYear - 1900) * 365);
       if (totalItemDays - totalDays <= 2 && totalItemDays - totalDays > 0) {
-        list.appendChild(document.createTextNode(objects[i].name + ' expires on ' + objects[i].date + '!'));
+        console.log(itemMonth);
+        itemMonth -= 1;
+        itemMonth = '0' + itemMonth;
+        var date = parse(itemYear + itemMonth + itemDate);
+        list.appendChild(document.createTextNode(objects[i].name + ' expires on ' + toWeekday(date) + '!'));
         list.appendChild(document.createElement('br'));
         check++;
       }
