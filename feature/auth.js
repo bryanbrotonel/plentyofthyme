@@ -1,14 +1,4 @@
 (function() {
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBWQ0DKA_LDHLrsNEUkFRxh8Dr9rKKnTVA",
-    authDomain: "plentyofthyme-c301a.firebaseapp.com",
-    databaseURL: "https://plentyofthyme-c301a.firebaseio.com",
-    projectId: "plentyofthyme-c301a",
-    storageBucket: "plentyofthyme-c301a.appspot.com",
-    messagingSenderId: "1087388674603"
-  };
-  firebase.initializeApp(config);
 
   // Get elements
   const txtEmail = document.getElementById('txtEmail');
@@ -34,38 +24,21 @@
       txtEmail.value = "";
       txtPassword.value = "";
       promise.catch(e => console.log(e.message));
-      // setTimeout(function(){window.location.href = 'landing.html'}, 1000);
     } else {
       Materialize.toast('Please fill all required fields!', 4000)
     }
   });
 
-  // // create account
-  // btnSignUp.addEventListener('click', e => {
-  //     // check for real email validation
-  //     const email = txtEmail.value;
-  //     const pass = txtPassword.value;
-  //     const auth = firebase.auth();
-  //
-  //     const promise = auth.createUserWithEmailAndPassword(email, pass);
-  //     promise.catch(e => console.log(e.message));
-  // });
-
-  // add event listener
-  // btnSignUp.addEventListener('click', e=> {
-  //     window.location.href='signup.html';
-  // })
   // add a realtime user
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-      console.log(firebaseUser);
       btnLogout1.setAttribute('class', 'center waves-effect waves-light');
       btnLogout.setAttribute('class', 'center waves-effect waves-light btn white-text');
       loginbutton.setAttribute('class', 'hidden');
       signupbutton.setAttribute('class', 'hidden');
       // btnGrocery_mobile.setAttribute('class', 'center white-text waves-effect waves-light');
-      btnGrocery_main.setAttribute('class', 'dropdown-button white-text');
-      btnGrocery_main.setAttribute('data-activates', 'dropdown1');
+      // btnGrocery_main.setAttribute('class', 'dropdown-button white-text');
+      // btnGrocery_main.setAttribute('data-activates', 'dropdown1');
 
     } else {
       console.log('not logged in');
@@ -75,7 +48,7 @@
       loginbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
       signupbutton.setAttribute('class', 'btn btn-action waves-effect waves-light white-text');
       // btnGrocery_mobile.setAttribute('class', 'hidden');
-      btnGrocery_main.setAttribute('class', 'hidden');
+      // btnGrocery_main.setAttribute('class', 'hidden');
 
     }
   });
