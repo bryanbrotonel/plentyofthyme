@@ -173,7 +173,7 @@ footer {
 */
 
 .navbar-brand.fixed-theme {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .navbar-container.fixed-theme {
@@ -243,4 +243,8 @@ blockquote {
 
 .img-circle {
     border-radius: 50%;
+}
+
+#navbg {
+  text-align: center;
 }
