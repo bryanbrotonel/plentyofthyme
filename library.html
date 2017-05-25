@@ -111,6 +111,7 @@
             <br class="visible-sm">
             <br>
             <br />
+            
             <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for food item...">
             <div id="food">
                 <hr style="color:white;width:95%;" />
@@ -418,12 +419,17 @@
             <script>
                 function searchFunction() {
                     var input, filter, food, item, i;
+                    
                     input = document.getElementById('myInput');
                     filter = input.value.toUpperCase();
-                    food = document.getElementById("food");
-                    item = food.getElementsByTagName('div');
-                    for (i = 0; i < item.length; i++) {
-                        item[i].setAttribute('id', item[i]);
+                    food = document.body.children; 
+                    
+                    for(i = 0; i < food.length; i++) {
+                        if(food.value.toUpperCase().indexOf(filter) > -1) {
+                            food[i].style.display = "";
+                        } else {
+                            food[i].style.display = "none";
+                        }
                     }
                 }
             </script>
