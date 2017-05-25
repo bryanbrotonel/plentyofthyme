@@ -16,21 +16,9 @@
   <link rel="manifest" href="/manifest.json">
   <title>Plenty of Thyme</title>
 </head>
+
 <style>
 #navbg {
-        background-image: url(images/thyme+background3.jpg);
-        /*height: 250px;*/
-    }
-
-    .img-circle {
-        height: 120px;
-        width: 120px;
-    }
-
-    .resimg {
-        width: 100%;
-        height: auto;
-    }
     background-image: url(images/thyme+background3.jpg);
     /*height: 250px;*/
   }
@@ -44,8 +32,22 @@
     width: 100%;
     height: auto;
   }
+
+  background-image: url(images/thyme+background3.jpg);
+  /*height: 250px;*/
+}
+
+.img-circle {
+  height: 120px;
+  width: 120px;
+}
+
+.resimg {
+  width: 100%;
+  height: auto;
 }
 </style>
+
 <script>
   $(document).ready(function() {
     $('.modal').modal();
@@ -129,9 +131,10 @@
   <div class="center" id="navbg">
     <br>
     <h2 class=" white-text hide-on-small-only" style="padding:25px;">Spend your thyme wisely.</h2>
+    <h5 class=" white-text hide-on-med-and-up">Spend your thyme wisely.</h5>
+    <!-- <br class="hide-on-med-and-up">
     <br class="hide-on-med-and-up">
-    <br class="hide-on-med-and-up">
-    <h3 class="brand-logo white-text hide-on-med-and-up">Plenty of Thyme</h3>
+    <h3 class="brand-logo white-text hide-on-med-and-up">Plenty of Thyme</h3> -->
     <!-- <br class="hide-on-med-and-down"> -->
     <button id='loginbutton' data-target="loginmodal" class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Log in</button>
     <button id='signupbutton' class="btn btn-action waves-effect waves-light white-text" style="background-color:#3d3e25">Sign Up</button>
@@ -146,11 +149,11 @@
           <br/>
           <!-- <label class='col-sm-12' for="email">Email</label> -->
           <!-- <i class="material-icons prefix">email</i> -->
-          <input type="email" placeholder="Email" style="width: 80%" id="txtEmail">
+          <input class="validate" type="email" placeholder="Email" style="width: 80%" id="txtEmail">
           <br/>
           <!-- <label class='col-sm-12' for="password">Password</label> -->
           <!-- <i class="material-icons prefix">lock</i> -->
-          <input type="password" placeholder="Password" style="width: 80%" id="txtPassword"> </form>
+          <input class="validate" type="password" placeholder="Password" style="width: 80%" id="txtPassword"> </form>
       </div>
     </div>
     <div class="modal-footer">
@@ -181,6 +184,17 @@
       <script src="feature/auth"></script>
   <!-- </div>
     </div></div> -->
+  <div id="modalnotif" class="black-text modal">
+    <div class="center modal-content">
+      <h4>Uh oh.</h4>
+      <div class='container black-text' id='list' />
+      <script src='soon2.js'></script>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+  </div>
 </header>
 
 <body>
@@ -189,9 +203,9 @@
       <h4>Food Waste</h4>
       <blockquote> Food waste is a major problem in the Metro Vancouver area. This problem is caused by a general lack of awareness of the impact that food waste has on the environment.
         <br/>
-        <br/>  Join us in our efforts to help raise awareness about food waste and the monetary benefits that come along with reducing food waste in the Greater Vancouver area.
+        <br/> Join us in our efforts to help raise awareness about food waste and the monetary benefits that come along with reducing food waste in the Greater Vancouver area.
         <br/>
-      <!-- <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote> -->
+        <!-- <blockquote> The Metro Vancouver area has a problem with food waste and that is mainly caused by the lack of awareness surrounding this issue. People are unaware of the impact food waste has on our environment and the amount of money they could be saving. </blockquote> -->
       </blockquote>
       <div class="center">
         <br/>
@@ -255,7 +269,8 @@
           <div class="card-image"> <img id="teama1" src="images/team2.jpg"> <img id="teama2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> <span class="card-title hide-on-med-and-up">Team SEABASS</span> </div>
           <div class="card-stacked">
             <div class="card-content left-align">
-              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we've created Plenty of Thyme, a web application that keeps track of the grocery items in your possession, to help in our fight against food waste.</p> <img src="images/mvLogo.png" alt="Metro Vancouver">
+              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we've created Plenty of Thyme, a web application that keeps track of the grocery items in your possession, to help in our fight against
+                food waste.</p> <img src="images/mvLogo.png" alt="Metro Vancouver">
               <br>
               <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
           </div>
@@ -266,10 +281,11 @@
           <div class="card">
             <div class="card-image"> <img id="teamb1" src="images/team2.jpg"> <img id="teamb2" src="images/team.jpg"> <span class="card-title">Team SEABASS</span> </div>
             <div class="card-content left-align">
-              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we've created Plenty of Thyme, a web application that keeps track of the grocery items in your possession, to help in our fight against food waste.</p> <img src="images/mvLogo.png" alt="Metro Vancouver">
-                <style="height: auto; width: 100%;">
+              <p class="black-text">We are a group of BCIT students with a mission to end food waste. In collaboration with Metro Vancouver, we've created Plenty of Thyme, a web application that keeps track of the grocery items in your possession, to help in our fight against
+                food waste.</p> <img src="images/mvLogo.png" alt="Metro Vancouver" style="height: auto; width: 100%;">
               <br>
-              <br> <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
+              <br>
+              <img src="images/BCITlog.jpeg" alt="BCIT"> </div>
           </div>
         </div>
       </div>
@@ -387,7 +403,9 @@
       <div>
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 card-panel light-blue darken-1">
           <div class="center">
-            <a href="http://foodfall.ca/"><img src="images/hamish.png" style=" height:140px"> </a>
+            <a href="http://foodfall.ca/">
+              <img src="images/hamish.png" style=" height:140px">
+            </a>
           </div>
         </div>
         <p id="funfacts2" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Watch out for falling food! Save food and yourself from the dispair of unnecessary food waste in Food Fall!</p>
@@ -412,9 +430,10 @@
       <h4 class="hide-on-med-and-up black-text">redu-list</h4>
       <h3 class="hide-on-small-only black-text">redu-list</h3>
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 grey darken-4 card-panel">
-        <div class="center">
+        <div class="center-align">
           <a href="https://redulist.firebaseapp.com">
-            <img src="images/mikeks.png" style=" width:130px;"></a>
+            <img class="center-align" src="images/mikeks.png" style=" width:130px;">
+          </a>
         </div>
       </div>
       <p id="funfacts" class="col-xs-6 col-sm-8 col-md-8 col-lg-8 black-text">Bring with you an app that gives recipe recommendations based on ingredients of your choosing the next time you shop for groceries with redu-list, a simple shopping list management app.</p>

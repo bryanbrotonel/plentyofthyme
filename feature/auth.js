@@ -28,6 +28,8 @@
 
     if (email != "" && pass != "") {
       Materialize.toast('Log in successful!', 4000);
+      $('.modal').modal();
+      $('#modalnotif').modal('open');
       const promise = auth.signInWithEmailAndPassword(email, pass);
       txtEmail.value = "";
       txtPassword.value = "";
