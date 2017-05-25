@@ -192,7 +192,20 @@ caption1.appendChild(document.createTextNode('Week of ' + tomorrow.toDateString(
 
 // Create dates
 for (var i = 0; i < 7; i++) {
-  var day = document.createTextNode(tomorrow.toDateString());
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var month = document.createTextNode(month[tomorrow.getMonth()]);
+  var day = document.createTextNode(tomorrow.getDate());
   var th = document.createElement('th');
 
   // styling
@@ -203,6 +216,7 @@ for (var i = 0; i < 7; i++) {
     th.setAttribute('class', 'week');
     alt = 0;
   }
+  th.appendChild(month)
   th.appendChild(day)
   days_tr.appendChild(th);
   tomorrow.setDate(tomorrow.getDate() + 1);
@@ -232,7 +246,20 @@ alt = 0;
 
 // creates dates 2
 for (var i = 0; i < 7; i++) {
-  var day = document.createTextNode(tomorrow.toDateString());
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var month = document.createTextNode(month[tomorrow.getMonth()]);
+  var day = document.createTextNode(tomorrow.getDate());
   var th = document.createElement('th');
 
   // styling
@@ -243,6 +270,7 @@ for (var i = 0; i < 7; i++) {
     th.setAttribute('class', 'week');
     alt = 0;
   }
+  th.appendChild(month)
   th.appendChild(day)
   days2_tr.appendChild(th);
   tomorrow.setDate(tomorrow.getDate() + 1);
